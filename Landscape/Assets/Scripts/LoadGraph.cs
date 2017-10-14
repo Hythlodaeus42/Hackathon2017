@@ -18,7 +18,13 @@ public class LoadGraph : MonoBehaviour {
 
     private XmlDocument xmlGraph;
     private XmlNodeList xmlNodes;
-    private XmlNodeList xmlEdges; 
+    private XmlNodeList xmlEdges;
+
+    private float yoffset = -10f;
+    private float yscale = 10f;
+    private float edgexscale = 0.05f;
+    private float edgeyscale = 0.05f;
+
 
     // Use this for initialization
     void Start () {
@@ -36,7 +42,8 @@ public class LoadGraph : MonoBehaviour {
         // draw model
         DrawNodes();
         DrawEdges();
-        
+        DrawLayers();
+
         //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
     }
 
@@ -48,8 +55,6 @@ public class LoadGraph : MonoBehaviour {
         float x = 0;
         float y = 0;
         float z = 0;
-        float yoffset = -10f;
-        float yscale = 10f;
         string nodeName = "dummy";
         string nodeType = "Default";
 
@@ -105,7 +110,7 @@ public class LoadGraph : MonoBehaviour {
             //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, graphTransform);
             Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, graphTransform);
             edgeInstance.LookAt(endNode.transform);
-            edgeInstance.transform.localScale = new Vector3(0.01f, 0.01f, dist);
+            edgeInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, dist);
 
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
@@ -129,12 +134,31 @@ public class LoadGraph : MonoBehaviour {
         }
     }
 
-    void DrawLayer(float y)
+    void DrawLayers()
     {
-        Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
+        TextAsset textLayer = Resources.Load("layers") as TextAsset;
 
-        Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
+        string[] rows = textLayer.text.Split("\n"[0]);
+
+        foreach (string row in rows)
+        {
+            string[] rowAttributes = row.Split(","[0]);
+
+            float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
+
+            //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
+            //Quaternion target = Quaternion.Euler(90, 0, 0);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
+
+            //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
+            Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+
+            Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+            nodeInstance.name = rowAttributes[1];
+            nodeInstance.Rotate(90, 0, 0);
+
+        }
+
     }
 
 }
