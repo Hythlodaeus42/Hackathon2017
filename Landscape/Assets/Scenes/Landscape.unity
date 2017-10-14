@@ -150,11 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabNodeDefault: {fileID: 4036091980589840, guid: d4e6f08d614ce344ea20eb72a91332a0,
     type: 2}
-  prefabNodeBusinessFunction: {fileID: 0}
-  prefabNodeCDE: {fileID: 0}
-  prefabNodeFile: {fileID: 0}
-  prefabNodeSource: {fileID: 0}
-  prefabNodeTable: {fileID: 0}
+  prefabNodeApplication: {fileID: 4036091980589840, guid: 90ef8808b4cb15c4c9d2707c379f7c3a,
+    type: 2}
+  prefabNodeChannel: {fileID: 4036091980589840, guid: 25036220b990aa34390a2a9001e9a89d,
+    type: 2}
+  prefabNodeService: {fileID: 4036091980589840, guid: 0b3b7ccb67243e340b0012909363ac4a,
+    type: 2}
   prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6, type: 2}
   prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
     type: 2}

@@ -7,11 +7,9 @@ using System.Xml;
 
 public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeDefault;
-    public Transform prefabNodeBusinessFunction;
-    public Transform prefabNodeCDE;
-    public Transform prefabNodeFile;
-    public Transform prefabNodeSource;
-    public Transform prefabNodeTable;
+    public Transform prefabNodeApplication;
+    public Transform prefabNodeChannel;
+    public Transform prefabNodeService;
     public Transform prefabEdge;
     public Transform prefabLayer;
 
@@ -55,20 +53,14 @@ public class LoadGraph : MonoBehaviour {
 
             switch (nodeType)
             {
-                case "busproc":
-                    Instantiate(prefabNodeBusinessFunction, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                case "Application":
+                    Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, graphTransform);
                 break;
-                case "CDE":
-                    Instantiate(prefabNodeCDE, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                case "Service":
+                    Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, graphTransform);
                     break;
-                case "file":
-                    Instantiate(prefabNodeFile, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                    break;
-                case "source":
-                    Instantiate(prefabNodeSource, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                    break;
-                case "table":
-                    Instantiate(prefabNodeTable, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                case "Channel":
+                    Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, graphTransform);
                     break;
                 default:
                     Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, graphTransform);
@@ -86,29 +78,20 @@ public class LoadGraph : MonoBehaviour {
             nodecount++;
         }
 
-        //DrawEdges();
+        DrawEdges();
         
         //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
     }
 	
     void DrawEdges()
     {
-        TextAsset edgeTextAsset = Resources.Load("edges") as TextAsset;
 
-        string edgeDataset = edgeTextAsset.text;
-        string[] edgeRows = edgeDataset.Split("\r\n"[0]);
-
-        //Color c1 = Color.yellow;
-        //Color c2 = Color.red;
-
-        foreach (string edgeRow in edgeRows)
+        foreach (XmlNode edge in xmlEdges)
         {
-            //Debug.Log(edgeRow.ToString());
+            Debug.Log(edge.InnerXml);
             
-            string[] rowAttributes = edgeRow.Split(","[0]);
-
-            GameObject startNode = GameObject.Find(rowAttributes[0].Trim());
-            GameObject endNode = GameObject.Find(rowAttributes[1].Trim());
+            GameObject startNode = GameObject.Find(edge.Attributes["source"].Value);
+            GameObject endNode = GameObject.Find(edge.Attributes["target"].Value);
 
             //float startX = startNode.transform.position.x;
             //float startY = startNode.transform.position.y;
@@ -131,7 +114,7 @@ public class LoadGraph : MonoBehaviour {
             edgeInstance.LookAt(endNode.transform);
             edgeInstance.transform.localScale = new Vector3(0.01f, 0.01f, dist);
 
-            var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
+            //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
             
 
             //float lineAngle = Vector3.Angle(startNode.transform.position, endNode.transform.position);
@@ -157,12 +140,12 @@ public class LoadGraph : MonoBehaviour {
         }
     }
 
-    void DrawLayer(float x)
+    void DrawLayer(float y)
     {
-        Quaternion target = Quaternion.Euler(Camera.main.transform.rotation.x, 90, Camera.main.transform.rotation.z);
+        Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
         transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
-        Instantiate(prefabLayer, new Vector3(x, 0, 0), transform.rotation, graphTransform);
+        Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
     }
 
 	// Update is called once per frame
