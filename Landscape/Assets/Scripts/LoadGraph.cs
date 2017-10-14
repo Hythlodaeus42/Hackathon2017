@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Xml;
 
 
 public class LoadGraph : MonoBehaviour {
@@ -15,52 +16,42 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabLayer;
 
     private Transform graphTransform;
-    private float lastLayer = 999999f;
+    //private float lastLayer = 999999f;
 
+    private XmlDocument xmlGraph;
+    private XmlNodeList xmlNodes;
+    private XmlNodeList xmlEdges; 
 
     // Use this for initialization
     void Start () {
-        //DataTable nodes = GetDataTableFromCsv("E:\\Users\\Brendan\\Documents\\R\\DataLineage\\nodes_coord.csv");
-        //string path = "E:\\Users\\Brendan\\Documents\\R\\DataLineage\\nodes_coord.csv";
+        // load XML document
+        TextAsset textGraph = Resources.Load("landscape") as TextAsset;
+        xmlGraph = new XmlDocument();
+        xmlGraph.LoadXml(textGraph.text);
 
-        TextAsset nodeTextAsset = Resources.Load("nodes_layout") as TextAsset;
-
-        string nodeText = nodeTextAsset.text;
-        string[] nodeRows = nodeText.Split("\r\n"[0]);
-
-        //string[] csv = File.ReadAllLines(path);
+        // get nodes
+        xmlNodes = xmlGraph.SelectNodes("/graphml/graph/node");
+        xmlEdges = xmlGraph.SelectNodes("/graphml/graph/edge");
 
         int nodecount = 0;
 
         float x = 0;
         float y = 0;
         float z = 0;
-        float xoffset = -10f;
-        float xscale = 10f;
+        float yoffset = -10f;
+        float yscale = 10f;
         string nodeName = "dummy";
         string nodeType = "Default"; 
 
-        graphTransform = GameObject.Find("Graph").transform;
+        graphTransform = GameObject.Find("Landscape").transform;
 
-        foreach (string nodeRow in nodeRows)
-        {
-            string[] rowAttributes = nodeRow.Split(","[0]);
-            //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
-            //Debug.Log(nodecount.ToString());
-
-            x = float.Parse(rowAttributes[3]) * xscale + xoffset;
-            y = float.Parse(rowAttributes[4]);
-            z = float.Parse(rowAttributes[5]);
-            nodeName = rowAttributes[0].Trim();
-            nodeType = rowAttributes[1].Trim();
-
-            // find min and max layers
-            if (x != lastLayer)
-            {
-                DrawLayer(x);
-                lastLayer = x;
-            }
-
+        foreach (XmlNode node in xmlNodes)
+        {           
+            x = float.Parse(node.SelectSingleNode("data[@key='v_X']").InnerText);
+            y = float.Parse(node.SelectSingleNode("data[@key='v_LayerOrdinal']").InnerText) * yscale + yoffset;
+            z = float.Parse(node.SelectSingleNode("data[@key='v_Z']").InnerText);
+            nodeName = node.Attributes["id"].Value;
+            nodeType = node.SelectSingleNode("data[@key='v_Layer']").InnerText;
 
             switch (nodeType)
             {
@@ -84,12 +75,7 @@ public class LoadGraph : MonoBehaviour {
                     break;
             }
 
-            //node.name = nodeName;
-            //Transform nodeInstance = Instantiate(node, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-            
-
             Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
-            //nodeInstance.name = nodecount.ToString();
             nodeInstance.name = nodeName;
 
             Text txt = nodeInstance.GetComponentInChildren<Text>();
@@ -97,19 +83,11 @@ public class LoadGraph : MonoBehaviour {
 
             nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
 
-            //nodeInstance.name = nodeName;
-            //Debug.Log(nodeName);
-            //nodeInstance.name = nodeName;
-
-            //NodeData nodeData = GetComponent<NodeData>("NodeData");
-            //nodeData.Name = rowAttributes[0];
-
-
             nodecount++;
         }
 
-        DrawEdges();
-
+        //DrawEdges();
+        
         //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
     }
 	
