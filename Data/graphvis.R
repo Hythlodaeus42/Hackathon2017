@@ -37,19 +37,19 @@ plot(g, layoyt = l.fr)
 
 nodes.layout <- cbind(nodes, l.fr)
 
-names(nodes.layout)[8:9] <- c("Z", "Y")
+names(nodes.layout)[8:9] <- c("X", "Z")
 
 
 
 # -----------------------------------
 # centre the graph
 nodes.layout$LayerOrdinal <- nodes.layout$LayerOrdinal - round(mean(nodes.layout$LayerOrdinal), 0)
-nodes.layout$Y <- nodes.layout$Y - mean(nodes.layout$Y)
+nodes.layout$X <- nodes.layout$X - mean(nodes.layout$X)
 nodes.layout$Z <- nodes.layout$Z - mean(nodes.layout$Z)
 
 # -----------------------------------
 # set coords as vertex attribute 
-V(g)$Y <- nodes.layout$Y
+V(g)$X <- nodes.layout$X
 V(g)$Z <- nodes.layout$Z
 
 # cbind(V(g)$name, V(g)$Y, V(g)$Z, nodes.layout$name, nodes.layout$Y, nodes.layout$Z)

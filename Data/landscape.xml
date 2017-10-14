@@ -11,6 +11,8 @@
   <key id="v_Critically" for="node" attr.name="Critically" attr.type="string"/>
   <key id="v_Desirability" for="node" attr.name="Desirability" attr.type="string"/>
   <key id="v_DisplayWeight" for="node" attr.name="DisplayWeight" attr.type="double"/>
+  <key id="v_X" for="node" attr.name="X" attr.type="double"/>
+  <key id="v_Z" for="node" attr.name="Z" attr.type="double"/>
   <key id="e_Direction" for="edge" attr.name="Direction" attr.type="double"/>
   <key id="e_Data" for="edge" attr.name="Data" attr.type="string"/>
   <key id="e_Frequency" for="edge" attr.name="Frequency" attr.type="string"/>
@@ -24,6 +26,8 @@
       <data key="v_Critically">Gold</data>
       <data key="v_Desirability">Red</data>
       <data key="v_DisplayWeight">1</data>
+      <data key="v_X">-0.926568790542831</data>
+      <data key="v_Z">-6.78792657724529</data>
     </node>
     <node id="n1">
       <data key="v_name">B</data>
@@ -33,6 +37,8 @@
       <data key="v_Critically">Silver</data>
       <data key="v_Desirability">Amber </data>
       <data key="v_DisplayWeight">1</data>
+      <data key="v_X">3.54649628921336</data>
+      <data key="v_Z">0.283430449507183</data>
     </node>
     <node id="n2">
       <data key="v_name">C</data>
@@ -42,6 +48,8 @@
       <data key="v_Critically">Gold</data>
       <data key="v_Desirability">Green</data>
       <data key="v_DisplayWeight">3</data>
+      <data key="v_X">-0.74866932243209</data>
+      <data key="v_Z">-5.43002487988343</data>
     </node>
     <node id="n3">
       <data key="v_name">D</data>
@@ -51,6 +59,8 @@
       <data key="v_Critically">Silver</data>
       <data key="v_Desirability">Red</data>
       <data key="v_DisplayWeight">2</data>
+      <data key="v_X">2.14154759775406</data>
+      <data key="v_Z">0.14610968943168</data>
     </node>
     <node id="n4">
       <data key="v_name">E</data>
@@ -60,6 +70,8 @@
       <data key="v_Critically">Gold</data>
       <data key="v_Desirability">Amber </data>
       <data key="v_DisplayWeight">3</data>
+      <data key="v_X">-0.466594234059917</data>
+      <data key="v_Z">-3.77284846202456</data>
     </node>
     <node id="n5">
       <data key="v_name">F</data>
@@ -69,6 +81,8 @@
       <data key="v_Critically">Silver</data>
       <data key="v_Desirability">Green</data>
       <data key="v_DisplayWeight">2</data>
+      <data key="v_X">0.45135213690738</data>
+      <data key="v_Z">0.0115692804060177</data>
     </node>
     <node id="n6">
       <data key="v_name">G</data>
@@ -78,6 +92,8 @@
       <data key="v_Critically">Bronze</data>
       <data key="v_Desirability">Red</data>
       <data key="v_DisplayWeight">1</data>
+      <data key="v_X">-0.830449596440941</data>
+      <data key="v_Z">3.66916527117569</data>
     </node>
     <node id="n7">
       <data key="v_name">H</data>
@@ -87,6 +103,8 @@
       <data key="v_Critically">Platnium</data>
       <data key="v_Desirability">Amber </data>
       <data key="v_DisplayWeight">3</data>
+      <data key="v_X">-1.5621755541193</data>
+      <data key="v_Z">6.6417454477695</data>
     </node>
     <node id="n8">
       <data key="v_name">I</data>
@@ -96,6 +114,8 @@
       <data key="v_Critically">Silver</data>
       <data key="v_Desirability">Green</data>
       <data key="v_DisplayWeight">3</data>
+      <data key="v_X">-0.0828676973678473</data>
+      <data key="v_Z">-1.93461618291451</data>
     </node>
     <node id="n9">
       <data key="v_name">J</data>
@@ -105,6 +125,8 @@
       <data key="v_Critically">PVC</data>
       <data key="v_Desirability">Red</data>
       <data key="v_DisplayWeight">1</data>
+      <data key="v_X">-0.280759384476072</data>
+      <data key="v_Z">1.88037794029204</data>
     </node>
     <node id="n10">
       <data key="v_name">K</data>
@@ -114,6 +136,8 @@
       <data key="v_Critically">Silver</data>
       <data key="v_Desirability">Amber </data>
       <data key="v_DisplayWeight">1</data>
+      <data key="v_X">-1.2413114444358</data>
+      <data key="v_Z">5.29301802348567</data>
     </node>
     <edge source="n0" target="n2">
       <data key="e_Direction">1</data>
