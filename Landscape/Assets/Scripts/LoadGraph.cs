@@ -88,6 +88,19 @@ public class LoadGraph : MonoBehaviour {
             Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
             nodeInstance.name = nodeName;
 
+            NodeProperties nodeProperties = nodeInstance.gameObject.GetComponent<NodeProperties>();
+            nodeProperties.NodeID = node.Attributes["id"].Value;
+            nodeProperties.LongName = nodeLongName;
+            nodeProperties.LayerOrdinal = node.SelectSingleNode("data[@key='v_LayerOrdinal']").InnerText;
+            nodeProperties.Layer = node.SelectSingleNode("data[@key='v_Layer']").InnerText;
+            nodeProperties.Critically = node.SelectSingleNode("data[@key='v_Critically']").InnerText;
+            nodeProperties.Desirability = node.SelectSingleNode("data[@key='v_Desirability']").InnerText;
+            nodeProperties.DisplayWeight = node.SelectSingleNode("data[@key='v_DisplayWeight']").InnerText;
+
+            float displayWeight = float.Parse(nodeProperties.DisplayWeight);
+
+            nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
+
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
 
