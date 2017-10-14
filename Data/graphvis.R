@@ -55,8 +55,10 @@ V(g)$Z <- nodes.layout$Z
 # cbind(V(g)$name, V(g)$Y, V(g)$Z, nodes.layout$name, nodes.layout$Y, nodes.layout$Z)
 
 # -----------------------------------
-# write csv files
-# write.csv(nodes.layout, "nodes_layout.csv", row.names = FALSE, quote=FALSE, col.names = FALSE)
+# get layers
+layers <- unique(nodes[order(nodes$LayerOrdinal), c("LayerOrdinal", "Layer")])
 
+# -----------------------------------
+# write files
 write_graph(g, "landscape.xml", format="graphml")
-
+write.table(layers, "layers.csv", sep = ",", row.names = FALSE, quote=FALSE, col.names = FALSE)
