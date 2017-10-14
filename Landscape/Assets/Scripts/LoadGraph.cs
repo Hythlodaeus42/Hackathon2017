@@ -24,6 +24,7 @@ public class LoadGraph : MonoBehaviour {
     private float yscale = 10f;
     private float edgexscale = 0.05f;
     private float edgeyscale = 0.05f;
+    private float layerscale = 4f;
 
 
     // Use this for initialization
@@ -57,6 +58,7 @@ public class LoadGraph : MonoBehaviour {
         float z = 0;
         string nodeName = "dummy";
         string nodeType = "Default";
+        string nodeLongName = "dummy";
 
         foreach (XmlNode node in xmlNodes)
         {
@@ -65,6 +67,7 @@ public class LoadGraph : MonoBehaviour {
             z = float.Parse(node.SelectSingleNode("data[@key='v_Z']").InnerText);
             nodeName = node.Attributes["id"].Value;
             nodeType = node.SelectSingleNode("data[@key='v_Layer']").InnerText;
+            nodeLongName = node.SelectSingleNode("data[@key='v_LongName']").InnerText;
 
             switch (nodeType)
             {
@@ -86,9 +89,9 @@ public class LoadGraph : MonoBehaviour {
             nodeInstance.name = nodeName;
 
             Text txt = nodeInstance.GetComponentInChildren<Text>();
-            txt.text = nodeName;
+            txt.text = nodeLongName;
 
-            nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
+            nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
 
             nodecount++;
         }
@@ -145,6 +148,9 @@ public class LoadGraph : MonoBehaviour {
             string[] rowAttributes = row.Split(","[0]);
 
             float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
+            float layerx = float.Parse(rowAttributes[2]) * layerscale;
+            float layerz = float.Parse(rowAttributes[3]) * layerscale;
+
 
             //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
             //Quaternion target = Quaternion.Euler(90, 0, 0);
@@ -152,10 +158,13 @@ public class LoadGraph : MonoBehaviour {
 
             //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
             Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+            
 
-            Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
-            nodeInstance.name = rowAttributes[1];
-            nodeInstance.Rotate(90, 0, 0);
+            Transform layerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+            RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
+            layerInstance.name = rowAttributes[1];
+            layerInstance.Rotate(90, 0, 0);
+            layerRect.sizeDelta = new Vector2(layerx, layerz);
 
         }
 

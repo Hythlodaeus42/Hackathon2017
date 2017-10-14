@@ -47,6 +47,9 @@ nodes.layout$LayerOrdinal <- nodes.layout$LayerOrdinal - round(mean(nodes.layout
 nodes.layout$X <- nodes.layout$X - mean(nodes.layout$X)
 nodes.layout$Z <- nodes.layout$Z - mean(nodes.layout$Z)
 
+layer.x = ceiling(max(abs(nodes.layout$X)))
+layer.z = ceiling(max(abs(nodes.layout$Z)))
+
 # -----------------------------------
 # set coords as vertex attribute 
 V(g)$X <- nodes.layout$X
@@ -57,6 +60,9 @@ V(g)$Z <- nodes.layout$Z
 # -----------------------------------
 # get layers
 layers <- unique(nodes[order(nodes$LayerOrdinal), c("LayerOrdinal", "Layer")])
+
+layers$x = layer.x
+layers$z = layer.z
 
 # -----------------------------------
 # write files
