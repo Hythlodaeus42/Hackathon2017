@@ -1,0 +1,11 @@
+Source,Target,Direction,Data,Frequency,Type
+A,C,1,trade,Intraday,Message
+B,D,1,trade,Intraday,Message
+C,E,1,customer,EOD,Batch
+D,F,1,trade,Intraday,Message
+E,I,1,reference,EOD,Batch
+I,F,1,trade,Intraday,Batch
+F,J,1,customer,EOD,Batch
+J,G,1,customer,Intraday,Message
+G,K,1,trade,Intraday,Batch
+K,H,1,customer,EOD,Batch
