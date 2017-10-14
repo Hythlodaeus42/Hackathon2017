@@ -31,6 +31,18 @@ public class LoadGraph : MonoBehaviour {
         xmlNodes = xmlGraph.SelectNodes("/graphml/graph/node");
         xmlEdges = xmlGraph.SelectNodes("/graphml/graph/edge");
 
+        graphTransform = GameObject.Find("Landscape").transform;
+
+        // draw model
+        DrawNodes();
+        DrawEdges();
+        
+        //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
+    }
+
+    void DrawNodes()
+    {
+
         int nodecount = 0;
 
         float x = 0;
@@ -39,12 +51,10 @@ public class LoadGraph : MonoBehaviour {
         float yoffset = -10f;
         float yscale = 10f;
         string nodeName = "dummy";
-        string nodeType = "Default"; 
-
-        graphTransform = GameObject.Find("Landscape").transform;
+        string nodeType = "Default";
 
         foreach (XmlNode node in xmlNodes)
-        {           
+        {
             x = float.Parse(node.SelectSingleNode("data[@key='v_X']").InnerText);
             y = float.Parse(node.SelectSingleNode("data[@key='v_LayerOrdinal']").InnerText) * yscale + yoffset;
             z = float.Parse(node.SelectSingleNode("data[@key='v_Z']").InnerText);
@@ -55,7 +65,7 @@ public class LoadGraph : MonoBehaviour {
             {
                 case "Application":
                     Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                break;
+                    break;
                 case "Service":
                     Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, graphTransform);
                     break;
@@ -77,36 +87,19 @@ public class LoadGraph : MonoBehaviour {
 
             nodecount++;
         }
-
-        DrawEdges();
-        
-        //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
     }
-	
     void DrawEdges()
     {
 
         foreach (XmlNode edge in xmlEdges)
         {
-            Debug.Log(edge.InnerXml);
+            //Debug.Log(edge.InnerXml);
             
             GameObject startNode = GameObject.Find(edge.Attributes["source"].Value);
             GameObject endNode = GameObject.Find(edge.Attributes["target"].Value);
 
-            //float startX = startNode.transform.position.x;
-            //float startY = startNode.transform.position.y;
-            //float startZ = startNode.transform.position.z;
-
-            //float endX = endNode.transform.position.x;
-            //float endY = endNode.transform.position.y;
-            //float endZ = endNode.transform.position.z;
-
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
-
-            //Debug.Log(vectorDir.ToString());
-            //Quaternion rotation = Quaternion.Euler(vectorDir);
-
 
 
             //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, graphTransform);
@@ -115,11 +108,7 @@ public class LoadGraph : MonoBehaviour {
             edgeInstance.transform.localScale = new Vector3(0.01f, 0.01f, dist);
 
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
-            
 
-            //float lineAngle = Vector3.Angle(startNode.transform.position, endNode.transform.position);
-
-            //float length = Mathf.Pow(endX - startX, 2);
 
             //LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
             //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
@@ -147,29 +136,5 @@ public class LoadGraph : MonoBehaviour {
 
         Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
     }
-
-	// Update is called once per frame
-	//void Update () {
-		
-	//}
-
-    //private 
-
-    //private DataTable GetDataTableFromCsv(string path)
-    //{
-    //    DataTable dataTable = new DataTable();
-    //    string[] csv = File.ReadAllLines(path);
-
-    //    foreach (string csvrow in csv)
-    //    {
-    //        var fields = csvrow.Split(','); // csv delimiter
-    //        var row = dataTable.NewRow();
-
-    //        row.ItemArray = fields;
-    //        dataTable.Rows.Add(row);
-    //    }
-
-    //    return dataTable;
-    //}
 
 }
