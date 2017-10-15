@@ -510,7 +510,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Landscape
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: E:\Users\Brendan\Documents\Unity\Hackathon2017\Landscape\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
