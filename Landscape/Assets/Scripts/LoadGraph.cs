@@ -22,7 +22,7 @@ public class LoadGraph : MonoBehaviour {
     private IEnumerable<XElement> xmlEdges;
 
     private float yoffset = -10f;
-    private float yscale = 10f;
+    private float yscale = 5f;
     private float edgexscale = 0.05f;
     private float edgeyscale = 0.05f;
     private float layerscale = 4f;
@@ -90,6 +90,7 @@ public class LoadGraph : MonoBehaviour {
             }
 
             Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+            nodeInstance.localPosition = new Vector3(x, y, z);
             nodeInstance.name = nodeName;
 
             NodeProperties nodeProperties = nodeInstance.gameObject.GetComponent<NodeProperties>();
@@ -181,6 +182,7 @@ public class LoadGraph : MonoBehaviour {
             Transform layerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
             RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
             layerInstance.name = rowAttributes[1];
+            layerInstance.localPosition = new Vector3(0, y, 0);
             layerInstance.Rotate(90, 0, 0);
             layerRect.sizeDelta = new Vector2(layerx, layerz);
 

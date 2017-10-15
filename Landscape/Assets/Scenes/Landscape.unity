@@ -117,6 +117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 998474382}
   - component: {fileID: 998474383}
+  - component: {fileID: 998474385}
+  - component: {fileID: 998474384}
   m_Layer: 0
   m_Name: Landscape
   m_TagString: Untagged
@@ -131,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998474381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -159,6 +161,29 @@ MonoBehaviour:
   prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6, type: 2}
   prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
     type: 2}
+--- !u!114 &998474384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998474381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3a0190f1055464d8ee3395bdfd16a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &998474385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998474381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398c85452ad6fc043b111adaf3761e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateGraph: 0
 --- !u!1 &1228766884
 GameObject:
   m_ObjectHideFlags: 0
