@@ -1,0 +1,12 @@
+NodeID,LongName,LayerOrdinal,Layer,Critically,Desirability,DisplayWeight
+A,AAA,4,Channel,Gold,Red,1
+B,BBB,4,Channel,Silver,Amber ,1
+C,CCC,3,Service,Gold,Green,3
+D,DDD,3,Service,Silver,Red,2
+E,EEE,2,Application,Gold,Amber ,3
+F,FFF,2,Application,Silver,Green,2
+G,GGG,2,Application,Bronze,Red,1
+H,HHH,2,Application,Platnium,Amber ,3
+I,III,1,Data & Integration,Silver,Green,3
+J,JJJ,1,Data & Integration,PVC,Red,1
+K,KKK,1,Data & Integration,Silver,Amber ,1

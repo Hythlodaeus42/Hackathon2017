@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 49cf4a91a902ab840a935356b73fc846
+timeCreated: 1507960449
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - prefabNodeDefault: {fileID: 4036091980589840, guid: d4e6f08d614ce344ea20eb72a91332a0,
+      type: 2}
+  - prefabNodeBusinessFunction: {instanceID: 0}
+  - prefabNodeCDE: {instanceID: 0}
+  - prefabNodeFile: {instanceID: 0}
+  - prefabNodeSource: {instanceID: 0}
+  - prefabNodeTable: {instanceID: 0}
+  - prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6,
+      type: 2}
+  - prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
