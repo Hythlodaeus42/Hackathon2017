@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Xml;
+using System.Linq;
+using System.Xml.Linq;
 
 
 public class LoadGraph : MonoBehaviour {
@@ -14,11 +16,10 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabLayer;
 
     private Transform graphTransform;
-    //private float lastLayer = 999999f;
-
-    private XmlDocument xmlGraph;
-    private XmlNodeList xmlNodes;
-    private XmlNodeList xmlEdges;
+    
+    private XDocument xmlGraph;
+    private IEnumerable<XElement> xmlNodes;
+    private IEnumerable<XElement> xmlEdges;
 
     private float yoffset = -10f;
     private float yscale = 10f;
@@ -31,12 +32,17 @@ public class LoadGraph : MonoBehaviour {
     void Start () {
         // load XML document
         TextAsset textGraph = Resources.Load("landscape") as TextAsset;
-        xmlGraph = new XmlDocument();
-        xmlGraph.LoadXml(textGraph.text);
+        xmlGraph = XDocument.Parse(textGraph.text);
 
         // get nodes
-        xmlNodes = xmlGraph.SelectNodes("/graphml/graph/node");
-        xmlEdges = xmlGraph.SelectNodes("/graphml/graph/edge");
+        xmlNodes =
+            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("node")
+            select el;
+
+        xmlEdges =
+            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("edge")
+            select el;
+
 
         graphTransform = GameObject.Find("Landscape").transform;
 
@@ -44,8 +50,6 @@ public class LoadGraph : MonoBehaviour {
         DrawNodes();
         DrawEdges();
         DrawLayers();
-
-        //Instantiate(node, new Vector3(0.134f, 2.564f, 0), Quaternion.identity);
     }
 
     void DrawNodes()
@@ -60,14 +64,14 @@ public class LoadGraph : MonoBehaviour {
         string nodeType = "Default";
         string nodeLongName = "dummy";
 
-        foreach (XmlNode node in xmlNodes)
+        foreach (XElement node in xmlNodes)
         {
-            x = float.Parse(node.SelectSingleNode("data[@key='v_X']").InnerText);
-            y = float.Parse(node.SelectSingleNode("data[@key='v_LayerOrdinal']").InnerText) * yscale + yoffset;
-            z = float.Parse(node.SelectSingleNode("data[@key='v_Z']").InnerText);
-            nodeName = node.Attributes["id"].Value;
-            nodeType = node.SelectSingleNode("data[@key='v_Layer']").InnerText;
-            nodeLongName = node.SelectSingleNode("data[@key='v_LongName']").InnerText;
+            x = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_X").Select(a => a.Value).FirstOrDefault());
+            y = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault()) * yscale + yoffset;
+            z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault());
+            nodeName = node.Attribute("id").Value;
+            nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
+            nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
 
             switch (nodeType)
             {
@@ -89,13 +93,13 @@ public class LoadGraph : MonoBehaviour {
             nodeInstance.name = nodeName;
 
             NodeProperties nodeProperties = nodeInstance.gameObject.GetComponent<NodeProperties>();
-            nodeProperties.NodeID = node.Attributes["id"].Value;
+            nodeProperties.NodeID = node.Attribute("id").Value;
             nodeProperties.LongName = nodeLongName;
-            nodeProperties.LayerOrdinal = node.SelectSingleNode("data[@key='v_LayerOrdinal']").InnerText;
-            nodeProperties.Layer = node.SelectSingleNode("data[@key='v_Layer']").InnerText;
-            nodeProperties.Critically = node.SelectSingleNode("data[@key='v_Critically']").InnerText;
-            nodeProperties.Desirability = node.SelectSingleNode("data[@key='v_Desirability']").InnerText;
-            nodeProperties.DisplayWeight = node.SelectSingleNode("data[@key='v_DisplayWeight']").InnerText;
+            nodeProperties.LayerOrdinal = node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.Layer = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.Critically = node.Descendants().Where(a => a.Attribute("key").Value == "v_Critically").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.Desirability = node.Descendants().Where(a => a.Attribute("key").Value == "v_Desirability").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.DisplayWeight = node.Descendants().Where(a => a.Attribute("key").Value == "v_DisplayWeight").Select(a => a.Value).FirstOrDefault();
 
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
 
@@ -105,19 +109,20 @@ public class LoadGraph : MonoBehaviour {
             txt.text = nodeLongName;
 
             nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
-
+            
             nodecount++;
         }
     }
+    
     void DrawEdges()
     {
-
-        foreach (XmlNode edge in xmlEdges)
+        Debug.Log("start draw edges");
+        foreach (XElement edge in xmlEdges)
         {
-            //Debug.Log(edge.InnerXml);
+            //Debug.Log(edge.Attribute("source").Value);
             
-            GameObject startNode = GameObject.Find(edge.Attributes["source"].Value);
-            GameObject endNode = GameObject.Find(edge.Attributes["target"].Value);
+            GameObject startNode = GameObject.Find(edge.Attribute("source").Value);
+            GameObject endNode = GameObject.Find(edge.Attribute("target").Value);
 
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
@@ -146,10 +151,10 @@ public class LoadGraph : MonoBehaviour {
             //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
             //    );
             //lineRenderer.colorGradient = gradient;
-
+            
         }
     }
-
+    
     void DrawLayers()
     {
         TextAsset textLayer = Resources.Load("layers") as TextAsset;
