@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour {
-    public bool rotateGraph = false;
+    public bool rotateGraph = true;
 
 	// Update is called once per frame
 	void Update () {
