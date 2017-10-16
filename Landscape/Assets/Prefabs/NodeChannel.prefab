@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 135231642905252254}
   - component: {fileID: 23105237636067818}
   - component: {fileID: 114625082126178124}
+  - component: {fileID: 114735986014407842}
+  - component: {fileID: 122590627474172902}
   m_Layer: 0
   m_Name: NodeChannel
   m_TagString: Untagged
@@ -196,6 +198,17 @@ MonoBehaviour:
   Critically: 
   Desirability: 
   DisplayWeight: 
+--- !u!114 &114735986014407842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527218357268960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f9d1d4ee075224188de4d23ac6d8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114764492085550940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +263,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!122 &122590627474172902
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527218357268960}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4291294446
+  m_Size: 2
 --- !u!135 &135231642905252254
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -280,7 +304,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1246780747847478}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}

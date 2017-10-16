@@ -17,16 +17,49 @@ g <- graph.data.frame(edges, directed = TRUE, vertices = nodes)
 
 plot(g)
 
-
 # -----------------------------------
 # layout 2d
 # -----------------------------------
 
-l.fr <- layout_with_fr(g, dim = 2, niter = 500)
-# l.kk <- layout_with_kk(g, dim = 2)
+# l <- layout_with_fr(g, dim = 2, niter = 500)
+# l <- layout_with_kk(g, dim = 2, maxiter = 500)
+# l <- layout_with_mds(g)
+# l <- layout_with_sugiyama(g, layers = nodes$LayerOrdinal)
+# l <- layout_with_dh(g)
+l <- layout_with_graphopt(g, mass = 1, charge = 100)
+# l <- layout_with_lgl(g, maxiter = 500)
+# l <- norm_coords(cbind(l.fr, nodes$LayerOrdinal))
+# l <- layout_on_grid(g)
+# l <- layout_as_tree
 
-plot(g, layoyt = l.fr)
-# plot(g, layoyt = l.kk)
+# l <- layout_with_fr(g, dim = 3, niter = 500)
+
+l <- l / max(l) * 10
+
+
+# hist(l[, 1])
+
+# l[, 3] <- nodes$LayerOrdinal
+
+plot(g, layout = l, recale=F)
+
+# g.1 = subgraph(g, V(g)[V(g)$LayerOrdinal == 1])
+# plot(g.1)
+# plot(g.1, layout = l[V(g)$LayerOrdinal == 1, ])
+# l.1 <- layout_on_grid(g.1)
+# plot(g.1, layout = l.1)
+# 
+# g.2 = subgraph(g, V(g)[V(g)$LayerOrdinal == 2])
+# plot(g.2, layout = l[V(g)$LayerOrdinal == 2, ])
+# l.2 <- layout_on_grid(g.2)
+# plot(g.2, layout = l.2)
+# 
+# g.3 = subgraph(g, V(g)[V(g)$LayerOrdinal == 3])
+# plot(g.3, layout = l[V(g)$LayerOrdinal == 3, ])
+# 
+# g.4 = subgraph(g, V(g)[V(g)$LayerOrdinal == 4])
+# plot(g.4, layout = l[V(g)$LayerOrdinal == 4, ])
+
 
 # l.df <- data.frame(l.fr)
 # names(l.df)
@@ -35,10 +68,9 @@ plot(g, layoyt = l.fr)
 # l.df$type = nodes$type
 
 
-nodes.layout <- cbind(nodes, l.fr)
+nodes.layout <- cbind(nodes, l)
 
 names(nodes.layout)[8:9] <- c("X", "Z")
-
 
 
 # -----------------------------------

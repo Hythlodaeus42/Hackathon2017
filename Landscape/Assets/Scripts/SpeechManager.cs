@@ -11,7 +11,7 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        keywords.Add("Spin", () =>
+        keywords.Add("Turn", () =>
         {
             // Call the OnReset method on every descendant object.
             this.BroadcastMessage("RotateGraph");
