@@ -51,7 +51,7 @@ public class LoadGraph : MonoBehaviour {
         // draw model
         DrawNodes();
         DrawEdges();
-        //DrawLayers();
+        DrawLayers();
     }
 
     void DrawNodes()
@@ -140,6 +140,14 @@ public class LoadGraph : MonoBehaviour {
             edgeInstance.LookAt(endNode.transform);
             edgeInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, dist);
 
+            EdgeProperties edgeProperties = edgeInstance.gameObject.GetComponent<EdgeProperties>();
+            edgeProperties.fromNode = edge.Attribute("source").Value;
+            edgeProperties.toNode = edge.Attribute("target").Value;
+            edgeProperties.flowType = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Type").Select(a => a.Value).FirstOrDefault(); ;
+            edgeProperties.flowRate = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Frequency").Select(a => a.Value).FirstOrDefault(); ; ;
+            edgeProperties.dataClass = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Data").Select(a => a.Value).FirstOrDefault(); ; ;
+            edgeProperties.isBidirectional = (int.Parse(edge.Descendants().Where(a => a.Attribute("key").Value == "e_Direction").Select(a => a.Value).FirstOrDefault()) == 2);
+
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
 
@@ -158,7 +166,7 @@ public class LoadGraph : MonoBehaviour {
             //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
             //    );
             //lineRenderer.colorGradient = gradient;
-            
+
         }
     }
     
