@@ -17,16 +17,22 @@ g <- graph.data.frame(edges, directed = TRUE, vertices = nodes)
 
 plot(g)
 
-
 # -----------------------------------
 # layout 2d
 # -----------------------------------
 
-l.fr <- layout_with_fr(g, dim = 2, niter = 500)
-# l.kk <- layout_with_kk(g, dim = 2)
+# l <- layout_with_fr(g, dim = 2, niter = 500)
+# l <- layout_with_kk(g, dim = 2)
+# l <- layout_with_mds(g)
+# l <- layout_with_sugiyama(g, layers = nodes$LayerOrdinal)
+# l <- layout_with_dh(g)
+# l <- layout_with_graphopt(g, mass = 0.01, charge = 0.001)
+# l <- layout_with_lgl(g, maxiter = 500)
+# l <- norm_coords(cbind(l.fr, nodes$LayerOrdinal))
+l <- layout_on_grid(g)
 
-plot(g, layoyt = l.fr)
-# plot(g, layoyt = l.kk)
+plot(g, layout = l, recale=F)
+
 
 # l.df <- data.frame(l.fr)
 # names(l.df)
@@ -35,10 +41,9 @@ plot(g, layoyt = l.fr)
 # l.df$type = nodes$type
 
 
-nodes.layout <- cbind(nodes, l.fr)
+nodes.layout <- cbind(nodes, l)
 
 names(nodes.layout)[8:9] <- c("X", "Z")
-
 
 
 # -----------------------------------
