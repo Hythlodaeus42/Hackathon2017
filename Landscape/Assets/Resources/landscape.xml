@@ -170,13 +170,13 @@
       <data key="e_Type">Message</data>
     </edge>
     <edge source="n6" target="n10">
-      <data key="e_Direction">1</data>
+      <data key="e_Direction">2</data>
       <data key="e_Data">trade</data>
       <data key="e_Frequency">Intraday</data>
       <data key="e_Type">Batch</data>
     </edge>
     <edge source="n10" target="n7">
-      <data key="e_Direction">1</data>
+      <data key="e_Direction">2</data>
       <data key="e_Data">customer</data>
       <data key="e_Frequency">EOD</data>
       <data key="e_Type">Batch</data>
