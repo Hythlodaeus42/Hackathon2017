@@ -21,11 +21,13 @@ public class LoadGraph : MonoBehaviour {
     private IEnumerable<XElement> xmlNodes;
     private IEnumerable<XElement> xmlEdges;
 
-    private float yoffset = -10f;
+    private float xscale = 2f;
     private float yscale = 5f;
+    private float zscale = 2f;
+    private float yoffset = -10f;
     private float edgexscale = 0.05f;
     private float edgeyscale = 0.05f;
-    private float layerscale = 4f;
+    private float layerscale = 3f;
 
 
     // Use this for initialization
@@ -66,9 +68,9 @@ public class LoadGraph : MonoBehaviour {
 
         foreach (XElement node in xmlNodes)
         {
-            x = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_X").Select(a => a.Value).FirstOrDefault());
+            x = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_X").Select(a => a.Value).FirstOrDefault()) * xscale;
             y = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault()) * yscale + yoffset;
-            z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault());
+            z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault()) * zscale;
             nodeName = node.Attribute("id").Value;
             nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
             nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
@@ -109,7 +111,7 @@ public class LoadGraph : MonoBehaviour {
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
 
-            nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
+            nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
             
             nodecount++;
         }
@@ -167,8 +169,8 @@ public class LoadGraph : MonoBehaviour {
             string[] rowAttributes = row.Split(","[0]);
 
             float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
-            float layerx = float.Parse(rowAttributes[2]) * layerscale;
-            float layerz = float.Parse(rowAttributes[3]) * layerscale;
+            float layerx = float.Parse(rowAttributes[2]) * layerscale * xscale;
+            float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
 
 
             //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
