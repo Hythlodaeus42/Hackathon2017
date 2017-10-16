@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class NodeBehaviour : MonoBehaviour {
     //public Text displayInfo;
     private Canvas mainCanvas;
+    private Canvas localCanvas;
     private Text systemText;
     private Text mainText;
 
@@ -14,11 +15,12 @@ public class NodeBehaviour : MonoBehaviour {
     private bool selected;
 
 
-	// Use this for initialization
-	void Start () {
-        mainCanvas = GameObject.Find("MainCanvas").GetComponent<Canvas>();
-        systemText = GameObject.Find("SystemText").GetComponent<Text>();
-        mainText = GameObject.Find("MainText").GetComponent<Text>();
+    void Start()
+    {
+        //       mainCanvas = GameObject.Find("MainCanvas").GetComponent<Canvas>();
+        //       systemText = GameObject.Find("SystemText").GetComponent<Text>();
+        //       mainText = GameObject.Find("MainText").GetComponent<Text>();
+        localCanvas = this.GetComponent<Canvas>();
         halo = (Behaviour)this.GetComponent("Halo");
 
         selected = false;
@@ -35,11 +37,16 @@ public class NodeBehaviour : MonoBehaviour {
         selected = !selected;
         
         halo.enabled = selected;
-        mainCanvas.enabled = selected;
+        localCanvas.enabled = selected;
 
+        /*
         // Display info
         if (selected)
         {
+
+
+            
+
             //string nodeType = this.name.Split("|"[0])[0];
             systemText.text = this.name.Split("|"[0])[1];
 
@@ -80,7 +87,7 @@ public class NodeBehaviour : MonoBehaviour {
             mainText.text = businessfunction + "\n\n" + OS + "\n\n" + data + "\n\n" + systemsoftware;
             
         } 
-
+        */
 
     }
 }
