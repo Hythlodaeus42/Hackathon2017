@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class NodeBehaviour : MonoBehaviour {
     //public Text displayInfo;
-    private Canvas mainCanvas;
-    private Canvas localCanvas;
-    private Text systemText;
-    private Text mainText;
+    //private Canvas mainCanvas;
+    //private Canvas localCanvas;
+    //private Text systemText;
+    //private Text mainText;
 
     private Behaviour halo;
 
@@ -17,10 +17,11 @@ public class NodeBehaviour : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log("NodeBehaviour.Start(): " + this.name);
         //       mainCanvas = GameObject.Find("MainCanvas").GetComponent<Canvas>();
         //       systemText = GameObject.Find("SystemText").GetComponent<Text>();
         //       mainText = GameObject.Find("MainText").GetComponent<Text>();
-        localCanvas = this.GetComponent<Canvas>();
+        //localCanvas = this.GetComponent<Canvas>();
         halo = (Behaviour)this.GetComponent("Halo");
 
         selected = false;
@@ -33,11 +34,14 @@ public class NodeBehaviour : MonoBehaviour {
 
     void OnSelect()
     {
+        Debug.Log("NodeBehaviour.OnSelect() called");
+
         // set selected
         selected = !selected;
-        
+
+        halo = (Behaviour)this.GetComponent("Halo");
         halo.enabled = selected;
-        localCanvas.enabled = selected;
+        //localCanvas.enabled = selected;
 
         /*
         // Display info

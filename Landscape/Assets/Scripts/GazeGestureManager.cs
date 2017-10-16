@@ -23,6 +23,7 @@ public class GazeGestureManager : MonoBehaviour
             if (FocusedObject != null)
             {
                 FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                Debug.Log("OnSelect message sent to " + FocusedObject.name);
             }
         };
         recognizer.StartCapturingGestures();
