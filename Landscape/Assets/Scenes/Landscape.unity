@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabAppBlock: {fileID: 4408260399842018, guid: 3842ea758672f074c980c5eb37a88b96,
     type: 2}
-  prefabAxisBlock: {fileID: 4408260399842018, guid: 3842ea758672f074c980c5eb37a88b96,
+  prefabAxisBlock: {fileID: 4408260399842018, guid: bd3f38c1637e1c14da7912dc649e69fe,
     type: 2}
 --- !u!1 &959185928
 GameObject:

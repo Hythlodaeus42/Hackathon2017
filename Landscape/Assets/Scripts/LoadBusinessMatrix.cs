@@ -33,85 +33,38 @@ public class LoadBusinessMatrix : MonoBehaviour {
         matrixTransform = GameObject.Find("BusinessArchitectureMatrix").transform;
 
         // draw model
-        //DrawAxis();
+        DrawAxis();
         DrawApps();
 
     }
 
-    /*
-
     void DrawAxis()
-{
-    TextAsset textBusinessFunctionGroup = Resources.Load("BusinessFunctionGroup") as TextAsset;
-    TextAsset textBusinessFunction = Resources.Load("BusinessFunction") as TextAsset;
-    TextAsset textAssetClass = Resources.Load("AssetClass") as TextAsset;
-
-    string[] businessFunctionGroupRows = textBusinessFunctionGroup.Text.Split("\n"[0]);
-
-    foreach (string row in nodeRbusinessFunctionGroupRowsows)
     {
-        Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-    }
+        TextAsset textBusinessFunctionGroup = Resources.Load("BusinessFunctionGroup") as TextAsset;
+        TextAsset textBusinessFunction = Resources.Load("BusinessFunction") as TextAsset;
+        TextAsset textAssetClass = Resources.Load("AssetClass") as TextAsset;
 
+        string[] businessFunctionRows = textBusinessFunction.text.Split("\n"[0]);
 
-        float x = 0;
-    float y = 0;
-    float z = 0;
-    string nodeName = "dummy";
-    string nodeType = "Default";
-    string nodeLongName = "dummy";
-
-    foreach (XElement node in xmlNodes)
-    {
-        x = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_X").Select(a => a.Value).FirstOrDefault()) * xscale;
-        y = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault()) * yscale + yoffset;
-        z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault()) * zscale;
-        nodeName = node.Attribute("id").Value;
-        nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
-        nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
-
-        switch (nodeType)
+        foreach (string row in businessFunctionRows)
         {
-            case "Application":
-                Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                break;
-            case "Service":
-                Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                break;
-            case "Channel":
-                Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                break;
-            default:
-                Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, graphTransform);
-                break;
+            string[] rowAttributes = row.Split(","[0]);
+            //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
+            //Debug.Log(nodecount.ToString());
+
+            float x = 0;
+            float y = float.Parse(rowAttributes[0]);
+            float z = 0;
+            string blockName = rowAttributes[1].Trim();
+
+            Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
+
+            Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+            blockInstance.transform.localPosition = new Vector3(x, y, z);
+            blockInstance.name = blockName;
         }
 
-        Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
-        nodeInstance.localPosition = new Vector3(x, y, z);
-        nodeInstance.name = nodeName;
-
-        NodeProperties nodeProperties = nodeInstance.gameObject.GetComponent<NodeProperties>();
-        nodeProperties.NodeID = node.Attribute("id").Value;
-        nodeProperties.LongName = nodeLongName;
-        nodeProperties.LayerOrdinal = node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault();
-        nodeProperties.Layer = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
-        nodeProperties.Critically = node.Descendants().Where(a => a.Attribute("key").Value == "v_Critically").Select(a => a.Value).FirstOrDefault();
-        nodeProperties.Desirability = node.Descendants().Where(a => a.Attribute("key").Value == "v_Desirability").Select(a => a.Value).FirstOrDefault();
-        nodeProperties.DisplayWeight = node.Descendants().Where(a => a.Attribute("key").Value == "v_DisplayWeight").Select(a => a.Value).FirstOrDefault();
-
-        float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-
-        nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
-
-        Text txt = nodeInstance.GetComponentInChildren<Text>();
-        txt.text = nodeLongName;
-
-        nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
-
-        nodecount++;
     }
-}
-    */
 
     void DrawApps()
     {
