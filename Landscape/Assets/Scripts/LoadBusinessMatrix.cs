@@ -65,6 +65,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 appInstance.transform.localPosition = new Vector3(x, y, z);
                 appInstance.name = appName;
 
+                Text txt = appInstance.GetComponentInChildren<Text>();
+                txt.text = appName;
+
             }
         }
         
@@ -107,6 +110,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
                 blockInstance.transform.localPosition = new Vector3(x, y, z);
                 blockInstance.name = blockName;
+
+                Text txt = blockInstance.GetComponentInChildren<Text>();
+                txt.text = blockName;
             }
         }
 
