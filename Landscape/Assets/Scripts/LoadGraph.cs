@@ -116,9 +116,6 @@ public class LoadGraph : MonoBehaviour {
             nodecount++;
         }
 
-        Transform lastNode = graphTransform.GetChild(graphTransform.childCount - 1);
-        Debug.Log(lastNode.name);
-        lastNode.gameObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
     }
     
     void DrawEdges()
