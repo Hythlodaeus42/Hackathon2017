@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -175,28 +175,30 @@ public class LoadGraph : MonoBehaviour {
 
         foreach (string row in rows)
         {
-            string[] rowAttributes = row.Split(","[0]);
+            if (row != "")
+            {
+                string[] rowAttributes = row.Split(","[0]);
 
-            float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
-            float layerx = float.Parse(rowAttributes[2]) * layerscale * xscale;
-            float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
+                float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
+                float layerx = float.Parse(rowAttributes[2]) * layerscale * xscale;
+                float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
 
 
-            //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
-            //Quaternion target = Quaternion.Euler(90, 0, 0);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
+                //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
+                //Quaternion target = Quaternion.Euler(90, 0, 0);
+                //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
-            //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
-            Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
-            
+                //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
+                Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
 
-            Transform layerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
-            RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
-            layerInstance.name = rowAttributes[1];
-            layerInstance.localPosition = new Vector3(0, y, 0);
-            layerInstance.Rotate(90, 0, 0);
-            layerRect.sizeDelta = new Vector2(layerx, layerz);
 
+                Transform layerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
+                layerInstance.name = rowAttributes[1];
+                layerInstance.localPosition = new Vector3(0, y, 0);
+                layerInstance.Rotate(90, 0, 0);
+                layerRect.sizeDelta = new Vector2(layerx, layerz);
+            }
         }
 
     }
