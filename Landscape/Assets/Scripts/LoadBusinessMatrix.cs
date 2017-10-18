@@ -14,9 +14,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
     private Transform matrixTransform;
 
-    private float xscale = 2f;
-    private float yscale = 5f;
-    private float zscale = 1f;
+    private float xscale;
+    private float yscale;
+    private float zscale;
 
     private float xpad = 0.02f;
     private float ypad = 0.02f;
@@ -31,7 +31,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
     void Start () {
         // load XML document
 
-
+        xscale = prefabAppBlock.localScale.x;
+        yscale = prefabAppBlock.localScale.y;
+        zscale = prefabAppBlock.localScale.z;
 
 
         matrixTransform = GameObject.Find("BusinessArchitectureMatrix").transform;
@@ -58,8 +60,8 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[6]);
-                float y = float.Parse(rowAttributes[5]);
+                float x = float.Parse(rowAttributes[6]) * (xscale + xpad);
+                float y = float.Parse(rowAttributes[5]) * (yscale + ypad);
                 float z = 0;
                 string appName = rowAttributes[3].Trim();
 
@@ -88,7 +90,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         string[] businessFunctionRows = textBusinessFunction.text.Split("\n"[0]);
         string[] assetClassRows = textAssetClass.text.Split("\n"[0]);
 
-        int maxBlockY = 0;
+        float maxBlockY = 0;
 
         //draw row headers
         foreach (string row in businessFunctionRows)
@@ -100,14 +102,14 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodecount.ToString());
 
                 float x = 0;
-                float y = float.Parse(rowAttributes[0]);
+                float y = float.Parse(rowAttributes[0]) * (yscale + ypad);
                 float z = 0;
                 string blockName = rowAttributes[1].Trim();
 
                 //track height of structure
                 if (y > maxBlockY)
                 {
-                    maxBlockY = (int)y;
+                    maxBlockY = y;
                 }
 
                 Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
@@ -131,15 +133,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodecount.ToString());
 
                 float x = -1;
-                float y = float.Parse(rowAttributes[0]);
+                float y = float.Parse(rowAttributes[0]) * (yscale + ypad);
                 float z = 0;
                 string blockName = rowAttributes[1].Trim();
-
-                //track height of structure
-                if (y > maxBlockY)
-                {
-                    maxBlockY = (int)y;
-                }
 
                 Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
 
@@ -152,6 +148,8 @@ public class LoadBusinessMatrix : MonoBehaviour {
             }
         }
 
+        Debug.Log(maxBlockY.ToString());
+
         //draw column headers
         foreach (string row in assetClassRows)
         {
@@ -161,8 +159,8 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[0]);
-                float y = maxBlockY + 1;
+                float x = float.Parse(rowAttributes[0]) * (xscale + xpad);
+                float y = maxBlockY + yscale + ypad;
                 float z = 0;
                 string blockName = rowAttributes[1].Trim();
 
