@@ -61,12 +61,12 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
                 Instantiate(prefabAppBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
 
-                Transform appInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
-                appInstance.transform.localPosition = new Vector3(x, y, z);
-                appInstance.name = appName;
+                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                blockInstance.transform.localPosition = new Vector3(x, y, z);
+                blockInstance.name = appName;
 
-                Text txt = appInstance.GetComponentInChildren<Text>();
-                txt.text = appName;
+                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = appName;
+                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = appName;
 
             }
         }
@@ -111,8 +111,8 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 blockInstance.transform.localPosition = new Vector3(x, y, z);
                 blockInstance.name = blockName;
 
-                Text txt = blockInstance.GetComponentInChildren<Text>();
-                txt.text = blockName;
+                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
+                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
             }
         }
 
@@ -135,6 +135,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
                 blockInstance.transform.localPosition = new Vector3(x, y, z);
                 blockInstance.name = blockName;
+
+                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
+                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
             }
         }
     }
