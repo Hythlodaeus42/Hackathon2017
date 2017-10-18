@@ -56,18 +56,21 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
             if (row != "")
             {
-                string[] rowAttributes = row.Split(","[0]);
+                string[] rowAttributes = row.Split("|"[0]);
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[6]) * (xscale + xpad);
-                float y = float.Parse(rowAttributes[5]) * (yscale + ypad);
+                float x = float.Parse(rowAttributes[5]) * (xscale + xpad);
+                float appcount = float.Parse(rowAttributes[6]);
+                float apprank = float.Parse(rowAttributes[7]); 
+                float y = (float.Parse(rowAttributes[4]) + 0.5f - (apprank - 0.5f) / appcount) * (yscale + ypad);       // y = ([y number] - 1 + [app rank] / [app count]) * (scale + pad)
                 float z = 0;
                 string appName = rowAttributes[3].Trim();
 
                 Instantiate(prefabAppBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
-
+                
                 Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                blockInstance.localScale = new Vector3(blockInstance.localScale.x, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
                 blockInstance.transform.localPosition = new Vector3(x, y, z);
                 blockInstance.name = appName;
 
@@ -97,7 +100,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         {
             if (row != "")
             {
-                string[] rowAttributes = row.Split(","[0]);
+                string[] rowAttributes = row.Split("|"[0]);
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
@@ -128,7 +131,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         {
             if (row != "")
             {
-                string[] rowAttributes = row.Split(","[0]);
+                string[] rowAttributes = row.Split("|"[0]);
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
@@ -155,7 +158,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         {
             if (row != "")
             {
-                string[] rowAttributes = row.Split(","[0]);
+                string[] rowAttributes = row.Split("|"[0]);
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 

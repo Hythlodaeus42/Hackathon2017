@@ -36,4 +36,4 @@ busmat.rank <- busmat.all %>%
 
 # --------------------------
 # write files
-write.table(busmat.rank, "BusinessArchitectureMatrix.csv", sep = ",", row.names = FALSE, quote=FALSE, col.names = FALSE)
+write.table(busmat.rank, "BusinessArchitectureMatrix.csv", sep = "|", row.names = FALSE, quote=FALSE, col.names = FALSE)
