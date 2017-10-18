@@ -14,9 +14,13 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
     private Transform matrixTransform;
 
-    //private float xscale = 2f;
-    //private float yscale = 5f;
-    //private float zscale = 2f;
+    private float xscale = 2f;
+    private float yscale = 5f;
+    private float zscale = 1f;
+
+    private float xpad = 0.02f;
+    private float ypad = 0.02f;
+    private float zpad = 0.02f;
     //private float yoffset = -10f;
     //private float edgexscale = 0.05f;
     //private float edgeyscale = 0.05f;
@@ -80,6 +84,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         TextAsset textBusinessFunction = Resources.Load("BusinessFunction") as TextAsset;
         TextAsset textAssetClass = Resources.Load("AssetClass") as TextAsset;
 
+        string[] businessFunctionGroupRows = textBusinessFunctionGroup.text.Split("\n"[0]);
         string[] businessFunctionRows = textBusinessFunction.text.Split("\n"[0]);
         string[] assetClassRows = textAssetClass.text.Split("\n"[0]);
 
@@ -95,6 +100,37 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodecount.ToString());
 
                 float x = 0;
+                float y = float.Parse(rowAttributes[0]);
+                float z = 0;
+                string blockName = rowAttributes[1].Trim();
+
+                //track height of structure
+                if (y > maxBlockY)
+                {
+                    maxBlockY = (int)y;
+                }
+
+                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
+
+                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                blockInstance.transform.localPosition = new Vector3(x, y, z);
+                blockInstance.name = blockName;
+
+                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
+                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
+            }
+        }
+
+        //draw business function groups
+        foreach (string row in businessFunctionGroupRows)
+        {
+            if (row != "")
+            {
+                string[] rowAttributes = row.Split(","[0]);
+                //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
+                //Debug.Log(nodecount.ToString());
+
+                float x = -1;
                 float y = float.Parse(rowAttributes[0]);
                 float z = 0;
                 string blockName = rowAttributes[1].Trim();
