@@ -136,13 +136,15 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodecount.ToString());
 
                 float x = -1;
-                float y = float.Parse(rowAttributes[0]) * (yscale + ypad);
-                float z = 0;
-                string blockName = rowAttributes[1].Trim();
+                float y = (float.Parse(rowAttributes[1]) + float.Parse(rowAttributes[2])) / 2f * (yscale + ypad);
+                float z = -xpad;
+                float len = (float.Parse(rowAttributes[2]) - float.Parse(rowAttributes[1]) + 1) * (yscale + ypad);
+                string blockName = rowAttributes[0].Trim();
 
-                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
+                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.Euler(0, 0, 90), matrixTransform);
 
                 Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                blockInstance.localScale = new Vector3(len, blockInstance.localScale.y, blockInstance.localScale.z);
                 blockInstance.transform.localPosition = new Vector3(x, y, z);
                 blockInstance.name = blockName;
 
