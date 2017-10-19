@@ -60,6 +60,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
             Instantiate(container, new Vector3(0, 0, year - 2018), Quaternion.identity, matrixParentTransform);
             Transform matrixTransform = matrixParentTransform.GetChild(matrixParentTransform.childCount - 1);
             matrixTransform.name = "Matrix" + year.ToString();
+            matrixTransform.localPosition = new Vector3(0, 0, year - 2018);
 
             DrawAxis(matrixTransform);
         }
