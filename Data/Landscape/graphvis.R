@@ -70,7 +70,7 @@ plot(g, layout = l, recale=F)
 
 nodes.layout <- cbind(nodes, l)
 
-names(nodes.layout)[8:9] <- c("X", "Z")
+names(nodes.layout)[11:12] <- c("X", "Z")
 
 
 # -----------------------------------

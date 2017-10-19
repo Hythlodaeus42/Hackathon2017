@@ -1,0 +1,178 @@
+NodeID,LongName,LayerOrdinal,Layer,Critically,Desirability,DisplayWeight,Business Area,Business Function,non-Markets
+Node001,Node001,2,Application,Bronze,AMBER,1,BA01,BF01,
+Node002,Node002,1,Data & Integration,Gold,GREEN,2,BA02,BF02,
+Node003,Node003,4,Channel,Silver,GREEN,1,BA01,BF03,1
+Node004,Node004,3,Service,Platinum,GREEN,1,BA03,BF04,
+Node005,Node005,2,Application,Silver,GREEN,2,BA03,BF04,
+Node006,Node006,3,Service,Gold,GREEN,1,BA02,BF05,
+Node007,Node007,4,Channel,Gold,GREEN,1,BA02,BF06,
+Node008,Node008,4,Channel,Silver,GREEN,1,BA04,BF07,
+Node009,Node009,1,Data & Integration,Gold,GREEN,2,BA05,BF08,
+Node010,Node010,1,Data & Integration,Silver,GREEN,1,BA02,BF05,
+Node011,Node011,4,Channel,Silver,GREEN,1,BA06,BF09,
+Node012,Node012,2,Application,Gold,GREEN,2,BA01,BF10,1
+Node013,Node013,2,Application,Bronze,AMBER,1,BA07,BF11,
+Node014,Node014,4,Channel,Silver,GREEN,1,BA06,BF09,
+Node015,Node015,2,Application,Silver,AMBER,1,BA01,BF01,
+Node016,Node016,2,Application,Silver,AMBER,1,BA01,BF10,1
+Node017,Node017,2,Application,Silver,RED,2,BA01,BF12,1
+Node018,Node018,2,Application,Tin,RED,1,BA01,BF12,1
+Node019,Node019,4,Channel,Silver,GREEN,1,BA03,BF13,
+Node020,Node020,2,Application,Gold,AMBER,1,BA01,BF14,
+Node021,Node021,2,Application,Platinum,AMBER,1,BA08,BF15,1
+Node022,Node022,2,Application,Silver,AMBER,1,BA03,BF03,
+Node023,Node023,4,Channel,Silver,GREEN,1,BA02,BF06,
+Node024,Node024,4,Channel,Silver,GREEN,1,BA09,BF09,
+Node025,Node025,2,Application,Bronze,AMBER,1,BA01,BF01,
+Node026,Node026,4,Channel,Gold,AMBER,1,BA01,BF10,1
+Node027,Node027,2,Application,Tin,AMBER,1,BA01,BF16,1
+Node028,Node028,2,Application,Gold,GREEN,1,BA03,BF17,1
+Node029,Node029,2,Application,Tin,GREEN,1,BA02,BF18,
+Node030,Node030,2,Application,Platinum,GREEN,1,BA01,BF01,1
+Node031,Node031,4,Channel,Tin,GREEN,1,BA03,BF13,
+Node032,Node032,4,Channel,Tin,GREEN,1,BA03,BF13,
+Node033,Node033,4,Channel,Gold,GREEN,1,BA01,BF19,
+Node034,Node034,2,Application,Bronze,GREEN,1,BA03,BF02,
+Node035,Node035,1,Data & Integration,Gold,GREEN,1,BA02,BF05,
+Node036,Node036,4,Channel,Silver,GREEN,1,BA08,BF20,
+Node037,Node037,4,Channel,Platinum,AMBER,1,BA03,BF13,1
+Node038,Node038,2,Application,Gold,AMBER,2,BA01,BF14,1
+Node039,Node039,2,Application,Gold,AMBER,2,BA01,BF14,1
+Node040,Node040,2,Application,Silver,RED,1,BA03,BF21,
+Node041,Node041,2,Application,Silver,RED,1,BA01,BF22,
+Node042,Node042,2,Application,Silver,AMBER,1,BA06,BF23,
+Node043,Node043,4,Channel,Gold,GREEN,1,BA04,BF24,1
+Node044,Node044,2,Application,Gold,GREEN,1,BA03,BF25,
+Node045,Node045,4,Channel,Gold,GREEN,1,BA03,BF13,1
+Node046,Node046,1,Data & Integration,Bronze,GREEN,2,BA01,BF16,1
+Node047,Node047,2,Application,Silver,GREEN,2,BA03,BF25,
+Node048,Node048,2,Application,Bronze,GREEN,1,BA03,BF26,
+Node049,Node049,4,Channel,Tin,GREEN,1,BA02,BF27,
+Node050,Node050,2,Application,Tin,RED,1,BA01,BF03,1
+Node051,Node051,2,Application,Tin,AMBER,1,BA02,BF28,1
+Node052,Node052,2,Application,Gold,GREEN,1,BA02,BF05,
+Node053,Node053,1,Data & Integration,Silver,AMBER,1,BA08,BF19,
+Node054,Node054,2,Application,Silver,RED,2,BA10,BF29,1
+Node055,Node055,2,Application,Gold,AMBER,1,BA11,BF30,
+Node056,Node056,2,Application,Silver,GREEN,1,BA02,BF05,
+Node057,Node057,4,Channel,Bronze,AMBER,1,BA02,BF31,
+Node058,Node058,3,Service,Platinum,GREEN,1,BA02,BF05,
+Node059,Node059,3,Service,Silver,GREEN,1,BA03,BF04,
+Node060,Node060,2,Application,Bronze,GREEN,1,BA09,BF23,1
+Node061,Node061,2,Application,Gold,AMBER,1,BA01,BF19,1
+Node062,Node062,4,Channel,Platinum,AMBER,1,BA03,BF13,
+Node063,Node063,4,Channel,Silver,GREEN,1,BA03,BF13,
+Node064,Node064,2,Application,Platinum,AMBER,2,BA03,BF13,
+Node065,Node065,3,Service,Bronze,GREEN,2,BA03,BF32,
+Node066,Node066,4,Channel,Platinum,AMBER,2,BA12,BF33,
+Node067,Node067,2,Application,Platinum,AMBER,1,BA03,BF13,
+Node068,Node068,4,Channel,Silver,GREEN,1,BA02,BF34,
+Node069,Node069,1,Data & Integration,Silver,GREEN,1,BA10,BF35,1
+Node070,Node070,4,Channel,Silver,GREEN,2,BA03,BF13,
+Node071,Node071,2,Application,Silver,GREEN,2,BA04,BF18,
+Node072,Node072,3,Service,Platinum,GREEN,1,BA03,BF03,1
+Node073,Node073,3,Service,Platinum,AMBER,1,BA03,BF36,
+Node074,Node074,4,Channel,Gold,RED,1,BA03,BF13,1
+Node075,Node075,4,Channel,Silver,GREEN,1,BA04,BF37,
+Node076,Node076,4,Channel,Silver,GREEN,1,BA02,BF38,
+Node077,Node077,4,Channel,Silver,GREEN,1,BA02,BF38,
+Node078,Node078,2,Application,Platinum,GREEN,2,BA02,BF05,
+Node079,Node079,2,Application,Gold,AMBER,2,BA01,BF39,
+Node080,Node080,4,Channel,Tin,RED,1,BA06,BF09,1
+Node081,Node081,2,Application,Tin,AMBER,1,BA02,BF05,1
+Node082,Node082,4,Channel,Silver,GREEN,1,BA09,BF09,
+Node083,Node083,2,Application,Bronze,RED,1,BA01,BF22,1
+Node084,Node084,4,Channel,Silver,GREEN,1,BA02,BF06,
+Node085,Node085,1,Data & Integration,Gold,GREEN,2,BA13,BF40,
+Node086,Node086,4,Channel,Silver,GREEN,1,BA02,BF27,
+Node087,Node087,2,Application,Gold,RED,2,BA10,BF41,1
+Node088,Node088,1,Data & Integration,Gold,GREEN,1,BA08,BF42,
+Node089,Node089,2,Application,Gold,GREEN,2,BA03,BF17,
+Node090,Node090,4,Channel,Silver,GREEN,1,BA14,BF07,
+Node091,Node091,3,Service,Platinum,GREEN,1,BA15,BF43,1
+Node092,Node092,2,Application,Platinum,AMBER,3,BA10,BF44,
+Node093,Node093,3,Service,Gold,AMBER,1,BA08,BF15,1
+Node094,Node094,1,Data & Integration,Tin,AMBER,1,BA03,BF45,
+Node095,Node095,2,Application,Tin,AMBER,1,BA01,BF46,
+Node096,Node096,2,Application,Silver,RED,2,BA03,BF17,
+Node097,Node097,2,Application,Platinum,RED,3,BA16,BF47,
+Node098,Node098,2,Application,Platinum,RED,2,BA06,BF19,
+Node099,Node099,4,Channel,Silver,GREEN,1,BA09,BF09,
+Node100,Node100,2,Application,Bronze,AMBER,1,BA01,BF01,1
+Node101,Node101,2,Application,Bronze,AMBER,1,BA01,BF48,1
+Node102,Node102,4,Channel,Silver,GREEN,1,BA02,BF31,
+Node103,Node103,2,Application,Gold,GREEN,2,BA04,BF18,
+Node104,Node104,4,Channel,Gold,GREEN,1,BA03,BF13,1
+Node105,Node105,3,Service,Platinum,AMBER,1,BA15,BF49,1
+Node106,Node106,3,Service,Platinum,GREEN,1,BA03,BF13,1
+Node107,Node107,2,Application,Silver,GREEN,1,BA03,BF04,
+Node108,Node108,2,Application,Tin,RED,1,BA03,BF04,
+Node109,Node109,2,Application,Silver,AMBER,1,BA17,BF50,1
+Node110,Node110,2,Application,Tin,AMBER,1,BA08,BF19,
+Node111,Node111,2,Application,Silver,AMBER,1,BA01,BF48,
+Node112,Node112,2,Application,Silver,AMBER,1,BA03,BF17,
+Node113,Node113,2,Application,Silver,AMBER,1,BA10,BF51,1
+Node114,Node114,4,Channel,Gold,GREEN,1,BA03,BF13,
+Node115,Node115,3,Service,Silver,GREEN,1,BA02,BF02,
+Node116,Node116,4,Channel,Silver,GREEN,1,BA02,BF05,
+Node117,Node117,4,Channel,Silver,GREEN,1,BA02,BF27,
+Node118,Node118,1,Data & Integration,Silver,GREEN,2,BA13,BF52,
+Node119,Node119,2,Application,Bronze,RED,1,BA03,BF26,
+Node120,Node120,2,Application,tin,RED,1,BA02,BF05,
+Node121,Node121,4,Channel,Tin,GREEN,1,BA03,BF13,
+Node122,Node122,2,Application,Silver,GREEN,2,BA03,BF17,1
+Node123,Node123,2,Application,Platinum,GREEN,3,BA04,BF53,
+Node124,Node124,2,Application,Gold,AMBER,1,BA09,BF23,
+Node125,Node125,2,Application,Silver,AMBER,1,BA03,BF54,
+Node126,Node126,4,Channel,Bronze,AMBER,1,BA03,BF13,
+Node127,Node127,2,Application,Silver,RED,1,BA06,BF23,
+Node128,Node128,4,Channel,Silver,AMBER,1,BA03,BF13,
+Node129,Node129,2,Application,Bronze,GREEN,1,BA03,BF55,1
+Node130,Node130,1,Data & Integration,Tin,RED,1,BA03,BF26,
+Node131,Node131,3,Service,Silver,GREEN,2,BA13,BF56,
+Node132,Node132,2,Application,Bronze,GREEN,1,BA03,BF55,1
+Node133,Node133,4,Channel,Silver,GREEN,1,BA08,BF08,
+Node134,Node134,3,Service,Platinum,GREEN,1,BA18,BF57,1
+Node135,Node135,1,Data & Integration,Gold,GREEN,1,BA08,BF58,
+Node136,Node136,2,Application,Silver,GREEN,1,BA08,BF18,1
+Node137,Node137,4,Channel,Silver,GREEN,1,BA02,BF08,
+Node138,Node138,3,Service,Silver,GREEN,1,BA02,BF18,
+Node139,Node139,4,Channel,Silver,RED,1,BA10,BF59,1
+Node140,Node140,4,Channel,Silver,GREEN,1,BA03,BF26,
+Node141,Node141,2,Application,Gold,GREEN,1,BA03,BF26,
+Node142,Node142,4,Channel,Silver,GREEN,1,BA19,BF60,
+Node143,Node143,4,Channel,Gold,RED,1,BA03,BF13,1
+Node144,Node144,4,Channel,Silver,GREEN,1,BA04,BF61,
+Node145,Node145,2,Application,Tin,RED,1,BA08,BF53,
+Node146,Node146,4,Channel,Gold,GREEN,1,BA02,BF27,
+Node147,Node147,1,Data & Integration,Gold,AMBER,1,BA13,BF02,
+Node148,Node148,3,Service,Tin,RED,1,BA08,BF53,
+Node149,Node149,4,Channel,Platinum,RED,1,BA09,BF15,1
+Node150,Node150,4,Channel,Silver,GREEN,1,BA09,BF09,
+Node151,Node151,2,Application,Platinum,GREEN,3,BA20,BF62,
+Node152,Node152,4,Channel,Silver,GREEN,1,BA02,BF27,
+Node153,Node153,3,Service,Silver,GREEN,1,BA20,BF63,
+Node154,Node154,2,Application,Silver,GREEN,1,BA20,BF63,
+Node155,Node155,2,Application,Not Rated,Undefined,1,BA04,BF64,
+Node156,Node156,1,Data & Integration,Gold,GREEN,2,BA13,BF12,
+Node157,Node157,2,Application,Not Rated,GREEN,3,BA20,BF65,
+Node158,Node158,2,Application,Platinum,GREEN,3,BA06,BF66,
+Node159,Node159,2,Application,Silver,GREEN,2,BA03,BF18,
+Node160,Node160,2,Application,Tin,GREEN,1,BA04,BF67,
+Node161,Node161,1,Data & Integration,Gold,AMBER,1,BA13,BF48,
+Node162,Node162,2,Application,Silver,GREEN,2,BA04,BF24,
+Node163,Node163,2,Application,Silver,GREEN,2,BA04,BF24,
+Node164,Node164,1,Data & Integration,Platinum,GREEN,2,BA13,BF18,1
+Node165,Node165,1,Data & Integration,Bronze,RED,1,BA20,BF45,
+Node166,Node166,2,Application,Silver,GREEN,1,BA13,BF18,
+Node167,Node167,4,Channel,Silver,GREEN,1,BA16,BF68,
+Node168,Node168,2,Application,Silver,RED,1,BA16,BF18,
+Node169,Node169,4,Channel,Silver,GREEN,1,BA03,BF69,
+Node170,Node170,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node171,Node171,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node172,Node172,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node173,Node173,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node174,Node174,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node175,Node175,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node176,Node176,4,Channel,Silver,GREEN,1,BA03,BF69,1
+Node177,Node177,4,Channel,Silver,GREEN,1,BA03,BF69,1
