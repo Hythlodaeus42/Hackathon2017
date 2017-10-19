@@ -12,7 +12,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
     public Transform prefabAppBlock;
     public Transform prefabAxisBlock;
 
-    private Transform matrixTransform;
+    private Transform matrixParentTransform;
 
     private float xscale;
     private float yscale;
@@ -28,7 +28,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start() {
         // load XML document
 
         xscale = prefabAppBlock.localScale.x;
@@ -36,14 +36,38 @@ public class LoadBusinessMatrix : MonoBehaviour {
         zscale = prefabAppBlock.localScale.z;
 
 
-        matrixTransform = GameObject.Find("BusinessArchitectureMatrix").transform;
+        matrixParentTransform = GameObject.Find("BusinessArchitectureMatrix").transform;
 
-        // draw model
-        DrawAxis();
-        DrawApps();
+        // draw matrices
+        BuildMatrices();
 
     }
 
+
+    void BuildMatrices()
+    {
+        GameObject container = new GameObject();
+
+        //get years
+        TextAsset textMatrix = Resources.Load("MatrixYears") as TextAsset;
+        string[] matrixRows = textMatrix.text.Split("\n"[0]);
+
+        //loop through years and build axis
+        foreach (string row in matrixRows)
+        {
+            int year = int.Parse(row);
+
+            Instantiate(container, new Vector3(0, 0, year - 2018), Quaternion.identity, matrixParentTransform);
+            Transform matrixTransform = matrixParentTransform.GetChild(matrixParentTransform.childCount - 1);
+            matrixTransform.name = "Matrix" + year.ToString();
+
+            DrawAxis(matrixTransform);
+        }
+
+            
+        DrawApps();
+
+    }
 
     void DrawApps()
     {
@@ -60,12 +84,15 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[5]) * (xscale + xpad);
-                float appcount = float.Parse(rowAttributes[6]);
-                float apprank = float.Parse(rowAttributes[7]); 
-                float y = (float.Parse(rowAttributes[4]) + 0.5f - (apprank - 0.5f) / appcount) * (yscale + ypad);       // y = ([y number] - 1 + [app rank] / [app count]) * (scale + pad)
+                float x = float.Parse(rowAttributes[6]) * (xscale + xpad);
+                float appcount = float.Parse(rowAttributes[7]);
+                float apprank = float.Parse(rowAttributes[8]); 
+                float y = (float.Parse(rowAttributes[5]) + 0.5f - (apprank - 0.5f) / appcount) * (yscale + ypad);       // y = ([y number] - 1 + [app rank] / [app count]) * (scale + pad)
                 float z = 0;
-                string appName = rowAttributes[3].Trim();
+                int year = int.Parse(rowAttributes[2]);
+                string appName = rowAttributes[4].Trim();
+
+                Transform matrixTransform = matrixParentTransform.Find("Matrix" + year.ToString());
 
                 Instantiate(prefabAppBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
                 
@@ -83,7 +110,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
     }
 
 
-    void DrawAxis()
+    void DrawAxis(Transform matrixTransform)
     {
         TextAsset textBusinessFunctionGroup = Resources.Load("BusinessFunctionGroup") as TextAsset;
         TextAsset textBusinessFunction = Resources.Load("BusinessFunction") as TextAsset;
@@ -104,10 +131,10 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = 0;
-                float y = float.Parse(rowAttributes[0]) * (yscale + ypad);
+                float x = -(xscale + xpad);
+                float y = float.Parse(rowAttributes[1]) * (yscale + ypad);
                 float z = 0;
-                string blockName = rowAttributes[1].Trim();
+                string blockName = rowAttributes[0].Trim();
 
                 //track height of structure
                 if (y > maxBlockY)
@@ -135,9 +162,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = -1;
+                float x = -yscale - xscale - xpad;
                 float y = (float.Parse(rowAttributes[1]) + float.Parse(rowAttributes[2])) / 2f * (yscale + ypad);
-                float z = -xpad;
+                float z = 0;
                 float len = (float.Parse(rowAttributes[2]) - float.Parse(rowAttributes[1]) + 1) * (yscale + ypad);
                 string blockName = rowAttributes[0].Trim();
 
@@ -153,7 +180,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
             }
         }
 
-        Debug.Log(maxBlockY.ToString());
+        //Debug.Log(maxBlockY.ToString());
 
         //draw column headers
         foreach (string row in assetClassRows)
@@ -164,10 +191,10 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[0]) * (xscale + xpad);
+                float x = float.Parse(rowAttributes[1]) * (xscale + xpad);
                 float y = maxBlockY + yscale + ypad;
                 float z = 0;
-                string blockName = rowAttributes[1].Trim();
+                string blockName = rowAttributes[0].Trim();
 
                 Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
 

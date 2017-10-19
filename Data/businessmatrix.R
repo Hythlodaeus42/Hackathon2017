@@ -1,6 +1,6 @@
 # install.packages("dplyr")
 library(dplyr)
-library(plyr)
+# library(plyr)
 
 # --------------------------
 # load data
@@ -11,10 +11,10 @@ busmat <- read.csv(paste(path, 'BusinessArchitectureMatrix.csv', sep = ''), sep=
 bf <- read.csv(paste(path, 'BusinessFunction.csv', sep = ''), sep="|", stringsAsFactors=F, header=F)
 ac <- read.csv(paste(path, 'AssetClass.csv', sep = ''), sep="|", stringsAsFactors=F, header=F)
 
-names(busmat) <- c('bfg', 'bf', 'ac', 'app')
-# names(bfg) <- c('bfg.ord', 'bfg')
-names(bf) <- c('bf.ord', 'bf')
-names(ac) <- c('ac.ord', 'ac')
+names(busmat) <- c('bfg', 'bf', 'ac', 'app', 'year')
+# names(bfg) <- c('bfg', 'bfg.ord')
+names(bf) <- c('bf', 'bf.ord')
+names(ac) <- c('ac', 'ac.ord')
 
 # --------------------------
 # add ordinals
@@ -25,13 +25,13 @@ busmat.all <- merge(busmat.all, ac, by = 'ac')
 
 # --------------------------
 # count multiples at intersections
-busmat.count <- aggregate(app ~ bf + ac, data = busmat.all, FUN = length)
-busmat.all <- merge(busmat.all, busmat.count, by = c('bf', 'ac'))
-names(busmat.all)[c(4, 7)] <- c('app', 'count')
+busmat.count <- aggregate(app ~ bf + ac + year, data = busmat.all, FUN = length)
+busmat.all <- merge(busmat.all, busmat.count, by = c('bf', 'ac', 'year'))
+names(busmat.all)[c(5, 8)] <- c('app', 'count')
 
 busmat.rank <- busmat.all %>% 
-  arrange(bf, ac, app) %>%
-  group_by(bf, ac) %>%
+  arrange(bf, ac, year, app) %>%
+  group_by(bf, ac, year) %>%
   mutate(rank=row_number())
 
 # --------------------------
