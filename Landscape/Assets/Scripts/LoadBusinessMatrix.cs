@@ -11,6 +11,7 @@ using System.IO;
 public class LoadBusinessMatrix : MonoBehaviour {
     public Transform prefabAppBlock;
     public Transform prefabAxisBlock;
+    public Transform prefabContainer;
 
     private Transform matrixParentTransform;
 
@@ -46,8 +47,6 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
     void BuildMatrices()
     {
-        GameObject container = new GameObject();
-
         //get years
         TextAsset textMatrix = Resources.Load("MatrixYears") as TextAsset;
         string[] matrixRows = textMatrix.text.Split("\n"[0]);
@@ -57,7 +56,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
         {
             int year = int.Parse(row);
 
-            Instantiate(container, new Vector3(0, 0, year - 2018), Quaternion.identity, matrixParentTransform);
+            Instantiate(prefabContainer, new Vector3(0, 0, year - 2018), Quaternion.identity, matrixParentTransform);
             Transform matrixTransform = matrixParentTransform.GetChild(matrixParentTransform.childCount - 1);
             matrixTransform.name = "Matrix" + year.ToString();
             matrixTransform.localPosition = new Vector3(0, 0, year - 2018);

@@ -133,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477848530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -4, z: 5}
+  m_LocalPosition: {x: -5, y: -4, z: 10}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -153,6 +153,8 @@ MonoBehaviour:
   prefabAppBlock: {fileID: 4408260399842018, guid: 3842ea758672f074c980c5eb37a88b96,
     type: 2}
   prefabAxisBlock: {fileID: 4408260399842018, guid: bd3f38c1637e1c14da7912dc649e69fe,
+    type: 2}
+  prefabContainer: {fileID: 4485068404231290, guid: ba927d028069248458ec66c0e33a8673,
     type: 2}
 --- !u!114 &477848533
 MonoBehaviour:
@@ -391,7 +393,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 959185928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 3, z: 5}
+  m_LocalPosition: {x: -6, y: 3, z: 10}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 767077251}
@@ -450,8 +452,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998474381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: -3, z: 20}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 12, y: -3, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -478,6 +480,7 @@ MonoBehaviour:
   prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6, type: 2}
   prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
     type: 2}
+  hologramScale: 0.25
 --- !u!114 &998474384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +655,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.85
   far clip plane: 1000
   field of view: 60
   orthographic: 0
