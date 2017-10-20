@@ -154,6 +154,8 @@ MonoBehaviour:
     type: 2}
   prefabAxisBlock: {fileID: 4408260399842018, guid: bd3f38c1637e1c14da7912dc649e69fe,
     type: 2}
+  prefabContainer: {fileID: 4485068404231290, guid: ba927d028069248458ec66c0e33a8673,
+    type: 2}
 --- !u!114 &477848533
 MonoBehaviour:
   m_ObjectHideFlags: 0
