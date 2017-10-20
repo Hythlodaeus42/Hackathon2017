@@ -14,6 +14,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeService;
     public Transform prefabEdge;
     public Transform prefabLayer;
+    public float hologramScale;
 
     private Transform graphTransform;
     
@@ -52,6 +53,8 @@ public class LoadGraph : MonoBehaviour {
         DrawNodes();
         DrawEdges();
         DrawLayers();
+
+        graphTransform.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
     }
 
     void DrawNodes()
