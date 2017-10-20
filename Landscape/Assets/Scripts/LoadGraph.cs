@@ -209,6 +209,13 @@ public class LoadGraph : MonoBehaviour {
                 layerInstance.localPosition = new Vector3(0, 0, 0);
                 layerInstance.Rotate(90, 0, 0);
                 layerRect.sizeDelta = new Vector2(layerx, layerz);
+
+                //set layer text
+                layerInstance.Find("Panel/North").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/South").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
+
             }
         }
 
