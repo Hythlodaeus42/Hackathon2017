@@ -478,6 +478,8 @@ MonoBehaviour:
   prefabNodeService: {fileID: 4036091980589840, guid: 0b3b7ccb67243e340b0012909363ac4a,
     type: 2}
   prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6, type: 2}
+  prefabLayerContainer: {fileID: 4485068404231290, guid: ba927d028069248458ec66c0e33a8673,
+    type: 2}
   prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
     type: 2}
   hologramScale: 0.25
@@ -553,6 +555,14 @@ Prefab:
     - target: {fileID: 4187870614002072, guid: 6085c789819d5464b912ca91557654c6, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187870614002072, guid: 6085c789819d5464b912ca91557654c6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187870614002072, guid: 6085c789819d5464b912ca91557654c6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6085c789819d5464b912ca91557654c6, type: 2}

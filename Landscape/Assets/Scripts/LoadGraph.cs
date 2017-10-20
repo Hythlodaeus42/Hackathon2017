@@ -13,6 +13,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeChannel;
     public Transform prefabNodeService;
     public Transform prefabEdge;
+    public Transform prefabLayerContainer;
     public Transform prefabLayer;
     public float hologramScale;
 
@@ -50,9 +51,9 @@ public class LoadGraph : MonoBehaviour {
         graphTransform = GameObject.Find("Landscape").transform;
 
         // draw model
+        DrawLayers();
         DrawNodes();
         DrawEdges();
-        DrawLayers();
 
         graphTransform.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
     }
@@ -68,44 +69,51 @@ public class LoadGraph : MonoBehaviour {
         string nodeName = "dummy";
         string nodeType = "Default";
         string nodeLongName = "dummy";
+        int layerOrdinal;
 
         foreach (XElement node in xmlNodes)
         {
+            layerOrdinal = int.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault());
             x = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_X").Select(a => a.Value).FirstOrDefault()) * xscale;
-            y = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault()) * yscale + yoffset;
+            y = layerOrdinal * yscale + yoffset;
             z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault()) * zscale;
             nodeName = node.Attribute("id").Value;
             nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
             nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
 
+            Transform layerContainer = graphTransform.Find("Layer" + layerOrdinal.ToString());
+
             switch (nodeType)
             {
                 case "Application":
-                    Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                    Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 case "Service":
-                    Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                    Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 case "Channel":
-                    Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                    Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 default:
-                    Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, graphTransform);
+                    Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
             }
 
-            Transform nodeInstance = graphTransform.GetChild(graphTransform.childCount - 1);
-            nodeInstance.localPosition = new Vector3(x, y, z);
+            Transform nodeInstance = layerContainer.GetChild(layerContainer.childCount - 1);
+            nodeInstance.localPosition = new Vector3(x, 0, z);
             nodeInstance.name = nodeName;
 
             NodeProperties nodeProperties = nodeInstance.gameObject.GetComponent<NodeProperties>();
             nodeProperties.NodeID = node.Attribute("id").Value;
             nodeProperties.LongName = nodeLongName;
-            nodeProperties.LayerOrdinal = node.Descendants().Where(a => a.Attribute("key").Value == "v_LayerOrdinal").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.LayerOrdinal = layerOrdinal.ToString();
             nodeProperties.Layer = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
             nodeProperties.Critically = node.Descendants().Where(a => a.Attribute("key").Value == "v_Critically").Select(a => a.Value).FirstOrDefault();
             nodeProperties.Desirability = node.Descendants().Where(a => a.Attribute("key").Value == "v_Desirability").Select(a => a.Value).FirstOrDefault();
             nodeProperties.DisplayWeight = node.Descendants().Where(a => a.Attribute("key").Value == "v_DisplayWeight").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.BusinessArea = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Area").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.BusinessFunction = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Function").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.IsMarkets = node.Descendants().Where(a => a.Attribute("key").Value == "v_non.Markets").Select(a => a.Value).FirstOrDefault() != "1";
 
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
 
@@ -187,23 +195,34 @@ public class LoadGraph : MonoBehaviour {
                 float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
 
 
+                Instantiate(prefabLayerContainer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+                Transform containerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                containerInstance.name = "Layer" + rowAttributes[0];
+
                 //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
                 //Quaternion target = Quaternion.Euler(90, 0, 0);
                 //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
                 //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
-                Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+                Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, containerInstance);
 
-
-                Transform layerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                Transform layerInstance = containerInstance.GetChild(containerInstance.childCount - 1);
                 RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
                 layerInstance.name = rowAttributes[1];
-                layerInstance.localPosition = new Vector3(0, y, 0);
+                layerInstance.localPosition = new Vector3(0, 0, 0);
                 layerInstance.Rotate(90, 0, 0);
                 layerRect.sizeDelta = new Vector2(layerx, layerz);
+
+                //set layer text
+                layerInstance.Find("Panel/North").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/South").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
+                layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
+
             }
         }
 
     }
 
 }
+
