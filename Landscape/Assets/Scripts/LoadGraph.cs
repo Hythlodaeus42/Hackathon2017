@@ -111,6 +111,9 @@ public class LoadGraph : MonoBehaviour {
             nodeProperties.Critically = node.Descendants().Where(a => a.Attribute("key").Value == "v_Critically").Select(a => a.Value).FirstOrDefault();
             nodeProperties.Desirability = node.Descendants().Where(a => a.Attribute("key").Value == "v_Desirability").Select(a => a.Value).FirstOrDefault();
             nodeProperties.DisplayWeight = node.Descendants().Where(a => a.Attribute("key").Value == "v_DisplayWeight").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.BusinessArea = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Area").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.BusinessFunction = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Function").Select(a => a.Value).FirstOrDefault();
+            nodeProperties.IsMarkets = node.Descendants().Where(a => a.Attribute("key").Value == "v_non.Markets").Select(a => a.Value).FirstOrDefault() != "1";
 
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
 
