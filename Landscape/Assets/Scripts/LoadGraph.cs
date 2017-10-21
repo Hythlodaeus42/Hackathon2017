@@ -155,6 +155,18 @@ public class LoadGraph : MonoBehaviour {
         }
 
     }
+
+    void AddChildTag(Transform trn, string tag)
+    {
+        //create empty child object to hold tag
+        GameObject child = new GameObject("Tag");
+
+        //tag child
+        child.tag = tag;
+
+        //add tag to game object
+        child.transform.parent = trn.transform;
+    }
     
     void DrawEdges()
     {
@@ -182,6 +194,11 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.flowRate = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Frequency").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.dataClass = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Data").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.isBidirectional = (int.Parse(edge.Descendants().Where(a => a.Attribute("key").Value == "e_Direction").Select(a => a.Value).FirstOrDefault()) == 2);
+
+
+            //tag edges with node layers
+            AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
+            AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
