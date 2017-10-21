@@ -263,6 +263,9 @@ MonoBehaviour:
   Critically: 
   Desirability: 
   DisplayWeight: 
+  BusinessArea: 
+  BusinessFunction: 
+  IsMarkets: 0
 --- !u!122 &122789769696261136
 Halo:
   m_ObjectHideFlags: 1
@@ -273,7 +276,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 1690825966
-  m_Size: 2
+  m_Size: 0.2
 --- !u!135 &135231642905252254
 SphereCollider:
   m_ObjectHideFlags: 1
