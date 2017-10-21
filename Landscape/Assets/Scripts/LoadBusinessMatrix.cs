@@ -13,6 +13,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
     public Transform prefabAxisBlock;
     public Transform prefabTitleBlock;
     public Transform prefabContainer;
+    public bool startVisible;
 
     private Transform matrixParentTransform;
 
@@ -42,9 +43,19 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
         // draw matrices
         BuildMatrices();
-
+        SetStartActiveStatus();
     }
 
+    void SetStartActiveStatus()
+    {
+        if (!startVisible)
+        {
+            foreach (Transform matrix in matrixParentTransform.GetComponentInChildren<Transform>(true))
+            {
+                matrix.GetComponent<ContainerBehaviour>().toggleVisibility();
+            }
+        }
+    }
 
     void BuildMatrices()
     {

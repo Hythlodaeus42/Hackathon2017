@@ -17,6 +17,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabLayerContainer;
     public Transform prefabLayer;
     public float hologramScale;
+    public bool startVisible;
 
     private Transform parentContainer;
     private Transform graphTransform;
@@ -59,6 +60,8 @@ public class LoadGraph : MonoBehaviour {
         DrawEdges();
 
         graphTransform.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+
+        SetStartActiveStatus();
     }
 
     void CreateYearContainers()
@@ -69,6 +72,17 @@ public class LoadGraph : MonoBehaviour {
         yearContainer.name = "Landscape2018";
 
         graphTransform = yearContainer;
+    }
+
+    void SetStartActiveStatus()
+    {
+        if (!startVisible)
+        {
+            foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
+            {
+                landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
+            }
+        }
     }
 
     void DrawNodes()

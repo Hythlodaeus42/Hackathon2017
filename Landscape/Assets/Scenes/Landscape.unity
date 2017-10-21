@@ -437,6 +437,7 @@ MonoBehaviour:
   prefabLayer: {fileID: 224608388392013916, guid: e62d375378a6a874cbcdf789678f2150,
     type: 2}
   hologramScale: 0.25
+  startVisible: 0
 --- !u!114 &998474385
 MonoBehaviour:
   m_ObjectHideFlags: 0
