@@ -7,6 +7,7 @@ public class GazeGestureManager : MonoBehaviour
 
     // Represents the hologram that is currently being gazed at.
     public GameObject FocusedObject { get; private set; }
+    public GameObject LastClickedObject { get; private set; }
 
     GestureRecognizer recognizer;
 
@@ -23,8 +24,15 @@ public class GazeGestureManager : MonoBehaviour
             if (FocusedObject != null)
             {
                 FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                Debug.Log("OnSelect message sent to " + FocusedObject.name);
+                //Debug.Log("OnSelect message sent to " + FocusedObject.name);
             }
+
+            if (LastClickedObject != FocusedObject && LastClickedObject != null)
+            {
+                LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+            }
+
+            LastClickedObject = FocusedObject;
         };
         recognizer.StartCapturingGestures();
     }

@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MouseManager : MonoBehaviour {
-	private GameObject hitObject; 
-    private float nextClick = 0;
-    private bool click = true;
+	private GameObject hitObject;
+    public GameObject LastClickedObject = null;
 
     // Use this for initialization
     void Start () {
@@ -15,44 +14,42 @@ public class MouseManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (click)
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
+            //Debug.Log ("pressed left");
+            RaycastHit hitInfo;
+            Ray rayCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(rayCamera, out hitInfo))
             {
-                //Debug.Log ("pressed left");
-                RaycastHit hitInfo;
-                Ray rayCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
+                hitObject = hitInfo.collider.gameObject;
 
-                if (Physics.Raycast(rayCamera, out hitInfo))
+                if (hitObject != null)
                 {
-                    hitObject = hitInfo.collider.gameObject;
+                    Debug.Log(hitObject.name);
+                    hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
 
-                    if (hitObject != null)
-                    {
-                        Debug.Log(hitObject.name);
-                        hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                    }
 
                 }
-                //else
-                //{
-                //    hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                //}
 
-                //nextClick = Time.time + 0.2f;
-                //click = false;
-
-            }
-            else
-            {
-                if (Input.GetMouseButtonDown(0))
+                if (LastClickedObject != hitObject && LastClickedObject != null)
                 {
-                    Debug.Log("Click2");
-                    click = true;
+                    LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 }
+
+                LastClickedObject = hitObject;
+
             }
+            //else
+            //{
+            //    hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+            //}
+
+            //nextClick = Time.time + 0.2f;
+            //click = false;
+
         }
+    }
 
-			
-	}
+		
 }
