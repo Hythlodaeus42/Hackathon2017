@@ -18,7 +18,7 @@ public class NodeBehaviour : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("NodeBehaviour.Start(): " + this.name);
+        //Debug.Log("NodeBehaviour.Start(): " + this.name);
         //       mainCanvas = GameObject.Find("MainCanvas").GetComponent<Canvas>();
         //       systemText = GameObject.Find("SystemText").GetComponent<Text>();
         //       mainText = GameObject.Find("MainText").GetComponent<Text>();
@@ -36,7 +36,7 @@ public class NodeBehaviour : MonoBehaviour
 
     void OnSelect()
     {
-        Debug.Log("NodeBehaviour.OnSelect() called");
+        //Debug.Log("NodeBehaviour.OnSelect() called");
 
         if (Time.time > nextClick)
         {

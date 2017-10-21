@@ -6,20 +6,16 @@ public class TimelineBehaviour : MonoBehaviour {
 
     void OnSelect()
     {
-        //Debug.Log("TimelineBehaviour.OnSelect(): " + this.name);
-
         string year = this.name.Split(" "[0])[1];
-        //Debug.Log(year);
 
-        GameObject matrix = GameObject.Find("Matrix" + year);
-
-        if (matrix != null)
+        GameObject matrixParent = GameObject.Find("BusinessArchitectureMatrix");
+        foreach (Transform matrix in matrixParent.GetComponentInChildren<Transform>(true))
         {
-            Debug.Log(matrix.name);
-        }
-        else
-        {
-            Debug.Log("nothing found");
+            if (matrix.name == "Matrix" + year)
+            {
+                matrix.GetComponent<ContainerBehaviour>().toggleVisibility();
+                break;
+            }
         }
     }
 }
