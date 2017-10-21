@@ -22,7 +22,13 @@ public class BlockBehaviour : MonoBehaviour
 
     void OnSelect()
     {
-        Debug.Log("BlockBehaviour.OnSelect() called");
+        Debug.Log("BlockBehaviour.OnSelect():" + this.name);
+
+        if (this.name == "2018")
+        {
+
+        }
+
 
         // set selected
         selected = !selected;

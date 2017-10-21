@@ -11,6 +11,7 @@ using System.IO;
 public class LoadBusinessMatrix : MonoBehaviour {
     public Transform prefabAppBlock;
     public Transform prefabAxisBlock;
+    public Transform prefabTitleBlock;
     public Transform prefabContainer;
 
     private Transform matrixParentTransform;
@@ -61,7 +62,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
             matrixTransform.name = "Matrix" + year.ToString();
             matrixTransform.localPosition = new Vector3(0, 0, year - 2018);
 
-            DrawAxis(matrixTransform);
+            DrawAxis(matrixTransform, year);
         }
 
             
@@ -94,23 +95,15 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
                 Transform matrixTransform = matrixParentTransform.Find("Matrix" + year.ToString());
 
-                Instantiate(prefabAppBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
-                
-                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                Transform blockInstance = AddBlock(x, y, z, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
                 blockInstance.localScale = new Vector3(blockInstance.localScale.x, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
-                blockInstance.transform.localPosition = new Vector3(x, y, z);
-                blockInstance.name = appName;
-
-                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = appName;
-                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = appName;
-
             }
         }
         
     }
 
 
-    void DrawAxis(Transform matrixTransform)
+    void DrawAxis(Transform matrixTransform, int year)
     {
         TextAsset textBusinessFunctionGroup = Resources.Load("BusinessFunctionGroup") as TextAsset;
         TextAsset textBusinessFunction = Resources.Load("BusinessFunction") as TextAsset;
@@ -142,16 +135,14 @@ public class LoadBusinessMatrix : MonoBehaviour {
                     maxBlockY = y;
                 }
 
-                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
+                AddBlock(x, y, z, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
 
-                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
-                blockInstance.transform.localPosition = new Vector3(x, y, z);
-                blockInstance.name = blockName;
-
-                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
-                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
             }
         }
+
+        //draw title block
+        AddBlock(-(xscale + xpad), maxBlockY + yscale + ypad, 0, Quaternion.identity, year.ToString(), prefabTitleBlock, matrixTransform);
+
 
         //draw business function groups
         foreach (string row in businessFunctionGroupRows)
@@ -168,15 +159,9 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 float len = (float.Parse(rowAttributes[2]) - float.Parse(rowAttributes[1]) + 1) * (yscale + ypad);
                 string blockName = rowAttributes[0].Trim();
 
-                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.Euler(0, 0, 90), matrixTransform);
-
-                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+                Transform blockInstance = AddBlock(x, y, z, Quaternion.Euler(0, 0, 90), blockName, prefabAxisBlock, matrixTransform);
                 blockInstance.localScale = new Vector3(len, blockInstance.localScale.y, blockInstance.localScale.z);
-                blockInstance.transform.localPosition = new Vector3(x, y, z);
-                blockInstance.name = blockName;
 
-                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
-                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
             }
         }
 
@@ -196,15 +181,23 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 float z = 0;
                 string blockName = rowAttributes[0].Trim();
 
-                Instantiate(prefabAxisBlock, new Vector3(x, y, z), Quaternion.identity, matrixTransform);
+                AddBlock(x, y, z, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
 
-                Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
-                blockInstance.transform.localPosition = new Vector3(x, y, z);
-                blockInstance.name = blockName;
-
-                blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
-                blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
             }
         }
+    }
+
+    Transform AddBlock(float x, float y, float z, Quaternion rotation, string blockName, Transform prefab, Transform matrixTransform)
+    {
+        Instantiate(prefab, new Vector3(x, y, z), rotation, matrixTransform);
+
+        Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
+        blockInstance.transform.localPosition = new Vector3(x, y, z);
+        blockInstance.name = blockName;
+
+        blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
+        blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
+
+        return blockInstance;
     }
 }
