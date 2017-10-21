@@ -208,6 +208,8 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.fromLayerOrdinal = int.Parse(startNode.GetComponent<NodeProperties>().LayerOrdinal);
             edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
+            edgeInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode;
+
             //tag edges with node layers
             //AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
             //AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
