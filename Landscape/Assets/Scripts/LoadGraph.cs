@@ -16,6 +16,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabEdge;
     public Transform prefabLayerContainer;
     public Transform prefabLayer;
+    public Transform prefabLayerUI;
     public float hologramScale;
     public bool startVisible;
 
@@ -71,6 +72,7 @@ public class LoadGraph : MonoBehaviour {
         yearContainer.localPosition = new Vector3(0, 0, 0);
         yearContainer.name = "Landscape2018";
 
+        // quick option to put all children in year container without refactoring. 
         graphTransform = yearContainer;
     }
 
@@ -145,8 +147,7 @@ public class LoadGraph : MonoBehaviour {
             //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
             nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
-            //Behaviour halo = (Behaviour)nodeInstance.GetComponent("Halo");
-            //halo.
+
             Light light = nodeInstance.GetComponent<Light>();
             light.range = displayWeight / 2f;
             light.enabled = false;
@@ -253,7 +254,7 @@ public class LoadGraph : MonoBehaviour {
                 //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
                 //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
-                Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, containerInstance);
+                Instantiate(prefabLayer, new Vector3(0, 0, 0), Quaternion.identity, containerInstance);
 
                 Transform layerInstance = containerInstance.GetChild(containerInstance.childCount - 1);
                 RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
@@ -267,6 +268,18 @@ public class LoadGraph : MonoBehaviour {
                 layerInstance.Find("Panel/South").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
+
+                //create layer UI
+                Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+
+                Transform uiInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                RectTransform uiRect = uiInstance.gameObject.GetComponent<RectTransform>();
+                uiInstance.name = "LayerUI" + rowAttributes[0];
+                //uiInstance.localPosition = new Vector3(0, y, 0);
+                uiInstance.Rotate(90, 0, 0);
+                uiRect.sizeDelta = new Vector2(layerx, layerz);
+
+                uiInstance.GetComponent<LayerUIBehaviour>().SetUp(containerInstance);
 
             }
         }
