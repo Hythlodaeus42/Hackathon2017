@@ -84,6 +84,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
     void DrawApps()
     {
         TextAsset textMatrix = Resources.Load("BusinessArchitectureMatrix") as TextAsset;
+        Transform matrixTransform;
 
         string[] matrixRows = textMatrix.text.Split("\n"[0]);
 
@@ -96,18 +97,28 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = float.Parse(rowAttributes[6]) * (xscale + xpad);
-                float appcount = float.Parse(rowAttributes[7]);
-                float apprank = float.Parse(rowAttributes[8]); 
-                float y = (float.Parse(rowAttributes[5]) + 0.5f - (apprank - 0.5f) / appcount) * (yscale + ypad);       // y = ([y number] - 1 + [app rank] / [app count]) * (scale + pad)
-                float z = 0;
                 int year = int.Parse(rowAttributes[2]);
                 string appName = rowAttributes[4].Trim();
+                string colour = rowAttributes[5].Trim();
+                float x = float.Parse(rowAttributes[7]) * (xscale + xpad);
+                float appcount = float.Parse(rowAttributes[8]);
+                float apprank = float.Parse(rowAttributes[9]);
+                float y = (float.Parse(rowAttributes[6]) + 0.5f - (apprank - 0.5f) / appcount) * (yscale + ypad);       // y = ([y number] - 1 + [app rank] / [app count]) * (scale + pad)
+                float z = 0;
+                bool leftMatch = (rowAttributes[10] == "TRUE");
+                int contiguous = int.Parse(rowAttributes[11]);
 
-                Transform matrixTransform = matrixParentTransform.Find("Matrix" + year.ToString());
+                matrixTransform = matrixParentTransform.Find("Matrix" + year.ToString());
 
-                Transform blockInstance = AddBlock(x, y, z, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
-                blockInstance.localScale = new Vector3(blockInstance.localScale.x, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
+                if (!leftMatch || appcount > 1)
+                {
+                    Transform blockInstance = AddBlock(x, y, z, contiguous, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
+                    blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
+                } else
+                {
+                    //Transform blockInstance = AddBlock(x, y, z, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
+                    //blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
+                }
             }
         }
         
@@ -146,13 +157,13 @@ public class LoadBusinessMatrix : MonoBehaviour {
                     maxBlockY = y;
                 }
 
-                AddBlock(x, y, z, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
+                AddBlock(x, y, z, 1, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
 
             }
         }
 
         //draw title block
-        AddBlock(-(xscale + xpad), maxBlockY + yscale + ypad, 0, Quaternion.identity, year.ToString(), prefabTitleBlock, matrixTransform);
+        AddBlock(-(xscale + xpad), maxBlockY + yscale + ypad, 0, 1, Quaternion.identity, year.ToString(), prefabTitleBlock, matrixTransform);
 
 
         //draw business function groups
@@ -170,7 +181,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 float len = (float.Parse(rowAttributes[2]) - float.Parse(rowAttributes[1]) + 1) * (yscale + ypad);
                 string blockName = rowAttributes[0].Trim();
 
-                Transform blockInstance = AddBlock(x, y, z, Quaternion.Euler(0, 0, 90), blockName, prefabAxisBlock, matrixTransform);
+                Transform blockInstance = AddBlock(x, y, z, 1, Quaternion.Euler(0, 0, 90), blockName, prefabAxisBlock, matrixTransform);
                 blockInstance.localScale = new Vector3(len, blockInstance.localScale.y, blockInstance.localScale.z);
 
             }
@@ -192,18 +203,18 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 float z = 0;
                 string blockName = rowAttributes[0].Trim();
 
-                AddBlock(x, y, z, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
+                AddBlock(x, y, z, 1, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
 
             }
         }
     }
 
-    Transform AddBlock(float x, float y, float z, Quaternion rotation, string blockName, Transform prefab, Transform matrixTransform)
+    Transform AddBlock(float x, float y, float z, int contiguous, Quaternion rotation, string blockName, Transform prefab, Transform matrixTransform)
     {
         Instantiate(prefab, new Vector3(x, y, z), rotation, matrixTransform);
 
         Transform blockInstance = matrixTransform.GetChild(matrixTransform.childCount - 1);
-        blockInstance.transform.localPosition = new Vector3(x, y, z);
+        blockInstance.transform.localPosition = new Vector3(x + (contiguous - 1) * (xscale + xpad) / 2, y, z);
         blockInstance.name = blockName;
 
         blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;

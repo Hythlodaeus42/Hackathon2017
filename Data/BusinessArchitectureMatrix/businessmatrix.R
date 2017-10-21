@@ -103,7 +103,7 @@ for (y in years) {
 }
 
 # bfg04	bf09	ac01	app11	2018	Green
-# busmat.rank[busmat.rank$year == 2018 & busmat.rank$bf == "bf09", ]
+# busmat.rank[busmat.rank$year == 2018 & busmat.rank$bf == "bf16", ]
 
 
 # View(busmat.rank[busmat.rank$year == y & busmat.rank$bf.ord == b & busmat.rank$ac.ord %in% (a-1):(a + 1), ])
