@@ -13,9 +13,11 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeApplication;
     public Transform prefabNodeChannel;
     public Transform prefabNodeService;
+    public Transform prefabEdgeContainer;
     public Transform prefabEdge;
     public Transform prefabLayerContainer;
     public Transform prefabLayer;
+    public Transform prefabLayerUI;
     public float hologramScale;
     public bool startVisible;
 
@@ -71,6 +73,7 @@ public class LoadGraph : MonoBehaviour {
         yearContainer.localPosition = new Vector3(0, 0, 0);
         yearContainer.name = "Landscape2018";
 
+        // quick option to put all children in year container without refactoring. 
         graphTransform = yearContainer;
     }
 
@@ -142,9 +145,13 @@ public class LoadGraph : MonoBehaviour {
             nodeProperties.BusinessFunction = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Function").Select(a => a.Value).FirstOrDefault();
             nodeProperties.IsMarkets = node.Descendants().Where(a => a.Attribute("key").Value == "v_non.Markets").Select(a => a.Value).FirstOrDefault() != "1";
 
+            //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-
             nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
+
+            Light light = nodeInstance.GetComponent<Light>();
+            light.range = displayWeight / 2f;
+            light.enabled = false;
 
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
@@ -155,10 +162,27 @@ public class LoadGraph : MonoBehaviour {
         }
 
     }
+
+    //void AddChildTag(Transform trn, string tag)
+    //{
+    //    //create empty child object to hold tag
+    //    GameObject child = new GameObject("Tag");
+
+    //    //tag child
+    //    child.tag = tag;
+
+    //    //add tag to game object
+    //    child.transform.parent = trn.transform;
+    //}
     
     void DrawEdges()
     {
-        Debug.Log("start draw edges");
+        //Debug.Log("start draw edges");
+
+        Transform edgeContainer = Instantiate(prefabEdgeContainer, new Vector3(0, 0, 0), Quaternion.identity, graphTransform);
+        edgeContainer.name = "EdgeContainer";
+        edgeContainer.localPosition = new Vector3(0, 0, 0);
+
         foreach (XElement edge in xmlEdges)
         {
             //Debug.Log(edge.Attribute("source").Value);
@@ -169,9 +193,8 @@ public class LoadGraph : MonoBehaviour {
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
 
-
             //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, graphTransform);
-            Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, graphTransform);
+            Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, edgeContainer);
             edgeInstance.LookAt(endNode.transform);
             edgeInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, dist);
 
@@ -182,6 +205,12 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.flowRate = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Frequency").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.dataClass = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Data").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.isBidirectional = (int.Parse(edge.Descendants().Where(a => a.Attribute("key").Value == "e_Direction").Select(a => a.Value).FirstOrDefault()) == 2);
+            edgeProperties.fromLayerOrdinal = int.Parse(startNode.GetComponent<NodeProperties>().LayerOrdinal);
+            edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
+
+            //tag edges with node layers
+            //AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
+            //AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
@@ -231,7 +260,7 @@ public class LoadGraph : MonoBehaviour {
                 //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
                 //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
-                Instantiate(prefabLayer, new Vector3(0, y, 0), Quaternion.identity, containerInstance);
+                Instantiate(prefabLayer, new Vector3(0, 0, 0), Quaternion.identity, containerInstance);
 
                 Transform layerInstance = containerInstance.GetChild(containerInstance.childCount - 1);
                 RectTransform layerRect = layerInstance.gameObject.GetComponent<RectTransform>();
@@ -245,6 +274,21 @@ public class LoadGraph : MonoBehaviour {
                 layerInstance.Find("Panel/South").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
+
+                //set layer properties
+                containerInstance.GetComponent<ContainerProperties>().Ordinal = int.Parse(rowAttributes[0]);
+
+                //create layer UI
+                Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+
+                Transform uiInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                RectTransform uiRect = uiInstance.gameObject.GetComponent<RectTransform>();
+                uiInstance.name = "LayerUI" + rowAttributes[0];
+                //uiInstance.localPosition = new Vector3(0, y, 0);
+                uiInstance.Rotate(90, 0, 0);
+                uiRect.sizeDelta = new Vector2(layerx, layerz);
+
+                uiInstance.GetComponent<LayerUIBehaviour>().SetUp(containerInstance);
 
             }
         }

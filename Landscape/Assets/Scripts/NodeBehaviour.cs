@@ -11,8 +11,6 @@ public class NodeBehaviour : MonoBehaviour
     //private Text systemText;
     //private Text mainText;
 
-    private Behaviour halo;
-
     private bool selected;
     private float nextClick = 0;
 
@@ -38,14 +36,12 @@ public class NodeBehaviour : MonoBehaviour
     {
         //Debug.Log("NodeBehaviour.OnSelect() called");
 
-        if (Time.time > nextClick)
-        {
-            // set selected
-            selected = !selected;
+        // set selected
+        selected = !selected;
 
-            halo = (Behaviour)this.GetComponent("Halo");
-            halo.enabled = selected;
-            //localCanvas.enabled = selected;
+        Light light = this.GetComponent<Light>();
+        light.enabled = selected;
+
 
             /*
             // Display info
@@ -99,8 +95,5 @@ public class NodeBehaviour : MonoBehaviour
 
             } 
             */
-
-            //nextClick = Time.time + 0.05f;
-        }
     }
 }
