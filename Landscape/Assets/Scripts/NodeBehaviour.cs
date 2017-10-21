@@ -43,8 +43,11 @@ public class NodeBehaviour : MonoBehaviour
             // set selected
             selected = !selected;
 
-            halo = (Behaviour)this.GetComponent("Halo");
-            halo.enabled = selected;
+            Light light = this.GetComponent<Light>();
+            light.enabled = selected;
+
+            //halo = (Behaviour)this.GetComponent("Halo");
+            //halo.enabled = selected;
             //localCanvas.enabled = selected;
 
             /*

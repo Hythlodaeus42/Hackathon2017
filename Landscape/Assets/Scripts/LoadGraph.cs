@@ -142,9 +142,14 @@ public class LoadGraph : MonoBehaviour {
             nodeProperties.BusinessFunction = node.Descendants().Where(a => a.Attribute("key").Value == "v_Business.Function").Select(a => a.Value).FirstOrDefault();
             nodeProperties.IsMarkets = node.Descendants().Where(a => a.Attribute("key").Value == "v_non.Markets").Select(a => a.Value).FirstOrDefault() != "1";
 
+            //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-
             nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
+            //Behaviour halo = (Behaviour)nodeInstance.GetComponent("Halo");
+            //halo.
+            Light light = nodeInstance.GetComponent<Light>();
+            light.range = displayWeight / 2f;
+            light.enabled = false;
 
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
