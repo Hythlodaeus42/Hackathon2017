@@ -114,11 +114,17 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 {
                     Transform blockInstance = AddBlock(x, y, z, contiguous, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
                     blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
-                } else
-                {
-                    //Transform blockInstance = AddBlock(x, y, z, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
-                    //blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
-                }
+                    switch (colour)
+                    {
+                        case "Amber":
+                            blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+                            break;
+                        case "White":
+                            blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
+                            break;
+                    }
+                    
+                } 
             }
         }
         
