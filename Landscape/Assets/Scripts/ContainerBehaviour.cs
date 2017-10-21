@@ -14,11 +14,12 @@ public class ContainerBehaviour : MonoBehaviour {
 		
 	}
 
-    public void toggleVisibility()
+    public bool toggleVisibility()
     {
         Debug.Log("toggleVisibility(): " + this.name);
         this.transform.gameObject.SetActive(!this.transform.gameObject.activeSelf);
-        
+
+        return this.transform.gameObject.activeSelf;
     }
 
 }

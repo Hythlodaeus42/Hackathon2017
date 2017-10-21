@@ -13,6 +13,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeApplication;
     public Transform prefabNodeChannel;
     public Transform prefabNodeService;
+    public Transform prefabEdgeContainer;
     public Transform prefabEdge;
     public Transform prefabLayerContainer;
     public Transform prefabLayer;
@@ -176,7 +177,12 @@ public class LoadGraph : MonoBehaviour {
     
     void DrawEdges()
     {
-        Debug.Log("start draw edges");
+        //Debug.Log("start draw edges");
+
+        Transform edgeContainer = Instantiate(prefabEdgeContainer, new Vector3(0, 0, 0), Quaternion.identity, graphTransform);
+        edgeContainer.name = "EdgeContainer";
+        edgeContainer.localPosition = new Vector3(0, 0, 0);
+
         foreach (XElement edge in xmlEdges)
         {
             //Debug.Log(edge.Attribute("source").Value);
@@ -187,9 +193,8 @@ public class LoadGraph : MonoBehaviour {
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
 
-
             //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, graphTransform);
-            Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, graphTransform);
+            Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, edgeContainer);
             edgeInstance.LookAt(endNode.transform);
             edgeInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, dist);
 
@@ -200,7 +205,8 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.flowRate = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Frequency").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.dataClass = edge.Descendants().Where(a => a.Attribute("key").Value == "e_Data").Select(a => a.Value).FirstOrDefault(); ; ;
             edgeProperties.isBidirectional = (int.Parse(edge.Descendants().Where(a => a.Attribute("key").Value == "e_Direction").Select(a => a.Value).FirstOrDefault()) == 2);
-
+            edgeProperties.fromLayerOrdinal = int.Parse(startNode.GetComponent<NodeProperties>().LayerOrdinal);
+            edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             //tag edges with node layers
             AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);

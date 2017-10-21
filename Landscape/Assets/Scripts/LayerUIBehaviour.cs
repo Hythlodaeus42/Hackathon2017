@@ -33,12 +33,26 @@ public class LayerUIBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	public void ToggleLayerVisibility () {
         //Debug.Log("LayerUIBehaviour.SetUp(): " + localLayerContainer.name);
+        bool[] visibility = new bool[5];
+
         localLayerContainer.GetComponent<ContainerBehaviour>().toggleVisibility();
 
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Layer" + localLayerContainer.GetComponent<ContainerProperties>().Ordinal.ToString()))
+        //show/hide edges
+        for (int i = 1; i <= 4; i++)
         {
-            obj.transform.parent.gameObject.SetActive(!obj.transform.parent.gameObject.activeSelf);
-            
+            //Debug.Log(i.ToString());
+            visibility[i] = localLayerContainer.parent.Find("Layer" + i.ToString()).gameObject.activeSelf;
+
+        }
+
+        int layerOrdinal = localLayerContainer.GetComponent<ContainerProperties>().Ordinal;
+        Debug.Log("toggle layer " + layerOrdinal.ToString());
+
+        Debug.Log(localLayerContainer.parent.Find("EdgeContainer").childCount.ToString());
+
+        foreach (Transform trn in localLayerContainer.parent.Find("EdgeContainer"))
+        {
+            trn.gameObject.SetActive(visibility[trn.GetComponent<EdgeProperties>().fromLayerOrdinal] && visibility[trn.GetComponent<EdgeProperties>().toLayerOrdinal]);
         }
     }
 
