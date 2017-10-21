@@ -13,4 +13,9 @@ public class TimelineBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnSelect()
+    {
+        Debug.Log("hello");
+    }
 }
