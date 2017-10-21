@@ -32,9 +32,14 @@ public class LayerUIBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void ToggleLayerVisibility () {
-        //Debug.Log("ToggleLayerVisibility");
-        Debug.Log("LayerUIBehaviour.SetUp(): " + localLayerContainer.name);
+        //Debug.Log("LayerUIBehaviour.SetUp(): " + localLayerContainer.name);
         localLayerContainer.GetComponent<ContainerBehaviour>().toggleVisibility();
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Layer" + localLayerContainer.GetComponent<ContainerProperties>().Ordinal.ToString()))
+        {
+            obj.transform.parent.gameObject.SetActive(!obj.transform.parent.gameObject.activeSelf);
+            
+        }
     }
 
     void Destroy()

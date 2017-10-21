@@ -269,6 +269,9 @@ public class LoadGraph : MonoBehaviour {
                 layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
 
+                //set layer properties
+                containerInstance.GetComponent<ContainerProperties>().Ordinal = int.Parse(rowAttributes[0]);
+
                 //create layer UI
                 Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
 
