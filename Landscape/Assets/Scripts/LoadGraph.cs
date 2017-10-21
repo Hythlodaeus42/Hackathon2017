@@ -163,17 +163,17 @@ public class LoadGraph : MonoBehaviour {
 
     }
 
-    void AddChildTag(Transform trn, string tag)
-    {
-        //create empty child object to hold tag
-        GameObject child = new GameObject("Tag");
+    //void AddChildTag(Transform trn, string tag)
+    //{
+    //    //create empty child object to hold tag
+    //    GameObject child = new GameObject("Tag");
 
-        //tag child
-        child.tag = tag;
+    //    //tag child
+    //    child.tag = tag;
 
-        //add tag to game object
-        child.transform.parent = trn.transform;
-    }
+    //    //add tag to game object
+    //    child.transform.parent = trn.transform;
+    //}
     
     void DrawEdges()
     {
@@ -209,8 +209,8 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             //tag edges with node layers
-            AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
-            AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
+            //AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
+            //AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
