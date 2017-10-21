@@ -24,9 +24,19 @@ public class BlockBehaviour : MonoBehaviour
     {
         Debug.Log("BlockBehaviour.OnSelect():" + this.name);
 
-        if (this.name == "2018")
-        {
+        string year = "2018";
 
+        if (this.name == year)
+        {
+            GameObject landscapeContainer = GameObject.Find("Landscape");
+            foreach (Transform landscape in landscapeContainer.GetComponentInChildren<Transform>(true))
+            {
+                if (landscape.name == "Landscape" + year)
+                {
+                    landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
+                    break;
+                }
+            }
         }
 
 

@@ -421,6 +421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cf4a91a902ab840a935356b73fc846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabLandscapeContainer: {fileID: 4485068404231290, guid: ba927d028069248458ec66c0e33a8673,
+    type: 2}
   prefabNodeDefault: {fileID: 4036091980589840, guid: d4e6f08d614ce344ea20eb72a91332a0,
     type: 2}
   prefabNodeApplication: {fileID: 4036091980589840, guid: 90ef8808b4cb15c4c9d2707c379f7c3a,
