@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33212672094283372}
   - component: {fileID: 136230276330116798}
   - component: {fileID: 23847637919029330}
+  - component: {fileID: 114377021325662406}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -165,6 +166,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4285333503
+--- !u!114 &114377021325662406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014119331432312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6fdb69075689c4790e1ae4b15b1ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136230276330116798
 CapsuleCollider:
   m_ObjectHideFlags: 1

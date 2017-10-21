@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MouseManager : MonoBehaviour {
 	private GameObject hitObject; 
     private float nextClick = 0;
+    private bool click = true;
 
     // Use this for initialization
     void Start () {
@@ -14,27 +15,44 @@ public class MouseManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonUp (0) && Time.time > nextClick)
+        if (click)
         {
-			//Debug.Log ("pressed left");
-			RaycastHit hitInfo;
-			Ray rayCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0))
+            {
+                //Debug.Log ("pressed left");
+                RaycastHit hitInfo;
+                Ray rayCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast (rayCamera, out hitInfo)) {
-				hitObject = hitInfo.collider.gameObject;
+                if (Physics.Raycast(rayCamera, out hitInfo))
+                {
+                    hitObject = hitInfo.collider.gameObject;
 
-				if (hitObject != null) {
-					Debug.Log (hitObject.name);
-					hitObject.SendMessageUpwards ("OnSelect", SendMessageOptions.DontRequireReceiver);
-				}
+                    if (hitObject != null)
+                    {
+                        Debug.Log(hitObject.name);
+                        hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                    }
 
-			} else {
-				hitObject.SendMessageUpwards ("OnSelect", SendMessageOptions.DontRequireReceiver);
-			}
+                }
+                //else
+                //{
+                //    hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                //}
 
-            //nextClick = Time.time + 0.05f;
+                //nextClick = Time.time + 0.2f;
+                //click = false;
 
+            }
+            else
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("Click2");
+                    click = true;
+                }
+            }
         }
+
 			
 	}
 }

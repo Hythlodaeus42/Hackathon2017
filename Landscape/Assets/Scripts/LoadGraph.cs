@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 
 public class LoadGraph : MonoBehaviour {
+    public Transform prefabLandscapeContainer;
     public Transform prefabNodeDefault;
     public Transform prefabNodeApplication;
     public Transform prefabNodeChannel;
@@ -16,9 +17,11 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabLayerContainer;
     public Transform prefabLayer;
     public float hologramScale;
+    public bool startVisible;
 
+    private Transform parentContainer;
     private Transform graphTransform;
-    
+
     private XDocument xmlGraph;
     private IEnumerable<XElement> xmlNodes;
     private IEnumerable<XElement> xmlEdges;
@@ -48,14 +51,38 @@ public class LoadGraph : MonoBehaviour {
             select el;
 
 
-        graphTransform = GameObject.Find("Landscape").transform;
+        parentContainer = GameObject.Find("Landscape").transform;
 
         // draw model
+        CreateYearContainers();
         DrawLayers();
         DrawNodes();
         DrawEdges();
 
         graphTransform.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+
+        SetStartActiveStatus();
+    }
+
+    void CreateYearContainers()
+    {
+        Instantiate(prefabLandscapeContainer, new Vector3(0, 0, 0), Quaternion.identity, parentContainer);
+        Transform yearContainer = parentContainer.GetChild(parentContainer.childCount - 1);
+        yearContainer.localPosition = new Vector3(0, 0, 0);
+        yearContainer.name = "Landscape2018";
+
+        graphTransform = yearContainer;
+    }
+
+    void SetStartActiveStatus()
+    {
+        if (!startVisible)
+        {
+            foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
+            {
+                landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
+            }
+        }
     }
 
     void DrawNodes()
