@@ -1,0 +1,13 @@
+ShapeName,ShapeCode
+Horizontal Rectange,RCH
+Cube,CUB
+Vertical Rectangle,RCV
+Sphere (no edges),SPH
+Many-Triangle Edge Sphere,ISO
+Few-Triangle Edge Sphere,ISS
+Large Cylinder,CYL
+Medium Cylinder,
+Small Cylinder,
+Dome,DOM
+Square pyramid,PYR
+Circular pyramid,CON

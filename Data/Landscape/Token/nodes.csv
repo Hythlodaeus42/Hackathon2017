@@ -1,4 +1,4 @@
-NodeID,NodeID,LayerOrdinal,Layer,Critically,Desirability,DisplayWeight,BusinessArea,BusinessFunction,nonMarkets,ObjectType,ObjectColour,Object Base Colour,Xsize,Ysize,Zsize
+NodeID,LongName,LayerOrdinal,Layer,Critically,Desirability,DisplayWeight,BusinessArea,BusinessFunction,nonMarkets,ObjectType,ObjectColour,Object Base Colour,Xsize,Ysize,Zsize
 Node001,Node001,2,Application,Bronze,AMBER,1,BA01,BF01,,Horizontal Rectange,Light Green,Brown,4,14,7
 Node002,Node002,1,Data & Integration,Gold,GREEN,2,BA02,BF02,,Large Cylinder,Deep Purple,Yellow,28,19.6,19.6
 Node003,Node003,4,Channel,Silver,GREEN,1,BA01,BF03,1,Few-Triangle Edge Sphere,Light Gray,Gray,2.5,2.5,2.5
@@ -176,9 +176,9 @@ Node174,Node174,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gra
 Node175,Node175,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
 Node176,Node176,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
 Node177,Node177,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
-Node178,Node178,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,#N/A,Yellow,16.8,16.8,56
-Node179,Node179,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,#N/A,Yellow,13.2,13.2,44
-Node180,Node180,2,Application,Silver,AMBER,1,BA08,BF70,,Cube,#N/A,Gray,9,9,9
+Node178,Node178,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,Deep Yellow,Yellow,16.8,16.8,56
+Node179,Node179,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,Deep Yellow,Yellow,13.2,13.2,44
+Node180,Node180,2,Application,Silver,AMBER,1,BA08,BF70,,Cube,Deep Yellow,Gray,9,9,9
 Node181,Node181,2,Application,Bronze,GREEN,1,BA03,BF04,,Horizontal Rectange,Yellow,Brown,4,14,7
 Node182,Node182,2,Application,Silver,GREEN,2,BA08,BF48,,Cube,Green,Gray,18,18,18
 Node183,Node183,2,Application,Silver,GREEN,1,BA13,BF18,,Cube,Brown,Gray,9,9,9
