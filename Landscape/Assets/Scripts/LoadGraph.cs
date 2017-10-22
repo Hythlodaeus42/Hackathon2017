@@ -9,10 +9,17 @@ using System.Xml.Linq;
 
 public class LoadGraph : MonoBehaviour {
     public Transform prefabLandscapeContainer;
-    public Transform prefabNodeDefault;
-    public Transform prefabNodeApplication;
-    public Transform prefabNodeChannel;
-    public Transform prefabNodeService;
+    public Transform prefabNodeCone;
+    public Transform prefabNodeCube;
+    public Transform prefabNodeSphere;
+    public Transform prefabNodeSphereHalf;
+    public Transform prefabNodePyramid;
+    public Transform prefabNodeCylinder;
+    public Transform prefabNodeIcosphere;
+    public Transform prefabNodeIcosphereSmall;
+    public Transform prefabNodeRectangleH;
+    public Transform prefabNodeRectangleV;
+
     public Transform prefabEdgeContainer;
     public Transform prefabEdge;
     public Transform prefabLayerContainer;
@@ -97,9 +104,12 @@ public class LoadGraph : MonoBehaviour {
         float y = 0;
         float z = 0;
         string nodeName = "dummy";
-        string nodeType = "Default";
         string nodeLongName = "dummy";
         int layerOrdinal;
+        string nodeType = "Default";
+        string nodeColour;
+        string nodeBaseColour;
+        Color clr;
 
         foreach (XElement node in xmlNodes)
         {
@@ -108,24 +118,57 @@ public class LoadGraph : MonoBehaviour {
             y = layerOrdinal * yscale + yoffset;
             z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault()) * zscale;
             nodeName = node.Attribute("id").Value;
-            nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
+            nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectType").Select(a => a.Value).FirstOrDefault();
             nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
+            nodeColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectColour").Select(a => a.Value).FirstOrDefault();
+            nodeBaseColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectBaseColour").Select(a => a.Value).FirstOrDefault();
 
             Transform layerContainer = graphTransform.Find("Layer" + layerOrdinal.ToString());
 
             switch (nodeType)
             {
-                case "Application":
-                    Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                //application
+                case "RCH":
+                    Instantiate(prefabNodeRectangleH, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
-                case "Service":
-                    Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                case "RCV":
+                    Instantiate(prefabNodeRectangleV, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
-                case "Channel":
-                    Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                case "CUB":
+                    Instantiate(prefabNodeCube, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
+                
+                //channel
+                case "SPH":
+                    Instantiate(prefabNodeSphere, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "ISO":
+                    Instantiate(prefabNodeIcosphere, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "ISS":
+                    Instantiate(prefabNodeIcosphereSmall, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                
+                //data
+                case "CYL":
+                    Instantiate(prefabNodeCylinder, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+
+                //service
+                case "DOM":
+                    Instantiate(prefabNodeSphereHalf, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "PYR":
+                    Instantiate(prefabNodePyramid, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "CON":
+                    Instantiate(prefabNodeCone, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+
+
                 default:
-                    Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Instantiate(prefabNodeCube, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Debug.Log(nodeType);
                     break;
             }
 
@@ -147,7 +190,12 @@ public class LoadGraph : MonoBehaviour {
 
             //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-            nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
+            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight, nodeInstance.localScale.y * displayWeight, nodeInstance.localScale.z * displayWeight);
+
+            //set colour
+            ColorUtility.TryParseHtmlString("#" + nodeColour, out clr);
+            nodeInstance.GetComponent<Renderer>().material.SetColor("_Color", clr);
+            
 
             Light light = nodeInstance.GetComponent<Light>();
             light.range = displayWeight / 2f;
@@ -156,12 +204,20 @@ public class LoadGraph : MonoBehaviour {
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
 
-            nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
+            nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
             
             nodecount++;
         }
 
     }
+
+    //Color HexToColor(string hex)
+    //{
+    //    byte R = (byte)((HexVal >> 16) & 0xFF);
+    //    byte G = (byte)((HexVal >> 8) & 0xFF);
+    //    byte B = (byte)((HexVal) & 0xFF);
+    //    return new Color32(R, G, B, 255);
+    //}
 
     //void AddChildTag(Transform trn, string tag)
     //{

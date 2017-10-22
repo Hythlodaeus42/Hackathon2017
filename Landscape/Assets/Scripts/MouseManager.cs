@@ -34,7 +34,7 @@ public class MouseManager : MonoBehaviour {
 
                 if (LastClickedObject != hitObject && LastClickedObject != null)
                 {
-                    LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                    LastClickedObject.SendMessageUpwards("OnDeSelect", SendMessageOptions.DontRequireReceiver);
                 }
 
                 LastClickedObject = hitObject;

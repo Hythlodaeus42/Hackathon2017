@@ -43,57 +43,65 @@ public class NodeBehaviour : MonoBehaviour
         light.enabled = selected;
 
 
-            /*
-            // Display info
-            if (selected)
+        /*
+        // Display info
+        if (selected)
+        {
+
+        }
+
+
+
+
+
+            //string nodeType = this.name.Split("|"[0])[0];
+            systemText.text = this.name.Split("|"[0])[1];
+
+            string data = "<b>Data</b>";
+            string OS = "<b>OS</b>";
+            string businessfunction = "<b>Business Function</b>";
+            string systemsoftware = "<b>System Software</b>";
+
+            foreach (Transform child in this.transform)
             {
-
-            }
-
-
-
-
-
-                //string nodeType = this.name.Split("|"[0])[0];
-                systemText.text = this.name.Split("|"[0])[1];
-
-                string data = "<b>Data</b>";
-                string OS = "<b>OS</b>";
-                string businessfunction = "<b>Business Function</b>";
-                string systemsoftware = "<b>System Software</b>";
-
-                foreach (Transform child in this.transform)
+                if (child.name.IndexOf(">") > 0)
                 {
-                    if (child.name.IndexOf(">") > 0)
+                    string childNodeName = child.name.Split(">"[0])[1];
+                    string childType = childNodeName.Split("|"[0])[0];
+                    string childName = childNodeName.Split("|"[0])[1];
+
+                    switch (childType)
                     {
-                        string childNodeName = child.name.Split(">"[0])[1];
-                        string childType = childNodeName.Split("|"[0])[0];
-                        string childName = childNodeName.Split("|"[0])[1];
-
-                        switch (childType)
-                        {
-                            case "data":
-                                data += "\n" + childName;
-                                break;
-                            case "os":
-                                OS += "\n" + childName;
-                                break;
-                            case "businessfunction":
-                                businessfunction += "\n" + childName;
-                                break;
-                            case "systemsoftware":
-                                systemsoftware += "\n" + childName;
-                                break;
-
-                        }
+                        case "data":
+                            data += "\n" + childName;
+                            break;
+                        case "os":
+                            OS += "\n" + childName;
+                            break;
+                        case "businessfunction":
+                            businessfunction += "\n" + childName;
+                            break;
+                        case "systemsoftware":
+                            systemsoftware += "\n" + childName;
+                            break;
 
                     }
 
                 }
 
-                mainText.text = businessfunction + "\n\n" + OS + "\n\n" + data + "\n\n" + systemsoftware;
+            }
 
-            } 
-            */
+            mainText.text = businessfunction + "\n\n" + OS + "\n\n" + data + "\n\n" + systemsoftware;
+
+        } 
+        */
+    }
+
+    void OnDeSelect()
+    {
+        selected = false;
+
+        Light light = this.GetComponent<Light>();
+        light.enabled = selected;
     }
 }

@@ -24,6 +24,7 @@ public class BlockBehaviour : MonoBehaviour
     {
         Debug.Log("BlockBehaviour.OnSelect():" + this.name);
 
+        // year for landscape model, indicating title block
         string year = "2018";
 
         if (this.name == year)
@@ -59,6 +60,15 @@ public class BlockBehaviour : MonoBehaviour
             }
 
         }
+    }
+
+    void OnDeSelect()
+    {
+        Color clr1 = gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color;
+        Color clr2 = gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color;
+
+        gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
+        gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
     }
 
 }
