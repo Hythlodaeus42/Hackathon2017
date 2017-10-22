@@ -109,6 +109,7 @@ public class LoadGraph : MonoBehaviour {
         string nodeType = "Default";
         string nodeColour;
         string nodeBaseColour;
+        Color clr;
 
         foreach (XElement node in xmlNodes)
         {
@@ -191,6 +192,11 @@ public class LoadGraph : MonoBehaviour {
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
             nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight, nodeInstance.localScale.y * displayWeight, nodeInstance.localScale.z * displayWeight);
 
+            //set colour
+            ColorUtility.TryParseHtmlString("#" + nodeColour, out clr);
+            nodeInstance.GetComponent<Renderer>().material.SetColor("_Color", clr);
+            
+
             Light light = nodeInstance.GetComponent<Light>();
             light.range = displayWeight / 2f;
             light.enabled = false;
@@ -204,6 +210,14 @@ public class LoadGraph : MonoBehaviour {
         }
 
     }
+
+    //Color HexToColor(string hex)
+    //{
+    //    byte R = (byte)((HexVal >> 16) & 0xFF);
+    //    byte G = (byte)((HexVal >> 8) & 0xFF);
+    //    byte B = (byte)((HexVal) & 0xFF);
+    //    return new Color32(R, G, B, 255);
+    //}
 
     //void AddChildTag(Transform trn, string tag)
     //{
