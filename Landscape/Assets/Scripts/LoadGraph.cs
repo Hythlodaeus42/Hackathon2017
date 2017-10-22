@@ -186,7 +186,7 @@ public class LoadGraph : MonoBehaviour {
         foreach (XElement edge in xmlEdges)
         {
             //Debug.Log(edge.Attribute("source").Value);
-            
+
             GameObject startNode = GameObject.Find(edge.Attribute("source").Value);
             GameObject endNode = GameObject.Find(edge.Attribute("target").Value);
 
@@ -210,28 +210,43 @@ public class LoadGraph : MonoBehaviour {
 
             edgeInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode;
 
+            // add Animation
+            Transform objAnimationOut = edgeInstance.Find("AnimationOut");
+
+            ParticleSystem objPart = edgeInstance.GetComponentInChildren<ParticleSystem>();
+            var pSmain = objPart.main;
+            var pEmission = objPart.emission;
+
+            pSmain.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPart.main.startSpeed.constant / 10);
+
+            // delay for EOD
+            if (edgeProperties.flowRate.Equals("EOD")) {
+                pEmission.rateOverTime = pEmission.rateOverTime.constant / 10;
+            }
+
+
             //tag edges with node layers
             //AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
             //AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
-            //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
+                //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
 
-            //LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
-            //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
-            //lineRenderer.widthMultiplier = 0.1f;
-            ////lineRenderer.positionCount = lengthOfLineRenderer;
-            //lineRenderer.SetPosition(0, new Vector3(startNode.transform.position.x, startNode.transform.position.y, startNode.transform.position.z));
-            //lineRenderer.SetPosition(1, new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
+                //LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
+                //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+                //lineRenderer.widthMultiplier = 0.1f;
+                ////lineRenderer.positionCount = lengthOfLineRenderer;
+                //lineRenderer.SetPosition(0, new Vector3(startNode.transform.position.x, startNode.transform.position.y, startNode.transform.position.z));
+                //lineRenderer.SetPosition(1, new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
 
-            ////A simple 2 color gradient with a fixed alpha of 1.0f.
-            //float alpha = 1.0f;
-            //Gradient gradient = new Gradient();
-            //gradient.SetKeys(
-            //    new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(c2, 1.0f) },
-            //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
-            //    );
-            //lineRenderer.colorGradient = gradient;
+                ////A simple 2 color gradient with a fixed alpha of 1.0f.
+                //float alpha = 1.0f;
+                //Gradient gradient = new Gradient();
+                //gradient.SetKeys(
+                //    new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(c2, 1.0f) },
+                //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
+                //    );
+                //lineRenderer.colorGradient = gradient;
 
         }
     }
