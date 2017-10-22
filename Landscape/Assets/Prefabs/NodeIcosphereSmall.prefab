@@ -57,6 +57,8 @@ GameObject:
   - component: {fileID: 23564731461777890}
   - component: {fileID: 64896449859241874}
   - component: {fileID: 108435425603648650}
+  - component: {fileID: 114736627329944364}
+  - component: {fileID: 114873360537580412}
   m_Layer: 0
   m_Name: NodeIcosphereSmall
   m_TagString: Untagged
@@ -300,6 +302,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!114 &114736627329944364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659451287119410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f9d1d4ee075224188de4d23ac6d8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114842694396652772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,6 +329,27 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114873360537580412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659451287119410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb690d6f9571d34a9b789763dd2221d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NodeID: 
+  LongName: 
+  LayerOrdinal: 
+  Layer: 
+  Critically: 
+  Desirability: 
+  DisplayWeight: 
+  BusinessArea: 
+  BusinessFunction: 
+  IsMarkets: 0
 --- !u!222 &222383323584450146
 CanvasRenderer:
   m_ObjectHideFlags: 1

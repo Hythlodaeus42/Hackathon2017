@@ -104,9 +104,11 @@ public class LoadGraph : MonoBehaviour {
         float y = 0;
         float z = 0;
         string nodeName = "dummy";
-        string nodeType = "Default";
         string nodeLongName = "dummy";
         int layerOrdinal;
+        string nodeType = "Default";
+        string nodeColour;
+        string nodeBaseColour;
 
         foreach (XElement node in xmlNodes)
         {
@@ -115,24 +117,57 @@ public class LoadGraph : MonoBehaviour {
             y = layerOrdinal * yscale + yoffset;
             z = float.Parse(node.Descendants().Where(a => a.Attribute("key").Value == "v_Z").Select(a => a.Value).FirstOrDefault()) * zscale;
             nodeName = node.Attribute("id").Value;
-            nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_Layer").Select(a => a.Value).FirstOrDefault();
+            nodeType = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectType").Select(a => a.Value).FirstOrDefault();
             nodeLongName = node.Descendants().Where(a => a.Attribute("key").Value == "v_LongName").Select(a => a.Value).FirstOrDefault();
+            nodeColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectColour").Select(a => a.Value).FirstOrDefault();
+            nodeBaseColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectBaseColour").Select(a => a.Value).FirstOrDefault();
 
             Transform layerContainer = graphTransform.Find("Layer" + layerOrdinal.ToString());
 
             switch (nodeType)
             {
-                case "Application":
+                //application
+                case "RCH":
+                    Instantiate(prefabNodeRectangleH, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "RCV":
                     Instantiate(prefabNodeRectangleV, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
-                case "Service":
-                    Instantiate(prefabNodePyramid, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                case "CUB":
+                    Instantiate(prefabNodeCube, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
-                case "Channel":
+                
+                //channel
+                case "SPH":
+                    Instantiate(prefabNodeSphere, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "ISO":
                     Instantiate(prefabNodeIcosphere, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
-                default:
+                case "ISS":
+                    Instantiate(prefabNodeIcosphereSmall, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                
+                //data
+                case "CYL":
                     Instantiate(prefabNodeCylinder, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+
+                //service
+                case "DOM":
+                    Instantiate(prefabNodeSphereHalf, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "PYR":
+                    Instantiate(prefabNodePyramid, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+                case "CON":
+                    Instantiate(prefabNodeCone, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    break;
+
+
+                default:
+                    Instantiate(prefabNodeCube, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Debug.Log(nodeType);
                     break;
             }
 
@@ -154,7 +189,7 @@ public class LoadGraph : MonoBehaviour {
 
             //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-            nodeInstance.localScale = new Vector3(displayWeight, displayWeight, displayWeight);
+            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight, nodeInstance.localScale.y * displayWeight, nodeInstance.localScale.z * displayWeight);
 
             Light light = nodeInstance.GetComponent<Light>();
             light.range = displayWeight / 2f;
