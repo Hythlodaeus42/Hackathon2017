@@ -9,10 +9,17 @@ using System.Xml.Linq;
 
 public class LoadGraph : MonoBehaviour {
     public Transform prefabLandscapeContainer;
-    public Transform prefabNodeDefault;
-    public Transform prefabNodeApplication;
-    public Transform prefabNodeChannel;
-    public Transform prefabNodeService;
+    public Transform prefabNodeCone;
+    public Transform prefabNodeCube;
+    public Transform prefabNodeSphere;
+    public Transform prefabNodeSphereHalf;
+    public Transform prefabNodePyramid;
+    public Transform prefabNodeCylinder;
+    public Transform prefabNodeIcosphere;
+    public Transform prefabNodeIcosphereSmall;
+    public Transform prefabNodeRectangleH;
+    public Transform prefabNodeRectangleV;
+
     public Transform prefabEdgeContainer;
     public Transform prefabEdge;
     public Transform prefabLayerContainer;
@@ -116,16 +123,16 @@ public class LoadGraph : MonoBehaviour {
             switch (nodeType)
             {
                 case "Application":
-                    Instantiate(prefabNodeApplication, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Instantiate(prefabNodeRectangleV, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 case "Service":
-                    Instantiate(prefabNodeService, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Instantiate(prefabNodePyramid, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 case "Channel":
-                    Instantiate(prefabNodeChannel, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Instantiate(prefabNodeIcosphere, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
                 default:
-                    Instantiate(prefabNodeDefault, new Vector3(x, y, z), Quaternion.identity, layerContainer);
+                    Instantiate(prefabNodeCylinder, new Vector3(x, y, z), Quaternion.identity, layerContainer);
                     break;
             }
 
