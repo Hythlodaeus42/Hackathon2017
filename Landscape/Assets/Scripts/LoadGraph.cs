@@ -204,7 +204,7 @@ public class LoadGraph : MonoBehaviour {
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
 
-            nodeInstance.GetComponentInChildren<Canvas>().enabled = false;
+            nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
             
             nodecount++;
         }
