@@ -12,7 +12,6 @@ public class NodeBehaviour : MonoBehaviour
     //private Text mainText;
 
     private bool selected;
-    private float nextClick = 0;
 
     void Start()
     {
