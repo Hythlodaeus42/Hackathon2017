@@ -16,28 +16,28 @@ public class KeyboardManager : MonoBehaviour {
         // rotate camera
         if (Input.GetKey(KeyCode.DownArrow))
             //Debug.Log("DownArrow was pressed.");
-            transform.Rotate(new Vector3(spin, 0, 0));
+            Camera.main.transform.Rotate(new Vector3(spin, 0, 0));
 
         if (Input.GetKey(KeyCode.UpArrow))
             //Debug.Log("DownArrow was pressed.");
-            transform.Rotate(new Vector3(-spin, 0, 0));
+            Camera.main.transform.Rotate(new Vector3(-spin, 0, 0));
 
         if (Input.GetKey(KeyCode.LeftArrow))
             //Debug.Log("DownArrow was pressed.");
-            transform.Rotate(new Vector3(0, -spin, 0));
+            Camera.main.transform.Rotate(new Vector3(0, -spin, 0));
 
         if (Input.GetKey(KeyCode.RightArrow))
             //Debug.Log("DownArrow was pressed.");
-            transform.Rotate(new Vector3(0, spin, 0));
+            Camera.main.transform.Rotate(new Vector3(0, spin, 0));
 
         // move camera
         if (Input.GetKey(KeyCode.S))
             //Debug.Log("DownArrow was pressed.");
-            transform.position -= this.transform.forward * thrust;
+            Camera.main.transform.position -= Camera.main.transform.forward * thrust;
 
         if (Input.GetKey(KeyCode.W))
             //Debug.Log("DownArrow was pressed.");
-            transform.position += this.transform.forward * thrust;
+            Camera.main.transform.position += Camera.main.transform.forward * thrust;
 
         //if (Input.GetKey(KeyCode.A))
         //    //Debug.Log("DownArrow was pressed.");
