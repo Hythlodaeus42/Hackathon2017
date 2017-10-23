@@ -36,12 +36,14 @@ public class LoadGraph : MonoBehaviour {
     private IEnumerable<XElement> xmlEdges;
 
     private float xscale = 2f;
-    private float yscale = 5f;
+    private float yscale = 7f;
     private float zscale = 2f;
     private float yoffset = -10f;
     private float edgexscale = 0.05f;
     private float edgeyscale = 0.05f;
     private float layerscale = 3f;
+    private float EODdelay = 5f;
+
 
 
     // Use this for initialization
@@ -268,41 +270,82 @@ public class LoadGraph : MonoBehaviour {
 
             // add Animation
             Transform objAnimationOut = edgeInstance.Find("AnimationOut");
+            Transform objAnimationIn = edgeInstance.Find("AnimationIn");
 
-            ParticleSystem objPart = edgeInstance.GetComponentInChildren<ParticleSystem>();
-            var pSmain = objPart.main;
-            var pEmission = objPart.emission;
+            ParticleSystem objPartOut = objAnimationOut.GetComponentInChildren<ParticleSystem>();
+            ParticleSystem objPartIn = objAnimationIn.GetComponentInChildren<ParticleSystem>();
+            var pSmainOut = objPartOut.main;
+            var pSmainIn = objPartIn.main;
+            var pEmissionOut = objPartOut.emission;
+            var pEmissionIn = objPartIn.emission;
 
-            pSmain.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPart.main.startSpeed.constant / 10);
+
+            // set attributes
+            objAnimationOut.position = startNode.transform.position;
+            pSmainOut.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
+            pSmainIn.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
+
+            // disable incoming if not both directional
+            if (!edgeProperties.isBidirectional.Equals(true))
+            {
+                pEmissionIn.enabled = false;
+            }
+            else
+            {
+                // set up incoming link in opposite direction
+                objAnimationIn.position = endNode.transform.position;
+                objAnimationIn.LookAt(startNode.transform);
+            }
 
             // delay for EOD
-            if (edgeProperties.flowRate.Equals("EOD")) {
-                pEmission.rateOverTime = pEmission.rateOverTime.constant / 10;
+            if (edgeProperties.flowRate.Equals("EOD"))
+            {
+                pEmissionOut.rateOverTime = pEmissionOut.rateOverTime.constant / EODdelay;
+                pEmissionIn.rateOverTime = pEmissionOut.rateOverTime;
             }
+
+            pSmainOut.startColor = new Color(72, 54, 128);  // blue
+            pSmainOut.startColor = new ParticleSystem.MinMaxGradient(new Color(72, 54, 128));
+
+            // change color for integration types
+            /*
+            switch (edgeProperties.flowType)
+            {
+                case "API":
+                    pSmainOut.startColor = new Color(72, 54, 128);  // blue
+                    break;
+                case "Batch":
+                    pSmainOut.startColor = new Color(221, 133, 10); // orange
+                    break;
+                case "MSG":
+                    pSmainOut.startColor = new Color(131, 42, 42); // red
+                    break;
+            }
+            */
 
 
             //tag edges with node layers
             //AddChildTag(edgeInstance, "Layer" + startNode.GetComponent<NodeProperties>().LayerOrdinal);
             //AddChildTag(edgeInstance, "Layer" + endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
-                //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
+            //var edgeData = edgeInstance.transform.GetComponent<EdgeData>();
 
 
-                //LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
-                //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
-                //lineRenderer.widthMultiplier = 0.1f;
-                ////lineRenderer.positionCount = lengthOfLineRenderer;
-                //lineRenderer.SetPosition(0, new Vector3(startNode.transform.position.x, startNode.transform.position.y, startNode.transform.position.z));
-                //lineRenderer.SetPosition(1, new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
+            //LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
+            //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+            //lineRenderer.widthMultiplier = 0.1f;
+            ////lineRenderer.positionCount = lengthOfLineRenderer;
+            //lineRenderer.SetPosition(0, new Vector3(startNode.transform.position.x, startNode.transform.position.y, startNode.transform.position.z));
+            //lineRenderer.SetPosition(1, new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
 
-                ////A simple 2 color gradient with a fixed alpha of 1.0f.
-                //float alpha = 1.0f;
-                //Gradient gradient = new Gradient();
-                //gradient.SetKeys(
-                //    new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(c2, 1.0f) },
-                //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
-                //    );
-                //lineRenderer.colorGradient = gradient;
+            ////A simple 2 color gradient with a fixed alpha of 1.0f.
+            //float alpha = 1.0f;
+            //Gradient gradient = new Gradient();
+            //gradient.SetKeys(
+            //    new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(c2, 1.0f) },
+            //    new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
+            //    );
+            //lineRenderer.colorGradient = gradient;
 
         }
     }
