@@ -304,9 +304,6 @@ public class LoadGraph : MonoBehaviour {
                 pEmissionIn.rateOverTime = pEmissionOut.rateOverTime;
             }
 
-            pSmainOut.startColor = new Color(72, 54, 128);  // blue
-            pSmainOut.startColor = new ParticleSystem.MinMaxGradient(new Color(72, 54, 128));
-
             // change color for integration types
             /*
             switch (edgeProperties.flowType)
