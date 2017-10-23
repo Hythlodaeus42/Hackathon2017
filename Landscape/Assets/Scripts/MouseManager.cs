@@ -24,9 +24,11 @@ public class MouseManager : MonoBehaviour {
             {
                 hitObject = hitInfo.collider.gameObject;
 
+                //Debug.Log(hitObject.name);
+
                 if (hitObject != null)
                 {
-                    Debug.Log(hitObject.name);
+                    //Debug.Log(hitObject.name);
                     hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
 
 
@@ -34,19 +36,19 @@ public class MouseManager : MonoBehaviour {
 
                 if (LastClickedObject != hitObject && LastClickedObject != null)
                 {
-                    LastClickedObject.SendMessageUpwards("OnDeSelect", SendMessageOptions.DontRequireReceiver);
+                    LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 }
 
                 LastClickedObject = hitObject;
 
             }
-            //else
-            //{
-            //    hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-            //}
-
-            //nextClick = Time.time + 0.2f;
-            //click = false;
+            else
+            {
+                if (LastClickedObject != null)
+                {
+                    LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                }
+            }
 
         }
     }

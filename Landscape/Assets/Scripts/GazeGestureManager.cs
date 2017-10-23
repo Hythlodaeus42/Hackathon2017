@@ -29,7 +29,7 @@ public class GazeGestureManager : MonoBehaviour
 
             if (LastClickedObject != FocusedObject && LastClickedObject != null)
             {
-                LastClickedObject.SendMessageUpwards("OnDeSelect", SendMessageOptions.DontRequireReceiver);
+                LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
             }
 
             LastClickedObject = FocusedObject;

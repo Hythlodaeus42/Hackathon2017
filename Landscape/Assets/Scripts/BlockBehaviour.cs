@@ -10,10 +10,13 @@ public class BlockBehaviour : MonoBehaviour
     private Vector3 offset;
     private Vector3 screenPoint;
 
+    private Canvas infoCanvas;
+
     // Use this for initialization
     void Start()
     {
         matrix = this.transform.parent;
+        infoCanvas = GameObject.Find("InfoCanvas").GetComponentInChildren<Canvas>();
     }
 
     // Update is called once per frame
@@ -45,10 +48,13 @@ public class BlockBehaviour : MonoBehaviour
             // set selected
             selected = !selected;
 
+            infoCanvas.GetComponent<InfoCanvasBehaviour>().ToggleVisibility(this.name);
+
+
             Color clr1 = gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color;
             Color clr2 = gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color;
 
-            Debug.Log(clr1.ToString());
+            //Debug.Log(clr1.ToString());
 
             if (selected)
             {
@@ -64,14 +70,21 @@ public class BlockBehaviour : MonoBehaviour
         }
     }
 
-    void OnDeSelect()
-    {
-        Color clr1 = gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color;
-        Color clr2 = gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color;
+    //void OnDeSelect()
+    //{
+    //    //Debug.Log("BlockBehaviour.OnSelect():" + this.name);
 
-        gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
-        gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
-    }
+    //    //Color clr1 = gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color;
+    //    //Color clr2 = gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color;
+
+    //    //gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
+    //    //gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0f);
+
+    //    //selected = false;
+
+        
+
+    //}
 
     private void OnMouseDown()
     {
