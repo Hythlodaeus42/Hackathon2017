@@ -13,7 +13,7 @@ public class Billboard : MonoBehaviour {
 		thisText = tm;
 	}
 	void Start () {
-		if (TextMesh == null) {
+		if (thisText == null) {
 			Debug.LogWarning("billboard not set");
 		}
 		if (thisText != null) {

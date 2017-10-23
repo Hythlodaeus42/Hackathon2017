@@ -30,7 +30,7 @@ public class PopupText : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Renderer rend = my.GetComponent<Renderer>();
+        Renderer rend = owner.GetComponent<Renderer>();
 		TextMesh infoText = billb.getTextDisplay();
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -58,7 +58,7 @@ public class PopupText : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown(KeyCode.KeypadPlus))
         {
             Vector3 newpos = new Vector3(currentpos.x + 1f, currentpos.y + 1f, currentpos.z + 1f);
-            my.transform.position = newpos;
+            owner.transform.position = newpos;
 			theMessage = "press ++++";if (infoText != null) {
 				infoText.text = theMessage;
 			}
@@ -66,7 +66,7 @@ public class PopupText : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Plus ) || Input.GetKeyUp(KeyCode.KeypadPlus))
         {
 
-            my.transform.position = currentpos;
+            owner.transform.position = currentpos;
             infoText.text = "....";
         }
     }
