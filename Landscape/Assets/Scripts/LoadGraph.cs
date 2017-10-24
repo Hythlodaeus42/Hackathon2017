@@ -50,20 +50,6 @@ public class LoadGraph : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        // load XML document
-        TextAsset textGraph = Resources.Load("landscape") as TextAsset;
-        xmlGraph = XDocument.Parse(textGraph.text);
-
-        // get nodes
-        xmlNodes =
-            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("node")
-            select el;
-
-        xmlEdges =
-            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("edge")
-            select el;
-
-
         parentContainer = GameObject.Find("Landscape").transform;
 
         // build model for each year
@@ -75,19 +61,37 @@ public class LoadGraph : MonoBehaviour {
 
         foreach (string row in rows)
         {
-            // draw model
-            //Debug.Log(row);
-            year = int.Parse(row);
+            if (row.Trim() != "")
+            {
+                // load XML document
+                Debug.Log("landscape" + row.Trim());
+                TextAsset textGraph = Resources.Load("landscape" + row.Trim()) as TextAsset;
+                xmlGraph = XDocument.Parse(textGraph.text);
 
-            yearContainer = CreateYearContainer(year);
-            DrawLayers(yearContainer);
-            DrawNodes(yearContainer);
-            DrawEdges(yearContainer);
+                // get nodes
+                xmlNodes =
+                    from el in xmlGraph.Elements("graphml").Elements("graph").Elements("node")
+                    select el;
 
-            //rescale hologram
-            yearContainer.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
-            yearContainer.gameObject.SetActive(false); //temporary during construction
+                xmlEdges =
+                    from el in xmlGraph.Elements("graphml").Elements("graph").Elements("edge")
+                    select el;
+
+                // draw model
+                //Debug.Log(row);
+                year = int.Parse(row);
+
+                yearContainer = CreateYearContainer(year);
+                DrawLayers(yearContainer);
+                DrawNodes(yearContainer);
+                DrawEdges(yearContainer);
+
+                //rescale hologram
+                yearContainer.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+                yearContainer.gameObject.SetActive(false); //temporary during construction
+            }
         }
+
 
         SetStartActiveStatus();
 
