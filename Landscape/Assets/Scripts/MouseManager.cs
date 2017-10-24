@@ -39,7 +39,15 @@ public class MouseManager : MonoBehaviour {
                     LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 }
 
-                LastClickedObject = hitObject;
+                if (hitObject.GetComponent<NodeBehaviour>() != null)
+                {
+                    // only save nodes and blocks
+                    LastClickedObject = hitObject;
+                } else
+                {
+                    LastClickedObject = null;
+                }
+                
 
             }
             else
@@ -47,6 +55,7 @@ public class MouseManager : MonoBehaviour {
                 if (LastClickedObject != null)
                 {
                     LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                    LastClickedObject = null;
                 }
             }
 
