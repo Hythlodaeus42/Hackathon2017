@@ -123,8 +123,15 @@ public class LoadBusinessMatrix : MonoBehaviour {
                             blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
                             break;
                     }
-                    
-                } 
+
+                    // add property
+                    BlockProperties blockProperties = blockInstance.gameObject.GetComponent<BlockProperties>();
+                    blockProperties.ApplicationName = appName;
+                    blockProperties.BusinessGroup = rowAttributes[3].Trim();
+                    blockProperties.BusinessFunction = rowAttributes[0].Trim();
+                    blockProperties.Desirability = colour;
+                }
+
             }
         }
         
@@ -201,7 +208,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
             if (row != "")
             {
                 string[] rowAttributes = row.Split("|"[0]);
-                //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
+                Debug.Log(row);
                 //Debug.Log(nodecount.ToString());
 
                 float x = float.Parse(rowAttributes[1]) * (xscale + xpad);
@@ -210,7 +217,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 string blockName = rowAttributes[0].Trim();
 
                 AddBlock(x, y, z, 1, Quaternion.identity, blockName, prefabAxisBlock, matrixTransform);
-
+                
             }
         }
     }
