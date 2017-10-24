@@ -35,22 +35,25 @@ public class MouseManager : MonoBehaviour {
 
                 if (hitObject != null)
                 {
+                    if (LastClickedObject != hitObject && LastClickedObject != null)
+                    {
+                        LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                    }
+
                     //Debug.Log(hitObject.name);
                     hitObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
 
-
                 }
 
-                if (LastClickedObject != hitObject && LastClickedObject != null)
-                {
-                    LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                }
 
-                if (hitObject.GetComponent<NodeProperties>() != null || (hitObject.GetComponent<NodeProperties>() != null ))
+
+
+                if (hitObject.GetComponent<NodeProperties>() != null || (hitObject.GetComponent<BlockProperties>() != null))
                 {
                     // only save nodes and blocks
                     LastClickedObject = hitObject;
-                } else
+                }
+                else
                 {
                     LastClickedObject = null;
                 }
@@ -59,11 +62,12 @@ public class MouseManager : MonoBehaviour {
             }
             else
             {
+                Debug.Log("nothing hit");
                 if (LastClickedObject != null)
                 {
                     LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                    LastClickedObject = null;
                 }
+                LastClickedObject = null;
             }
 
         }
