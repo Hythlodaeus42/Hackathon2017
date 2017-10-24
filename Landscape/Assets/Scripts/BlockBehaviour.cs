@@ -79,14 +79,12 @@ public class BlockBehaviour : MonoBehaviour
 
     string BuildInfoString()
     {
-        //Block np = this.GetComponent<NodeProperties>();
+        BlockProperties bp = this.GetComponent<BlockProperties>();
         string info = "<b>" + this.name + "</b>\n\n";
-        //info += "Layer: " + np.Layer + "\n";
-        //info += "Critically: " + np.Critically + "\n";
-        //info += "Desirability: " + np.Desirability + "\n";
-        //info += "Business Area: " + np.BusinessArea + "\n";
-        //info += "Business Function: " + np.BusinessFunction + "\n";
-        //info += "IsMarkets: " + np.IsMarkets.ToString();
+        info += "Application name: " + bp.ApplicationName + "\n";
+        info += "Business Group: " + bp.BusinessGroup + "\n";
+        info += "Business Function: " + bp.BusinessFunction + "\n";
+        info += "Desirability: " + bp.Desirability;
 
         return info;
     }
