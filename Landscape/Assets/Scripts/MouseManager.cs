@@ -46,7 +46,7 @@ public class MouseManager : MonoBehaviour {
                     LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 }
 
-                if (hitObject.GetComponent<NodeBehaviour>() != null || (hitObject.GetComponent<BlockBehaviour>() != null && hitObject.name != "2018"))
+                if (hitObject.GetComponent<NodeProperties>() != null || (hitObject.GetComponent<NodeProperties>() != null ))
                 {
                     // only save nodes and blocks
                     LastClickedObject = hitObject;

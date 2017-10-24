@@ -12,6 +12,6 @@ public class BorderBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Debug.Log("border clicked");
 	}
 }
