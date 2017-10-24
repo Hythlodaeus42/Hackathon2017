@@ -16,7 +16,14 @@ public class MouseManager : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            //Debug.Log ("pressed left");
+            if (LastClickedObject != null)
+            {
+                Debug.Log("last = " + LastClickedObject.name);
+            } else
+            {
+                Debug.Log("last = none");
+            }
+            
             RaycastHit hitInfo;
             Ray rayCamera = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -39,7 +46,7 @@ public class MouseManager : MonoBehaviour {
                     LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 }
 
-                if (hitObject.GetComponent<NodeBehaviour>() != null)
+                if (hitObject.GetComponent<NodeBehaviour>() != null || (hitObject.GetComponent<BlockBehaviour>() != null && hitObject.name != "2018"))
                 {
                     // only save nodes and blocks
                     LastClickedObject = hitObject;

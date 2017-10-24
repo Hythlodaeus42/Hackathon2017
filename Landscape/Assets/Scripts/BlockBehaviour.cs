@@ -48,7 +48,14 @@ public class BlockBehaviour : MonoBehaviour
             // set selected
             selected = !selected;
 
-            infoCanvas.GetComponent<InfoCanvasBehaviour>().ToggleVisibility(BuildInfoString());
+            if (selected)
+            {
+                infoCanvas.GetComponent<InfoCanvasBehaviour>().Show(BuildInfoString());
+            } else
+            {
+                infoCanvas.GetComponent<InfoCanvasBehaviour>().Hide();
+            }
+            
 
 
             Color clr1 = gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color;
@@ -95,6 +102,12 @@ public class BlockBehaviour : MonoBehaviour
         Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
         matrix.transform.position = cursorPosition;
+
+        //if (selected && Time.time > timeMouseDown + 0.05f && dragStart)
+        //{
+        //    OnSelect();
+        //    dragStart = false;
+        //}
     }
 
     

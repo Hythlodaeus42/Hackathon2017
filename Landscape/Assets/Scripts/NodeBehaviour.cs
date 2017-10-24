@@ -36,8 +36,16 @@ public class NodeBehaviour : MonoBehaviour
 
         Light light = this.GetComponent<Light>();
         light.enabled = selected;
-        Debug.Log(BuildInfoString());
-        infoCanvas.GetComponent<InfoCanvasBehaviour>().ToggleVisibility(BuildInfoString());       
+
+        if (selected)
+        {
+            //Debug.Log(BuildInfoString());
+            infoCanvas.GetComponent<InfoCanvasBehaviour>().Show(BuildInfoString());
+        } else
+        {
+            //Debug.Log(BuildInfoString());
+            infoCanvas.GetComponent<InfoCanvasBehaviour>().Hide();
+        }
     }
 
     string BuildInfoString()
