@@ -30,14 +30,12 @@ public class BlockBehaviour : MonoBehaviour
         Debug.Log("BlockBehaviour.OnSelect():" + this.name);
 
         // year for landscape model, indicating title block
-        string year = "2018";
-
-        if (this.name == year)
+        if (this.name == "2018" || this.name == "2022")
         {
             GameObject landscapeContainer = GameObject.Find("Landscape");
             foreach (Transform landscape in landscapeContainer.GetComponentInChildren<Transform>(true))
             {
-                if (landscape.name == "Landscape" + year)
+                if (landscape.name == "Landscape" + this.name)
                 {
                     landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
                     break;
