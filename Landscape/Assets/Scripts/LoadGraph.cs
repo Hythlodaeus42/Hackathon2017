@@ -44,6 +44,7 @@ public class LoadGraph : MonoBehaviour {
     private float layerscale = 3f;
     private float EODdelay = 5f;
     private float yBentDrop = 2f;
+    private float objectscale = 2f;
     
 
     // Use this for initialization
@@ -192,7 +193,7 @@ public class LoadGraph : MonoBehaviour {
 
             //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight, nodeInstance.localScale.y * displayWeight, nodeInstance.localScale.z * displayWeight);
+            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight * objectscale, nodeInstance.localScale.y * displayWeight * objectscale, nodeInstance.localScale.z * displayWeight * objectscale);
 
             //set colour
             ColorUtility.TryParseHtmlString("#" + nodeColour, out clr);
