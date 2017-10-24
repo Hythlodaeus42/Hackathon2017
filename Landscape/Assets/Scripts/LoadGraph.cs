@@ -43,6 +43,7 @@ public class LoadGraph : MonoBehaviour {
     private float edgeyscale = 0.05f;
     private float layerscale = 3f;
     private float EODdelay = 5f;
+    private float yBentDrop = 2f;
 
 
 
@@ -267,58 +268,47 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
 
             edgeInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode;
-
-            // add Animation
-            Transform objAnimationOut = edgeInstance.Find("AnimationOut");
-            Transform objAnimationIn = edgeInstance.Find("AnimationIn");
-
-            ParticleSystem objPartOut = objAnimationOut.GetComponentInChildren<ParticleSystem>();
-            ParticleSystem objPartIn = objAnimationIn.GetComponentInChildren<ParticleSystem>();
-            var pSmainOut = objPartOut.main;
-            var pSmainIn = objPartIn.main;
-            var pEmissionOut = objPartOut.emission;
-            var pEmissionIn = objPartIn.emission;
-
-
-            // set attributes
-            objAnimationOut.position = startNode.transform.position;
-            pSmainOut.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
-            pSmainIn.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
-
-            // disable incoming if not both directional
-            if (!edgeProperties.isBidirectional.Equals(true))
+            
+            // bent edges
+            if (edgeProperties.fromLayerOrdinal.Equals(2) && edgeProperties.toLayerOrdinal.Equals(2))
             {
-                pEmissionIn.enabled = false;
+                float ydrop = yscale - Random.Range(yBentDrop, yBentDrop + 1f);
+
+                // drop existing
+                edgeInstance.transform.position = new Vector3(centerPosition.x, centerPosition.y - ydrop, centerPosition.z);
+                SetupEdgeAnimation(edgeInstance, new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop, startNode.transform.position.z), new Vector3(endNode.transform.position.x, endNode.transform.position.y - yscale, endNode.transform.position.z));
+
+                // add drop
+                Vector3 centerDropPosition = new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop / 2 , startNode.transform.position.z);
+                Transform edgeDropInstance = Instantiate(prefabEdge, centerDropPosition, Quaternion.identity, edgeContainer);
+                edgeDropInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, ydrop);
+                edgeDropInstance.LookAt(new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop, startNode.transform.position.z));
+                edgeDropInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode + "- DROP";
+
+                EdgeProperties edgeDropProperties = edgeDropInstance.gameObject.GetComponent<EdgeProperties>();
+                CopyEdgeProperties(edgeProperties, edgeDropProperties);
+
+                SetupEdgeAnimation(edgeDropInstance, new Vector3(startNode.transform.position.x, startNode.transform.position.y, startNode.transform.position.z), new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop, startNode.transform.position.z));
+
+                // add go up
+                Vector3 centerUpPosition = new Vector3(endNode.transform.position.x, endNode.transform.position.y - ydrop / 2, endNode.transform.position.z);
+                Transform edgeUpInstance = Instantiate(prefabEdge, centerUpPosition, Quaternion.identity, edgeContainer);
+                edgeUpInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, ydrop);
+                edgeUpInstance.LookAt(new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
+                edgeUpInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode + "- UP";
+
+                EdgeProperties edgeUpProperties = edgeUpInstance.gameObject.GetComponent<EdgeProperties>();
+                CopyEdgeProperties(edgeProperties, edgeUpProperties);
+
+                SetupEdgeAnimation(edgeUpInstance, new Vector3(endNode.transform.position.x, endNode.transform.position.y - ydrop, endNode.transform.position.z), new Vector3(endNode.transform.position.x, endNode.transform.position.y, endNode.transform.position.z));
+
             }
             else
             {
-                // set up incoming link in opposite direction
-                objAnimationIn.position = endNode.transform.position;
-                objAnimationIn.LookAt(startNode.transform);
+                SetupEdgeAnimation(edgeInstance, startNode.transform.position, endNode.transform.position);
             }
 
-            // delay for EOD
-            if (edgeProperties.flowRate.Equals("EOD"))
-            {
-                pEmissionOut.rateOverTime = pEmissionOut.rateOverTime.constant / EODdelay;
-                pEmissionIn.rateOverTime = pEmissionOut.rateOverTime;
-            }
 
-            // change color for integration types
-            /*
-            switch (edgeProperties.flowType)
-            {
-                case "API":
-                    pSmainOut.startColor = new Color(72, 54, 128);  // blue
-                    break;
-                case "Batch":
-                    pSmainOut.startColor = new Color(221, 133, 10); // orange
-                    break;
-                case "MSG":
-                    pSmainOut.startColor = new Color(131, 42, 42); // red
-                    break;
-            }
-            */
 
 
             //tag edges with node layers
@@ -347,6 +337,83 @@ public class LoadGraph : MonoBehaviour {
         }
     }
     
+    void CopyEdgeProperties(EdgeProperties edgeFromInstance, EdgeProperties edgeToInstance)
+    {
+        edgeToInstance.fromNode = edgeFromInstance.fromNode;
+        edgeToInstance.toNode = edgeFromInstance.toNode;
+        edgeToInstance.flowType = edgeFromInstance.flowType;
+        edgeToInstance.flowRate = edgeFromInstance.flowRate;
+        edgeToInstance.dataClass = edgeFromInstance.dataClass;
+        edgeToInstance.isBidirectional = edgeFromInstance.isBidirectional;
+        edgeToInstance.fromLayerOrdinal = edgeFromInstance.fromLayerOrdinal;
+        edgeToInstance.toLayerOrdinal = edgeFromInstance.toLayerOrdinal;
+
+    }
+
+    void SetupEdgeAnimation(Transform edgeInstance, Vector3 startPos, Vector3 endPos)
+    {
+
+        // add Animation
+        Transform objAnimationOut = edgeInstance.Find("AnimationOut");
+        Transform objAnimationIn = edgeInstance.Find("AnimationIn");
+
+        EdgeProperties edgeProperties = edgeInstance.gameObject.GetComponent<EdgeProperties>();
+        ParticleSystem objPartOut = objAnimationOut.GetComponentInChildren<ParticleSystem>();
+        ParticleSystem objPartIn = objAnimationIn.GetComponentInChildren<ParticleSystem>();
+        var pSmainOut = objPartOut.main;
+        var pSmainIn = objPartIn.main;
+        var pEmissionOut = objPartOut.emission;
+        var pEmissionIn = objPartIn.emission;
+        float dist = edgeInstance.localScale.z;
+
+        // set attributes
+        objAnimationOut.position = startPos;
+        pSmainOut.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
+        pSmainIn.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
+        /*
+        Debug.Log("Edge: " + edgeInstance.transform.position);
+        Debug.Log("Rotation: " + edgeInstance.transform.rotation);
+        Debug.Log("Distance: " + dist);
+        Debug.Log("Calculated: ");
+        Debug.Log("Animation " + objAnimationOut.position);
+        */
+        // disable incoming if not both directional
+        if (!edgeProperties.isBidirectional.Equals(true))
+        {
+            pEmissionIn.enabled = false;
+        }
+        else
+        {
+            // set up incoming link in opposite direction
+            objAnimationIn.position = endPos;
+            objAnimationIn.LookAt(objAnimationOut.position);
+        }
+
+        // delay for EOD
+        if (edgeProperties.flowRate.Equals("EOD"))
+        {
+            pEmissionOut.rateOverTime = pEmissionOut.rateOverTime.constant / EODdelay;
+            pEmissionIn.rateOverTime = pEmissionOut.rateOverTime;
+        }
+
+        // change color for integration types
+        
+        switch (edgeProperties.flowType)
+        {
+            case "API":
+                pSmainOut.startColor = new Color(72, 54, 128);  // blue
+                break;
+            case "Batch":
+                pSmainOut.startColor = new Color(221, 133, 10); // orange
+                break;
+            case "MSG":
+                pSmainOut.startColor = new Color(131, 42, 42); // red
+                break;
+        }
+        
+    }
+
+
     void DrawLayers()
     {
         TextAsset textLayer = Resources.Load("layers") as TextAsset;
