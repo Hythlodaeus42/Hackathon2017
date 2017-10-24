@@ -36,7 +36,7 @@ public class LoadGraph : MonoBehaviour {
     private IEnumerable<XElement> xmlEdges;
 
     private float xscale = 2f;
-    private float yscale = 7f;
+    private float yscale = 10f;
     private float zscale = 2f;
     private float yoffset = -10f;
     private float edgexscale = 0.05f;
