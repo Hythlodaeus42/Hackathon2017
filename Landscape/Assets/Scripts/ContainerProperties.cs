@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class ContainerProperties : MonoBehaviour {
     public int Ordinal;
+    public bool Visible = true;
 }

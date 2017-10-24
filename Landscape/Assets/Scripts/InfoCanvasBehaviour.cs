@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class InfoCanvasBehaviour : MonoBehaviour {
 
     private Canvas infoCanvas;
-    private bool visible;
 
     // Use this for initialization
     void Start () {
         infoCanvas = GameObject.Find("InfoCanvas").GetComponentInChildren<Canvas>();
-        visible = false;
         infoCanvas.enabled = false;
     }
 	
@@ -20,16 +18,15 @@ public class InfoCanvasBehaviour : MonoBehaviour {
 		
 	}
 
-    public void ToggleVisibility(string info)
+    public void Show(string info)
     {
-        infoCanvas.GetComponentInChildren<Text>().text = info;        
-        ToggleVisibility();
+        infoCanvas.GetComponentInChildren<Text>().text = info;
+        infoCanvas.enabled = true;
     }
 
-    public void ToggleVisibility()
+    public void Hide()
     {
-        visible = !visible;
-        infoCanvas.enabled = visible;
+        infoCanvas.enabled = false;
 
         
     }

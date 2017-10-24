@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TimelineBehaviour : MonoBehaviour {
+    private Canvas infoCanvas;
 
+    private void Start()
+    {
+        infoCanvas = GameObject.Find("InfoCanvas").GetComponentInChildren<Canvas>();
+    }
     void OnSelect()
     {
         string year = this.name.Split(" "[0])[1];
@@ -17,5 +22,7 @@ public class TimelineBehaviour : MonoBehaviour {
                 break;
             }
         }
+
+        infoCanvas.GetComponent<InfoCanvasBehaviour>().Hide();
     }
 }
