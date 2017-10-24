@@ -29,75 +29,95 @@ public class LoadGraph : MonoBehaviour {
     public bool startVisible;
 
     private Transform parentContainer;
-    private Transform graphTransform;
+    //private Transform graphTransform;
 
     private XDocument xmlGraph;
     private IEnumerable<XElement> xmlNodes;
     private IEnumerable<XElement> xmlEdges;
 
     private float xscale = 2f;
-    private float yscale = 7f;
+    private float yscale = 10f;
     private float zscale = 2f;
     private float yoffset = -10f;
     private float edgexscale = 0.05f;
     private float edgeyscale = 0.05f;
     private float layerscale = 3f;
     private float EODdelay = 5f;
+    private float yBentMean = 0.75f;
     private float yBentDrop = 2f;
+    private float objectscale = 2f;
     
 
     // Use this for initialization
     void Start () {
-        // load XML document
-        TextAsset textGraph = Resources.Load("landscape") as TextAsset;
-        xmlGraph = XDocument.Parse(textGraph.text);
-
-        // get nodes
-        xmlNodes =
-            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("node")
-            select el;
-
-        xmlEdges =
-            from el in xmlGraph.Elements("graphml").Elements("graph").Elements("edge")
-            select el;
-
-
         parentContainer = GameObject.Find("Landscape").transform;
 
-        // draw model
-        CreateYearContainers();
-        DrawLayers();
-        DrawNodes();
-        DrawEdges();
+        // build model for each year
+        Transform yearContainer;
+        TextAsset textLayer = Resources.Load("LandscapeYears") as TextAsset;
+        int year;
 
-        graphTransform.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+        string[] rows = textLayer.text.Split("\n"[0]);
+
+        foreach (string row in rows)
+        {
+            if (row.Trim() != "")
+            {
+                // load XML document
+                Debug.Log("landscape" + row.Trim());
+                TextAsset textGraph = Resources.Load("landscape" + row.Trim()) as TextAsset;
+                xmlGraph = XDocument.Parse(textGraph.text);
+
+                // get nodes
+                xmlNodes =
+                    from el in xmlGraph.Elements("graphml").Elements("graph").Elements("node")
+                    select el;
+
+                xmlEdges =
+                    from el in xmlGraph.Elements("graphml").Elements("graph").Elements("edge")
+                    select el;
+
+                // draw model
+                //Debug.Log(row);
+                year = int.Parse(row);
+
+                yearContainer = CreateYearContainer(year);
+                DrawLayers(yearContainer);
+                DrawNodes(yearContainer);
+                DrawEdges(yearContainer);
+
+                //rescale hologram
+                yearContainer.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+                yearContainer.gameObject.SetActive(false); //temporary during construction
+            }
+        }
+
 
         SetStartActiveStatus();
+
     }
 
-    void CreateYearContainers()
+    Transform CreateYearContainer(int year)
     {
-        Instantiate(prefabLandscapeContainer, new Vector3(0, 0, 0), Quaternion.identity, parentContainer);
+        float xoffset = (year - 2018) * layerscale * xscale;
+        Instantiate(prefabLandscapeContainer, new Vector3(xoffset, 0, 0), Quaternion.identity, parentContainer);
         Transform yearContainer = parentContainer.GetChild(parentContainer.childCount - 1);
-        yearContainer.localPosition = new Vector3(0, 0, 0);
-        yearContainer.name = "Landscape2018";
+        yearContainer.localPosition = new Vector3(xoffset, 0, 0);
+        yearContainer.name = "Landscape" + year.ToString();
 
         // quick option to put all children in year container without refactoring. 
-        graphTransform = yearContainer;
+        return yearContainer;
     }
 
     void SetStartActiveStatus()
     {
-        if (!startVisible)
+        foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
         {
-            foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
-            {
-                landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
-            }
+            landscape.gameObject.SetActive(startVisible);
         }
     }
 
-    void DrawNodes()
+    void DrawNodes(Transform yearContainer)
     {
 
         int nodecount = 0;
@@ -125,7 +145,7 @@ public class LoadGraph : MonoBehaviour {
             nodeColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectColour").Select(a => a.Value).FirstOrDefault();
             nodeBaseColour = node.Descendants().Where(a => a.Attribute("key").Value == "v_ObjectBaseColour").Select(a => a.Value).FirstOrDefault();
 
-            Transform layerContainer = graphTransform.Find("Layer" + layerOrdinal.ToString());
+            Transform layerContainer = yearContainer.Find("Layer" + layerOrdinal.ToString());
 
             switch (nodeType)
             {
@@ -192,7 +212,7 @@ public class LoadGraph : MonoBehaviour {
 
             //size by display weight
             float displayWeight = float.Parse(nodeProperties.DisplayWeight);
-            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight, nodeInstance.localScale.y * displayWeight, nodeInstance.localScale.z * displayWeight);
+            nodeInstance.localScale = new Vector3(nodeInstance.localScale.x * displayWeight * objectscale, nodeInstance.localScale.y * displayWeight * objectscale, nodeInstance.localScale.z * displayWeight * objectscale);
 
             //set colour
             ColorUtility.TryParseHtmlString("#" + nodeColour, out clr);
@@ -233,11 +253,11 @@ public class LoadGraph : MonoBehaviour {
     //    child.transform.parent = trn.transform;
     //}
     
-    void DrawEdges()
+    void DrawEdges(Transform yearContainer)
     {
         //Debug.Log("start draw edges");
 
-        Transform edgeContainer = Instantiate(prefabEdgeContainer, new Vector3(0, 0, 0), Quaternion.identity, graphTransform);
+        Transform edgeContainer = Instantiate(prefabEdgeContainer, new Vector3(0, 0, 0), Quaternion.identity, yearContainer);
         edgeContainer.name = "EdgeContainer";
         edgeContainer.localPosition = new Vector3(0, 0, 0);
 
@@ -247,11 +267,13 @@ public class LoadGraph : MonoBehaviour {
 
             GameObject startNode = GameObject.Find(edge.Attribute("source").Value);
             GameObject endNode = GameObject.Find(edge.Attribute("target").Value);
+            //GameObject startNode = yearContainer.Find(edge.Attribute("source").Value).gameObject;
+            //GameObject endNode = yearContainer.Find(edge.Attribute("target").Value).gameObject;
 
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
 
-            //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, graphTransform);
+            //Transform edgeInstance = Instantiate(prefabEdge, startNode.transform.position, Quaternion.identity, yearContainer);
             Transform edgeInstance = Instantiate(prefabEdge, centerPosition, Quaternion.identity, edgeContainer);
             edgeInstance.LookAt(endNode.transform);
             edgeInstance.transform.localScale = new Vector3(edgexscale, edgeyscale, dist);
@@ -271,7 +293,7 @@ public class LoadGraph : MonoBehaviour {
             // bent edges
             if (edgeProperties.fromLayerOrdinal.Equals(2) && edgeProperties.toLayerOrdinal.Equals(2))
             {
-                float ydrop = yscale - Random.Range(yBentDrop, yBentDrop + 1f);
+                float ydrop = yscale * yBentMean - Random.Range(yBentDrop, yBentDrop + 1f);
 
                 // drop existing
                 edgeInstance.transform.position = new Vector3(centerPosition.x, centerPosition.y - ydrop, centerPosition.z);
@@ -413,7 +435,7 @@ public class LoadGraph : MonoBehaviour {
     }
 
 
-    void DrawLayers()
+    void DrawLayers(Transform yearContainer)
     {
         TextAsset textLayer = Resources.Load("layers") as TextAsset;
 
@@ -430,15 +452,15 @@ public class LoadGraph : MonoBehaviour {
                 float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
                 Color layerColor = new Color(float.Parse(rowAttributes[4]), float.Parse(rowAttributes[5]), float.Parse(rowAttributes[6]));
 
-                Instantiate(prefabLayerContainer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
-                Transform containerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                Instantiate(prefabLayerContainer, new Vector3(0, y, 0), Quaternion.identity, yearContainer);
+                Transform containerInstance = yearContainer.GetChild(yearContainer.childCount - 1);
                 containerInstance.name = "Layer" + rowAttributes[0];
 
                 //Quaternion target = Quaternion.Euler(90, Camera.main.transform.rotation.y, Camera.main.transform.rotation.z);
                 //Quaternion target = Quaternion.Euler(90, 0, 0);
                 //transform.rotation = Quaternion.Slerp(transform.rotation, target, 1);
 
-                //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, graphTransform);
+                //Instantiate(prefabLayer, new Vector3(0, y, 0), transform.rotation, yearContainer);
                 Instantiate(prefabLayer, new Vector3(0, 0, 0), Quaternion.identity, containerInstance);
 
                 Transform layerInstance = containerInstance.GetChild(containerInstance.childCount - 1);
@@ -477,9 +499,9 @@ public class LoadGraph : MonoBehaviour {
                 containerInstance.GetComponent<ContainerProperties>().Ordinal = int.Parse(rowAttributes[0]);
 
                 //create layer UI
-                Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
+                Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, yearContainer);
 
-                Transform uiInstance = graphTransform.GetChild(graphTransform.childCount - 1);
+                Transform uiInstance = yearContainer.GetChild(yearContainer.childCount - 1);
                 RectTransform uiRect = uiInstance.gameObject.GetComponent<RectTransform>();
                 uiInstance.name = "LayerUI" + rowAttributes[0];
                 //uiInstance.localPosition = new Vector3(0, y, 0);

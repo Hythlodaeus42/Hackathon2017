@@ -14,11 +14,11 @@ public class KeyboardManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // rotate camera
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
             //Debug.Log("DownArrow was pressed.");
             Camera.main.transform.Rotate(new Vector3(spin, 0, 0));
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
             //Debug.Log("DownArrow was pressed.");
             Camera.main.transform.Rotate(new Vector3(-spin, 0, 0));
 
