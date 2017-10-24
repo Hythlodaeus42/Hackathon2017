@@ -86,6 +86,7 @@ public class LoadGraph : MonoBehaviour {
 
             //rescale hologram
             yearContainer.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+            yearContainer.gameObject.SetActive(false); //temporary during construction
         }
 
         SetStartActiveStatus();
@@ -106,12 +107,9 @@ public class LoadGraph : MonoBehaviour {
 
     void SetStartActiveStatus()
     {
-        if (!startVisible)
+        foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
         {
-            foreach (Transform landscape in parentContainer.GetComponentInChildren<Transform>(true))
-            {
-                landscape.GetComponent<ContainerBehaviour>().toggleVisibility();
-            }
+            landscape.gameObject.SetActive(startVisible);
         }
     }
 
@@ -265,6 +263,8 @@ public class LoadGraph : MonoBehaviour {
 
             GameObject startNode = GameObject.Find(edge.Attribute("source").Value);
             GameObject endNode = GameObject.Find(edge.Attribute("target").Value);
+            //GameObject startNode = yearContainer.Find(edge.Attribute("source").Value).gameObject;
+            //GameObject endNode = yearContainer.Find(edge.Attribute("target").Value).gameObject;
 
             Vector3 centerPosition = (startNode.transform.position + endNode.transform.position) / 2f;
             float dist = Vector3.Distance(startNode.transform.position, endNode.transform.position);
