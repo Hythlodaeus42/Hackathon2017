@@ -1,4 +1,4 @@
-1,Data & Integration,11,11
-2,Application,11,11
-3,Service,11,11
-4,Channel,11,11
+1,Data & Integration,11,11,0,0,1
+2,Application,11,11,0,1,0
+3,Service,11,11,1,0.92,0.016
+4,Channel,11,11,1,0,0

@@ -44,8 +44,7 @@ public class LoadGraph : MonoBehaviour {
     private float layerscale = 3f;
     private float EODdelay = 5f;
     private float yBentDrop = 2f;
-
-
+    
 
     // Use this for initialization
     void Start () {
@@ -429,7 +428,7 @@ public class LoadGraph : MonoBehaviour {
                 float y = float.Parse(rowAttributes[0]) * yscale + yoffset;
                 float layerx = float.Parse(rowAttributes[2]) * layerscale * xscale;
                 float layerz = float.Parse(rowAttributes[3]) * layerscale * zscale;
-
+                Color layerColor = new Color(float.Parse(rowAttributes[4]), float.Parse(rowAttributes[5]), float.Parse(rowAttributes[6]));
 
                 Instantiate(prefabLayerContainer, new Vector3(0, y, 0), Quaternion.identity, graphTransform);
                 Transform containerInstance = graphTransform.GetChild(graphTransform.childCount - 1);
@@ -454,6 +453,25 @@ public class LoadGraph : MonoBehaviour {
                 layerInstance.Find("Panel/South").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/East").GetComponent<Text>().text = layerInstance.name;
                 layerInstance.Find("Panel/West").GetComponent<Text>().text = layerInstance.name;
+
+                    
+                //set beading           
+                Transform northCylinder = layerInstance.Find("Panel/North/Cylinder");
+                Transform westCylinder = layerInstance.Find("Panel/West/Cylinder");
+                Transform southCylinder = layerInstance.Find("Panel/South/Cylinder");
+                Transform eastCylinder = layerInstance.Find("Panel/East/Cylinder");
+
+                // change beading size
+                northCylinder.localScale = new Vector3(northCylinder.localScale.x, layerz * zscale, northCylinder.localScale.z);
+                westCylinder.localScale = new Vector3(westCylinder.localScale.x, layerx * xscale, westCylinder.localScale.z);
+                southCylinder.localScale = new Vector3(southCylinder.localScale.x, layerz * zscale, southCylinder.localScale.z);
+                eastCylinder.localScale = new Vector3(eastCylinder.localScale.x, layerx * xscale, eastCylinder.localScale.z);
+
+                // change beading color
+                northCylinder.GetComponent<Renderer>().materials[0].color = layerColor;
+                westCylinder.GetComponent<Renderer>().materials[0].color = layerColor;
+                southCylinder.GetComponent<Renderer>().materials[0].color = layerColor;
+                eastCylinder.GetComponent<Renderer>().materials[0].color = layerColor;
 
                 //set layer properties
                 containerInstance.GetComponent<ContainerProperties>().Ordinal = int.Parse(rowAttributes[0]);
