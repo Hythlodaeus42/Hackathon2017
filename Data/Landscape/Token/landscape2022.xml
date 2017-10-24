@@ -1,4 +1,31 @@
-<graphml>
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_LongName" for="node" attr.name="LongName" attr.type="string"/>
+  <key id="v_LayerOrdinal" for="node" attr.name="LayerOrdinal" attr.type="double"/>
+  <key id="v_Layer" for="node" attr.name="Layer" attr.type="string"/>
+  <key id="v_Critically" for="node" attr.name="Critically" attr.type="string"/>
+  <key id="v_Desirability" for="node" attr.name="Desirability" attr.type="string"/>
+  <key id="v_DisplayWeight" for="node" attr.name="DisplayWeight" attr.type="double"/>
+  <key id="v_BusinessArea" for="node" attr.name="BusinessArea" attr.type="string"/>
+  <key id="v_BusinessFunction" for="node" attr.name="BusinessFunction" attr.type="string"/>
+  <key id="v_nonMarkets" for="node" attr.name="nonMarkets" attr.type="double"/>
+  <key id="v_Xsize" for="node" attr.name="Xsize" attr.type="string"/>
+  <key id="v_Ysize" for="node" attr.name="Ysize" attr.type="string"/>
+  <key id="v_Zsize" for="node" attr.name="Zsize" attr.type="string"/>
+  <key id="v_ObjectColour" for="node" attr.name="ObjectColour" attr.type="string"/>
+  <key id="v_ObjectBaseColour" for="node" attr.name="ObjectBaseColour" attr.type="string"/>
+  <key id="v_ObjectType" for="node" attr.name="ObjectType" attr.type="string"/>
+  <key id="v_X" for="node" attr.name="X" attr.type="double"/>
+  <key id="v_Z" for="node" attr.name="Z" attr.type="double"/>
+  <key id="e_Direction" for="edge" attr.name="Direction" attr.type="double"/>
+  <key id="e_Data" for="edge" attr.name="Data" attr.type="string"/>
+  <key id="e_Frequency" for="edge" attr.name="Frequency" attr.type="string"/>
+  <key id="e_Type" for="edge" attr.name="Type" attr.type="string"/>
   <graph id="G" edgedefault="directed">
     <node id="n0">
       <data key="v_name">Node151</data>
