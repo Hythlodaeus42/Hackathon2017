@@ -90,7 +90,7 @@ for (y in years) {
         
         n <- 1
         contiguous <- 1
-        while (max(getapp.name(y, b, a)) == max(getapp.name(y, b, a + n))) {
+        while (max(getapp.name(y, b, a)) == max(getapp.name(y, b, a + n)) & getapp.count(y, b, a + n) == 1) {
           # contiguous[[y]][b + 1, a + 1] <- contiguous[[y]][b + 1, a + 1] + 1
           contiguous <- contiguous + 1
           
@@ -103,7 +103,7 @@ for (y in years) {
 }
 
 # bfg04	bf09	ac01	app11	2018	Green
-# busmat.rank[busmat.rank$year == 2018 & busmat.rank$bf == "bf16", ]
+# busmat.rank[busmat.rank$year == 2018 & busmat.rank$bf == "bf04", ]
 
 
 # View(busmat.rank[busmat.rank$year == y & busmat.rank$bf.ord == b & busmat.rank$ac.ord %in% (a-1):(a + 1), ])
