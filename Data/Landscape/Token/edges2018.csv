@@ -1,0 +1,420 @@
+Source,Target,Direction,Data,Frequency,Type
+Node200,Node193,1,Electronic Communications,EOD,Batch
+Node153,Node096,1,UAM,Intraday,MSG
+Node153,Node097,1,UAM,Intraday,MSG
+Node153,Node150,1,UAM,Intraday,MSG
+Node002,Node209,1,Reference Data,EOD,Batch
+Node002,Node160,1,Trades,EOD,Batch
+Node002,Node122,2,Validated Markets Data,EOD,Batch
+Node002,Node146,1,Derived Data,EOD,Batch
+Node003,Node050,2,Settlements,EOD,Batch
+Node005,Node170,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node178,2,Trades,Intraday,API
+Node005,Node171,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node023,1,IBank Orders,Intraday,API
+Node005,Node172,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node031,1,IBank Orders,Intraday,API
+Node005,Node173,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node045,1,IBank Orders,Intraday,API
+Node005,Node168,1,IBank Orders,Intraday,API
+Node005,Node174,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node169,1,IBank Orders,Intraday,API
+Node005,Node183,1,"Deals, quotes, depth ",Intraday,MSG
+Node005,Node163,2,FX Trades,Intraday,MSG
+Node005,Node175,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node117,1,IBank Orders,Intraday,API
+Node005,Node176,2,"IBank Orders, Market Price, IBank Trades",Intraday,API
+Node005,Node150,1,Direct Trader Deals,Intraday,API
+Node006,Node145,1,License,Intraday,API
+Node007,Node078,2,RFQ,Intraday,API
+Node007,Node096,1,"Trades, Block allocation",Intraday,MSG
+Node007,Node102,1,"Trades, Block allocation",EOD,Batch
+Node008,Node002,1,Trades,EOD,Batch
+Node008,Node089,1,Trades,Intraday,API
+Node008,Node145,1,Manual keying to VCON (affirmation),Intraday,API
+Node008,Node146,1,Trades,EOD,Batch
+Node009,Node002,1,Market Data,EOD,Batch
+Node009,Node078,1,Reference Data,EOD,Batch
+Node009,Node122,1,Markets Data,Intraday,API
+Node009,Node197,1,Market Data,Intraday,MSG
+Node009,Node146,1,Market Data,EOD,Batch
+Node010,Node145,1,Confirmation,Intraday,API
+Node194,Node193,1,Electronic Communications,EOD,Batch
+Node011,Node130,1,Equities & futures,Intraday,API
+Node201,Node193,1,Electronic Communications,EOD,Batch
+Node013,Node079,1,"Customer, Facility",Intraday,MSG
+Node158,Node196,1,Application Log,Intraday,API
+Node014,Node130,1,Warrants,Intraday,API
+Node016,Node020,2,Commerical Bill Drawdowns,Intraday,MSG
+Node019,Node124,1,"Sales Orders, Trades",Intraday,API
+Node020,Node013,1,Trade Event (Sales $val),Intraday,MSG
+Node020,Node027,1,Reports,EOD,Batch
+Node020,Node046,1,Daily Trades,EOD,Batch
+Node020,Node069,1,"Daily Trades, Active Deals, Static Ref Data",EOD,Batch
+Node020,Node083,1,Customer Advices,EOD,Batch
+Node020,Node104,1,"AU Cash, NZ Cash",Intraday,MSG
+Node020,Node160,1,Trades,EOD,Batch
+Node021,Node090,1,Swift Payment,Intraday,MSG
+Node021,Node104,1,Payments (VIPA format),Intraday,MSG
+Node202,Node193,1,Electronic Communications,EOD,Batch
+Node167,Node206,1,Customer Info,Intraday,API
+Node165,Node199,1,"SMTP/TLS Alerts, Emails",Intraday,API
+Node165,Node203,2,Authenticate and Authorise,Intraday,API
+Node165,Node204,2,ESM Reports/Spreadsheets & access dbs,EOD,Batch
+Node023,Node005,1,IBank Trades,Intraday,API
+Node023,Node089,2,Trades,Intraday,API
+Node024,Node130,1,Routed Executions,Intraday,API
+Node026,Node012,1,Usage Drawdowns,Intraday,MSG
+Node026,Node020,1,Commerical Bill Drawdowns,Intraday,MSG
+Node028,Node163,1,PFE’s,Intraday,MSG
+Node028,Node112,1,PFE’s,Intraday,MSG
+Node205,Node182,1,Customer Data,EOD,Batch
+Node205,Node071,1,Customer Onboarding,Intraday,API
+Node155,Node178,1,Static Data,EOD,Batch
+Node155,Node195,1,Static Data,EOD,Batch
+Node155,Node086,1,Customer Data,Intraday,MSG
+Node155,Node162,1,Customer Data,Intraday,MSG
+Node155,Node091,1,Customer Data,Intraday,MSG
+Node155,Node163,2,Customer Data,Intraday,MSG
+Node155,Node157,1,Customer Data,EOD,Batch
+Node155,Node096,1,Customer Data,Intraday,MSG
+Node155,Node097,1,Customer Data,Intraday,MSG
+Node155,Node150,1,Customer Data,Intraday,MSG
+Node155,Node181,1,Brokerage Details,EOD,Batch
+Node031,Node005,1,IBank Trades,Intraday,API
+Node031,Node047,1,Blocks & Allocations,Intraday,API
+Node032,Node124,1,Sales Orders & Trades,Intraday,API
+Node033,Node150,1,MM,Intraday,API
+Node034,Node150,1,Fwd Pts,Intraday,API
+Node035,Node116,1,Entitlement,Intraday,API
+Node037,Node091,1,FX Transaction thru MATI,Intraday,MSG
+Node038,Node013,1,Trade Event (Sales $val),Intraday,MSG
+Node038,Node025,1,"Daily Trades, Customer Info",EOD,Batch
+Node038,Node099,1,Positions,EOD,Batch
+Node038,Node108,1,G/L Entries,EOD,Batch
+Node038,Node110,1,"Trades, POS, MTM, Cashflows",EOD,Batch
+Node039,Node015,1,Cashflow of NZ Trades,EOD,Batch
+Node039,Node017,1,Active Deals,EOD,Batch
+Node039,Node018,1,Audit Confirmation Info,EOD,Batch
+Node039,Node100,1,Asset & Liability Info,EOD,Batch
+Node042,Node130,1,Exposures,Intraday,API
+Node045,Node005,1,IBank Trades,Intraday,API
+Node045,Node150,1,Trades,Intraday,API
+Node047,Node040,2,Ticket,Intraday,MSG
+Node047,Node044,2,"Spot Prices, Fwd Prices",Intraday,MSG
+Node047,Node086,1,NZ FX,Intraday,MSG
+Node047,Node130,1,Trades (NDF & PM),Intraday,MSG
+Node047,Node150,1,"FX, MMI",Intraday,MSG
+Node199,Node155,1,Customer Data,Intraday,MSG
+Node199,Node193,1,Electronic Communications,Intraday,API
+Node166,Node205,2,Customer services,Intraday,API
+Node166,Node198,1,Scenarios Management,EOD,Batch
+Node208,Node155,1,Legal Agreement,Intraday,API
+Node049,Node096,1,Trades,Intraday,MSG
+Node051,Node157,1,FI Settlement,EOD,Batch
+Node052,Node078,1,Publish Curves,Intraday,MSG
+Node053,Node036,1,BI Data,EOD,Batch
+Node053,Node060,1,"Markets, Trades Positions",EOD,Batch
+Node053,Node159,1,"PV, Trade Economic Details",EOD,Batch
+Node053,Node154,1,P&L,EOD,Batch
+Node053,Node109,1,BI Data,EOD,Batch
+Node053,Node144,1,"Markets, Trades Positions",EOD,Batch
+Node054,Node030,1,Customer Accounting Entries (Internal),EOD,Batch
+Node054,Node189,2,Trades,Intraday,API
+Node054,Node104,1,"AU Cash, NZ Cash",Intraday,MSG
+Node054,Node112,1,"Trades, POS, MTM, Cashflows",EOD,Batch
+Node054,Node121,1,Trade Events,Intraday,MSG
+Node054,Node135,1,Daily Trades,EOD,Batch
+Node055,Node096,1,Trades,Intraday,MSG
+Node055,Node097,1,Trades,Intraday,MSG
+Node055,Node122,1,Markets Data,EOD,Batch
+Node055,Node130,1,FX Option,Intraday,MSG
+Node057,Node145,1,Manual keying to VCON (affirmation),Intraday,API
+Node058,Node052,1,Authorisation,Intraday,MSG
+Node058,Node056,1,Authorisation,Intraday,MSG
+Node059,Node066,1,"RFQ, Trade",Intraday,MSG
+Node061,Node086,1,MM,Intraday,MSG
+Node062,Node059,1,FX Quote,Intraday,API
+Node062,Node163,2,FX Trades,Intraday,MSG
+Node063,Node047,1,"Blocks, Allocations",Intraday,API
+Node064,Node124,1,Orders. Trades,Intraday,API
+Node065,Node178,1,RFQ,Intraday,API
+Node168,Node005,1,IBank Trades,Intraday,API
+Node066,Node004,1,"RFQ, Trades",Intraday,API
+Node066,Node047,1,Client Deal,Intraday,MSG
+Node066,Node064,1,Client Tiered Rates,Intraday,MSG
+Node066,Node065,1,FX Ref Rates,EOD,Batch
+Node066,Node070,1,"RFQ, Rates",Intraday,MSG
+Node066,Node073,1,Trades,Intraday,API
+Node066,Node097,1,Trades,Intraday,MSG
+Node066,Node106,2,Cpty Limit Check,Intraday,MSG
+Node066,Node150,1,MM,Intraday,MSG
+Node067,Node124,1,"Sales, Orders, Trades",Intraday,API
+Node068,Node096,1,Manual trade entry for risk and after cleared,Intraday,API
+Node068,Node146,1,Market Data,EOD,Batch
+Node164,Node156,2,"Product hierarchy, P&L",EOD,Batch
+Node070,Node091,1,"Beneficiary, Payment Management",Intraday,MSG
+Node071,Node162,1,Customer Data,Intraday,MSG
+Node071,Node163,2,Customer Data,Intraday,MSG
+Node071,Node130,1,Customer Data,Intraday,MSG
+Node071,Node161,1,Customer Onboarding,Intraday,MSG
+Node072,Node091,1,FX Transaction thru MATI,Intraday,MSG
+Node169,Node005,1,IBank Trades,Intraday,API
+Node074,Node065,1,FX Quote,Intraday,API
+Node075,Node096,1,"Voice Trade manual entry for risk, Manual trade entry for risk and after cleared",Intraday,API
+Node075,Node145,1,Manual keying to VCON (affirmation),Intraday,API
+Node075,Node146,1,Market Data,EOD,Batch
+Node076,Node207,1,Risk Bucket Mapping,EOD,Batch
+Node076,Node089,1,Trades,Intraday,API
+Node077,Node096,1,Manual trade entry for risk and after cleared,Intraday,API
+Node207,Node184,1,Sensitivities CRIF File,EOD,Batch
+Node207,Node160,2,"Sensitivities, FX Spots & Volume, Murex Reports",EOD,Batch
+Node078,Node179,1,Internal live rates curve ,Intraday,MQ
+Node078,Node056,1,Mkt & closing data,EOD,Batch
+Node078,Node096,1,Trades,Intraday,MSG
+Node078,Node115,1,"Trades, Prices, RFQ",Intraday,MSG
+Node078,Node146,1,"EOD bond Pricing, Rates",EOD,Batch
+Node080,Node130,1,Equities,Intraday,MSG
+Node083,Node041,1,"Confirmation, Matching",Intraday,MSG
+Node190,Node046,1,Loan Data,EOD,Batch
+Node190,Node069,1,Loan Data,EOD,Batch
+Node190,Node099,1,Loan Data,EOD,Batch
+Node190,Node105,1,Payments,Intraday,MSG
+Node190,Node108,1,General Ledger,EOD,Batch
+Node190,Node112,1,Loan Data,EOD,Batch
+Node084,Node028,1,Trades,EOD,Batch
+Node084,Node190,1,Interest Rate,Intraday,API
+Node084,Node162,1,Trades,Intraday,MSG
+Node084,Node157,1,Holiday Calender,Intraday,API
+Node084,Node156,1,"Trades, Trade reference data, Securities",Intraday,API
+Node084,Node130,1,Reference Data,EOD,Batch
+Node084,Node161,1,Trade Execution,Intraday,MSG
+Node086,Node179,1,Trade Data,Intraday,MSG
+Node086,Node030,1,Customer Accounting Entries (Internal),EOD,Batch
+Node086,Node163,1,Trades,Intraday,MSG
+Node086,Node104,1,"AU Cash, NZ Cash",Intraday,MSG
+Node086,Node112,1,"Trades, POS, MTM, Cashflows",EOD,Batch
+Node086,Node160,1,Trades,EOD,Batch
+Node086,Node121,1,Trades,Intraday,MSG
+Node086,Node135,1,Daily Trades,EOD,Batch
+Node086,Node197,1,"P&L Files, Unconfirmed Trade reports",EOD,Batch
+Node087,Node078,1,Credit curves,EOD,Batch
+Node087,Node146,1,Market Data,EOD,Batch
+Node088,Node156,1,IPV & bid/offer risk position data,EOD,Batch
+Node089,Node096,1,Trades,Intraday,MSG
+Node089,Node097,1,Trades,Intraday,MSG
+Node090,Node030,1,Customer Accounting Entries (Internal),Intraday,MSG
+Node090,Node157,2,SWIFT Message,Intraday,MSG
+Node090,Node112,1,"Trades, POS, MTM, Cashflows",EOD,Batch
+Node090,Node133,1,Payments,Intraday,API
+Node090,Node135,1,Daily Trades,EOD,Batch
+Node090,Node140,1,"Confirmation, Matching",EOD,Batch
+Node162,Node152,2,Reference Data,Intraday,API
+Node162,Node102,1,Trade Leg Extraction,Intraday,MSG
+Node162,Node192,1,Regulatory Reports,EOD,Batch
+Node091,Node179,1,Trade Data,Intraday,MSG
+Node091,Node013,1,Trades,Intraday,MSG
+Node091,Node022,1,Payment Instructions,Intraday,MSG
+Node091,Node191,1,Confirmation,EOD,Batch
+Node091,Node030,1,Customer Accounting Entries (Internal),EOD,Batch
+Node091,Node195,1,Trade Data,Intraday,MSG
+Node091,Node040,1,"Confirmation, Matching",Intraday,MSG
+Node091,Node048,1,"Confirmation, Matching",Intraday,MSG
+Node091,Node050,1,Settlements,EOD,Batch
+Node091,Node072,1,Payment Instructions,Intraday,MSG
+Node091,Node209,1,Trades,Intraday,MSG
+Node091,Node090,1,Payment Instructions,Intraday,MSG
+Node091,Node093,1,Trades,EOD,Batch
+Node091,Node163,1,Trades,Intraday,MSG
+Node091,Node157,2,"Customer Data, Trade Reconciliation",Intraday,MSG
+Node091,Node156,1,Business Reference Data,EOD,Batch
+Node091,Node104,1,"AU Cash, NZ Cash, Payment Instructions",Intraday,MSG
+Node091,Node112,1,"Trades, POS, MTM, Cashflows",EOD,Batch
+Node091,Node118,1,"Confirmation, Matching",Intraday,MSG
+Node091,Node160,1,Trades,EOD,Batch
+Node091,Node121,1,Trades,Intraday,MSG
+Node091,Node129,1,"Confirmation, Matching",EOD,Batch
+Node091,Node161,1,"Payments/Ledger/Accounting, Trade Execution",Intraday,MSG
+Node091,Node135,1,Daily Trades,EOD,Batch
+Node091,Node139,1,"Confirmation, Matching",EOD,Batch
+Node091,Node140,1,"Confirmation, Matching",EOD,Batch
+Node091,Node150,1,"Spot Rates, Carded Position",EOD,Batch
+Node092,Node090,1,Payments,Intraday,MSG
+Node093,Node164,1,P&L,EOD,Batch
+Node093,Node122,1,Trade Data,EOD,Batch
+Node163,Node084,1,Trades,Intraday,MSG
+Node163,Node161,1,Trades,Intraday,MSG
+Node163,Node197,1,Trades,Intraday,MSG
+Node157,Node195,1,Trade Data,Intraday,MSG
+Node157,Node195,1,Trade Data,EOD,Batch
+Node157,Node058,2,Authorise User,Intraday,API
+Node157,Node163,2,"Trades, Settlement Instructions",Intraday,MSG
+Node157,Node118,1,Fax,eod,Batch
+Node095,Node088,1,Results,Intraday,MSG
+Node095,Node160,1,"Trades, Sensitivities",EOD,Batch
+Node096,Node179,1,P&L and valuations ,Intraday,MSG
+Node096,Node021,1,Payment Instructions,Intraday,MSG
+Node096,Node191,1,Confirmation,EOD,Batch
+Node096,Node028,1,Razor Feed (MTM),EOD,Batch
+Node096,Node195,1,Trade Data,Intraday,MSG
+Node096,Node051,1,Manual process AU & NZ extract file,EOD,Batch
+Node096,Node053,1,various batch files,EOD,Batch
+Node096,Node056,1,Positions / Trade Valuation,Intraday,MSG
+Node096,Node084,1,"Trades, Reference data",EOD,Batch
+Node096,Node209,1,Trades,Intraday,MSG
+Node096,Node091,1,Finance Journals (Mirror Account),EOD,Batch
+Node096,Node163,2,Trades,Intraday,MSG
+Node096,Node157,2,"Currencies & Currency Pair, Portofolios & Cost Centres, Rate Conventions & FX Indices, Trade Data",Intraday,MSG
+Node096,Node156,1,Trades,EOD,Batch
+Node096,Node102,1,"Trades, EOD valuation",EOD,Batch
+Node096,Node122,1,Trades,Intraday,MSG
+Node096,Node196,1,Application Log,Intraday,API
+Node096,Node161,1,"Trade Execution/Amendments, Regulatory Reporting, Customer, payments/Ledger/Accounting",Intraday,MSG
+Node096,Node135,1,Cashflows,EOD,Batch
+Node096,Node197,1,"P&L Files, Unconfirmed Trade reports",EOD,Batch
+Node096,Node147,1,"Market Data, Prices",Intraday,API
+Node096,Node148,1,Payment Instructions,Intraday,MSG
+Node096,Node181,1,Brokerage Fee,EOD,Batch
+Node096,Node180,1,"FX Rates, Expiry CSV file",EOD,Batch
+Node097,Node021,1,Payment Instructions,Intraday,MSG
+Node097,Node053,1,various batch files,EOD,Batch
+Node097,Node084,1,Trade Feed,EOD,Batch
+Node097,Node163,2,Trades,Intraday,MSG
+Node097,Node156,1,Trades,EOD,Batch
+Node097,Node160,1,"Trades, Sensitivities",EOD,Batch
+Node097,Node161,1,"Trade Execution/Amendments, Regulatory Reporting, Customer, payments/Ledger/Accounting",Intraday,MSG
+Node097,Node135,1,Cashflows,EOD,Batch
+Node097,Node147,1,Market Data / Prices,Intraday,API
+Node097,Node148,1,Payment Instructions,Intraday,MSG
+Node099,Node100,1,Positions,EOD,Batch
+Node101,Node145,1,Manual keying to VCON (affirmation),Intraday,API
+Node156,Node164,2,P&L,EOD,Batch
+Node156,Node093,1,TLTB Balance,EOD,Batch
+Node156,Node196,1,Application Log,Intraday,API
+Node102,Node152,2,Reference Data,Intraday,API
+Node102,Node043,1,Regulatory Reports,EOD,Batch
+Node102,Node163,2,Trades,Intraday,MSG
+Node103,Node091,1,FX Transaction thru MATI,Intraday,MSG
+Node104,Node090,2,Payment Instructions,Intraday,MSG
+Node104,Node140,2,"Confirmation, Matching",EOD,Batch
+Node105,Node158,1,SWIFT Message,Intraday,MSG
+Node105,Node065,1,FX Accept,Intraday,MSG
+Node105,Node157,2,Payments Processing,Intraday,MSG
+Node107,Node144,1,Curves,EOD,Batch
+Node177,Node183,1,"Quotes, position, P&L",Intraday,MSG
+Node177,Node185,1,Wholesale Rate,Intraday,MSG
+Node108,Node156,1,Regional FX Spot Rates,EOD,Batch
+Node110,Node152,1,Scenarios Management,EOD,Batch
+Node110,Node013,1,"Trades, POS",Intraday,API
+Node111,Node028,1,EOD Zero Curves,EOD,Batch
+Node111,Node160,1,"Sensitivities, Scenario, Risk factor",EOD,Batch
+Node112,Node028,1,"Position, MTM, Limits",EOD,Batch
+Node112,Node155,1,Customer Data,EOD,Batch
+Node112,Node207,1,Trades,EOD,Batch
+Node112,Node079,1,Open MM Deals,Intraday,MSG
+Node112,Node106,1,"Limits, Utilisation",EOD,Batch
+Node112,Node121,1,"List of collateral, Trades",EOD,Batch
+Node186,Node070,1,Markets Data,Intraday,API
+Node186,Node124,1,Markets Data,Intraday,API
+Node113,Node150,1,Trades,Intraday,API
+Node114,Node146,1,Market Data,EOD,Batch
+Node115,Node078,2,"Trades, Prices, RFQ",Intraday,API
+Node035,Node116,1,UAM,Intraday,API
+Node116,Node115,2,"Trades, Prices, RFQ",Intraday,API
+Node117,Node002,1,Market Data,EOD,Batch
+Node117,Node005,1,IBank Trades,Intraday,API
+Node117,Node193,1,Electronic Communications,EOD,Batch
+Node117,Node066,1,ANZ Prices,Intraday,API
+Node117,Node078,1,Reference Data,EOD,Batch
+Node117,Node122,1,Markets Data,Intraday,API
+Node117,Node197,1,Markets Data,Intraday,API
+Node117,Node146,1,Market Data,EOD,Batch
+Node160,Node088,1,"Sensitivities, Risk factor",EOD,Batch
+Node119,Node056,1,Issuer limit,Intraday,MSG
+Node120,Node124,1,"Sales, Orders, Trades",Intraday,API
+Node187,Node062,1,Sales Margin,Intraday,APi
+Node187,Node106,1,Sales Margin,Intraday,API
+Node187,Node124,1,Sales Margin,Intraday,API
+Node121,Node112,1,Collateral balances,EOD,Batch
+Node121,Node122,1,Collateral balances,EOD,Batch
+Node198,Node152,1,Scenarios Management,EOD,Batch
+Node122,Node207,1,"FX Vega, Delta, trade reference",EOD,Batch
+Node122,Node159,1,"PV, Trade Economic Details",EOD,API
+Node122,Node087,2,Totem,EOD,API
+Node122,Node162,1,Position Limits,EOD,Batch
+Node122,Node163,2,Trades,Intraday,MSG
+Node122,Node096,2,Trades,Intraday,MSG
+Node122,Node096,1,PV,EOD,API
+Node122,Node154,1,P&L,EOD,API
+Node122,Node160,2,"Markes risk scenario, sensitivites",EOD,Batch
+Node122,Node196,1,Application Log,Intraday,API
+Node122,Node130,2,Trade Confirmation,Intraday,MSG
+Node123,Node096,1,Trades,Intraday,MSG
+Node124,Node178,2,"Price, Execution",Intraday,API
+Node124,Node019,1,"Spot Prices, Fwd Prices",Intraday,MSG
+Node124,Node032,1,"Spot Prices, Fwd Prices",Intraday,MSG
+Node124,Node047,1,SPDEE Sales Trade (Spot),Intraday,MSG
+Node124,Node066,2,"Client Tier Spread Mgt, SPDEE Sales Trade (Fwd&Swap)",Intraday,MSG
+Node124,Node067,1,"Spot Prices, Fwd Prices",Intraday,MSG
+Node124,Node185,2,Credit Check,Intraday,API
+Node124,Node106,2,Credit Check,Intraday,MSG
+Node124,Node120,1,"Spot Prices, Fwd Prices",Intraday,MSG
+Node124,Node127,1,"Spot Prices, Fwd Prices",Intraday,MSG
+Node124,Node134,1,ANZ Prices,Intraday,MSG
+Node125,Node047,1,MFX Deals,Intraday,MSG
+Node126,Node163,2,Trades,Intraday,MSG
+Node126,Node130,1,Structured deals,Intraday,MSG
+Node127,Node178,1,RFS,Intraday,MSG
+Node127,Node124,1,"Sales, Orders, Trades",Intraday,API
+Node128,Node091,1,BID Utilisation,Intraday,MSG
+Node128,Node121,1,"Confirmation, Matching",Intraday,MSG
+Node130,Node152,1,"Case, alerts, status",Intraday,API
+Node130,Node155,1,Customer Data,Intraday,MSG
+Node130,Node188,2,Legal Agreement,Intraday,MSG
+Node130,Node162,2,Legal Agreement,Intraday,MSG
+Node130,Node163,2,Trades,Intraday,MSG
+Node130,Node096,1,"Routed Executions, Trades",Intraday,MSG
+Node130,Node097,1,Routed Executions,Intraday,MSG
+Node131,Node121,1,"Confirmation, Matching",Intraday,MSG
+Node132,Node146,1,Market Data,EOD,Batch
+Node133,Node157,2,CLS Pay In/Out + notifications,EOD,Batch
+Node134,Node066,1,ANZ Prices,Intraday,API
+Node134,Node183,1,IDN feed,Intraday,MSG
+Node135,Node158,1,Reconciliation ,EOD,Batch
+Node135,Node157,2,Reconciliation ,EOD,Batch
+Node136,Node146,1,Market Data,EOD,Batch
+Node138,Node054,1,"FX, MM",Intraday,MSG
+Node140,Node157,2,Matching Status,EOD,Batch
+Node141,Node078,2,REQ,Intraday,API
+Node141,Node089,1,Trades,Intraday,API
+Node197,Node152,2,"Reference Data, Scenarios Management",EOD,Batch
+Node142,Node059,1,FX Quote,Intraday,MSG
+Node143,Node096,1,"Voice Trade manual entry for risk, Manual trade entry for risk and after cleared",Intraday,API
+Node143,Node145,1,Manual keying to VCON (affirmation),Intraday,API
+Node143,Node146,1,Market Data,EOD,Batch
+Node145,Node010,1,Trades,Intraday,API
+Node145,Node096,1,Trades,Intraday,MSG
+Node146,Node179,1,Validated Rates,EOD,Batch
+Node146,Node190,1,FX Rates,EOD,Batch
+Node146,Node091,1,Markets Data,EOD,Batch
+Node146,Node096,1,"Market Data, Derived Data",EOD,Batch
+Node146,Node097,1,Market Data,EOD,Batch
+Node146,Node106,1,Markets Data,EOD,Batch
+Node146,Node112,1,Markets Data,EOD,Batch
+Node146,Node197,1,Markets Data,EOD,Batch
+Node149,Node130,1,Routed Executions,Intraday,MSG
+Node150,Node091,1,FX & MM Trades,Intraday,MSG
+Node150,Node163,2,"FX Trades, Fixed Income Trades, MM Trades",Intraday,MSG
+Node150,Node157,2,"Currencies & Currency Pair, Portofolios & Cost Centres, Trade Data",Intraday,MSG
+Node150,Node095,1,Portfolio CCY Ladders,EOD,Batch
+Node150,Node160,1,Trades,EOD,Batch
+Node150,Node124,1,CCY Holiday ,EOD,Batch
+Node150,Node128,1,FX Bid,Intraday,MSG
+Node150,Node130,1,Trades,Intraday,MSG
+Node150,Node131,1,FX Bid,Intraday,MSG
+Node150,Node161,1,Trade Execution,Intraday,MSG
+Node150,Node197,1,"P&L Files, Unconfirmed Trade reports",EOD,Batch
+Node150,Node181,1,Brokerage Fee,EOD,Batch
+Node180,Node090,1,SWIFT Messages,Intraday,MSG
+Node180,Node140,2,Confirmation and matching,EOD,Batch
+Node151,Node096,1,Trades,Intraday,MSG

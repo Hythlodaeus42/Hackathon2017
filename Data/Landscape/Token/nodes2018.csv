@@ -1,0 +1,209 @@
+NodeID,LongName,LayerOrdinal,Layer,Critically,Desirability,DisplayWeight,Business Area,Business Function,non-Markets,Object Type,Object Colour,Object Base Colour,X Size (width),Y Size (height),Z Size (depth)
+Node001,Node001,2,Application,Bronze,AMBER,1,BA01,BF01,,Horizontal Rectange,Light Green,Brown,4,14,7
+Node002,Node002,1,Data & Integration,Gold,GREEN,2,BA02,BF02,,Large Cylinder,Deep Purple,Yellow,28,19.6,19.6
+Node003,Node003,4,Channel,Silver,GREEN,1,BA01,BF03,1,Few-Triangle Edge Sphere,Light Gray,Gray,2.5,2.5,2.5
+Node004,Node004,3,Service,Platinum,GREEN,1,BA03,BF04,,Dome,Yellow,Deep Blue,10,7,7
+Node005,Node005,2,Application,Silver,GREEN,2,BA03,BF04,,Vertical Rectangle,Yellow,Gray,15.6,15.6,52
+Node006,Node006,3,Service,Gold,GREEN,1,BA02,BF05,,Circular pyramid,Green,Yellow,5,3,3
+Node007,Node007,4,Channel,Gold,GREEN,1,BA02,BF06,,Sphere (no edges),Purple,Yellow,12,12,12
+Node008,Node008,4,Channel,Silver,GREEN,1,BA04,BF07,,Sphere (no edges),Blue,Gray,5,5,5
+Node009,Node009,1,Data & Integration,Gold,GREEN,2,BA05,BF08,,Large Cylinder,Light Purple,Yellow,24,16.8,16.8
+Node010,Node010,1,Data & Integration,Silver,GREEN,1,BA02,BF05,,Small Cylinder,Green,Gray,5,3,3
+Node011,Node011,4,Channel,Silver,GREEN,1,BA06,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node012,Node012,2,Application,Gold,GREEN,2,BA01,BF10,1,Horizontal Rectange,Light Gray,Yellow,2.8,9.8,4.9
+Node013,Node013,2,Application,Bronze,AMBER,1,BA07,BF11,,Cube,Green,Brown,7.2,7.2,7.2
+Node014,Node014,4,Channel,Silver,GREEN,1,BA06,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node015,Node015,2,Application,Silver,AMBER,1,BA01,BF01,,Horizontal Rectange,Light Green,Gray,3.6,12.6,6.3
+Node016,Node016,2,Application,Silver,AMBER,1,BA01,BF10,1,Cube,Light Gray,Gray,2.7,2.7,2.7
+Node017,Node017,2,Application,Silver,RED,2,BA01,BF12,1,Cube,Light Gray,Gray,5.4,5.4,5.4
+Node018,Node018,2,Application,Tin,RED,1,BA01,BF12,1,Cube,Light Gray,Light Gray,2.7,2.7,2.7
+Node019,Node019,4,Channel,Silver,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Gray,5,5,5
+Node020,Node020,2,Application,Gold,AMBER,1,BA01,BF14,,Cube,Brown,Yellow,12.6,12.6,12.6
+Node021,Node021,2,Application,Platinum,AMBER,1,BA08,BF15,1,Horizontal Rectange,Light Gray,Deep Blue,2,7,3.5
+Node022,Node022,2,Application,Silver,AMBER,1,BA03,BF03,,Horizontal Rectange,Light Brown,Gray,4.8,16.8,8.4
+Node023,Node023,4,Channel,Silver,GREEN,1,BA02,BF06,,Sphere (no edges),Purple,Gray,5,5,5
+Node024,Node024,4,Channel,Silver,GREEN,1,BA09,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node025,Node025,2,Application,Bronze,AMBER,1,BA01,BF01,,Cube,Light Green,Brown,18.9,18.9,18.9
+Node026,Node026,4,Channel,Gold,AMBER,1,BA01,BF10,1,Many-Triangle Edge Sphere,Light Gray,Yellow,2.5,2.5,2.5
+Node027,Node027,2,Application,Tin,AMBER,1,BA01,BF16,1,Horizontal Rectange,Light Gray,Light Gray,1.2,4.2,2.1
+Node028,Node028,2,Application,Gold,GREEN,1,BA03,BF17,1,Cube,Light Gray,Yellow,4.5,4.5,4.5
+Node029,Node029,2,Application,Tin,GREEN,1,BA02,BF18,,Horizontal Rectange,Brown,Light Gray,3.2,11.2,5.6
+Node030,Node030,2,Application,Platinum,GREEN,1,BA01,BF01,1,Cube,Light Gray,Deep Blue,4.5,4.5,4.5
+Node031,Node031,4,Channel,Tin,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Light Gray,5,5,5
+Node032,Node032,4,Channel,Tin,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Light Gray,5,5,5
+Node033,Node033,4,Channel,Gold,GREEN,1,BA01,BF19,,Sphere (no edges),Yellow,Yellow,5,5,5
+Node034,Node034,2,Application,Bronze,GREEN,1,BA03,BF02,,Cube,Deep Purple,Brown,9,9,9
+Node035,Node035,2,Application,Gold,GREEN,1,BA02,BF05,,#N/A,Green,Yellow,#N/A,#N/A,#N/A
+Node036,Node036,4,Channel,Silver,GREEN,1,BA08,BF20,,Sphere (no edges),Yellow,Gray,5,5,5
+Node037,Node037,4,Channel,Platinum,AMBER,1,BA03,BF13,1,Sphere (no edges),Light Gray,Deep Blue,2.5,2.5,2.5
+Node038,Node038,2,Application,Gold,AMBER,2,BA01,BF14,1,Cube,Light Gray,Yellow,13.5,13.5,13.5
+Node039,Node039,2,Application,Gold,AMBER,2,BA01,BF14,1,Cube,Light Gray,Yellow,13.5,13.5,13.5
+Node040,Node040,2,Application,Silver,RED,1,BA03,BF21,,Horizontal Rectange,Brown,Gray,2.8,9.8,4.9
+Node041,Node041,2,Application,Silver,RED,1,BA01,BF22,,Horizontal Rectange,Light Brown,Gray,2.8,9.8,4.9
+Node042,Node042,2,Application,Silver,AMBER,1,BA06,BF23,,Horizontal Rectange,Gold,Gray,2.4,8.4,4.2
+Node043,Node043,4,Channel,Gold,GREEN,1,BA04,BF24,1,Few-Triangle Edge Sphere,Light Gray,Yellow,2.5,2.5,2.5
+Node044,Node044,2,Application,Gold,GREEN,1,BA03,BF25,,Horizontal Rectange,Brown,Yellow,4,14,7
+Node045,Node045,4,Channel,Gold,GREEN,1,BA03,BF13,1,Sphere (no edges),Light Gray,Yellow,2.5,2.5,2.5
+Node046,Node046,1,Data & Integration,Bronze,GREEN,2,BA01,BF16,1,Small Cylinder,Light Gray,Brown,5,3,3
+Node047,Node047,2,Application,Silver,GREEN,2,BA03,BF25,,Vertical Rectangle,Brown,Gray,14.4,14.4,48
+Node048,Node048,2,Application,Bronze,GREEN,1,BA03,BF26,,Horizontal Rectange,Brown,Brown,3.2,11.2,5.6
+Node049,Node049,4,Channel,Tin,GREEN,1,BA02,BF27,,Sphere (no edges),Orange,Light Gray,5,5,5
+Node050,Node050,2,Application,Tin,RED,1,BA01,BF03,1,Horizontal Rectange,Light Gray,Light Gray,1.2,4.2,2.1
+Node051,Node051,2,Application,Tin,AMBER,1,BA02,BF28,1,Cube,Light Gray,Light Gray,6.75,6.75,6.75
+Node052,Node052,2,Application,Gold,GREEN,1,BA02,BF05,,Horizontal Rectange,Green,Yellow,4,14,7
+Node053,Node053,1,Data & Integration,Silver,AMBER,1,BA08,BF19,,Medium Cylinder,Yellow,Gray,8,5,5
+Node054,Node054,2,Application,Silver,RED,2,BA10,BF29,1,Horizontal Rectange,Light Gray,Gray,4,14,7
+Node055,Node055,2,Application,Gold,AMBER,1,BA11,BF30,,Horizontal Rectange,Deep Orange,Yellow,3.2,11.2,5.6
+Node056,Node056,2,Application,Silver,GREEN,1,BA02,BF05,,Cube,Green,Gray,7.2,7.2,7.2
+Node057,Node057,4,Channel,Bronze,AMBER,1,BA02,BF31,,Sphere (no edges),Orange,Brown,5,5,5
+Node058,Node058,3,Service,Platinum,GREEN,1,BA02,BF05,,Circular pyramid,Green,Deep Blue,5,3,3
+Node059,Node059,3,Service,Silver,GREEN,1,BA03,BF04,,Circular pyramid,Yellow,Gray,5,3,3
+Node060,Node060,2,Application,Bronze,GREEN,1,BA09,BF23,1,Cube,Light Gray,Brown,5.4,5.4,5.4
+Node061,Node061,2,Application,Gold,AMBER,1,BA01,BF19,1,Cube,Light Gray,Yellow,4.5,4.5,4.5
+Node062,Node062,4,Channel,Platinum,AMBER,1,BA03,BF13,,Many-Triangle Edge Sphere,Orange,Deep Blue,5,5,5
+Node063,Node063,4,Channel,Silver,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Gray,5,5,5
+Node064,Node064,2,Application,Platinum,AMBER,2,BA03,BF13,,Cube,Orange,Deep Blue,23.4,23.4,23.4
+Node065,Node065,3,Service,Bronze,GREEN,2,BA03,BF32,,Dome,Yellow,Brown,24,16.8,16.8
+Node066,Node066,4,Channel,Platinum,AMBER,2,BA12,BF33,,Many-Triangle Edge Sphere,Yellow,Deep Blue,12,12,12
+Node067,Node067,2,Application,Platinum,AMBER,1,BA03,BF13,,Cube,Orange,Deep Blue,9,9,9
+Node068,Node068,4,Channel,Silver,GREEN,1,BA02,BF34,,Sphere (no edges),Orange,Gray,5,5,5
+Node069,Node069,1,Data & Integration,Silver,GREEN,1,BA10,BF35,1,Medium Cylinder,Light Gray,Gray,4,2.5,2.5
+Node070,Node070,4,Channel,Silver,GREEN,2,BA03,BF13,,Many-Triangle Edge Sphere,Orange,Gray,12,12,12
+Node071,Node071,2,Application,Silver,GREEN,2,BA04,BF18,,Vertical Rectangle,Brown,Gray,14.4,14.4,48
+Node072,Node072,3,Service,Platinum,GREEN,1,BA03,BF03,1,Square pyramid,Light Gray,Deep Blue,3.5,2.5,2.5
+Node073,Node073,3,Service,Platinum,AMBER,1,BA03,BF36,,Dome,Green,Deep Blue,10,7,7
+Node074,Node074,4,Channel,Gold,RED,1,BA03,BF13,1,Many-Triangle Edge Sphere,Light Gray,Yellow,2.5,2.5,2.5
+Node075,Node075,4,Channel,Silver,GREEN,1,BA04,BF37,,Sphere (no edges),Blue,Gray,5,5,5
+Node076,Node076,4,Channel,Silver,GREEN,1,BA02,BF38,,Sphere (no edges),Orange,Gray,5,5,5
+Node077,Node077,4,Channel,Silver,GREEN,1,BA02,BF38,,Sphere (no edges),Orange,Gray,5,5,5
+Node078,Node078,2,Application,Platinum,GREEN,2,BA02,BF05,,Vertical Rectangle,Green,Deep Blue,15.6,15.6,52
+Node079,Node079,2,Application,Gold,AMBER,2,BA01,BF39,,Horizontal Rectange,Yellow,Yellow,6.4,22.4,11.2
+Node080,Node080,4,Channel,Tin,RED,1,BA06,BF09,1,Sphere (no edges),Light Gray,Light Gray,2.5,2.5,2.5
+Node081,Node081,2,Application,Tin,AMBER,1,BA02,BF05,1,Cube,Light Gray,Light Gray,4.5,4.5,4.5
+Node082,Node082,4,Channel,Silver,GREEN,1,BA09,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node083,Node083,2,Application,Bronze,RED,1,BA01,BF22,1,Cube,Light Gray,Brown,3.15,3.15,3.15
+Node084,Node084,1,Data & Integration,Gold,GREEN,2,BA13,BF40,,Large Cylinder,Brown,Yellow,20,14,14
+Node085,Node085,4,Channel,Silver,GREEN,1,BA02,BF27,,Sphere (no edges),Orange,Gray,6.5,6.5,6.5
+Node086,Node086,2,Application,Gold,RED,2,BA10,BF41,1,Cube,Light Gray,Yellow,13.5,13.5,13.5
+Node087,Node087,1,Data & Integration,Gold,GREEN,1,BA08,BF42,,Medium Cylinder,Purple,Yellow,8,5,5
+Node088,Node088,2,Application,Gold,GREEN,2,BA03,BF17,,Cube,Green,Yellow,21.6,21.6,21.6
+Node089,Node089,4,Channel,Silver,GREEN,1,BA14,BF07,,Sphere (no edges),Blue,Gray,6.5,6.5,6.5
+Node090,Node090,3,Service,Platinum,GREEN,1,BA15,BF43,1,Dome,Light Gray,Deep Blue,5,3.5,3.5
+Node091,Node091,2,Application,Platinum,AMBER,3,BA10,BF44,,Cube,Deep Brown,Deep Blue,27,27,27
+Node092,Node092,3,Service,Gold,AMBER,1,BA08,BF15,1,Circular pyramid,Light Gray,Yellow,2.5,1.5,1.5
+Node093,Node093,1,Data & Integration,Tin,AMBER,1,BA03,BF45,,Medium Cylinder,Light Green,Light Gray,8,5,5
+Node094,Node094,2,Application,Tin,AMBER,1,BA01,BF46,,Horizontal Rectange,Brown,Light Gray,2.4,8.4,4.2
+Node095,Node095,2,Application,Silver,RED,2,BA03,BF17,,Horizontal Rectange,Green,Gray,8,28,14
+Node096,Node096,2,Application,Platinum,RED,3,BA16,BF47,,Vertical Rectangle,Yellow,Deep Blue,23.4,23.4,78
+Node097,Node097,2,Application,Platinum,RED,2,BA06,BF19,,Cube,Yellow,Deep Blue,12.6,12.6,12.6
+Node098,Node098,4,Channel,Silver,GREEN,1,BA09,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node099,Node099,2,Application,Bronze,AMBER,1,BA01,BF01,1,Cube,Light Gray,Brown,4.5,4.5,4.5
+Node100,Node100,2,Application,Bronze,AMBER,1,BA01,BF48,1,Cube,Light Gray,Brown,4.5,4.5,4.5
+Node101,Node101,4,Channel,Silver,GREEN,1,BA02,BF31,,Sphere (no edges),Orange,Gray,5,5,5
+Node102,Node102,2,Application,Gold,GREEN,2,BA04,BF18,,Horizontal Rectange,Brown,Yellow,4.8,16.8,8.4
+Node103,Node103,4,Channel,Gold,GREEN,1,BA03,BF13,1,Sphere (no edges),Light Gray,Yellow,2.5,2.5,2.5
+Node104,Node104,3,Service,Platinum,AMBER,1,BA15,BF49,1,Square pyramid,Light Gray,Deep Blue,3.5,2.5,2.5
+Node105,Node105,3,Service,Platinum,GREEN,1,BA03,BF13,1,Square pyramid,Light Gray,Deep Blue,3.5,2.5,2.5
+Node106,Node106,2,Application,Silver,GREEN,1,BA03,BF04,,Cube,Yellow,Gray,9,9,9
+Node107,Node107,2,Application,Tin,RED,1,BA03,BF04,,Horizontal Rectange,Yellow,Light Gray,2.8,9.8,4.9
+Node108,Node108,2,Application,Silver,AMBER,1,BA17,BF50,1,Cube,Light Gray,Gray,4.5,4.5,4.5
+Node109,Node109,2,Application,Tin,AMBER,1,BA08,BF19,,Cube,Yellow,Light Gray,9.9,9.9,9.9
+Node110,Node110,2,Application,Silver,AMBER,1,BA01,BF48,,Horizontal Rectange,Green,Gray,4,14,7
+Node111,Node111,2,Application,Silver,AMBER,1,BA03,BF17,,Horizontal Rectange,Green,Gray,4,14,7
+Node112,Node112,2,Application,Silver,AMBER,1,BA10,BF51,1,Cube,Light Gray,Gray,4.5,4.5,4.5
+Node113,Node113,4,Channel,Gold,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Yellow,5,5,5
+Node114,Node114,3,Service,Silver,GREEN,1,BA02,BF02,,Circular pyramid,Deep Purple,Gray,5,3,3
+Node115,Node115,4,Channel,Silver,GREEN,1,BA02,BF05,,Sphere (no edges),Green,Gray,5,5,5
+Node116,Node116,4,Channel,Silver,GREEN,1,BA02,BF27,,Sphere (no edges),Orange,Gray,5,5,5
+Node117,Node117,1,Data & Integration,Silver,GREEN,2,BA13,BF52,,Large Cylinder,Deep Purple,Gray,20,14,14
+Node118,Node118,2,Application,Bronze,RED,1,BA03,BF26,,Horizontal Rectange,Brown,Brown,2.4,8.4,4.2
+Node119,Node119,2,Application,tin,RED,1,BA02,BF05,,Horizontal Rectange,Green,Light Gray,2.4,8.4,4.2
+Node120,Node120,4,Channel,Tin,GREEN,1,BA03,BF13,,Sphere (no edges),Orange,Light Gray,5,5,5
+Node121,Node121,2,Application,Silver,GREEN,2,BA03,BF17,1,Cube,Light Gray,Gray,15.3,15.3,15.3
+Node122,Node122,2,Application,Platinum,GREEN,3,BA04,BF53,,Vertical Rectangle,Gold,Deep Blue,25.2,25.2,84
+Node123,Node123,2,Application,Gold,AMBER,1,BA09,BF23,,Horizontal Rectange,Gold,Yellow,4,14,7
+Node124,Node124,2,Application,Silver,AMBER,1,BA03,BF54,,Vertical Rectangle,Yellow,Gray,15.6,15.6,52
+Node125,Node125,4,Channel,Bronze,AMBER,1,BA03,BF13,,Sphere (no edges),Orange,Brown,5,5,5
+Node126,Node126,2,Application,Silver,RED,1,BA06,BF23,,Horizontal Rectange,Gold,Gray,2.4,8.4,4.2
+Node127,Node127,4,Channel,Silver,AMBER,1,BA03,BF13,,Many-Triangle Edge Sphere,Orange,Gray,5,5,5
+Node128,Node128,2,Application,Bronze,GREEN,1,BA03,BF55,1,Cube,Light Gray,Brown,4.5,4.5,4.5
+Node129,Node129,1,Data & Integration,Tin,RED,1,BA03,BF26,,Medium Cylinder,Brown,Light Gray,8,5,5
+Node130,Node130,3,Service,Silver,GREEN,2,BA13,BF56,,Dome,Gold,Gray,20,14,14
+Node131,Node131,2,Application,Bronze,GREEN,1,BA03,BF55,1,Cube,Light Gray,Brown,4.5,4.5,4.5
+Node132,Node132,4,Channel,Silver,GREEN,1,BA08,BF08,,Sphere (no edges),Light Purple,Gray,5,5,5
+Node133,Node133,3,Service,Platinum,GREEN,1,BA18,BF57,1,Square pyramid,Light Gray,Deep Blue,3.5,2.5,2.5
+Node134,Node134,1,Data & Integration,Gold,GREEN,1,BA08,BF58,,Medium Cylinder,Gold,Yellow,8,5,5
+Node135,Node135,2,Application,Silver,GREEN,1,BA08,BF18,1,Cube,Light Gray,Gray,4.5,4.5,4.5
+Node136,Node136,4,Channel,Silver,GREEN,1,BA02,BF08,,Sphere (no edges),Light Purple,Gray,5,5,5
+Node137,Node137,3,Service,Silver,GREEN,1,BA02,BF18,,Square pyramid,Brown,Gray,7,5,5
+Node138,Node138,4,Channel,Silver,RED,1,BA10,BF59,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node139,Node139,4,Channel,Silver,GREEN,1,BA03,BF26,,Few-Triangle Edge Sphere,Brown,Gray,6,6,6
+Node140,Node140,2,Application,Gold,GREEN,1,BA03,BF26,,Cube,Brown,Yellow,9,9,9
+Node141,Node141,4,Channel,Silver,GREEN,1,BA19,BF60,,Sphere (no edges),Blue,Gray,5,5,5
+Node142,Node142,4,Channel,Gold,RED,1,BA03,BF13,1,Sphere (no edges),Light Gray,Yellow,2.5,2.5,2.5
+Node143,Node143,4,Channel,Silver,GREEN,1,BA04,BF61,,Sphere (no edges),Blue,Gray,5,5,5
+Node144,Node144,2,Application,Tin,RED,1,BA08,BF53,,Horizontal Rectange,Gold,Light Gray,2.4,8.4,4.2
+Node145,Node145,4,Channel,Gold,GREEN,1,BA02,BF27,,Sphere (no edges),Orange,Yellow,5,5,5
+Node146,Node146,1,Data & Integration,Gold,AMBER,1,BA13,BF02,,Medium Cylinder,Deep Purple,Yellow,6.4,4,4
+Node147,Node147,3,Service,Tin,RED,1,BA08,BF53,,Circular pyramid,Gold,Light Gray,5,3,3
+Node148,Node148,4,Channel,Platinum,RED,1,BA09,BF15,1,Few-Triangle Edge Sphere,Light Gray,Deep Blue,2.5,2.5,2.5
+Node149,Node149,4,Channel,Silver,GREEN,1,BA09,BF09,,Sphere (no edges),Light Blue,Gray,5,5,5
+Node150,Node150,2,Application,Platinum,GREEN,3,BA20,BF62,,Vertical Rectangle,Brown,Deep Blue,21.6,21.6,72
+Node151,Node151,4,Channel,Silver,GREEN,1,BA02,BF27,,Sphere (no edges),Orange,Gray,5,5,5
+Node152,Node152,3,Service,Silver,GREEN,1,BA20,BF63,,Circular pyramid,Gray,Gray,5,3,3
+Node153,Node153,2,Application,Silver,GREEN,1,BA20,BF63,,Cube,Gray,Gray,9,9,9
+Node154,Node154,2,Application,Not Rated,Undefined,1,BA04,BF64,,Cube,Light Green,Light Gray,10.8,10.8,10.8
+Node155,Node155,1,Data & Integration,Gold,GREEN,2,BA13,BF12,,Large Cylinder,Pink,Yellow,20,14,14
+Node156,Node156,2,Application,Not Rated,GREEN,3,BA20,BF65,,Cube,Light Green,Light Gray,21.6,21.6,21.6
+Node157,Node157,2,Application,Platinum,GREEN,3,BA06,BF66,,Vertical Rectangle,Brown,Deep Blue,16.2,16.2,54
+Node158,Node158,2,Application,Silver,GREEN,2,BA03,BF18,,Horizontal Rectange,Brown,Gray,8.8,30.8,15.4
+Node159,Node159,2,Application,Tin,GREEN,1,BA04,BF67,,Horizontal Rectange,Brown,Light Gray,3.2,11.2,5.6
+Node160,Node160,1,Data & Integration,Gold,AMBER,1,BA13,BF48,,Medium Cylinder,Green,Yellow,8,5,5
+Node161,Node161,2,Application,Silver,GREEN,2,BA04,BF24,,Horizontal Rectange,Green,Gray,4.8,16.8,8.4
+Node162,Node162,2,Application,Silver,GREEN,2,BA04,BF24,,Horizontal Rectange,Green,Gray,5.6,19.6,9.8
+Node163,Node163,1,Data & Integration,Platinum,GREEN,2,BA13,BF18,1,Large Cylinder,Light Gray,Deep Blue,9,6.3,6.3
+Node164,Node164,1,Data & Integration,Bronze,RED,1,BA20,BF45,,Medium Cylinder,Light Green,Brown,8,5,5
+Node165,Node165,2,Application,Silver,GREEN,1,BA13,BF18,,Horizontal Rectange,Brown,Gray,3.6,12.6,6.3
+Node166,Node166,4,Channel,Silver,GREEN,1,BA16,BF68,,Many-Triangle Edge Sphere,Pink,Gray,5,5,5
+Node167,Node167,2,Application,Silver,RED,1,BA16,BF18,,Horizontal Rectange,Brown,Gray,4,14,7
+Node168,Node168,4,Channel,Silver,GREEN,1,BA03,BF69,,Sphere (no edges),Brown,Gray,5,5,5
+Node169,Node169,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node170,Node170,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node171,Node171,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node172,Node172,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node173,Node173,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node174,Node174,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node175,Node175,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node176,Node176,4,Channel,Silver,GREEN,1,BA03,BF69,1,Sphere (no edges),Light Gray,Gray,2.5,2.5,2.5
+Node177,Node177,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,#N/A,Yellow,16.8,16.8,56
+Node178,Node178,2,Application,Gold,GREEN,2,BA03,BF70,,Vertical Rectangle,#N/A,Yellow,13.2,13.2,44
+Node179,Node179,2,Application,Silver,GREEN,2,BA08,BF48,,Cube,Green,Gray,18,18,18
+Node180,Node180,2,Application,Silver,GREEN,1,BA13,BF03,,Vertical Rectangle,Light Brown,Gray,6,6,20
+Node181,Node181,2,Application,Silver,GREEN,1,BA16,BF03,,Horizontal Rectange,Light Brown,Gray,4,14,7
+Node182,Node182,2,Application,Silver,GREEN,1,BA13,BF12,1,Vertical Rectangle,Light Gray,Gray,3,3,10
+Node183,Node183,2,Application,Silver,GREEN,2,BA03,BF16,,Vertical Rectangle,Deep Pink,Gray,12,12,40
+Node184,Node184,4,Channel,Silver,GREEN,1,BA16,BF17,,Few-Triangle Edge Sphere,Green,Gray,5,5,5
+Node185,Node185,2,Application,Gold,RED,1,BA03,BF19,,#N/A,Yellow,Yellow,#N/A,#N/A,#N/A
+Node186,Node186,2,Application,Gold,RED,1,BA03,BF19,,Cube,Yellow,Yellow,9,9,9
+Node187,Node187,2,Application,Gold,GREEN,2,BA03,BF19,,Vertical Rectangle,Yellow,Yellow,15.6,15.6,52
+Node188,Node188,3,Service,Silver,GREEN,1,BA13,BF12,,Few-Triangle Edge Sphere,Pink,Gray,5,5,5
+Node189,Node189,2,Application,Silver,RED,1,BA21,BF03,1,Horizontal Rectange,Light Gray,Gray,2,7,3.5
+Node190,Node190,2,Application,Gold,GREEN,1,BA22,BF66,,Horizontal Rectange,Brown,Yellow,4,14,7
+Node191,Node191,2,Application,Bronze,GREEN,1,BA03,BF22,,#N/A,Light Brown,Brown,#N/A,#N/A,#N/A
+Node192,Node192,4,Channel,Silver,GREEN,1,BA13,BF24,,#N/A,Green,Gray,#N/A,#N/A,#N/A
+Node193,Node193,2,Application,Silver,GREEN,1,BA13,BF24,,Horizontal Rectange,Green,Gray,4,14,7
+Node194,Node194,3,Service,Silver,GREEN,1,BA13,BF24,,Few-Triangle Edge Sphere,Green,Gray,5,5,5
+Node195,Node195,2,Application,Silver,GREEN,1,BA13,BF46,,#N/A,Brown,Gray,#N/A,#N/A,#N/A
+Node196,Node196,2,Application,Silver,GREEN,2,BA13,BF71,,Cube,Gray,Gray,18,18,18
+Node197,Node197,2,Application,Silver,GREEN,1,BA13,BF72,,Cube,Gray,Gray,9,9,9
+Node198,Node198,1,Data & Integration,Bronze,GREEN,1,BA13,BF68,,Medium Cylinder,Pink,Brown,8,5,5
+Node199,Node199,1,Data & Integration,Silver,GREEN,1,BA13,BF18,,Medium Cylinder,Brown,Gray,8,5,5
+Node200,Node200,4,Channel,Silver,GREEN,1,BA13,BF18,1,Many-Triangle Edge Sphere,Light Gray,Gray,2.5,2.5,2.5
+Node201,Node201,4,Channel,Silver,GREEN,1,BA13,BF18,,Many-Triangle Edge Sphere,Brown,Gray,5,5,5
+Node202,Node202,4,Channel,Silver,GREEN,1,BA13,BF18,1,Many-Triangle Edge Sphere,Light Gray,Gray,2.5,2.5,2.5
+Node203,Node203,4,Channel,Gold,GREEN,1,BA13,BF74,1,,,,,,
+Node204,Node204,3,Service,Gold,GREEN,1,BA13,BF18,1,,,,,,
+Node205,Node205,3,Service,Silver,GREEN,1,BA23,BF75,1,,,,,,
+Node206,Node206,1,Data & Integration,Gold,GREEN,1,BA23,BF76,1,,,,,,
+Node207,Node207,2,Application,Silver,GREEN,1,,,,,,,,,
+Node208,Node208,1,Data & Integration,Bronze,GREEN,1,,,1,,,,,,

@@ -5,28 +5,34 @@ library(igraph)
 # -----------------------------------
 # get files
 path <- ''
+year <- '2022'
 
-nodes <- read.csv(paste(path, 'nodes.csv', sep = ''), stringsAsFactors=F)
-edges <- read.csv(paste(path, 'edges.csv', sep = ''), stringsAsFactors=F)
+nodes <- read.csv(paste(path, 'nodes', year, '.csv', sep = ''), stringsAsFactors=F)
+edges <- read.csv(paste(path, 'edges', year, '.csv', sep = ''), stringsAsFactors=F)
 clr <- read.csv(paste(path, 'ColourMap.csv', sep = ''), stringsAsFactors=F)
 shp <- read.csv(paste(path, 'ShapeMap.csv', sep = ''), stringsAsFactors=F)
 
 # table(nodes$type)
 # -----------------------------------
 # map data
-nodes <- merge(nodes, clr, by.x = "ObjectColour", by.y = "Shape.Colour" )
-nodes <- merge(nodes, clr, by.x = "Object.Base.Colour", by.y = "Shape.Colour", all.x=T )
-nodes <- merge(nodes, shp, by.x = "ObjectType", by.y = "ShapeName" )
+nodes <- merge(nodes, clr, by.x = "ObjectColour", by.y = "Shape.Colour", all.x=T )
+nodes <- merge(nodes, clr, by.x = "Object.Base.Colour", by.y = "Shape.Colour", all.x=T)
+nodes <- merge(nodes, shp, by.x = "ObjectType", by.y = "ShapeName" , all.x=T)
+
+nodes$Hex.x[is.na(nodes$Hex.x)] <- 'AAAAAAAA'
+nodes$Hex.y[is.na(nodes$Hex.y)] <- 'AAAAAAAA'
+nodes$ShapeCode[is.na(nodes$ShapeCode)] <- 'CUB'
 
 nodes <- nodes[ ,names(nodes[4:length(names(nodes))])]
 
-nodes$nonMarkets[is.na(nodes$nonMarkets)] = 0
+nodes$nonMarkets[is.na(nodes$nonMarkets)] <- 0
 names(nodes)[(length(names(nodes)) - 2):length(names(nodes))] <- c("ObjectColour", "ObjectBaseColour", "ObjectType")
 
 # table(nodes$Object.Base.Colour)
 # unique(nodes$Object.Base.Colour)
 # cbind(unique(nodes$ObjectColour), clr$Shape.Colour)
 # table(nodes$Hex.y)
+
 
 # -----------------------------------
 # constuct graph
