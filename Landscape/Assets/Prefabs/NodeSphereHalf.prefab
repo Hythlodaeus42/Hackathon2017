@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23624946767873782}
   - component: {fileID: 114997241897911756}
   - component: {fileID: 114546795527817886}
+  - component: {fileID: 135434691278584688}
   - component: {fileID: 108620956875545074}
   m_Layer: 0
   m_Name: NodeSphereHalf
@@ -301,6 +302,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f9d1d4ee075224188de4d23ac6d8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135434691278584688
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064518308649014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!222 &222005658686927394
 CanvasRenderer:
   m_ObjectHideFlags: 1
