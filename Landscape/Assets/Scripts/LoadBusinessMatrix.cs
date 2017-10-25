@@ -114,6 +114,13 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 {
                     Transform blockInstance = AddBlock(x, y, z, contiguous, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
                     blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
+
+                    // fix text panel size
+                    Transform objPanal1 = blockInstance.Find("Canvas/Panel1/Text1");
+                    objPanal1.localScale = new Vector3(objPanal1.localScale.x / contiguous, objPanal1.localScale.y * appcount, objPanal1.localScale.z);
+                    Transform objPanal2 = blockInstance.Find("Canvas/Panel2/Text2");
+                    objPanal2.localScale = new Vector3(objPanal2.localScale.x / contiguous, objPanal2.localScale.y * appcount, objPanal2.localScale.z);
+
                     switch (colour)
                     {
                         case "Amber":
@@ -232,7 +239,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
         blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
         blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
-
+                
         return blockInstance;
     }
 }
