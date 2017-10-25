@@ -530,10 +530,11 @@ public class LoadGraph : MonoBehaviour {
         Instantiate(prefabLegend, new Vector3(0, 0, 0), Quaternion.identity, yearContainer);
 
         Transform legendInstance = yearContainer.GetChild(yearContainer.childCount - 1);
-        RectTransform legendRect = legendInstance.gameObject.GetComponent<RectTransform>();
-        legendRect.localPosition = new Vector3(-20, yscale * 5, -10 * layerscale);
+        //RectTransform legendRect = legendInstance.gameObject.GetComponent<RectTransform>();
+        legendInstance.localPosition = new Vector3(-20, yscale * 5, -10 * layerscale);
+        legendInstance.Rotate(new Vector3(-90, 0, 0));
 
-        legendInstance.Find("Panel/TitleText").GetComponent<Text>().text = "Landscape " + year.ToString();
+        legendInstance.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "Landscape " + year.ToString();
     }
 
 }
