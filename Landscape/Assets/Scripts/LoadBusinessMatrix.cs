@@ -195,14 +195,29 @@ public class LoadBusinessMatrix : MonoBehaviour {
                 //Debug.Log(nodeRow.ToString().TrimStart().Substring(0, 2));
                 //Debug.Log(nodecount.ToString());
 
-                float x = -yscale - xscale - xpad;
+                float x = -yscale - xscale - xpad - (yscale + ypad);
                 float y = (float.Parse(rowAttributes[1]) + float.Parse(rowAttributes[2])) / 2f * (yscale + ypad);
                 float z = 0;
                 float len = (float.Parse(rowAttributes[2]) - float.Parse(rowAttributes[1]) + 1) * (yscale + ypad);
                 string blockName = rowAttributes[0].Trim();
 
                 Transform blockInstance = AddBlock(x, y, z, 1, Quaternion.Euler(0, 0, 90), blockName, prefabAxisBlock, matrixTransform);
+                float orgX = blockInstance.localScale.x;
                 blockInstance.localScale = new Vector3(len, blockInstance.localScale.y, blockInstance.localScale.z);
+
+                // fix text panel size
+                Transform objPanal1 = blockInstance.Find("Canvas/Panel1/Text1");
+                Transform objPanal2 = blockInstance.Find("Canvas/Panel2/Text2");
+                if (len / (yscale + ypad) < 3f)
+                {
+                    objPanal1.GetComponent<Text>().text = objPanal1.GetComponent<Text>().text.Replace(' ', '\n');
+                    objPanal2.GetComponent<Text>().text = objPanal2.GetComponent<Text>().text.Replace(' ', '\n');
+                }
+                else
+                {
+                    objPanal1.localScale = new Vector3(objPanal1.localScale.x / (len / orgX), objPanal1.localScale.y, objPanal1.localScale.z);
+                    objPanal2.localScale = new Vector3(objPanal2.localScale.x / (len / orgX), objPanal2.localScale.y, objPanal2.localScale.z);
+                }
 
             }
         }

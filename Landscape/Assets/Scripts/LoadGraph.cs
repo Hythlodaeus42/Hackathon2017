@@ -47,7 +47,8 @@ public class LoadGraph : MonoBehaviour {
     private float yBentMean = 0.75f;
     private float yBentDrop = 2f;
     private float objectscale = 2f;
-    
+    static float nodeTextSize = 20f;
+
 
     // Use this for initialization
     void Start () {
@@ -228,12 +229,44 @@ public class LoadGraph : MonoBehaviour {
             Text txt = nodeInstance.GetComponentInChildren<Text>();
             txt.text = nodeLongName;
 
+            // set text color
+            txt.color = Color.yellow;
+            txt.fontStyle = FontStyle.Bold;
+
+            Transform objPanal1 = nodeInstance.Find("Canvas/Panel");
+            Transform objText1 = nodeInstance.Find("Canvas/Panel/Text");
+
+            if (nodeLongName.Length > nodeTextSize && txt.text.Contains(' '))
+            {
+                // get longest length
+                int i = 0, j = 0;
+                foreach (string objStr in txt.text.Split(' '))
+                {
+                    i = Mathf.Max(objStr.Length, i);
+                    j++;
+                }
+                objPanal1.localScale = new Vector3(objPanal1.localScale.x * i / nodeTextSize, objPanal1.localScale.y * j, objPanal1.localScale.z);
+                objText1.localScale = new Vector3(objText1.localScale.x / i * nodeTextSize, objText1.localScale.y / j, objText1.localScale.z);
+                txt.text = txt.text.Replace(' ', '\n');
+                txt.verticalOverflow = VerticalWrapMode.Overflow;
+            }
+            else
+            {
+                objPanal1.localScale = new Vector3(objPanal1.localScale.x * txt.text.Length / nodeTextSize, objPanal1.localScale.y, objPanal1.localScale.z);
+                objText1.localScale = new Vector3(objText1.localScale.x / txt.text.Length * nodeTextSize, objText1.localScale.y, objText1.localScale.z);
+                
+            }
+            
+            objText1.localPosition = objPanal1.localPosition;
+            txt.alignment = TextAnchor.MiddleCenter;
+
             nodeInstance.GetComponentInChildren<Canvas>().enabled = true;
             
             nodecount++;
         }
 
     }
+    
 
     //Color HexToColor(string hex)
     //{
