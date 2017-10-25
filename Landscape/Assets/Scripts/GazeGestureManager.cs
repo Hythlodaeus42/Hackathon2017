@@ -20,19 +20,29 @@ public class GazeGestureManager : MonoBehaviour
         recognizer = new GestureRecognizer();
         recognizer.TappedEvent += (source, tapCount, ray) =>
         {
-            // Send an OnSelect message to the focused object and its ancestors.
-            if (FocusedObject != null)
-            {
-                FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
-                //Debug.Log("OnSelect message sent to " + FocusedObject.name);
-            }
-
+            // clear last selected object
             if (LastClickedObject != FocusedObject && LastClickedObject != null)
             {
                 LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
             }
 
-            LastClickedObject = FocusedObject;
+            // Send an OnSelect message to the focused object and its ancestors.
+            if (FocusedObject != null)
+            {
+
+                FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+                //Debug.Log("OnSelect message sent to " + FocusedObject.name);
+            }
+
+            if (FocusedObject.GetComponent<NodeProperties>() != null || (FocusedObject.GetComponent<BlockProperties>() != null))
+            {
+                // only save nodes and blocks
+                LastClickedObject = FocusedObject;
+            }
+            else
+            {
+                LastClickedObject = null;
+            }
         };
         recognizer.StartCapturingGestures();
     }
