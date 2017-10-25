@@ -19,6 +19,7 @@ public class LoadGraph : MonoBehaviour {
     public Transform prefabNodeIcosphereSmall;
     public Transform prefabNodeRectangleH;
     public Transform prefabNodeRectangleV;
+    public Transform prefabLegend;
 
     public Transform prefabEdgeContainer;
     public Transform prefabEdge;
@@ -85,6 +86,7 @@ public class LoadGraph : MonoBehaviour {
                 DrawLayers(yearContainer);
                 DrawNodes(yearContainer);
                 DrawEdges(yearContainer);
+                DrawLegend(yearContainer, year);
 
                 //rescale hologram
                 yearContainer.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
@@ -513,6 +515,17 @@ public class LoadGraph : MonoBehaviour {
             }
         }
 
+    }
+
+    void DrawLegend(Transform yearContainer, int year)
+    {
+        Instantiate(prefabLegend, new Vector3(0, 0, 0), Quaternion.identity, yearContainer);
+
+        Transform legendInstance = yearContainer.GetChild(yearContainer.childCount - 1);
+        RectTransform legendRect = legendInstance.gameObject.GetComponent<RectTransform>();
+        legendRect.localPosition = new Vector3(-20, yscale * 5, -10 * layerscale);
+
+        legendInstance.Find("Panel/TitleText").GetComponent<Text>().text = "Landscape " + year.ToString();
     }
 
 }

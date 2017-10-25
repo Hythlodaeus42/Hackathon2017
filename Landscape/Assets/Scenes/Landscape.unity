@@ -588,6 +588,8 @@ MonoBehaviour:
     type: 2}
   prefabNodeRectangleV: {fileID: 4994339203831648, guid: 60ec9ed2fd44e874f985514e5a114f07,
     type: 2}
+  prefabLegend: {fileID: 224110909449028664, guid: 031c58ae2d8f2f147a534971b6abdece,
+    type: 2}
   prefabEdgeContainer: {fileID: 4485068404231290, guid: ba927d028069248458ec66c0e33a8673,
     type: 2}
   prefabEdge: {fileID: 4483337126774992, guid: f763a35354ff4964a8972d627a5511d6, type: 2}
