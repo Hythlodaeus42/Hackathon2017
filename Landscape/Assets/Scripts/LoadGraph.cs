@@ -427,6 +427,7 @@ public class LoadGraph : MonoBehaviour {
 
         // change color for integration types
         
+        /*
         switch (edgeProperties.flowType)
         {
             case "API":
@@ -439,6 +440,7 @@ public class LoadGraph : MonoBehaviour {
                 pSmainOut.startColor = new Color(131, 42, 42); // red
                 break;
         }
+        */
         
     }
 
