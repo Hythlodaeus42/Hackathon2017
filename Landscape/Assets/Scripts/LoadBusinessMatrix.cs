@@ -208,7 +208,7 @@ public class LoadBusinessMatrix : MonoBehaviour {
             if (row != "")
             {
                 string[] rowAttributes = row.Split("|"[0]);
-                Debug.Log(row);
+                //Debug.Log(row);
                 //Debug.Log(nodecount.ToString());
 
                 float x = float.Parse(rowAttributes[1]) * (xscale + xpad);

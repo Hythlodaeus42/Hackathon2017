@@ -64,7 +64,7 @@ public class LoadGraph : MonoBehaviour {
             if (row.Trim() != "")
             {
                 // load XML document
-                Debug.Log("landscape" + row.Trim());
+                // Debug.Log("landscape" + row.Trim());
                 TextAsset textGraph = Resources.Load("landscape" + row.Trim()) as TextAsset;
                 xmlGraph = XDocument.Parse(textGraph.text);
 
@@ -190,7 +190,7 @@ public class LoadGraph : MonoBehaviour {
 
                 default:
                     Instantiate(prefabNodeCube, new Vector3(x, y, z), Quaternion.identity, layerContainer);
-                    Debug.Log(nodeType);
+                    //Debug.Log(nodeType);
                     break;
             }
 
