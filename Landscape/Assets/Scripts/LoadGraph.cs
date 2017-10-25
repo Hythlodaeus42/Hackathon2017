@@ -394,6 +394,11 @@ public class LoadGraph : MonoBehaviour {
         objAnimationOut.LookAt(endPos);
         pSmainOut.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
         pSmainIn.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
+
+        // fix scale
+        objAnimationOut.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+        objAnimationIn.localScale = new Vector3(hologramScale, hologramScale, hologramScale);
+
         /*
         Debug.Log("Edge: " + edgeInstance.transform.position);
         Debug.Log("Rotation: " + edgeInstance.transform.rotation);
