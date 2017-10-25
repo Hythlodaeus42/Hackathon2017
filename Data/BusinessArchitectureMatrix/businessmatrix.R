@@ -11,7 +11,9 @@ busmat <- read.csv(paste(path, 'BusinessArchitectureMatrix.csv', sep = ''), sep=
 bf <- read.csv(paste(path, 'BusinessFunction.csv', sep = ''), sep="|", stringsAsFactors=F, header=F)
 ac <- read.csv(paste(path, 'AssetClass.csv', sep = ''), sep="|", stringsAsFactors=F, header=F)
 
-names(busmat) <- c('bfg', 'bf', 'ac', 'app', 'year', 'colour')
+busmat <- busmat[, 1:6]
+
+names(busmat) <- c('bf', 'ac', 'year', 'bfg', 'app', 'colour')
 # names(bfg) <- c('bfg', 'bfg.ord')
 names(bf) <- c('bf', 'bf.ord')
 names(ac) <- c('ac', 'ac.ord')
