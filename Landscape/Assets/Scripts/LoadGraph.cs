@@ -299,7 +299,7 @@ public class LoadGraph : MonoBehaviour {
 
                 // drop existing
                 edgeInstance.transform.position = new Vector3(centerPosition.x, centerPosition.y - ydrop, centerPosition.z);
-                SetupEdgeAnimation(edgeInstance, new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop, startNode.transform.position.z), new Vector3(endNode.transform.position.x, endNode.transform.position.y - yscale, endNode.transform.position.z));
+                SetupEdgeAnimation(edgeInstance, new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop, startNode.transform.position.z), new Vector3(endNode.transform.position.x, endNode.transform.position.y - ydrop, endNode.transform.position.z));
 
                 // add drop
                 Vector3 centerDropPosition = new Vector3(startNode.transform.position.x, startNode.transform.position.y - ydrop / 2 , startNode.transform.position.z);
@@ -391,14 +391,15 @@ public class LoadGraph : MonoBehaviour {
 
         // set attributes
         objAnimationOut.position = startPos;
+        objAnimationOut.LookAt(endPos);
         pSmainOut.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
         pSmainIn.startLifetime = new ParticleSystem.MinMaxCurve(dist / objPartOut.main.startSpeed.constant);
         /*
         Debug.Log("Edge: " + edgeInstance.transform.position);
         Debug.Log("Rotation: " + edgeInstance.transform.rotation);
         Debug.Log("Distance: " + dist);
-        Debug.Log("Calculated: ");
-        Debug.Log("Animation " + objAnimationOut.position);
+        Debug.Log("startPos: " + startPos.ToString());
+        Debug.Log("endPos " + endPos.ToString());
         */
         // disable incoming if not both directional
         if (!edgeProperties.isBidirectional.Equals(true))
@@ -409,7 +410,7 @@ public class LoadGraph : MonoBehaviour {
         {
             // set up incoming link in opposite direction
             objAnimationIn.position = endPos;
-            objAnimationIn.LookAt(objAnimationOut.position);
+            objAnimationIn.LookAt(startPos);
         }
 
         // delay for EOD
