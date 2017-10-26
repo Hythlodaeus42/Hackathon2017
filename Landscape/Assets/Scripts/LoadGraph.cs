@@ -110,7 +110,7 @@ public class LoadGraph : MonoBehaviour {
 
         // quick option to put all children in year container without refactoring. 
         return yearContainer;
-    }
+    }   
 
     void SetStartActiveStatus()
     {
@@ -542,7 +542,13 @@ public class LoadGraph : MonoBehaviour {
                 containerInstance.GetComponent<ContainerProperties>().Ordinal = int.Parse(rowAttributes[0]);
 
                 //create layer UI
-                Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, yearContainer);
+                Transform containerUIInstance = Instantiate(prefabLayerUI, new Vector3(0, y, 0), Quaternion.identity, yearContainer);
+
+                // change corner color
+                containerUIInstance.Find("CylinderNE").GetComponent<Renderer>().materials[0].color = layerColor;
+                containerUIInstance.Find("CylinderNW").GetComponent<Renderer>().materials[0].color = layerColor;
+                containerUIInstance.Find("CylinderSE").GetComponent<Renderer>().materials[0].color = layerColor;
+                containerUIInstance.Find("CylinderSW").GetComponent<Renderer>().materials[0].color = layerColor;
 
                 Transform uiInstance = yearContainer.GetChild(yearContainer.childCount - 1);
                 RectTransform uiRect = uiInstance.gameObject.GetComponent<RectTransform>();

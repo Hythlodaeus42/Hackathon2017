@@ -46,7 +46,7 @@ public class BlockBehaviour : MonoBehaviour
             // set selected
             selected = !selected;
 
-            if (selected)
+            if (selected && this.GetComponent<BlockProperties>() != null)
             {
                 infoCanvas.GetComponent<InfoCanvasBehaviour>().Show(BuildInfoString());
             } else
@@ -61,7 +61,7 @@ public class BlockBehaviour : MonoBehaviour
 
             //Debug.Log(clr1.ToString());
 
-            if (selected)
+            if (selected && this.GetComponent<BlockProperties>() != null)
             {
                 gameObject.transform.Find("Canvas/Panel1").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0.4f);
                 gameObject.transform.Find("Canvas/Panel2").GetComponent<Image>().color = new Color(clr1.r, clr1.g, clr1.b, 0.4f);
