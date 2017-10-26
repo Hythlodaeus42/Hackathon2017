@@ -49,11 +49,12 @@ public class NodeBehaviour : MonoBehaviour
         {
             //Debug.Log(BuildInfoString());
             infoCanvas.GetComponent<InfoCanvasBehaviour>().Show(BuildInfoString());
-
+            yearContainer.GetComponent<ContainerBehaviour>().selectedGameObject = this.gameObject;
         } else
         {
             //Debug.Log(BuildInfoString());
             infoCanvas.GetComponent<InfoCanvasBehaviour>().Hide();
+            yearContainer.GetComponent<ContainerBehaviour>().selectedGameObject = null; 
         }
     }
 
@@ -82,6 +83,7 @@ public class NodeBehaviour : MonoBehaviour
                 // set neighbour flag
                 yearContainer.Find("Layer" + ep.fromLayerOrdinal + "/" + ep.fromNode).GetComponent<NodeBehaviour>().IsNeighbour = IsSelected;
                 ep.IsConnected = IsSelected;
+                
             }
 
             if (ep.fromNode == this.name)

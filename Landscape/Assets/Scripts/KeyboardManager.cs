@@ -63,20 +63,29 @@ public class KeyboardManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.F))
             Camera.main.transform.position -= Camera.main.transform.up * thrust;
 
-        if (Input.GetKey(KeyCode.Tab))
-        {
-            hiding = !hiding;
+        //if (Input.GetKey(KeyCode.Tab))
+        //{
+        //    hiding = !hiding;
 
-            if (hiding)
-            {
-                this.BroadcastMessage("ShowNodes");
-            } else
-            {
-                this.BroadcastMessage("HideNodes");
-            }
-                
+        //    if (hiding)
+        //    {
+        //        this.BroadcastMessage("HideNodes");
+        //    } else
+        //    {
+        //        this.BroadcastMessage("ShowNodes");
+        //    }   
+
+        //}
+
+        if (Input.GetKey(KeyCode.Comma))
+        {
+            this.BroadcastMessage("HideNodes");
         }
 
+        if (Input.GetKey(KeyCode.Period))
+        {
+            this.BroadcastMessage("ShowNodes");
+        }
 
         // lock the object
         if (Input.GetKeyDown(HoldKey))

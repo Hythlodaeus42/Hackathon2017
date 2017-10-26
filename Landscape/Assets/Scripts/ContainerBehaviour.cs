@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ContainerBehaviour : MonoBehaviour {
+    public GameObject selectedGameObject;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        selectedGameObject = null;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,35 +26,43 @@ public class ContainerBehaviour : MonoBehaviour {
 
     public void HideNodes()
     {
-        Debug.Log("HideNodes()");
-        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
+        //Debug.Log("HideNodes()");
+        if (selectedGameObject != null)
         {
-            if (!nb.IsSelected & !nb.IsNeighbour)
+            foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
             {
-                nb.gameObject.SetActive(false);
+                if (!nb.IsSelected & !nb.IsNeighbour)
+                {
+                    nb.gameObject.SetActive(false);
+                }
             }
-        }
 
-        foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
-        {
-            if (!ep.IsConnected)
+            foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
             {
-                ep.gameObject.SetActive(false);
+                if (!ep.IsConnected)
+                {
+                    ep.gameObject.SetActive(false);
+                }
             }
+
         }
     }
 
     public void ShowNodes()
     {
-        Debug.Log("ShowNodes()");
-        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
+        //Debug.Log("ShowNodes()");
+        if (selectedGameObject != null)
         {
+            foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
+            {
                 nb.gameObject.SetActive(true);
+            }
+
+            foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
+            {
+                ep.gameObject.SetActive(true);
+            }
         }
 
-        foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
-        {
-            ep.gameObject.SetActive(true);
-        }
     }
 }
