@@ -16,14 +16,14 @@ public class TapToPlaceParent : MonoBehaviour
         {
             //Debug.Log("placing");
             SpatialMapping.Instance.DrawVisualMeshes = true;
-            this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "tapped";
+            //this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "tapped";
         }
         // If the user is not in placing mode, hide the spatial mapping mesh.
         else
         {
             //Debug.Log("not placing");
             SpatialMapping.Instance.DrawVisualMeshes = false;
-            this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "untapped";
+            //this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "untapped";
         }
     }
 
@@ -39,7 +39,7 @@ public class TapToPlaceParent : MonoBehaviour
             var headPosition = Camera.main.transform.position;
             var gazeDirection = Camera.main.transform.forward;
 
-            this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "placing";
+            //this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "placing";
 
             RaycastHit hitInfo;
             if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
@@ -48,7 +48,7 @@ public class TapToPlaceParent : MonoBehaviour
                 // Move this object's parent object to
                 // where the raycast hit the Spatial Mapping mesh.
                 this.transform.parent.position = hitInfo.point;
-                this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "hit";
+                //this.transform.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "hit";
 
                 // Rotate this object's parent object to face the user.
                 Quaternion toQuat = Camera.main.transform.localRotation;
