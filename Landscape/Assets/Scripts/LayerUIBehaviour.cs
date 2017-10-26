@@ -20,7 +20,8 @@ public class LayerUIBehaviour : MonoBehaviour {
         //get year-layer container
 
 
-        // add handlers to buttons
+        // add handlers to buttons  
+        /*
         foreach (Transform child in this.transform)
         {
             Button btn = child.GetComponent<Button>();
@@ -28,6 +29,7 @@ public class LayerUIBehaviour : MonoBehaviour {
 
             btn.onClick.AddListener(ToggleLayerVisibility);
         }
+        */
     }
 	
 	// Update is called once per frame
