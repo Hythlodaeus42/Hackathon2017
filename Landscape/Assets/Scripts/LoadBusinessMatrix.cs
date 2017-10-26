@@ -125,11 +125,15 @@ public class LoadBusinessMatrix : MonoBehaviour {
                     {
                         case "Amber":
                             blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+                            objPanal1.GetComponent<Text>().color = Color.black;
+                            objPanal2.GetComponent<Text>().color = Color.black;
                             break;
                         case "White":
                             blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
+                            objPanal1.GetComponent<Text>().color = Color.black;
+                            objPanal2.GetComponent<Text>().color = Color.black;
                             break;
-                    }
+                    }                    
 
                     // add property
                     BlockProperties blockProperties = blockInstance.gameObject.GetComponent<BlockProperties>();
@@ -218,9 +222,13 @@ public class LoadBusinessMatrix : MonoBehaviour {
                     objPanal1.localScale = new Vector3(objPanal1.localScale.x / (len / orgX), objPanal1.localScale.y, objPanal1.localScale.z);
                     objPanal2.localScale = new Vector3(objPanal2.localScale.x / (len / orgX), objPanal2.localScale.y, objPanal2.localScale.z);
                 }
+                // bold
+                objPanal1.GetComponent<Text>().fontStyle = FontStyle.Bold;
+                objPanal2.GetComponent<Text>().fontStyle = FontStyle.Bold;
 
             }
         }
+
 
         //Debug.Log(maxBlockY.ToString());
 
@@ -254,7 +262,11 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
         blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().text = blockName;
         blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().text = blockName;
-                
+
+        // bold
+        blockInstance.Find("Canvas/Panel1").GetComponentInChildren<Text>().fontStyle = FontStyle.Bold;
+        blockInstance.Find("Canvas/Panel2").GetComponentInChildren<Text>().fontStyle = FontStyle.Bold;
+
         return blockInstance;
     }
 }
