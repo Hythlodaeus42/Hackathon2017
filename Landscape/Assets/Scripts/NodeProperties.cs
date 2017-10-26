@@ -12,5 +12,5 @@ public class NodeProperties : MonoBehaviour {
     public string DisplayWeight;
     public string BusinessArea;
     public string BusinessFunction;
-    public bool IsMarkets; 
+    public bool IsMarkets;
 }
