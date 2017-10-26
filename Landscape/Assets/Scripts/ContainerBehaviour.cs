@@ -22,4 +22,24 @@ public class ContainerBehaviour : MonoBehaviour {
         return this.transform.gameObject.activeSelf;
     }
 
+    public void HideNodes()
+    {
+        Debug.Log("HideNodes()");
+        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>())
+        {
+            if (!nb.IsSelected & !nb.IsNeighbour)
+            {
+                nb.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void ShowNodes()
+    {
+        Debug.Log("ShowNodes()");
+        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
+        {
+                nb.gameObject.SetActive(true);
+        }
+    }
 }
