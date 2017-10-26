@@ -13,6 +13,7 @@ public class LayerUIBehaviour : MonoBehaviour {
 
     }
 
+
     public void SetUp(Transform layerContainer)
     {
         localLayerContainer = layerContainer;
@@ -31,9 +32,13 @@ public class LayerUIBehaviour : MonoBehaviour {
         }
         */
     }
-	
-	// Update is called once per frame
-	public void ToggleLayerVisibility () {
+
+    void OnSelect()
+    {
+        ToggleLayerVisibility();
+    }
+    // Update is called once per frame
+    public void ToggleLayerVisibility () {
         //Debug.Log("LayerUIBehaviour.SetUp(): " + localLayerContainer.name);
         bool[] visibility = new bool[5];
 
