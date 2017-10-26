@@ -12,6 +12,8 @@ public class KeyboardManager : MonoBehaviour {
     private GameObject objClickedObject = null;
     static KeyCode HoldKey = KeyCode.Space;
 
+    private bool hiding = false;
+
     // Use this for initialization
     void Start () {
 
@@ -60,6 +62,21 @@ public class KeyboardManager : MonoBehaviour {
         // tilt camera down
         if (Input.GetKey(KeyCode.F))
             Camera.main.transform.position -= Camera.main.transform.up * thrust;
+
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            hiding = !hiding;
+
+            if (hiding)
+            {
+                this.BroadcastMessage("ShowNodes");
+            } else
+            {
+                this.BroadcastMessage("HideNodes");
+            }
+                
+        }
+
 
         // lock the object
         if (Input.GetKeyDown(HoldKey))

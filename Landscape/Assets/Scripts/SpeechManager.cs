@@ -33,7 +33,13 @@ public class SpeechManager : MonoBehaviour
         {
             // Call the OnReset method on every descendant object.
             this.BroadcastMessage("HideNodes");
-        }); 
+        });
+
+        keywords.Add("Show", () =>
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage("ShowNodes");
+        });
 
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());

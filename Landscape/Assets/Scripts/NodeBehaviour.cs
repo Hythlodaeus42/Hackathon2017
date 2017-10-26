@@ -81,12 +81,14 @@ public class NodeBehaviour : MonoBehaviour
             {
                 // set neighbour flag
                 yearContainer.Find("Layer" + ep.fromLayerOrdinal + "/" + ep.fromNode).GetComponent<NodeBehaviour>().IsNeighbour = IsSelected;
+                ep.IsConnected = IsSelected;
             }
 
             if (ep.fromNode == this.name)
             {
                 // set neighbour flag
                 yearContainer.Find("Layer" + ep.toLayerOrdinal + "/" + ep.toNode).GetComponent<NodeBehaviour>().IsNeighbour = IsSelected;
+                ep.IsConnected = IsSelected;
             }
         }
 

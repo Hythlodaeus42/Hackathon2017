@@ -25,11 +25,19 @@ public class ContainerBehaviour : MonoBehaviour {
     public void HideNodes()
     {
         Debug.Log("HideNodes()");
-        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>())
+        foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
         {
             if (!nb.IsSelected & !nb.IsNeighbour)
             {
                 nb.gameObject.SetActive(false);
+            }
+        }
+
+        foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
+        {
+            if (!ep.IsConnected)
+            {
+                ep.gameObject.SetActive(false);
             }
         }
     }
@@ -40,6 +48,11 @@ public class ContainerBehaviour : MonoBehaviour {
         foreach (NodeBehaviour nb in this.GetComponentsInChildren<NodeBehaviour>(true))
         {
                 nb.gameObject.SetActive(true);
+        }
+
+        foreach (EdgeProperties ep in this.GetComponentsInChildren<EdgeProperties>(true))
+        {
+            ep.gameObject.SetActive(true);
         }
     }
 }
