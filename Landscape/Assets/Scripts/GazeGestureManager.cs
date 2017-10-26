@@ -23,13 +23,14 @@ public class GazeGestureManager : MonoBehaviour
             // clear last selected object
             if (LastClickedObject != FocusedObject && LastClickedObject != null)
             {
+                //Debug.Log("untapped: " + LastClickedObject.name);
                 LastClickedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
             }
 
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
             {
-
+                //Debug.Log("tapped: " + FocusedObject.name);
                 FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
                 //Debug.Log("OnSelect message sent to " + FocusedObject.name);
             }
@@ -63,6 +64,7 @@ public class GazeGestureManager : MonoBehaviour
         {
             // If the raycast hit a hologram, use that as the focused object.
             FocusedObject = hitInfo.collider.gameObject;
+            Debug.Log("focus: " + FocusedObject.name);
         }
         else
         {

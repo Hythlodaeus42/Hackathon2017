@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 64041403873457192}
   - component: {fileID: 23858776398249880}
   - component: {fileID: 114913985086485348}
+  - component: {fileID: 114094818029597168}
   m_Layer: 0
   m_Name: Legend
   m_TagString: Untagged
@@ -1679,6 +1680,17 @@ MonoBehaviour:
   BusinessArea: 
   BusinessFunction: 
   IsMarkets: 0
+--- !u!114 &114094818029597168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130588518419930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aea6ae3703ffb742b333def146ba6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114130067937068954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2557,7 +2569,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130588518419930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a813d523f42260c4985ee70078fcbce4, type: 3}
   m_Name: 

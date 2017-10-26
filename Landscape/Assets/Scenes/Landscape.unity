@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45011294, g: 0.50015485, b: 0.57545805, a: 1}
+  m_IndirectSpecularColor: {r: 0.4501136, g: 0.50015557, b: 0.5754593, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -136,8 +136,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477848530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 10}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: -2, y: 4, z: 5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 647689716}
   m_RootOrder: 1
@@ -309,7 +309,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647689715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 5}
+  m_LocalPosition: {x: 0, y: -5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 959185929}
@@ -397,7 +397,16 @@ Prefab:
         type: 2}
       propertyPath: DrawMaterial
       value: 
-      objectReference: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: 53b7a575a388475408c48221ce323b04, type: 2}
+    - target: {fileID: 114000011744501634, guid: 87596db941ad3bf45a16b586b6e28b5c,
+        type: 2}
+      propertyPath: drawVisualMeshes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012674329276, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87596db941ad3bf45a16b586b6e28b5c, type: 2}
   m_IsPrefabParent: 0
@@ -561,8 +570,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 959185928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11, y: 10, z: 11.5}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -2, y: 7, z: 5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 767077251}
   - {fileID: 1400234459}
@@ -596,7 +605,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998474381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 2, z: 15}
+  m_LocalPosition: {x: 1, y: 4.5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 647689716}
@@ -646,7 +655,7 @@ MonoBehaviour:
     type: 2}
   prefabLayerUI: {fileID: 224253035329266388, guid: ea470f3ba7449a148a57910e9d67ae32,
     type: 2}
-  hologramScale: 0.2
+  hologramScale: 0.05
   startVisible: 0
 --- !u!114 &998474385
 MonoBehaviour:
@@ -824,7 +833,7 @@ Camera:
     height: 1
   near clip plane: 0.85
   far clip plane: 1000
-  field of view: 60
+  field of view: 33.2
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

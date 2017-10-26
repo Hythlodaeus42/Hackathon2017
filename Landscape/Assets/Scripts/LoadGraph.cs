@@ -102,7 +102,7 @@ public class LoadGraph : MonoBehaviour {
 
     Transform CreateYearContainer(int year)
     {
-        float xoffset = (year - 2018 + (year==2018?0.75f:0)) * layerscale * xscale;
+        float xoffset = (year - 2018) + layerscale;
         Instantiate(prefabLandscapeContainer, new Vector3(xoffset, 0, 0), Quaternion.identity, parentContainer);
         Transform yearContainer = parentContainer.GetChild(parentContainer.childCount - 1);
         yearContainer.localPosition = new Vector3(xoffset, 0, 0);
@@ -223,7 +223,7 @@ public class LoadGraph : MonoBehaviour {
             
 
             Light light = nodeInstance.GetComponent<Light>();
-            light.range = displayWeight / 2f;
+            light.range = displayWeight / 4f;
             light.enabled = false;
 
             Text txt = nodeInstance.GetComponentInChildren<Text>();
@@ -570,7 +570,7 @@ public class LoadGraph : MonoBehaviour {
 
         Transform legendInstance = yearContainer.GetChild(yearContainer.childCount - 1);
         //RectTransform legendRect = legendInstance.gameObject.GetComponent<RectTransform>();
-        legendInstance.localPosition = new Vector3(-20, yscale * 5, -10 * layerscale);
+        legendInstance.localPosition = new Vector3(-20, yscale * 4.5f, -10 * layerscale);
         legendInstance.Rotate(new Vector3(-90, 0, 0));
 
         legendInstance.Find("Canvas/Panel/TitleText").GetComponent<Text>().text = "Landscape " + year.ToString();
