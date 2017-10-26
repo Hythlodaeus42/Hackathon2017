@@ -22,13 +22,14 @@ public class InfoCanvasBehaviour : MonoBehaviour {
     {
         infoCanvas.GetComponentInChildren<Text>().text = info;
         infoCanvas.enabled = true;
+        infoCanvas.GetComponent<AudioSource>().Play();
     }
 
     public void Hide()
     {
         infoCanvas.enabled = false;
+        infoCanvas.GetComponent<AudioSource>().Stop();
 
-        
     }
 
 }
