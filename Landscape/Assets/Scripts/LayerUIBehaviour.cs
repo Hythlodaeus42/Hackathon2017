@@ -61,6 +61,9 @@ public class LayerUIBehaviour : MonoBehaviour {
         {
             trn.gameObject.SetActive(visibility[trn.GetComponent<EdgeProperties>().fromLayerOrdinal] && visibility[trn.GetComponent<EdgeProperties>().toLayerOrdinal]);
         }
+
+        // disable pop-up
+        GameObject.Find("InfoCanvas").GetComponentInChildren<Canvas>().GetComponent<InfoCanvasBehaviour>().Hide();
     }
 
     void Destroy()
