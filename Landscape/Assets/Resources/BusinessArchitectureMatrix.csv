@@ -1,596 +1,597 @@
-Accounting Rules|Commodities|2018|Finance|Murex 2.11 TLC|Amber|5|6|1|1|TRUE|1
-Accounting Rules|Commodities|2020|Finance|Murex 3.1 TLC|Green|5|6|1|1|TRUE|3
-Accounting Rules|Commodities|2022|Finance|Murex 3.1 TLC|Green|5|6|1|1|TRUE|3
-Accounting Rules|Credit - Cash|2018|Finance|Murex 2.11 TLC|Amber|5|4|1|1|TRUE|3
-Accounting Rules|Credit - Cash|2020|Finance|Murex 3.1 TLC|Green|5|4|1|1|TRUE|5
-Accounting Rules|Credit - Cash|2022|Finance|Murex 3.1 TLC|Green|5|4|1|1|TRUE|5
-Accounting Rules|Credit - Derivatives|2018|Finance|Murex 2.11 TLC|Amber|5|5|1|1|TRUE|2
-Accounting Rules|Credit - Derivatives|2020|Finance|Murex 3.1 TLC|Green|5|5|1|1|TRUE|4
-Accounting Rules|Credit - Derivatives|2022|Finance|Murex 3.1 TLC|Green|5|5|1|1|TRUE|4
-Accounting Rules|Equity - Derivatives|2018|Finance|Murex 3.1 ETP|Green|5|7|1|1|FALSE|1
-Accounting Rules|Equity - Derivatives|2020|Finance|Murex 3.1 TLC|Green|5|7|1|1|TRUE|2
-Accounting Rules|Equity - Derivatives|2022|Finance|Murex 3.1 TLC|Green|5|7|1|1|TRUE|2
-Accounting Rules|FXO|2018|Finance|Murex 2.11 TLC|Amber|5|1|1|1|FALSE|6
-Accounting Rules|FXO|2020|Finance|Murex 3.1 TLC|Green|5|1|1|1|TRUE|8
-Accounting Rules|FXO|2022|Finance|Murex 3.1 TLC|Green|5|1|1|1|TRUE|8
-Accounting Rules|MM|2018|Finance|DLD|Amber|5|8|1|1|FALSE|1
-Accounting Rules|MM|2020|Finance|Murex 3.1 TLC|Green|5|8|1|1|TRUE|1
-Accounting Rules|MM|2022|Finance|Murex 3.1 TLC|Green|5|8|1|1|TRUE|1
-Accounting Rules|Rates - Cash|2018|Finance|Murex 2.11 TLC|Amber|5|2|1|1|TRUE|5
-Accounting Rules|Rates - Cash|2020|Finance|Murex 3.1 TLC|Green|5|2|1|1|TRUE|7
-Accounting Rules|Rates - Cash|2022|Finance|Murex 3.1 TLC|Green|5|2|1|1|TRUE|7
-Accounting Rules|Rates - Derivatives|2018|Finance|Murex 2.11 TLC|Amber|5|3|1|1|TRUE|4
-Accounting Rules|Rates - Derivatives|2020|Finance|Murex 3.1 TLC|Green|5|3|1|1|TRUE|6
-Accounting Rules|Rates - Derivatives|2022|Finance|Murex 3.1 TLC|Green|5|3|1|1|TRUE|6
-Accounting Rules|Vanilla FX + NDF|2018|Finance|MIDANZ|Amber|5|0|1|1|FALSE|1
-Accounting Rules|Vanilla FX + NDF|2020|Finance|Murex 3.1 TLC|Green|5|0|1|1|FALSE|9
-Accounting Rules|Vanilla FX + NDF|2022|Finance|Murex 3.1 TLC|Green|5|0|1|1|FALSE|9
-Adjustments|Commodities|2018|Finance|OneSumX|Green|4|6|1|1|FALSE|1
-Adjustments|Commodities|2020|Finance|OneSumX|Green|4|6|1|1|TRUE|3
-Adjustments|Commodities|2022|Finance|OneSumX|Green|4|6|1|1|TRUE|3
-Adjustments|Credit - Cash|2018|Finance|OneSumX|Green|4|4|1|1|TRUE|1
-Adjustments|Credit - Cash|2020|Finance|OneSumX|Green|4|4|1|1|TRUE|5
-Adjustments|Credit - Cash|2022|Finance|OneSumX|Green|4|4|1|1|TRUE|5
-Adjustments|Credit - Derivatives|2020|Finance|OneSumX|Green|4|5|1|1|TRUE|4
-Adjustments|Credit - Derivatives|2022|Finance|OneSumX|Green|4|5|1|1|TRUE|4
-Adjustments|Equity - Derivatives|2020|Finance|OneSumX|Green|4|7|1|1|TRUE|2
-Adjustments|Equity - Derivatives|2022|Finance|OneSumX|Green|4|7|1|1|TRUE|2
-Adjustments|FXO|2018|Finance|OneSumX|Green|4|1|1|1|FALSE|4
-Adjustments|FXO|2020|Finance|OneSumX|Green|4|1|1|1|TRUE|8
-Adjustments|FXO|2022|Finance|OneSumX|Green|4|1|1|1|TRUE|8
-Adjustments|MM|2020|Finance|OneSumX|Green|4|8|1|1|TRUE|1
-Adjustments|MM|2022|Finance|OneSumX|Green|4|8|1|1|TRUE|1
-Adjustments|Rates - Cash|2018|Finance|OneSumX|Green|4|2|1|1|TRUE|3
-Adjustments|Rates - Cash|2020|Finance|OneSumX|Green|4|2|1|1|TRUE|7
-Adjustments|Rates - Cash|2022|Finance|OneSumX|Green|4|2|1|1|TRUE|7
-Adjustments|Rates - Derivatives|2018|Finance|OneSumX|Green|4|3|1|1|TRUE|2
-Adjustments|Rates - Derivatives|2020|Finance|OneSumX|Green|4|3|1|1|TRUE|6
-Adjustments|Rates - Derivatives|2022|Finance|OneSumX|Green|4|3|1|1|TRUE|6
-Adjustments|Vanilla FX + NDF|2020|Finance|OneSumX|Green|4|0|1|1|FALSE|9
-Adjustments|Vanilla FX + NDF|2022|Finance|OneSumX|Green|4|0|1|1|FALSE|9
-Collateral Management|Commodities|2018|Middle & Back Office|SENTRY|Green|12|6|1|1|TRUE|3
-Collateral Management|Commodities|2020|Middle & Back Office|SENTRY|Green|12|6|1|1|TRUE|3
-Collateral Management|Commodities|2022|Middle & Back Office|SENTRY|Amber|12|6|1|1|TRUE|3
-Collateral Management|Credit - Cash|2018|Middle & Back Office|SENTRY|Green|12|4|1|1|TRUE|5
-Collateral Management|Credit - Cash|2020|Middle & Back Office|SENTRY|Green|12|4|1|1|TRUE|5
-Collateral Management|Credit - Cash|2022|Middle & Back Office|SENTRY|Amber|12|4|1|1|TRUE|5
-Collateral Management|Credit - Derivatives|2018|Middle & Back Office|SENTRY|Green|12|5|1|1|TRUE|4
-Collateral Management|Credit - Derivatives|2020|Middle & Back Office|SENTRY|Green|12|5|1|1|TRUE|4
-Collateral Management|Credit - Derivatives|2022|Middle & Back Office|SENTRY|Amber|12|5|1|1|TRUE|4
-Collateral Management|Equity - Derivatives|2018|Middle & Back Office|SENTRY|Green|12|7|1|1|TRUE|2
-Collateral Management|Equity - Derivatives|2020|Middle & Back Office|SENTRY|Green|12|7|1|1|TRUE|2
-Collateral Management|Equity - Derivatives|2022|Middle & Back Office|SENTRY|Amber|12|7|1|1|TRUE|2
-Collateral Management|FXO|2018|Middle & Back Office|SENTRY|Green|12|1|1|1|TRUE|8
-Collateral Management|FXO|2020|Middle & Back Office|SENTRY|Green|12|1|1|1|TRUE|8
-Collateral Management|FXO|2022|Middle & Back Office|SENTRY|Amber|12|1|1|1|TRUE|8
-Collateral Management|MM|2018|Middle & Back Office|SENTRY|Green|12|8|1|1|TRUE|1
-Collateral Management|MM|2020|Middle & Back Office|SENTRY|Green|12|8|1|1|TRUE|1
-Collateral Management|MM|2022|Middle & Back Office|SENTRY|Amber|12|8|1|1|TRUE|1
-Collateral Management|Rates - Cash|2018|Middle & Back Office|SENTRY|Green|12|2|1|1|TRUE|7
-Collateral Management|Rates - Cash|2020|Middle & Back Office|SENTRY|Green|12|2|1|1|TRUE|7
-Collateral Management|Rates - Cash|2022|Middle & Back Office|SENTRY|Amber|12|2|1|1|TRUE|7
-Collateral Management|Rates - Derivatives|2018|Middle & Back Office|SENTRY|Green|12|3|1|1|TRUE|6
-Collateral Management|Rates - Derivatives|2020|Middle & Back Office|SENTRY|Green|12|3|1|1|TRUE|6
-Collateral Management|Rates - Derivatives|2022|Middle & Back Office|SENTRY|Amber|12|3|1|1|TRUE|6
-Collateral Management|Vanilla FX + NDF|2018|Middle & Back Office|SENTRY|Green|12|0|1|1|FALSE|9
-Collateral Management|Vanilla FX + NDF|2020|Middle & Back Office|SENTRY|Green|12|0|1|1|FALSE|9
-Collateral Management|Vanilla FX + NDF|2022|Middle & Back Office|SENTRY|Amber|12|0|1|1|FALSE|9
-Confirmations|Commodities|2018|Middle & Back Office|Xceptor|Green|13|6|1|1|TRUE|1
-Confirmations|Commodities|2020|Middle & Back Office|Xceptor|Green|13|6|1|1|TRUE|1
-Confirmations|Commodities|2022|Middle & Back Office|Xceptor|Green|13|6|1|1|TRUE|3
-Confirmations|Credit - Cash|2018|Middle & Back Office|Xceptor|Green|13|4|1|1|TRUE|3
-Confirmations|Credit - Cash|2020|Middle & Back Office|Xceptor|Green|13|4|1|1|TRUE|3
-Confirmations|Credit - Cash|2022|Middle & Back Office|Xceptor|Green|13|4|1|1|TRUE|5
-Confirmations|Credit - Derivatives|2018|Middle & Back Office|Xceptor|Green|13|5|1|1|TRUE|2
-Confirmations|Credit - Derivatives|2020|Middle & Back Office|Xceptor|Green|13|5|1|1|TRUE|2
-Confirmations|Credit - Derivatives|2022|Middle & Back Office|Xceptor|Green|13|5|1|1|TRUE|4
-Confirmations|Equity - Derivatives|2018|Middle & Back Office|Murex 3.1 ETP|Green|13|7|2|1|FALSE|1
-Confirmations|Equity - Derivatives|2018|Middle & Back Office|Spider|Green|13|7|2|2|FALSE|1
-Confirmations|Equity - Derivatives|2020|Middle & Back Office|Murex 3.1 ETP|Amber|13|7|2|1|FALSE|1
-Confirmations|Equity - Derivatives|2020|Middle & Back Office|Spider|Amber|13|7|2|2|FALSE|1
-Confirmations|Equity - Derivatives|2022|Middle & Back Office|Xceptor|Green|13|7|1|1|TRUE|2
-Confirmations|FXO|2018|Middle & Back Office|Xceptor|Green|13|1|1|1|FALSE|6
-Confirmations|FXO|2020|Middle & Back Office|Xceptor|Green|13|1|1|1|TRUE|6
-Confirmations|FXO|2022|Middle & Back Office|Xceptor|Green|13|1|1|1|TRUE|8
-Confirmations|MM|2018|Middle & Back Office|DLD|Amber|13|8|1|1|FALSE|1
-Confirmations|MM|2020|Middle & Back Office|Xceptor|Green|13|8|1|1|FALSE|1
-Confirmations|MM|2022|Middle & Back Office|Xceptor|Green|13|8|1|1|TRUE|1
-Confirmations|Rates - Cash|2018|Middle & Back Office|Xceptor|Green|13|2|1|1|TRUE|5
-Confirmations|Rates - Cash|2020|Middle & Back Office|Xceptor|Green|13|2|1|1|TRUE|5
-Confirmations|Rates - Cash|2022|Middle & Back Office|Xceptor|Green|13|2|1|1|TRUE|7
-Confirmations|Rates - Derivatives|2018|Middle & Back Office|Xceptor|Green|13|3|1|1|TRUE|4
-Confirmations|Rates - Derivatives|2020|Middle & Back Office|Xceptor|Green|13|3|1|1|TRUE|4
-Confirmations|Rates - Derivatives|2022|Middle & Back Office|Xceptor|Green|13|3|1|1|TRUE|6
-Confirmations|Vanilla FX + NDF|2018|Middle & Back Office|MIDANZ|Amber|13|0|1|1|FALSE|1
-Confirmations|Vanilla FX + NDF|2020|Middle & Back Office|Xceptor|Green|13|0|1|1|FALSE|7
-Confirmations|Vanilla FX + NDF|2022|Middle & Back Office|Xceptor|Green|13|0|1|1|FALSE|9
-Customer Data|Commodities|2018|Middle & Back Office|CSS|Green|14|6|2|1|FALSE|1
-Customer Data|Commodities|2018|Middle & Back Office|GoldTier|Green|14|6|2|2|FALSE|1
-Customer Data|Commodities|2020|Middle & Back Office|CSS|Green|14|6|2|1|FALSE|1
-Customer Data|Commodities|2020|Middle & Back Office|GoldTier|Green|14|6|2|2|FALSE|1
-Customer Data|Commodities|2022|Middle & Back Office|CSS|Green|14|6|2|1|FALSE|1
-Customer Data|Commodities|2022|Middle & Back Office|GoldTier|Green|14|6|2|2|FALSE|1
-Customer Data|Credit - Cash|2018|Middle & Back Office|CSS|Green|14|4|2|1|FALSE|1
-Customer Data|Credit - Cash|2018|Middle & Back Office|GoldTier|Green|14|4|2|2|FALSE|1
-Customer Data|Credit - Cash|2020|Middle & Back Office|CSS|Green|14|4|2|1|FALSE|1
-Customer Data|Credit - Cash|2020|Middle & Back Office|GoldTier|Green|14|4|2|2|FALSE|1
-Customer Data|Credit - Cash|2022|Middle & Back Office|CSS|Green|14|4|2|1|FALSE|1
-Customer Data|Credit - Cash|2022|Middle & Back Office|GoldTier|Green|14|4|2|2|FALSE|1
-Customer Data|Credit - Derivatives|2018|Middle & Back Office|CSS|Green|14|5|2|1|FALSE|1
-Customer Data|Credit - Derivatives|2018|Middle & Back Office|GoldTier|Green|14|5|2|2|FALSE|1
-Customer Data|Credit - Derivatives|2020|Middle & Back Office|CSS|Green|14|5|2|1|FALSE|1
-Customer Data|Credit - Derivatives|2020|Middle & Back Office|GoldTier|Green|14|5|2|2|FALSE|1
-Customer Data|Credit - Derivatives|2022|Middle & Back Office|CSS|Green|14|5|2|1|FALSE|1
-Customer Data|Credit - Derivatives|2022|Middle & Back Office|GoldTier|Green|14|5|2|2|FALSE|1
-Customer Data|Equity - Derivatives|2018|Middle & Back Office|GoldTier|Green|14|7|2|1|FALSE|1
-Customer Data|Equity - Derivatives|2018|Middle & Back Office|Murex 3.1 ETP|Green|14|7|2|2|FALSE|1
-Customer Data|Equity - Derivatives|2020|Middle & Back Office|CSS|Green|14|7|2|1|FALSE|1
-Customer Data|Equity - Derivatives|2020|Middle & Back Office|GoldTier|Green|14|7|2|2|FALSE|1
-Customer Data|Equity - Derivatives|2022|Middle & Back Office|CSS|Green|14|7|2|1|FALSE|1
-Customer Data|Equity - Derivatives|2022|Middle & Back Office|GoldTier|Green|14|7|2|2|FALSE|1
-Customer Data|FXO|2018|Middle & Back Office|CSS|Green|14|1|2|1|FALSE|1
-Customer Data|FXO|2018|Middle & Back Office|GoldTier|Green|14|1|2|2|FALSE|1
-Customer Data|FXO|2020|Middle & Back Office|CSS|Green|14|1|2|1|FALSE|1
-Customer Data|FXO|2020|Middle & Back Office|GoldTier|Green|14|1|2|2|FALSE|1
-Customer Data|FXO|2022|Middle & Back Office|CSS|Green|14|1|2|1|FALSE|1
-Customer Data|FXO|2022|Middle & Back Office|GoldTier|Green|14|1|2|2|FALSE|1
-Customer Data|MM|2018|Middle & Back Office|DLD|Amber|14|8|2|1|FALSE|1
-Customer Data|MM|2018|Middle & Back Office|GoldTier|Green|14|8|2|2|FALSE|1
-Customer Data|MM|2020|Middle & Back Office|CSS|Green|14|8|2|1|FALSE|1
-Customer Data|MM|2020|Middle & Back Office|GoldTier|Green|14|8|2|2|FALSE|1
-Customer Data|MM|2022|Middle & Back Office|CSS|Green|14|8|2|1|FALSE|1
-Customer Data|MM|2022|Middle & Back Office|GoldTier|Green|14|8|2|2|FALSE|1
-Customer Data|Rates - Cash|2018|Middle & Back Office|CSS|Green|14|2|2|1|FALSE|1
-Customer Data|Rates - Cash|2018|Middle & Back Office|GoldTier|Green|14|2|2|2|FALSE|1
-Customer Data|Rates - Cash|2020|Middle & Back Office|CSS|Green|14|2|2|1|FALSE|1
-Customer Data|Rates - Cash|2020|Middle & Back Office|GoldTier|Green|14|2|2|2|FALSE|1
-Customer Data|Rates - Cash|2022|Middle & Back Office|CSS|Green|14|2|2|1|FALSE|1
-Customer Data|Rates - Cash|2022|Middle & Back Office|GoldTier|Green|14|2|2|2|FALSE|1
-Customer Data|Rates - Derivatives|2018|Middle & Back Office|CSS|Green|14|3|2|1|FALSE|1
-Customer Data|Rates - Derivatives|2018|Middle & Back Office|GoldTier|Green|14|3|2|2|FALSE|1
-Customer Data|Rates - Derivatives|2020|Middle & Back Office|CSS|Green|14|3|2|1|FALSE|1
-Customer Data|Rates - Derivatives|2020|Middle & Back Office|GoldTier|Green|14|3|2|2|FALSE|1
-Customer Data|Rates - Derivatives|2022|Middle & Back Office|CSS|Green|14|3|2|1|FALSE|1
-Customer Data|Rates - Derivatives|2022|Middle & Back Office|GoldTier|Green|14|3|2|2|FALSE|1
-Customer Data|Vanilla FX + NDF|2018|Middle & Back Office|CSS|Green|14|0|3|1|FALSE|1
-Customer Data|Vanilla FX + NDF|2018|Middle & Back Office|GoldTier|Green|14|0|3|2|FALSE|1
-Customer Data|Vanilla FX + NDF|2018|Middle & Back Office|Wall Street System|Green|14|0|3|3|FALSE|1
-Customer Data|Vanilla FX + NDF|2020|Middle & Back Office|CSS|Green|14|0|2|1|FALSE|1
-Customer Data|Vanilla FX + NDF|2020|Middle & Back Office|GoldTier|Green|14|0|2|2|FALSE|1
-Customer Data|Vanilla FX + NDF|2022|Middle & Back Office|CSS|Green|14|0|2|1|FALSE|1
-Customer Data|Vanilla FX + NDF|2022|Middle & Back Office|GoldTier|Green|14|0|2|2|FALSE|1
-Electronic Channel|Credit - Cash|2018|Electronic Channel|ION Gateways|Green|18|4|1|1|FALSE|1
-Electronic Channel|Credit - Cash|2020|Electronic Channel|ION Gateways|Green|18|4|1|1|FALSE|1
-Electronic Channel|Credit - Cash|2022|Electronic Channel|ION Gateways|Green|18|4|1|1|FALSE|1
-Electronic Channel|Credit - Derivatives|2018|Electronic Channel|ECNs|Green|18|5|1|1|FALSE|1
-Electronic Channel|Credit - Derivatives|2020|Electronic Channel|Bloomberg|Green|18|5|2|1|FALSE|1
-Electronic Channel|Credit - Derivatives|2020|Electronic Channel|ECNs|Green|18|5|2|2|FALSE|1
-Electronic Channel|Credit - Derivatives|2022|Electronic Channel|Bloomberg|Green|18|5|2|1|FALSE|1
-Electronic Channel|Credit - Derivatives|2022|Electronic Channel|ECNs|Green|18|5|2|2|FALSE|1
-Electronic Channel|FXO|2018|Electronic Channel|Direct API|Green|18|1|2|1|FALSE|1
-Electronic Channel|FXO|2018|Electronic Channel|FINIQ|Green|18|1|2|2|FALSE|1
-Electronic Channel|FXO|2020|Electronic Channel|Direct API|Green|18|1|2|1|FALSE|1
-Electronic Channel|FXO|2020|Electronic Channel|FINIQ|Green|18|1|2|2|FALSE|1
-Electronic Channel|FXO|2022|Electronic Channel|Direct API|Green|18|1|2|1|FALSE|1
-Electronic Channel|FXO|2022|Electronic Channel|FINIQ|Green|18|1|2|2|FALSE|1
-Electronic Channel|Rates - Cash|2018|Electronic Channel|ION Gateways|Green|18|2|1|1|FALSE|1
-Electronic Channel|Rates - Cash|2020|Electronic Channel|ION Gateways|Green|18|2|1|1|FALSE|1
-Electronic Channel|Rates - Cash|2022|Electronic Channel|ION Gateways|Green|18|2|1|1|FALSE|1
-Electronic Channel|Rates - Derivatives|2018|Electronic Channel|ECNs|Green|18|3|1|1|FALSE|1
-Electronic Channel|Rates - Derivatives|2020|Electronic Channel|Bloomberg|Green|18|3|2|1|FALSE|1
-Electronic Channel|Rates - Derivatives|2020|Electronic Channel|ECNs|Green|18|3|2|2|FALSE|1
-Electronic Channel|Rates - Derivatives|2022|Electronic Channel|Bloomberg|Green|18|3|2|1|FALSE|1
-Electronic Channel|Rates - Derivatives|2022|Electronic Channel|ECNs|Green|18|3|2|2|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|Corporate Dealers|Green|18|0|6|1|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|Direct API|Green|18|0|6|2|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|FX Easy|Green|18|0|6|3|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|GMP|Green|18|0|6|4|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|Mult-Bank Portals|Green|18|0|6|5|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2018|Electronic Channel|Wholesale Dealers|Green|18|0|6|6|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|Corporate Dealers|Green|18|0|6|1|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|Direct API|Green|18|0|6|2|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|FX Easy|Green|18|0|6|3|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|GMP|Amber|18|0|6|4|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|Mult-Bank Portals|Green|18|0|6|5|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2020|Electronic Channel|Wholesale Dealers|Green|18|0|6|6|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|Corporate Dealers|Green|18|0|6|1|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|Direct API|Green|18|0|6|2|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|FX Easy|Green|18|0|6|3|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|GMP|Amber|18|0|6|4|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|Mult-Bank Portals|Green|18|0|6|5|FALSE|1
-Electronic Channel|Vanilla FX + NDF|2022|Electronic Channel|Wholesale Dealers|Green|18|0|6|6|FALSE|1
-EOD Market Data Management|Commodities|2018|Data|Asset Control|Green|1|6|2|1|FALSE|1
-EOD Market Data Management|Commodities|2018|Data|VMR|Amber|1|6|2|2|FALSE|1
-EOD Market Data Management|Commodities|2020|Data|Asset Control|Green|1|6|1|1|TRUE|3
-EOD Market Data Management|Commodities|2022|Data|Asset Control|Green|1|6|1|1|TRUE|3
-EOD Market Data Management|Credit - Cash|2018|Data|Asset Control|Green|1|4|2|1|FALSE|1
-EOD Market Data Management|Credit - Cash|2018|Data|VMR|Amber|1|4|2|2|FALSE|1
-EOD Market Data Management|Credit - Cash|2020|Data|Asset Control|Green|1|4|1|1|TRUE|5
-EOD Market Data Management|Credit - Cash|2022|Data|Asset Control|Green|1|4|1|1|TRUE|5
-EOD Market Data Management|Credit - Derivatives|2018|Data|Asset Control|Green|1|5|2|1|FALSE|1
-EOD Market Data Management|Credit - Derivatives|2018|Data|VMR|Amber|1|5|2|2|FALSE|1
-EOD Market Data Management|Credit - Derivatives|2020|Data|Asset Control|Green|1|5|1|1|TRUE|4
-EOD Market Data Management|Credit - Derivatives|2022|Data|Asset Control|Green|1|5|1|1|TRUE|4
-EOD Market Data Management|Equity - Derivatives|2018|Data|Asset Control|Green|1|7|2|1|FALSE|1
-EOD Market Data Management|Equity - Derivatives|2018|Data|VMR|Amber|1|7|2|2|FALSE|1
-EOD Market Data Management|Equity - Derivatives|2020|Data|Asset Control|Green|1|7|1|1|TRUE|2
-EOD Market Data Management|Equity - Derivatives|2022|Data|Asset Control|Green|1|7|1|1|TRUE|2
-EOD Market Data Management|FXO|2018|Data|Asset Control|Green|1|1|2|1|FALSE|1
-EOD Market Data Management|FXO|2018|Data|VMR|Amber|1|1|2|2|FALSE|1
-EOD Market Data Management|FXO|2020|Data|Asset Control|Green|1|1|1|1|TRUE|8
-EOD Market Data Management|FXO|2022|Data|Asset Control|Green|1|1|1|1|TRUE|8
-EOD Market Data Management|MM|2018|Data|Asset Control|Green|1|8|2|1|FALSE|1
-EOD Market Data Management|MM|2018|Data|VMR|Amber|1|8|2|2|FALSE|1
-EOD Market Data Management|MM|2020|Data|Asset Control|Green|1|8|1|1|TRUE|1
-EOD Market Data Management|MM|2022|Data|Asset Control|Green|1|8|1|1|TRUE|1
-EOD Market Data Management|Rates - Cash|2018|Data|Asset Control|Green|1|2|2|1|FALSE|1
-EOD Market Data Management|Rates - Cash|2018|Data|VMR|Amber|1|2|2|2|FALSE|1
-EOD Market Data Management|Rates - Cash|2020|Data|Asset Control|Green|1|2|1|1|TRUE|7
-EOD Market Data Management|Rates - Cash|2022|Data|Asset Control|Green|1|2|1|1|TRUE|7
-EOD Market Data Management|Rates - Derivatives|2018|Data|Asset Control|Green|1|3|2|1|FALSE|1
-EOD Market Data Management|Rates - Derivatives|2018|Data|VMR|Amber|1|3|2|2|FALSE|1
-EOD Market Data Management|Rates - Derivatives|2020|Data|Asset Control|Green|1|3|1|1|TRUE|6
-EOD Market Data Management|Rates - Derivatives|2022|Data|Asset Control|Green|1|3|1|1|TRUE|6
-EOD Market Data Management|Vanilla FX + NDF|2018|Data|Asset Control|Green|1|0|2|1|FALSE|1
-EOD Market Data Management|Vanilla FX + NDF|2018|Data|VMR|Amber|1|0|2|2|FALSE|1
-EOD Market Data Management|Vanilla FX + NDF|2020|Data|Asset Control|Green|1|0|1|1|FALSE|9
-EOD Market Data Management|Vanilla FX + NDF|2022|Data|Asset Control|Green|1|0|1|1|FALSE|9
-Intraday Risk & PnL|Commodities|2018|Front Office|Murex 2.11 TLC|Amber|16|6|1|1|TRUE|1
-Intraday Risk & PnL|Commodities|2020|Front Office|SKY|Green|16|6|1|1|TRUE|1
-Intraday Risk & PnL|Commodities|2022|Front Office|SKY|Green|16|6|1|1|TRUE|1
-Intraday Risk & PnL|Credit - Cash|2018|Front Office|Murex 2.11 TLC|Amber|16|4|1|1|FALSE|3
-Intraday Risk & PnL|Credit - Cash|2020|Front Office|SKY|Green|16|4|1|1|TRUE|3
-Intraday Risk & PnL|Credit - Cash|2022|Front Office|SKY|Green|16|4|1|1|TRUE|3
-Intraday Risk & PnL|Credit - Derivatives|2018|Front Office|Murex 2.11 TLC|Amber|16|5|1|1|TRUE|2
-Intraday Risk & PnL|Credit - Derivatives|2020|Front Office|SKY|Green|16|5|1|1|TRUE|2
-Intraday Risk & PnL|Credit - Derivatives|2022|Front Office|SKY|Green|16|5|1|1|TRUE|2
-Intraday Risk & PnL|Equity - Derivatives|2018|Front Office|Murex 3.1 ETP|Green|16|7|1|1|FALSE|1
-Intraday Risk & PnL|Equity - Derivatives|2020|Front Office|Murex 3.1 ETP|Amber|16|7|1|1|FALSE|1
-Intraday Risk & PnL|Equity - Derivatives|2022|Front Office|Murex 3.1 TLC|Green|16|7|1|1|FALSE|1
-Intraday Risk & PnL|FXO|2018|Front Office|SKY|Green|16|1|1|1|FALSE|3
-Intraday Risk & PnL|FXO|2020|Front Office|SKY|Green|16|1|1|1|FALSE|6
-Intraday Risk & PnL|FXO|2022|Front Office|SKY|Green|16|1|1|1|FALSE|6
-Intraday Risk & PnL|MM|2018|Front Office|DLD|Amber|16|8|3|1|FALSE|1
-Intraday Risk & PnL|MM|2018|Front Office|Mantec|Amber|16|8|3|2|FALSE|1
-Intraday Risk & PnL|MM|2018|Front Office|Wall Street System|Green|16|8|3|3|FALSE|1
-Intraday Risk & PnL|MM|2020|Front Office|DLD|Amber|16|8|3|1|FALSE|1
-Intraday Risk & PnL|MM|2020|Front Office|Mantec|Amber|16|8|3|2|FALSE|1
-Intraday Risk & PnL|MM|2020|Front Office|Wall Street System|Amber|16|8|3|3|FALSE|1
-Intraday Risk & PnL|MM|2022|Front Office|Sales Desktop|Green|16|8|1|1|FALSE|1
-Intraday Risk & PnL|Rates - Cash|2018|Front Office|SKY|Green|16|2|1|1|TRUE|2
-Intraday Risk & PnL|Rates - Cash|2020|Front Office|SKY|Green|16|2|1|1|TRUE|5
-Intraday Risk & PnL|Rates - Cash|2022|Front Office|SKY|Green|16|2|1|1|TRUE|5
-Intraday Risk & PnL|Rates - Derivatives|2018|Front Office|SKY|Green|16|3|1|1|TRUE|1
-Intraday Risk & PnL|Rates - Derivatives|2020|Front Office|SKY|Green|16|3|1|1|TRUE|4
-Intraday Risk & PnL|Rates - Derivatives|2022|Front Office|SKY|Green|16|3|1|1|TRUE|4
-Intraday Risk & PnL|Vanilla FX + NDF|2018|Front Office|Mantec|Amber|16|0|2|1|FALSE|1
-Intraday Risk & PnL|Vanilla FX + NDF|2018|Front Office|Wall Street System|Green|16|0|2|2|FALSE|1
-Intraday Risk & PnL|Vanilla FX + NDF|2020|Front Office|Mantec|Amber|16|0|2|1|FALSE|1
-Intraday Risk & PnL|Vanilla FX + NDF|2020|Front Office|Wall Street System|Amber|16|0|2|2|FALSE|1
-Intraday Risk & PnL|Vanilla FX + NDF|2022|Front Office|Sales Desktop|Green|16|0|1|1|FALSE|1
-Limit Management|Commodities|2018|Credit Risk|RAZOR|White|6|6|1|1|TRUE|3
-Limit Management|Commodities|2020|Credit Risk|RAZOR|White|6|6|1|1|TRUE|3
-Limit Management|Commodities|2022|Credit Risk|RAZOR|White|6|6|1|1|TRUE|3
-Limit Management|Credit - Cash|2018|Credit Risk|RAZOR|White|6|4|1|1|TRUE|5
-Limit Management|Credit - Cash|2020|Credit Risk|RAZOR|White|6|4|1|1|TRUE|5
-Limit Management|Credit - Cash|2022|Credit Risk|RAZOR|White|6|4|1|1|TRUE|5
-Limit Management|Credit - Derivatives|2018|Credit Risk|RAZOR|White|6|5|1|1|TRUE|4
-Limit Management|Credit - Derivatives|2020|Credit Risk|RAZOR|White|6|5|1|1|TRUE|4
-Limit Management|Credit - Derivatives|2022|Credit Risk|RAZOR|White|6|5|1|1|TRUE|4
-Limit Management|Equity - Derivatives|2018|Credit Risk|RAZOR|White|6|7|1|1|TRUE|2
-Limit Management|Equity - Derivatives|2020|Credit Risk|RAZOR|White|6|7|1|1|TRUE|2
-Limit Management|Equity - Derivatives|2022|Credit Risk|RAZOR|White|6|7|1|1|TRUE|2
-Limit Management|FXO|2018|Credit Risk|RAZOR|White|6|1|1|1|TRUE|8
-Limit Management|FXO|2020|Credit Risk|RAZOR|White|6|1|1|1|TRUE|8
-Limit Management|FXO|2022|Credit Risk|RAZOR|White|6|1|1|1|TRUE|8
-Limit Management|MM|2018|Credit Risk|RAZOR|White|6|8|1|1|TRUE|1
-Limit Management|MM|2020|Credit Risk|RAZOR|White|6|8|1|1|TRUE|1
-Limit Management|MM|2022|Credit Risk|RAZOR|White|6|8|1|1|TRUE|1
-Limit Management|Rates - Cash|2018|Credit Risk|RAZOR|White|6|2|1|1|TRUE|7
-Limit Management|Rates - Cash|2020|Credit Risk|RAZOR|White|6|2|1|1|TRUE|7
-Limit Management|Rates - Cash|2022|Credit Risk|RAZOR|White|6|2|1|1|TRUE|7
-Limit Management|Rates - Derivatives|2018|Credit Risk|RAZOR|White|6|3|1|1|TRUE|6
-Limit Management|Rates - Derivatives|2020|Credit Risk|RAZOR|White|6|3|1|1|TRUE|6
-Limit Management|Rates - Derivatives|2022|Credit Risk|RAZOR|White|6|3|1|1|TRUE|6
-Limit Management|Vanilla FX + NDF|2018|Credit Risk|RAZOR|White|6|0|1|1|FALSE|9
-Limit Management|Vanilla FX + NDF|2020|Credit Risk|RAZOR|White|6|0|1|1|FALSE|9
-Limit Management|Vanilla FX + NDF|2022|Credit Risk|RAZOR|White|6|0|1|1|FALSE|9
-Limits, Reporting & Scenario Management|Commodities|2018|Market Risk|MaRRS|Green|8|6|1|1|TRUE|3
-Limits, Reporting & Scenario Management|Commodities|2020|Market Risk|MaRRS|Green|8|6|1|1|TRUE|3
-Limits, Reporting & Scenario Management|Commodities|2022|Market Risk|MaRRS|Green|8|6|1|1|TRUE|3
-Limits, Reporting & Scenario Management|Credit - Cash|2018|Market Risk|MaRRS|Green|8|4|1|1|TRUE|5
-Limits, Reporting & Scenario Management|Credit - Cash|2020|Market Risk|MaRRS|Green|8|4|1|1|TRUE|5
-Limits, Reporting & Scenario Management|Credit - Cash|2022|Market Risk|MaRRS|Green|8|4|1|1|TRUE|5
-Limits, Reporting & Scenario Management|Credit - Derivatives|2018|Market Risk|MaRRS|Green|8|5|1|1|TRUE|4
-Limits, Reporting & Scenario Management|Credit - Derivatives|2020|Market Risk|MaRRS|Green|8|5|1|1|TRUE|4
-Limits, Reporting & Scenario Management|Credit - Derivatives|2022|Market Risk|MaRRS|Green|8|5|1|1|TRUE|4
-Limits, Reporting & Scenario Management|Equity - Derivatives|2018|Market Risk|MaRRS|Green|8|7|1|1|TRUE|2
-Limits, Reporting & Scenario Management|Equity - Derivatives|2020|Market Risk|MaRRS|Green|8|7|1|1|TRUE|2
-Limits, Reporting & Scenario Management|Equity - Derivatives|2022|Market Risk|MaRRS|Green|8|7|1|1|TRUE|2
-Limits, Reporting & Scenario Management|FXO|2018|Market Risk|MaRRS|Green|8|1|1|1|TRUE|8
-Limits, Reporting & Scenario Management|FXO|2020|Market Risk|MaRRS|Green|8|1|1|1|TRUE|8
-Limits, Reporting & Scenario Management|FXO|2022|Market Risk|MaRRS|Green|8|1|1|1|TRUE|8
-Limits, Reporting & Scenario Management|MM|2018|Market Risk|MaRRS|Green|8|8|1|1|TRUE|1
-Limits, Reporting & Scenario Management|MM|2020|Market Risk|MaRRS|Green|8|8|1|1|TRUE|1
-Limits, Reporting & Scenario Management|MM|2022|Market Risk|MaRRS|Green|8|8|1|1|TRUE|1
-Limits, Reporting & Scenario Management|Rates - Cash|2018|Market Risk|MaRRS|Green|8|2|1|1|TRUE|7
-Limits, Reporting & Scenario Management|Rates - Cash|2020|Market Risk|MaRRS|Green|8|2|1|1|TRUE|7
-Limits, Reporting & Scenario Management|Rates - Cash|2022|Market Risk|MaRRS|Green|8|2|1|1|TRUE|7
-Limits, Reporting & Scenario Management|Rates - Derivatives|2018|Market Risk|MaRRS|Green|8|3|1|1|TRUE|6
-Limits, Reporting & Scenario Management|Rates - Derivatives|2020|Market Risk|MaRRS|Green|8|3|1|1|TRUE|6
-Limits, Reporting & Scenario Management|Rates - Derivatives|2022|Market Risk|MaRRS|Green|8|3|1|1|TRUE|6
-Limits, Reporting & Scenario Management|Vanilla FX + NDF|2018|Market Risk|MaRRS|Green|8|0|1|1|FALSE|9
-Limits, Reporting & Scenario Management|Vanilla FX + NDF|2020|Market Risk|MaRRS|Green|8|0|1|1|FALSE|9
-Limits, Reporting & Scenario Management|Vanilla FX + NDF|2022|Market Risk|MaRRS|Green|8|0|1|1|FALSE|9
-Nostro / Vostro|Commodities|2018|Finance|MIDANZ|Green|3|6|1|1|TRUE|3
-Nostro / Vostro|Commodities|2020|Finance|MIDANZ|Green|3|6|1|1|TRUE|3
-Nostro / Vostro|Commodities|2022|Finance|MIDANZ|Green|3|6|1|1|TRUE|3
-Nostro / Vostro|Credit - Cash|2018|Finance|MIDANZ|Green|3|4|1|1|TRUE|5
-Nostro / Vostro|Credit - Cash|2020|Finance|MIDANZ|Green|3|4|1|1|TRUE|5
-Nostro / Vostro|Credit - Cash|2022|Finance|MIDANZ|Green|3|4|1|1|TRUE|5
-Nostro / Vostro|Credit - Derivatives|2018|Finance|MIDANZ|Green|3|5|1|1|TRUE|4
-Nostro / Vostro|Credit - Derivatives|2020|Finance|MIDANZ|Green|3|5|1|1|TRUE|4
-Nostro / Vostro|Credit - Derivatives|2022|Finance|MIDANZ|Green|3|5|1|1|TRUE|4
-Nostro / Vostro|Equity - Derivatives|2018|Finance|MIDANZ|Green|3|7|1|1|TRUE|2
-Nostro / Vostro|Equity - Derivatives|2020|Finance|MIDANZ|Green|3|7|1|1|TRUE|2
-Nostro / Vostro|Equity - Derivatives|2022|Finance|MIDANZ|Green|3|7|1|1|TRUE|2
-Nostro / Vostro|FXO|2018|Finance|MIDANZ|Green|3|1|1|1|TRUE|8
-Nostro / Vostro|FXO|2020|Finance|MIDANZ|Green|3|1|1|1|TRUE|8
-Nostro / Vostro|FXO|2022|Finance|MIDANZ|Green|3|1|1|1|TRUE|8
-Nostro / Vostro|MM|2018|Finance|MIDANZ|Green|3|8|1|1|TRUE|1
-Nostro / Vostro|MM|2020|Finance|MIDANZ|Green|3|8|1|1|TRUE|1
-Nostro / Vostro|MM|2022|Finance|MIDANZ|Green|3|8|1|1|TRUE|1
-Nostro / Vostro|Rates - Cash|2018|Finance|MIDANZ|Green|3|2|1|1|TRUE|7
-Nostro / Vostro|Rates - Cash|2020|Finance|MIDANZ|Green|3|2|1|1|TRUE|7
-Nostro / Vostro|Rates - Cash|2022|Finance|MIDANZ|Green|3|2|1|1|TRUE|7
-Nostro / Vostro|Rates - Derivatives|2018|Finance|MIDANZ|Green|3|3|1|1|TRUE|6
-Nostro / Vostro|Rates - Derivatives|2020|Finance|MIDANZ|Green|3|3|1|1|TRUE|6
-Nostro / Vostro|Rates - Derivatives|2022|Finance|MIDANZ|Green|3|3|1|1|TRUE|6
-Nostro / Vostro|Vanilla FX + NDF|2018|Finance|MIDANZ|Green|3|0|1|1|FALSE|9
-Nostro / Vostro|Vanilla FX + NDF|2020|Finance|MIDANZ|Green|3|0|1|1|FALSE|9
-Nostro / Vostro|Vanilla FX + NDF|2022|Finance|MIDANZ|Green|3|0|1|1|FALSE|9
-PFE|Commodities|2018|Credit Risk|CCRE|Amber|7|6|1|1|TRUE|3
-PFE|Commodities|2020|Credit Risk|SKY|Green|7|6|1|1|TRUE|3
-PFE|Commodities|2022|Credit Risk|SKY|Green|7|6|1|1|TRUE|3
-PFE|Credit - Cash|2018|Credit Risk|CCRE|Amber|7|4|1|1|TRUE|5
-PFE|Credit - Cash|2020|Credit Risk|SKY|Green|7|4|1|1|TRUE|5
-PFE|Credit - Cash|2022|Credit Risk|SKY|Green|7|4|1|1|TRUE|5
-PFE|Credit - Derivatives|2018|Credit Risk|CCRE|Amber|7|5|1|1|TRUE|4
-PFE|Credit - Derivatives|2020|Credit Risk|SKY|Green|7|5|1|1|TRUE|4
-PFE|Credit - Derivatives|2022|Credit Risk|SKY|Green|7|5|1|1|TRUE|4
-PFE|Equity - Derivatives|2018|Credit Risk|CCRE|Amber|7|7|1|1|TRUE|2
-PFE|Equity - Derivatives|2020|Credit Risk|SKY|Green|7|7|1|1|TRUE|2
-PFE|Equity - Derivatives|2022|Credit Risk|SKY|Green|7|7|1|1|TRUE|2
-PFE|FXO|2018|Credit Risk|CCRE|Amber|7|1|1|1|TRUE|8
-PFE|FXO|2020|Credit Risk|SKY|Green|7|1|1|1|TRUE|8
-PFE|FXO|2022|Credit Risk|SKY|Green|7|1|1|1|TRUE|8
-PFE|MM|2018|Credit Risk|CCRE|Amber|7|8|1|1|TRUE|1
-PFE|MM|2020|Credit Risk|SKY|Green|7|8|1|1|TRUE|1
-PFE|MM|2022|Credit Risk|SKY|Green|7|8|1|1|TRUE|1
-PFE|Rates - Cash|2018|Credit Risk|CCRE|Amber|7|2|1|1|TRUE|7
-PFE|Rates - Cash|2020|Credit Risk|SKY|Green|7|2|1|1|TRUE|7
-PFE|Rates - Cash|2022|Credit Risk|SKY|Green|7|2|1|1|TRUE|7
-PFE|Rates - Derivatives|2018|Credit Risk|CCRE|Amber|7|3|1|1|TRUE|6
-PFE|Rates - Derivatives|2020|Credit Risk|SKY|Green|7|3|1|1|TRUE|6
-PFE|Rates - Derivatives|2022|Credit Risk|SKY|Green|7|3|1|1|TRUE|6
-PFE|Vanilla FX + NDF|2018|Credit Risk|CCRE|Amber|7|0|1|1|FALSE|9
-PFE|Vanilla FX + NDF|2020|Credit Risk|SKY|Green|7|0|1|1|FALSE|9
-PFE|Vanilla FX + NDF|2022|Credit Risk|SKY|Green|7|0|1|1|FALSE|9
-Pricing|Commodities|2018|Front Office|Murex 2.11 TLC|Amber|17|6|1|1|TRUE|1
-Pricing|Commodities|2020|Front Office|SKY|Green|17|6|1|1|TRUE|1
-Pricing|Commodities|2022|Front Office|SKY|Green|17|6|1|1|TRUE|1
-Pricing|Credit - Cash|2018|Front Office|Murex 2.11 TLC|Amber|17|4|1|1|FALSE|3
-Pricing|Credit - Cash|2020|Front Office|SKY|Green|17|4|1|1|TRUE|3
-Pricing|Credit - Cash|2022|Front Office|SKY|Green|17|4|1|1|TRUE|3
-Pricing|Credit - Derivatives|2018|Front Office|Murex 2.11 TLC|Amber|17|5|1|1|TRUE|2
-Pricing|Credit - Derivatives|2020|Front Office|SKY|Green|17|5|1|1|TRUE|2
-Pricing|Credit - Derivatives|2022|Front Office|SKY|Green|17|5|1|1|TRUE|2
-Pricing|Equity - Derivatives|2018|Front Office|Dot Pricer|Green|17|7|2|1|FALSE|1
-Pricing|Equity - Derivatives|2018|Front Office|Murex 3.1 ETP|Green|17|7|2|2|FALSE|1
-Pricing|Equity - Derivatives|2020|Front Office|Dot Pricer|Green|17|7|2|1|FALSE|1
-Pricing|Equity - Derivatives|2020|Front Office|Murex 3.1 ETP|Amber|17|7|2|2|FALSE|1
-Pricing|Equity - Derivatives|2022|Front Office|Dot Pricer|Amber|17|7|2|1|FALSE|1
-Pricing|Equity - Derivatives|2022|Front Office|Murex 3.1 TLC|Green|17|7|2|2|FALSE|1
-Pricing|FXO|2018|Front Office|SKY|Green|17|1|1|1|FALSE|3
-Pricing|FXO|2020|Front Office|SKY|Green|17|1|1|1|FALSE|6
-Pricing|FXO|2022|Front Office|SKY|Green|17|1|1|1|FALSE|6
-Pricing|MM|2018|Front Office|IPT|Green|17|8|1|1|FALSE|1
-Pricing|MM|2020|Front Office|IPT|Amber|17|8|1|1|FALSE|1
-Pricing|MM|2022|Front Office|SKY|Green|17|8|1|1|FALSE|1
-Pricing|Rates - Cash|2018|Front Office|SKY|Green|17|2|1|1|TRUE|2
-Pricing|Rates - Cash|2020|Front Office|SKY|Green|17|2|1|1|TRUE|5
-Pricing|Rates - Cash|2022|Front Office|SKY|Green|17|2|1|1|TRUE|5
-Pricing|Rates - Derivatives|2018|Front Office|SKY|Green|17|3|1|1|TRUE|1
-Pricing|Rates - Derivatives|2020|Front Office|SKY|Green|17|3|1|1|TRUE|4
-Pricing|Rates - Derivatives|2022|Front Office|SKY|Green|17|3|1|1|TRUE|4
-Pricing|Vanilla FX + NDF|2018|Front Office|AXLE|Green|17|0|3|1|FALSE|1
-Pricing|Vanilla FX + NDF|2018|Front Office|RET-AD|Amber|17|0|3|2|FALSE|1
-Pricing|Vanilla FX + NDF|2018|Front Office|SPDEE|Green|17|0|3|3|FALSE|1
-Pricing|Vanilla FX + NDF|2020|Front Office|AXLE|Green|17|0|3|1|FALSE|1
-Pricing|Vanilla FX + NDF|2020|Front Office|RET-AD|Amber|17|0|3|2|FALSE|1
-Pricing|Vanilla FX + NDF|2020|Front Office|SPDEE|Green|17|0|3|3|FALSE|1
-Pricing|Vanilla FX + NDF|2022|Front Office|AXLE|Green|17|0|3|1|FALSE|1
-Pricing|Vanilla FX + NDF|2022|Front Office|Sales Desktop|Green|17|0|3|2|FALSE|1
-Pricing|Vanilla FX + NDF|2022|Front Office|SPDEE|Green|17|0|3|3|FALSE|1
-Redistribution|Commodities|2020|Data|Data Hub|Green|0|6|1|1|TRUE|3
-Redistribution|Commodities|2022|Data|Data Hub|Green|0|6|1|1|TRUE|3
-Redistribution|Credit - Cash|2020|Data|Data Hub|Green|0|4|1|1|TRUE|5
-Redistribution|Credit - Cash|2022|Data|Data Hub|Green|0|4|1|1|TRUE|5
-Redistribution|Credit - Derivatives|2020|Data|Data Hub|Green|0|5|1|1|TRUE|4
-Redistribution|Credit - Derivatives|2022|Data|Data Hub|Green|0|5|1|1|TRUE|4
-Redistribution|Equity - Derivatives|2020|Data|Data Hub|Green|0|7|1|1|TRUE|2
-Redistribution|Equity - Derivatives|2022|Data|Data Hub|Green|0|7|1|1|TRUE|2
-Redistribution|FXO|2020|Data|Data Hub|Green|0|1|1|1|TRUE|8
-Redistribution|FXO|2022|Data|Data Hub|Green|0|1|1|1|TRUE|8
-Redistribution|MM|2020|Data|Data Hub|Green|0|8|1|1|TRUE|1
-Redistribution|MM|2022|Data|Data Hub|Green|0|8|1|1|TRUE|1
-Redistribution|Rates - Cash|2020|Data|Data Hub|Green|0|2|1|1|TRUE|7
-Redistribution|Rates - Cash|2022|Data|Data Hub|Green|0|2|1|1|TRUE|7
-Redistribution|Rates - Derivatives|2020|Data|Data Hub|Green|0|3|1|1|TRUE|6
-Redistribution|Rates - Derivatives|2022|Data|Data Hub|Green|0|3|1|1|TRUE|6
-Redistribution|Vanilla FX + NDF|2020|Data|Data Hub|Green|0|0|1|1|FALSE|9
-Redistribution|Vanilla FX + NDF|2022|Data|Data Hub|Green|0|0|1|1|FALSE|9
-Reference Data|Commodities|2018|Data|Murex 2.11 TLC|Amber|2|6|1|1|TRUE|1
-Reference Data|Commodities|2020|Data|Asset Control|Green|2|6|2|1|FALSE|1
-Reference Data|Commodities|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|6|2|2|FALSE|1
-Reference Data|Commodities|2022|Data|Asset Control|Green|2|6|2|1|FALSE|1
-Reference Data|Commodities|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|6|2|2|FALSE|1
-Reference Data|Credit - Cash|2018|Data|Murex 2.11 TLC|Amber|2|4|1|1|TRUE|3
-Reference Data|Credit - Cash|2020|Data|Asset Control|Green|2|4|2|1|FALSE|1
-Reference Data|Credit - Cash|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|4|2|2|FALSE|1
-Reference Data|Credit - Cash|2022|Data|Asset Control|Green|2|4|2|1|FALSE|1
-Reference Data|Credit - Cash|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|4|2|2|FALSE|1
-Reference Data|Credit - Derivatives|2018|Data|Murex 2.11 TLC|Amber|2|5|1|1|TRUE|2
-Reference Data|Credit - Derivatives|2020|Data|Asset Control|Green|2|5|2|1|FALSE|1
-Reference Data|Credit - Derivatives|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|5|2|2|FALSE|1
-Reference Data|Credit - Derivatives|2022|Data|Asset Control|Green|2|5|2|1|FALSE|1
-Reference Data|Credit - Derivatives|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|5|2|2|FALSE|1
-Reference Data|Equity - Derivatives|2018|Data|Murex 3.1 ETP|Amber|2|7|1|1|FALSE|1
-Reference Data|Equity - Derivatives|2020|Data|Asset Control|Green|2|7|2|1|FALSE|1
-Reference Data|Equity - Derivatives|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|7|2|2|FALSE|1
-Reference Data|Equity - Derivatives|2022|Data|Asset Control|Green|2|7|2|1|FALSE|1
-Reference Data|Equity - Derivatives|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|7|2|2|FALSE|1
-Reference Data|FXO|2018|Data|Murex 2.11 TLC|Amber|2|1|1|1|FALSE|6
-Reference Data|FXO|2020|Data|Asset Control|Green|2|1|2|1|FALSE|1
-Reference Data|FXO|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|1|2|2|FALSE|1
-Reference Data|FXO|2022|Data|Asset Control|Green|2|1|2|1|FALSE|1
-Reference Data|FXO|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|1|2|2|FALSE|1
-Reference Data|MM|2018|Data|DLD|Amber|2|8|1|1|FALSE|1
-Reference Data|MM|2020|Data|Asset Control|Green|2|8|2|1|FALSE|1
-Reference Data|MM|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|8|2|2|FALSE|1
-Reference Data|MM|2022|Data|Asset Control|Green|2|8|2|1|FALSE|1
-Reference Data|MM|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|8|2|2|FALSE|1
-Reference Data|Rates - Cash|2018|Data|Murex 2.11 TLC|Amber|2|2|1|1|TRUE|5
-Reference Data|Rates - Cash|2020|Data|Asset Control|Green|2|2|2|1|FALSE|1
-Reference Data|Rates - Cash|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|2|2|2|FALSE|1
-Reference Data|Rates - Cash|2022|Data|Asset Control|Green|2|2|2|1|FALSE|1
-Reference Data|Rates - Cash|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|2|2|2|FALSE|1
-Reference Data|Rates - Derivatives|2018|Data|Murex 2.11 TLC|Amber|2|3|1|1|TRUE|4
-Reference Data|Rates - Derivatives|2020|Data|Asset Control|Green|2|3|2|1|FALSE|1
-Reference Data|Rates - Derivatives|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|3|2|2|FALSE|1
-Reference Data|Rates - Derivatives|2022|Data|Asset Control|Green|2|3|2|1|FALSE|1
-Reference Data|Rates - Derivatives|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|3|2|2|FALSE|1
-Reference Data|Vanilla FX + NDF|2018|Data|Wall Street System|Amber|2|0|1|1|FALSE|1
-Reference Data|Vanilla FX + NDF|2020|Data|Asset Control|Green|2|0|2|1|FALSE|1
-Reference Data|Vanilla FX + NDF|2020|Data|External Utilities (TRAX/BBG/RDU)|Green|2|0|2|2|FALSE|1
-Reference Data|Vanilla FX + NDF|2022|Data|Asset Control|Green|2|0|2|1|FALSE|1
-Reference Data|Vanilla FX + NDF|2022|Data|External Utilities (TRAX/BBG/RDU)|Green|2|0|2|2|FALSE|1
-Risk Generation|Commodities|2018|Market Risk|Murex 2.11 RER|Amber|9|6|1|1|TRUE|1
-Risk Generation|Commodities|2020|Market Risk|SKY|Green|9|6|1|1|TRUE|3
-Risk Generation|Commodities|2022|Market Risk|SKY|Green|9|6|1|1|TRUE|3
-Risk Generation|Credit - Cash|2018|Market Risk|Murex 2.11 RER|Amber|9|4|1|1|FALSE|3
-Risk Generation|Credit - Cash|2020|Market Risk|SKY|Green|9|4|1|1|TRUE|5
-Risk Generation|Credit - Cash|2022|Market Risk|SKY|Green|9|4|1|1|TRUE|5
-Risk Generation|Credit - Derivatives|2018|Market Risk|Murex 2.11 RER|Amber|9|5|1|1|TRUE|2
-Risk Generation|Credit - Derivatives|2020|Market Risk|SKY|Green|9|5|1|1|TRUE|4
-Risk Generation|Credit - Derivatives|2022|Market Risk|SKY|Green|9|5|1|1|TRUE|4
-Risk Generation|Equity - Derivatives|2018|Market Risk|Murex 3.1 ETP|Green|9|7|1|1|FALSE|1
-Risk Generation|Equity - Derivatives|2020|Market Risk|SKY|Green|9|7|1|1|TRUE|2
-Risk Generation|Equity - Derivatives|2022|Market Risk|SKY|Green|9|7|1|1|TRUE|2
-Risk Generation|FXO|2018|Market Risk|SKY|Green|9|1|1|1|TRUE|3
-Risk Generation|FXO|2020|Market Risk|SKY|Green|9|1|1|1|TRUE|8
-Risk Generation|FXO|2022|Market Risk|SKY|Green|9|1|1|1|TRUE|8
-Risk Generation|MM|2018|Market Risk|DLD|Amber|9|8|1|1|FALSE|1
-Risk Generation|MM|2020|Market Risk|SKY|Green|9|8|1|1|TRUE|1
-Risk Generation|MM|2022|Market Risk|SKY|Green|9|8|1|1|TRUE|1
-Risk Generation|Rates - Cash|2018|Market Risk|SKY|Green|9|2|1|1|TRUE|2
-Risk Generation|Rates - Cash|2020|Market Risk|SKY|Green|9|2|1|1|TRUE|7
-Risk Generation|Rates - Cash|2022|Market Risk|SKY|Green|9|2|1|1|TRUE|7
-Risk Generation|Rates - Derivatives|2018|Market Risk|SKY|Green|9|3|1|1|TRUE|1
-Risk Generation|Rates - Derivatives|2020|Market Risk|SKY|Green|9|3|1|1|TRUE|6
-Risk Generation|Rates - Derivatives|2022|Market Risk|SKY|Green|9|3|1|1|TRUE|6
-Risk Generation|Vanilla FX + NDF|2018|Market Risk|SKY|Green|9|0|1|1|FALSE|4
-Risk Generation|Vanilla FX + NDF|2020|Market Risk|SKY|Green|9|0|1|1|FALSE|9
-Risk Generation|Vanilla FX + NDF|2022|Market Risk|SKY|Green|9|0|1|1|FALSE|9
-Settlement|Commodities|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|6|1|1|TRUE|1
-Settlement|Commodities|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|6|1|1|TRUE|3
-Settlement|Commodities|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|6|1|1|TRUE|3
-Settlement|Credit - Cash|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|4|1|1|TRUE|3
-Settlement|Credit - Cash|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|4|1|1|TRUE|5
-Settlement|Credit - Cash|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|4|1|1|TRUE|5
-Settlement|Credit - Derivatives|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|5|1|1|TRUE|2
-Settlement|Credit - Derivatives|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|5|1|1|TRUE|4
-Settlement|Credit - Derivatives|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|5|1|1|TRUE|4
-Settlement|Equity - Derivatives|2018|Middle & Back Office|Murex 3.1 ETP|Green|11|7|1|1|FALSE|1
-Settlement|Equity - Derivatives|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|7|1|1|TRUE|2
-Settlement|Equity - Derivatives|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|7|1|1|TRUE|2
-Settlement|FXO|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|1|1|1|FALSE|1
-Settlement|FXO|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|1|1|1|TRUE|8
-Settlement|FXO|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|1|1|1|TRUE|8
-Settlement|MM|2018|Middle & Back Office|DLD|Amber|11|8|1|1|FALSE|1
-Settlement|MM|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|8|1|1|TRUE|1
-Settlement|MM|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|8|1|1|TRUE|1
-Settlement|Rates - Cash|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|2|2|1|FALSE|1
-Settlement|Rates - Cash|2018|Middle & Back Office|Murex 3.1 MPE|Green|11|2|2|2|FALSE|1
-Settlement|Rates - Cash|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|2|1|1|TRUE|7
-Settlement|Rates - Cash|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|2|1|1|TRUE|7
-Settlement|Rates - Derivatives|2018|Middle & Back Office|Murex 2.11 TLC|Amber|11|3|1|1|FALSE|4
-Settlement|Rates - Derivatives|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|3|1|1|TRUE|6
-Settlement|Rates - Derivatives|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|3|1|1|TRUE|6
-Settlement|Vanilla FX + NDF|2018|Middle & Back Office|MIDANZ|Amber|11|0|2|1|FALSE|1
-Settlement|Vanilla FX + NDF|2018|Middle & Back Office|Murex 3.1 MPE|Green|11|0|2|2|FALSE|1
-Settlement|Vanilla FX + NDF|2020|Middle & Back Office|Murex 3.1 MPE|Green|11|0|1|1|FALSE|9
-Settlement|Vanilla FX + NDF|2022|Middle & Back Office|Murex 3.1 MPE|Green|11|0|1|1|FALSE|9
-Trade Lifecycle Management|Commodities|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|6|1|1|TRUE|1
-Trade Lifecycle Management|Commodities|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|6|1|1|TRUE|1
-Trade Lifecycle Management|Commodities|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|6|1|1|TRUE|3
-Trade Lifecycle Management|Credit - Cash|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|4|1|1|TRUE|3
-Trade Lifecycle Management|Credit - Cash|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|4|1|1|TRUE|3
-Trade Lifecycle Management|Credit - Cash|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|4|1|1|TRUE|5
-Trade Lifecycle Management|Credit - Derivatives|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|5|1|1|TRUE|2
-Trade Lifecycle Management|Credit - Derivatives|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|5|1|1|TRUE|2
-Trade Lifecycle Management|Credit - Derivatives|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|5|1|1|TRUE|4
-Trade Lifecycle Management|Equity - Derivatives|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|7|2|1|FALSE|1
-Trade Lifecycle Management|Equity - Derivatives|2018|Middle & Back Office|Murex 3.1 ETP|Green|15|7|2|2|FALSE|1
-Trade Lifecycle Management|Equity - Derivatives|2020|Middle & Back Office|Murex 3.1 ETP|Amber|15|7|2|1|FALSE|1
-Trade Lifecycle Management|Equity - Derivatives|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|7|2|2|FALSE|1
-Trade Lifecycle Management|Equity - Derivatives|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|7|1|1|TRUE|2
-Trade Lifecycle Management|FXO|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|1|1|1|FALSE|6
-Trade Lifecycle Management|FXO|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|1|1|1|FALSE|6
-Trade Lifecycle Management|FXO|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|1|1|1|TRUE|8
-Trade Lifecycle Management|MM|2018|Middle & Back Office|DLD|Amber|15|8|4|1|FALSE|1
-Trade Lifecycle Management|MM|2018|Middle & Back Office|Mantec|Amber|15|8|4|2|FALSE|1
-Trade Lifecycle Management|MM|2018|Middle & Back Office|MIDANZ|Amber|15|8|4|3|FALSE|1
-Trade Lifecycle Management|MM|2018|Middle & Back Office|Wall Street System|Green|15|8|4|4|FALSE|1
-Trade Lifecycle Management|MM|2020|Middle & Back Office|DLD|Amber|15|8|3|1|FALSE|1
-Trade Lifecycle Management|MM|2020|Middle & Back Office|Mantec|Amber|15|8|3|2|FALSE|1
-Trade Lifecycle Management|MM|2020|Middle & Back Office|Wall Street System|Amber|15|8|3|3|FALSE|1
-Trade Lifecycle Management|MM|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|8|1|1|TRUE|1
-Trade Lifecycle Management|Rates - Cash|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|2|1|1|TRUE|5
-Trade Lifecycle Management|Rates - Cash|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|2|1|1|TRUE|5
-Trade Lifecycle Management|Rates - Cash|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|2|1|1|TRUE|7
-Trade Lifecycle Management|Rates - Derivatives|2018|Middle & Back Office|Murex 2.11 TLC|Amber|15|3|1|1|TRUE|4
-Trade Lifecycle Management|Rates - Derivatives|2020|Middle & Back Office|Murex 3.1 TLC|Green|15|3|1|1|TRUE|4
-Trade Lifecycle Management|Rates - Derivatives|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|3|1|1|TRUE|6
-Trade Lifecycle Management|Vanilla FX + NDF|2018|Middle & Back Office|Mantec|Amber|15|0|2|1|FALSE|1
-Trade Lifecycle Management|Vanilla FX + NDF|2018|Middle & Back Office|Wall Street System|Green|15|0|2|2|FALSE|1
-Trade Lifecycle Management|Vanilla FX + NDF|2020|Middle & Back Office|Mantec|Amber|15|0|2|1|FALSE|1
-Trade Lifecycle Management|Vanilla FX + NDF|2020|Middle & Back Office|Wall Street System|Amber|15|0|2|2|FALSE|1
-Trade Lifecycle Management|Vanilla FX + NDF|2022|Middle & Back Office|Murex 3.1 TLC|Green|15|0|1|1|FALSE|9
-Valuation|Commodities|2018|Valuation|Murex 2.11 TLC|Amber|10|6|1|1|TRUE|1
-Valuation|Commodities|2020|Valuation|SKY|Green|10|6|1|1|TRUE|2
-Valuation|Commodities|2022|Valuation|SKY|Green|10|6|1|1|TRUE|3
-Valuation|Credit - Cash|2018|Valuation|Murex 2.11 TLC|Amber|10|4|1|1|FALSE|3
-Valuation|Credit - Cash|2020|Valuation|SKY|Green|10|4|1|1|TRUE|4
-Valuation|Credit - Cash|2022|Valuation|SKY|Green|10|4|1|1|TRUE|5
-Valuation|Credit - Derivatives|2018|Valuation|Murex 2.11 TLC|Amber|10|5|1|1|TRUE|2
-Valuation|Credit - Derivatives|2020|Valuation|SKY|Green|10|5|1|1|TRUE|3
-Valuation|Credit - Derivatives|2022|Valuation|SKY|Green|10|5|1|1|TRUE|4
-Valuation|Equity - Derivatives|2018|Valuation|Murex 3.1 ETP|Green|10|7|1|1|FALSE|1
-Valuation|Equity - Derivatives|2020|Valuation|SKY|Green|10|7|1|1|TRUE|1
-Valuation|Equity - Derivatives|2022|Valuation|SKY|Green|10|7|1|1|TRUE|2
-Valuation|FXO|2018|Valuation|SKY|Green|10|1|1|1|TRUE|3
-Valuation|FXO|2020|Valuation|SKY|Green|10|1|1|1|TRUE|7
-Valuation|FXO|2022|Valuation|SKY|Green|10|1|1|1|TRUE|8
-Valuation|MM|2018|Valuation|DLD|Amber|10|8|1|1|FALSE|1
-Valuation|MM|2020|Valuation|DLD|Amber|10|8|1|1|FALSE|1
-Valuation|MM|2022|Valuation|SKY|Green|10|8|1|1|TRUE|1
-Valuation|Rates - Cash|2018|Valuation|SKY|Green|10|2|1|1|TRUE|2
-Valuation|Rates - Cash|2020|Valuation|SKY|Green|10|2|1|1|TRUE|6
-Valuation|Rates - Cash|2022|Valuation|SKY|Green|10|2|1|1|TRUE|7
-Valuation|Rates - Derivatives|2018|Valuation|SKY|Green|10|3|1|1|TRUE|1
-Valuation|Rates - Derivatives|2020|Valuation|SKY|Green|10|3|1|1|TRUE|5
-Valuation|Rates - Derivatives|2022|Valuation|SKY|Green|10|3|1|1|TRUE|6
-Valuation|Vanilla FX + NDF|2018|Valuation|SKY|Green|10|0|1|1|FALSE|4
-Valuation|Vanilla FX + NDF|2020|Valuation|SKY|Green|10|0|1|1|FALSE|8
-Valuation|Vanilla FX + NDF|2022|Valuation|SKY|Green|10|0|1|1|FALSE|9
+bf01|ac01|2018|bfg01|app01|Green|18|0|6|1|FALSE|1
+bf01|ac01|2018|bfg01|app02|Green|18|0|6|2|FALSE|1
+bf01|ac01|2018|bfg01|app04|Green|18|0|6|3|FALSE|1
+bf01|ac01|2018|bfg01|app07|Green|18|0|6|4|FALSE|1
+bf01|ac01|2018|bfg01|app08|Green|18|0|6|5|FALSE|1
+bf01|ac01|2018|bfg01|app09|Green|18|0|6|6|FALSE|1
+bf01|ac01|2020|bfg01|app01|Amber|18|0|6|1|FALSE|1
+bf01|ac01|2020|bfg01|app02|Green|18|0|6|2|FALSE|1
+bf01|ac01|2020|bfg01|app04|Green|18|0|6|3|FALSE|1
+bf01|ac01|2020|bfg01|app07|Green|18|0|6|4|FALSE|1
+bf01|ac01|2020|bfg01|app08|Green|18|0|6|5|FALSE|1
+bf01|ac01|2020|bfg01|app09|Green|18|0|6|6|FALSE|1
+bf01|ac01|2022|bfg01|app01|Amber|18|0|6|1|FALSE|1
+bf01|ac01|2022|bfg01|app02|Green|18|0|6|2|FALSE|1
+bf01|ac01|2022|bfg01|app04|Green|18|0|6|3|FALSE|1
+bf01|ac01|2022|bfg01|app07|Green|18|0|6|4|FALSE|1
+bf01|ac01|2022|bfg01|app08|Green|18|0|6|5|FALSE|1
+bf01|ac01|2022|bfg01|app09|Green|18|0|6|6|FALSE|1
+bf01|ac02|2018|bfg01|app03|Green|18|1|2|1|FALSE|1
+bf01|ac02|2018|bfg01|app04|Green|18|1|2|2|FALSE|1
+bf01|ac02|2020|bfg01|app03|Green|18|1|2|1|FALSE|1
+bf01|ac02|2020|bfg01|app04|Green|18|1|2|2|FALSE|1
+bf01|ac02|2022|bfg01|app03|Green|18|1|2|1|FALSE|1
+bf01|ac02|2022|bfg01|app04|Green|18|1|2|2|FALSE|1
+bf01|ac03|2018|bfg01|app05|Green|18|2|1|1|FALSE|1
+bf01|ac03|2020|bfg01|app05|Green|18|2|1|1|FALSE|1
+bf01|ac03|2022|bfg01|app05|Green|18|2|1|1|FALSE|1
+bf01|ac04|2018|bfg01|app06|Green|18|3|1|1|FALSE|1
+bf01|ac04|2020|bfg01|app06|Green|18|3|2|1|FALSE|1
+bf01|ac04|2020|bfg01|app10|Green|18|3|2|2|FALSE|1
+bf01|ac04|2022|bfg01|app06|Green|18|3|2|1|FALSE|1
+bf01|ac04|2022|bfg01|app10|Green|18|3|2|2|FALSE|1
+bf01|ac05|2018|bfg01|app05|Green|18|4|1|1|FALSE|1
+bf01|ac05|2020|bfg01|app05|Green|18|4|1|1|FALSE|1
+bf01|ac05|2022|bfg01|app05|Green|18|4|1|1|FALSE|1
+bf01|ac06|2018|bfg01|app06|Green|18|5|1|1|FALSE|1
+bf01|ac06|2020|bfg01|app06|Green|18|5|2|1|FALSE|1
+bf01|ac06|2020|bfg01|app10|Green|18|5|2|2|FALSE|1
+bf01|ac06|2022|bfg01|app06|Green|18|5|2|1|FALSE|1
+bf01|ac06|2022|bfg01|app10|Green|18|5|2|2|FALSE|1
+bf02|ac01|2018|bfg02|app15|Amber|17|0|3|1|FALSE|1
+bf02|ac01|2018|bfg02|app16|Green|17|0|3|2|FALSE|1
+bf02|ac01|2018|bfg02|app17|Green|17|0|3|3|FALSE|1
+bf02|ac01|2020|bfg02|app15|Amber|17|0|3|1|FALSE|1
+bf02|ac01|2020|bfg02|app16|Green|17|0|3|2|FALSE|1
+bf02|ac01|2020|bfg02|app17|Green|17|0|3|3|FALSE|1
+bf02|ac01|2022|bfg02|app16|Green|17|0|3|1|FALSE|1
+bf02|ac01|2022|bfg02|app17|Green|17|0|3|2|FALSE|1
+bf02|ac01|2022|bfg02|app23|Green|17|0|3|3|FALSE|1
+bf02|ac02|2018|bfg02|app11|Green|17|1|1|1|FALSE|3
+bf02|ac02|2020|bfg02|app11|Green|17|1|1|1|FALSE|6
+bf02|ac02|2022|bfg02|app11|Green|17|1|1|1|FALSE|6
+bf02|ac03|2018|bfg02|app11|Green|17|2|1|1|TRUE|2
+bf02|ac03|2020|bfg02|app11|Green|17|2|1|1|TRUE|5
+bf02|ac03|2022|bfg02|app11|Green|17|2|1|1|TRUE|5
+bf02|ac04|2018|bfg02|app11|Green|17|3|1|1|TRUE|1
+bf02|ac04|2020|bfg02|app11|Green|17|3|1|1|TRUE|4
+bf02|ac04|2022|bfg02|app11|Green|17|3|1|1|TRUE|4
+bf02|ac05|2018|bfg02|app14|Amber|17|4|1|1|FALSE|3
+bf02|ac05|2020|bfg02|app11|Green|17|4|1|1|TRUE|3
+bf02|ac05|2022|bfg02|app11|Green|17|4|1|1|TRUE|3
+bf02|ac06|2018|bfg02|app14|Amber|17|5|1|1|TRUE|2
+bf02|ac06|2020|bfg02|app11|Green|17|5|1|1|TRUE|2
+bf02|ac06|2022|bfg02|app11|Green|17|5|1|1|TRUE|2
+bf02|ac07|2018|bfg02|app14|Amber|17|6|1|1|TRUE|1
+bf02|ac07|2020|bfg02|app11|Green|17|6|1|1|TRUE|1
+bf02|ac07|2022|bfg02|app11|Green|17|6|1|1|TRUE|1
+bf02|ac08|2018|bfg02|app13|Green|17|7|2|1|FALSE|1
+bf02|ac08|2018|bfg02|app18|Green|17|7|2|2|FALSE|1
+bf02|ac08|2020|bfg02|app13|Amber|17|7|2|1|FALSE|1
+bf02|ac08|2020|bfg02|app18|Green|17|7|2|2|FALSE|1
+bf02|ac08|2022|bfg02|app18|Amber|17|7|2|1|FALSE|1
+bf02|ac08|2022|bfg02|app20|Green|17|7|2|2|FALSE|1
+bf02|ac09|2018|bfg02|app19|Green|17|8|1|1|FALSE|1
+bf02|ac09|2020|bfg02|app19|Amber|17|8|1|1|FALSE|1
+bf02|ac09|2022|bfg02|app11|Green|17|8|1|1|FALSE|1
+bf03|ac01|2018|bfg02|app21|Amber|16|0|2|1|FALSE|1
+bf03|ac01|2018|bfg02|app22|Green|16|0|2|2|FALSE|1
+bf03|ac01|2020|bfg02|app21|Amber|16|0|2|1|FALSE|1
+bf03|ac01|2020|bfg02|app22|Amber|16|0|2|2|FALSE|1
+bf03|ac01|2022|bfg02|app23|Green|16|0|1|1|FALSE|1
+bf03|ac02|2018|bfg02|app11|Green|16|1|1|1|FALSE|3
+bf03|ac02|2020|bfg02|app11|Green|16|1|1|1|FALSE|6
+bf03|ac02|2022|bfg02|app11|Green|16|1|1|1|FALSE|6
+bf03|ac03|2018|bfg02|app11|Green|16|2|1|1|TRUE|2
+bf03|ac03|2020|bfg02|app11|Green|16|2|1|1|TRUE|5
+bf03|ac03|2022|bfg02|app11|Green|16|2|1|1|TRUE|5
+bf03|ac04|2018|bfg02|app11|Green|16|3|1|1|TRUE|1
+bf03|ac04|2020|bfg02|app11|Green|16|3|1|1|TRUE|4
+bf03|ac04|2022|bfg02|app11|Green|16|3|1|1|TRUE|4
+bf03|ac05|2018|bfg02|app14|Amber|16|4|1|1|FALSE|3
+bf03|ac05|2020|bfg02|app11|Green|16|4|1|1|TRUE|3
+bf03|ac05|2022|bfg02|app11|Green|16|4|1|1|TRUE|3
+bf03|ac06|2018|bfg02|app14|Amber|16|5|1|1|TRUE|2
+bf03|ac06|2020|bfg02|app11|Green|16|5|1|1|TRUE|2
+bf03|ac06|2022|bfg02|app11|Green|16|5|1|1|TRUE|2
+bf03|ac07|2018|bfg02|app14|Amber|16|6|1|1|TRUE|1
+bf03|ac07|2020|bfg02|app11|Green|16|6|1|1|TRUE|1
+bf03|ac07|2022|bfg02|app11|Green|16|6|1|1|TRUE|1
+bf03|ac08|2018|bfg02|app13|Green|16|7|1|1|FALSE|1
+bf03|ac08|2020|bfg02|app13|Amber|16|7|1|1|FALSE|1
+bf03|ac08|2022|bfg02|app20|Green|16|7|1|1|FALSE|1
+bf03|ac09|2018|bfg02|app12|Amber|16|8|3|1|FALSE|1
+bf03|ac09|2018|bfg02|app21|Amber|16|8|3|2|FALSE|1
+bf03|ac09|2018|bfg02|app22|Green|16|8|3|3|FALSE|1
+bf03|ac09|2020|bfg02|app12|Amber|16|8|3|1|FALSE|1
+bf03|ac09|2020|bfg02|app21|Amber|16|8|3|2|FALSE|1
+bf03|ac09|2020|bfg02|app22|Amber|16|8|3|3|FALSE|1
+bf03|ac09|2022|bfg02|app23|Green|16|8|1|1|FALSE|1
+bf04|ac01|2018|bfg03|app21|Amber|15|0|2|1|FALSE|1
+bf04|ac01|2018|bfg03|app22|Green|15|0|2|2|FALSE|1
+bf04|ac01|2020|bfg03|app21|Amber|15|0|2|1|FALSE|1
+bf04|ac01|2020|bfg03|app22|Amber|15|0|2|2|FALSE|1
+bf04|ac01|2022|bfg03|app20|Green|15|0|1|1|FALSE|9
+bf04|ac02|2018|bfg03|app14|Amber|15|1|1|1|FALSE|6
+bf04|ac02|2020|bfg03|app20|Green|15|1|1|1|FALSE|6
+bf04|ac02|2022|bfg03|app20|Green|15|1|1|1|TRUE|8
+bf04|ac03|2018|bfg03|app14|Amber|15|2|1|1|TRUE|5
+bf04|ac03|2020|bfg03|app20|Green|15|2|1|1|TRUE|5
+bf04|ac03|2022|bfg03|app20|Green|15|2|1|1|TRUE|7
+bf04|ac04|2018|bfg03|app14|Amber|15|3|1|1|TRUE|4
+bf04|ac04|2020|bfg03|app20|Green|15|3|1|1|TRUE|4
+bf04|ac04|2022|bfg03|app20|Green|15|3|1|1|TRUE|6
+bf04|ac05|2018|bfg03|app14|Amber|15|4|1|1|TRUE|3
+bf04|ac05|2020|bfg03|app20|Green|15|4|1|1|TRUE|3
+bf04|ac05|2022|bfg03|app20|Green|15|4|1|1|TRUE|5
+bf04|ac06|2018|bfg03|app14|Amber|15|5|1|1|TRUE|2
+bf04|ac06|2020|bfg03|app20|Green|15|5|1|1|TRUE|2
+bf04|ac06|2022|bfg03|app20|Green|15|5|1|1|TRUE|4
+bf04|ac07|2018|bfg03|app14|Amber|15|6|1|1|TRUE|1
+bf04|ac07|2020|bfg03|app20|Green|15|6|1|1|TRUE|1
+bf04|ac07|2022|bfg03|app20|Green|15|6|1|1|TRUE|3
+bf04|ac08|2018|bfg03|app13|Green|15|7|2|1|FALSE|1
+bf04|ac08|2018|bfg03|app14|Amber|15|7|2|2|FALSE|1
+bf04|ac08|2020|bfg03|app13|Amber|15|7|2|1|FALSE|1
+bf04|ac08|2020|bfg03|app20|Green|15|7|2|2|FALSE|1
+bf04|ac08|2022|bfg03|app20|Green|15|7|1|1|TRUE|2
+bf04|ac09|2018|bfg03|app12|Amber|15|8|4|1|FALSE|1
+bf04|ac09|2018|bfg03|app21|Amber|15|8|4|2|FALSE|1
+bf04|ac09|2018|bfg03|app22|Green|15|8|4|3|FALSE|1
+bf04|ac09|2018|bfg03|app24|Amber|15|8|4|4|FALSE|1
+bf04|ac09|2020|bfg03|app12|Amber|15|8|3|1|FALSE|1
+bf04|ac09|2020|bfg03|app21|Amber|15|8|3|2|FALSE|1
+bf04|ac09|2020|bfg03|app22|Amber|15|8|3|3|FALSE|1
+bf04|ac09|2022|bfg03|app20|Green|15|8|1|1|TRUE|1
+bf05|ac01|2018|bfg03|app22|Green|14|0|3|1|FALSE|1
+bf05|ac01|2018|bfg03|app25|Green|14|0|3|2|FALSE|1
+bf05|ac01|2018|bfg03|app26|Green|14|0|3|3|FALSE|1
+bf05|ac01|2020|bfg03|app25|Green|14|0|2|1|FALSE|1
+bf05|ac01|2020|bfg03|app26|Green|14|0|2|2|FALSE|1
+bf05|ac01|2022|bfg03|app25|Green|14|0|2|1|FALSE|1
+bf05|ac01|2022|bfg03|app26|Green|14|0|2|2|FALSE|1
+bf05|ac02|2018|bfg03|app25|Green|14|1|2|1|FALSE|1
+bf05|ac02|2018|bfg03|app26|Green|14|1|2|2|FALSE|1
+bf05|ac02|2020|bfg03|app25|Green|14|1|2|1|FALSE|1
+bf05|ac02|2020|bfg03|app26|Green|14|1|2|2|FALSE|1
+bf05|ac02|2022|bfg03|app25|Green|14|1|2|1|FALSE|1
+bf05|ac02|2022|bfg03|app26|Green|14|1|2|2|FALSE|1
+bf05|ac03|2018|bfg03|app25|Green|14|2|2|1|FALSE|1
+bf05|ac03|2018|bfg03|app26|Green|14|2|2|2|FALSE|1
+bf05|ac03|2020|bfg03|app25|Green|14|2|2|1|FALSE|1
+bf05|ac03|2020|bfg03|app26|Green|14|2|2|2|FALSE|1
+bf05|ac03|2022|bfg03|app25|Green|14|2|2|1|FALSE|1
+bf05|ac03|2022|bfg03|app26|Green|14|2|2|2|FALSE|1
+bf05|ac04|2018|bfg03|app25|Green|14|3|2|1|FALSE|1
+bf05|ac04|2018|bfg03|app26|Green|14|3|2|2|FALSE|1
+bf05|ac04|2020|bfg03|app25|Green|14|3|2|1|FALSE|1
+bf05|ac04|2020|bfg03|app26|Green|14|3|2|2|FALSE|1
+bf05|ac04|2022|bfg03|app25|Green|14|3|2|1|FALSE|1
+bf05|ac04|2022|bfg03|app26|Green|14|3|2|2|FALSE|1
+bf05|ac05|2018|bfg03|app25|Green|14|4|2|1|FALSE|1
+bf05|ac05|2018|bfg03|app26|Green|14|4|2|2|FALSE|1
+bf05|ac05|2020|bfg03|app25|Green|14|4|2|1|FALSE|1
+bf05|ac05|2020|bfg03|app26|Green|14|4|2|2|FALSE|1
+bf05|ac05|2022|bfg03|app25|Green|14|4|2|1|FALSE|1
+bf05|ac05|2022|bfg03|app26|Green|14|4|2|2|FALSE|1
+bf05|ac06|2018|bfg03|app25|Green|14|5|2|1|FALSE|1
+bf05|ac06|2018|bfg03|app26|Green|14|5|2|2|FALSE|1
+bf05|ac06|2020|bfg03|app25|Green|14|5|2|1|FALSE|1
+bf05|ac06|2020|bfg03|app26|Green|14|5|2|2|FALSE|1
+bf05|ac06|2022|bfg03|app25|Green|14|5|2|1|FALSE|1
+bf05|ac06|2022|bfg03|app26|Green|14|5|2|2|FALSE|1
+bf05|ac07|2018|bfg03|app25|Green|14|6|2|1|FALSE|1
+bf05|ac07|2018|bfg03|app26|Green|14|6|2|2|FALSE|1
+bf05|ac07|2020|bfg03|app25|Green|14|6|2|1|FALSE|1
+bf05|ac07|2020|bfg03|app26|Green|14|6|2|2|FALSE|1
+bf05|ac07|2022|bfg03|app25|Green|14|6|2|1|FALSE|1
+bf05|ac07|2022|bfg03|app26|Green|14|6|2|2|FALSE|1
+bf05|ac08|2018|bfg03|app13|Green|14|7|2|1|FALSE|1
+bf05|ac08|2018|bfg03|app25|Green|14|7|2|2|FALSE|1
+bf05|ac08|2020|bfg03|app25|Green|14|7|2|1|FALSE|1
+bf05|ac08|2020|bfg03|app26|Green|14|7|2|2|FALSE|1
+bf05|ac08|2022|bfg03|app25|Green|14|7|2|1|FALSE|1
+bf05|ac08|2022|bfg03|app26|Green|14|7|2|2|FALSE|1
+bf05|ac09|2018|bfg03|app12|Amber|14|8|2|1|FALSE|1
+bf05|ac09|2018|bfg03|app25|Green|14|8|2|2|FALSE|1
+bf05|ac09|2020|bfg03|app25|Green|14|8|2|1|FALSE|1
+bf05|ac09|2020|bfg03|app26|Green|14|8|2|2|FALSE|1
+bf05|ac09|2022|bfg03|app25|Green|14|8|2|1|FALSE|1
+bf05|ac09|2022|bfg03|app26|Green|14|8|2|2|FALSE|1
+bf06|ac01|2018|bfg03|app24|Amber|13|0|1|1|FALSE|1
+bf06|ac01|2020|bfg03|app27|Green|13|0|1|1|FALSE|7
+bf06|ac01|2022|bfg03|app27|Green|13|0|1|1|FALSE|9
+bf06|ac02|2018|bfg03|app27|Green|13|1|1|1|FALSE|6
+bf06|ac02|2020|bfg03|app27|Green|13|1|1|1|TRUE|6
+bf06|ac02|2022|bfg03|app27|Green|13|1|1|1|TRUE|8
+bf06|ac03|2018|bfg03|app27|Green|13|2|1|1|TRUE|5
+bf06|ac03|2020|bfg03|app27|Green|13|2|1|1|TRUE|5
+bf06|ac03|2022|bfg03|app27|Green|13|2|1|1|TRUE|7
+bf06|ac04|2018|bfg03|app27|Green|13|3|1|1|TRUE|4
+bf06|ac04|2020|bfg03|app27|Green|13|3|1|1|TRUE|4
+bf06|ac04|2022|bfg03|app27|Green|13|3|1|1|TRUE|6
+bf06|ac05|2018|bfg03|app27|Green|13|4|1|1|TRUE|3
+bf06|ac05|2020|bfg03|app27|Green|13|4|1|1|TRUE|3
+bf06|ac05|2022|bfg03|app27|Green|13|4|1|1|TRUE|5
+bf06|ac06|2018|bfg03|app27|Green|13|5|1|1|TRUE|2
+bf06|ac06|2020|bfg03|app27|Green|13|5|1|1|TRUE|2
+bf06|ac06|2022|bfg03|app27|Green|13|5|1|1|TRUE|4
+bf06|ac07|2018|bfg03|app27|Green|13|6|1|1|TRUE|1
+bf06|ac07|2020|bfg03|app27|Green|13|6|1|1|TRUE|1
+bf06|ac07|2022|bfg03|app27|Green|13|6|1|1|TRUE|3
+bf06|ac08|2018|bfg03|app13|Green|13|7|1|1|FALSE|1
+bf06|ac08|2020|bfg03|app13|Amber|13|7|3|1|FALSE|1
+bf06|ac08|2020|bfg03|app28|Green|13|7|3|2|FALSE|1
+bf06|ac08|2020|bfg03|app28|Amber|13|7|3|3|FALSE|1
+bf06|ac08|2022|bfg03|app27|Green|13|7|1|1|TRUE|2
+bf06|ac09|2018|bfg03|app12|Amber|13|8|1|1|FALSE|1
+bf06|ac09|2020|bfg03|app27|Green|13|8|1|1|FALSE|1
+bf06|ac09|2022|bfg03|app27|Green|13|8|1|1|TRUE|1
+bf07|ac01|2018|bfg03|app29|Green|12|0|1|1|FALSE|4
+bf07|ac01|2020|bfg03|app29|Green|12|0|1|1|FALSE|4
+bf07|ac01|2022|bfg03|app29|Amber|12|0|1|1|FALSE|5
+bf07|ac02|2018|bfg03|app29|Green|12|1|1|1|TRUE|3
+bf07|ac02|2020|bfg03|app29|Green|12|1|1|1|TRUE|3
+bf07|ac02|2022|bfg03|app29|Amber|12|1|1|1|TRUE|4
+bf07|ac03|2018|bfg03|app29|Green|12|2|1|1|TRUE|2
+bf07|ac03|2020|bfg03|app29|Green|12|2|1|1|TRUE|2
+bf07|ac03|2022|bfg03|app29|Amber|12|2|1|1|TRUE|3
+bf07|ac04|2018|bfg03|app29|Green|12|3|1|1|TRUE|1
+bf07|ac04|2020|bfg03|app29|Green|12|3|1|1|TRUE|1
+bf07|ac04|2022|bfg03|app29|Amber|12|3|1|1|TRUE|2
+bf07|ac05|2018|bfg03|app29|Green|12|4|2|1|FALSE|1
+bf07|ac05|2018|bfg03|app29|Green|12|4|2|2|FALSE|1
+bf07|ac05|2022|bfg03|app29|Amber|12|4|1|1|TRUE|1
+bf07|ac06|2020|bfg03|app29|Green|12|5|1|1|FALSE|2
+bf07|ac06|2022|bfg03|app29|Green|12|5|2|1|FALSE|1
+bf07|ac06|2022|bfg03|app29|Amber|12|5|2|2|FALSE|1
+bf07|ac07|2018|bfg03|app29|Green|12|6|1|1|FALSE|3
+bf07|ac07|2020|bfg03|app29|Green|12|6|1|1|TRUE|1
+bf07|ac07|2022|bfg03|app29|Amber|12|6|1|1|FALSE|1
+bf07|ac08|2018|bfg03|app29|Green|12|7|1|1|TRUE|2
+bf07|ac08|2020|bfg03|app29|Green|12|7|2|1|FALSE|1
+bf07|ac08|2020|bfg03|app29|Amber|12|7|2|2|FALSE|1
+bf07|ac09|2018|bfg03|app29|Green|12|8|1|1|TRUE|1
+bf07|ac09|2020|bfg03|app29|Green|12|8|1|1|FALSE|1
+bf07|ac09|2022|bfg03|app29|Amber|12|8|1|1|FALSE|1
+bf08|ac01|2018|bfg03|app24|Amber|11|0|2|1|FALSE|1
+bf08|ac01|2018|bfg03|app30|Green|11|0|2|2|FALSE|1
+bf08|ac01|2020|bfg03|app30|Green|11|0|2|1|FALSE|1
+bf08|ac01|2020|bfg03|app30|Green|11|0|2|2|FALSE|1
+bf08|ac02|2018|bfg03|app14|Amber|11|1|1|1|FALSE|1
+bf08|ac02|2020|bfg03|app30|Green|11|1|1|1|FALSE|7
+bf08|ac02|2022|bfg03|app30|Green|11|1|1|1|FALSE|3
+bf08|ac03|2018|bfg03|app14|Amber|11|2|2|1|FALSE|1
+bf08|ac03|2018|bfg03|app30|Green|11|2|2|2|FALSE|1
+bf08|ac03|2020|bfg03|app30|Green|11|2|1|1|TRUE|6
+bf08|ac03|2022|bfg03|app30|Green|11|2|1|1|TRUE|2
+bf08|ac04|2018|bfg03|app14|Amber|11|3|1|1|FALSE|1
+bf08|ac04|2020|bfg03|app30|Green|11|3|1|1|TRUE|5
+bf08|ac04|2022|bfg03|app30|Green|11|3|1|1|TRUE|1
+bf08|ac05|2020|bfg03|app30|Green|11|4|1|1|TRUE|4
+bf08|ac05|2022|bfg03|app14|Amber|11|4|2|1|FALSE|1
+bf08|ac05|2022|bfg03|app30|Green|11|4|2|2|FALSE|1
+bf08|ac06|2018|bfg03|app14|Amber|11|5|1|1|FALSE|2
+bf08|ac06|2020|bfg03|app30|Green|11|5|1|1|TRUE|3
+bf08|ac06|2022|bfg03|app30|Green|11|5|1|1|FALSE|4
+bf08|ac07|2018|bfg03|app14|Amber|11|6|1|1|TRUE|1
+bf08|ac07|2020|bfg03|app30|Green|11|6|1|1|TRUE|2
+bf08|ac07|2022|bfg03|app30|Green|11|6|1|1|TRUE|3
+bf08|ac08|2018|bfg03|app13|Green|11|7|1|1|FALSE|1
+bf08|ac08|2020|bfg03|app30|Green|11|7|1|1|TRUE|1
+bf08|ac08|2022|bfg03|app30|Green|11|7|1|1|TRUE|2
+bf08|ac09|2018|bfg03|app12|Amber|11|8|2|1|FALSE|1
+bf08|ac09|2018|bfg03|app30|Green|11|8|2|2|FALSE|1
+bf08|ac09|2022|bfg03|app30|Green|11|8|1|1|TRUE|1
+bf09|ac01|2018|bfg04|app11|Green|10|0|1|1|FALSE|4
+bf09|ac01|2020|bfg04|app11|Green|10|0|1|1|FALSE|8
+bf09|ac01|2022|bfg04|app11|Green|10|0|1|1|FALSE|9
+bf09|ac02|2018|bfg04|app11|Green|10|1|1|1|TRUE|3
+bf09|ac02|2020|bfg04|app11|Green|10|1|1|1|TRUE|7
+bf09|ac02|2022|bfg04|app11|Green|10|1|1|1|TRUE|8
+bf09|ac03|2018|bfg04|app11|Green|10|2|1|1|TRUE|2
+bf09|ac03|2020|bfg04|app11|Green|10|2|1|1|TRUE|6
+bf09|ac03|2022|bfg04|app11|Green|10|2|1|1|TRUE|7
+bf09|ac04|2018|bfg04|app11|Green|10|3|1|1|TRUE|1
+bf09|ac04|2020|bfg04|app11|Green|10|3|1|1|TRUE|5
+bf09|ac04|2022|bfg04|app11|Green|10|3|1|1|TRUE|6
+bf09|ac05|2018|bfg04|app14|Amber|10|4|1|1|FALSE|3
+bf09|ac05|2020|bfg04|app11|Green|10|4|1|1|TRUE|4
+bf09|ac05|2022|bfg04|app11|Green|10|4|1|1|TRUE|5
+bf09|ac06|2018|bfg04|app14|Amber|10|5|1|1|TRUE|2
+bf09|ac06|2020|bfg04|app11|Green|10|5|1|1|TRUE|3
+bf09|ac06|2022|bfg04|app11|Green|10|5|1|1|TRUE|4
+bf09|ac07|2018|bfg04|app14|Amber|10|6|1|1|TRUE|1
+bf09|ac07|2020|bfg04|app11|Green|10|6|1|1|TRUE|2
+bf09|ac07|2022|bfg04|app11|Green|10|6|1|1|TRUE|3
+bf09|ac08|2018|bfg04|app13|Green|10|7|1|1|FALSE|1
+bf09|ac08|2020|bfg04|app11|Green|10|7|1|1|TRUE|1
+bf09|ac08|2022|bfg04|app11|Green|10|7|1|1|TRUE|2
+bf09|ac09|2018|bfg04|app12|Amber|10|8|1|1|FALSE|1
+bf09|ac09|2020|bfg04|app12|Amber|10|8|1|1|FALSE|1
+bf09|ac09|2022|bfg04|app11|Green|10|8|1|1|TRUE|1
+bf10|ac01|2018|bfg05|app11|Green|9|0|2|1|FALSE|1
+bf10|ac01|2018|bfg05|app11|Green|9|0|2|2|FALSE|1
+bf10|ac01|2022|bfg05|app11|Green|9|0|1|1|FALSE|4
+bf10|ac02|2018|bfg05|app11|Green|9|1|1|1|FALSE|3
+bf10|ac02|2020|bfg05|app11|Green|9|1|1|1|FALSE|6
+bf10|ac02|2022|bfg05|app11|Green|9|1|1|1|TRUE|3
+bf10|ac03|2018|bfg05|app11|Green|9|2|1|1|TRUE|2
+bf10|ac03|2020|bfg05|app11|Green|9|2|1|1|TRUE|5
+bf10|ac03|2022|bfg05|app11|Green|9|2|1|1|TRUE|2
+bf10|ac04|2018|bfg05|app11|Green|9|3|1|1|TRUE|1
+bf10|ac04|2020|bfg05|app11|Green|9|3|1|1|TRUE|4
+bf10|ac04|2022|bfg05|app11|Green|9|3|1|1|TRUE|1
+bf10|ac05|2020|bfg05|app11|Green|9|4|1|1|TRUE|3
+bf10|ac05|2022|bfg05|app11|Green|9|4|2|1|FALSE|1
+bf10|ac05|2022|bfg05|app31|Amber|9|4|2|2|FALSE|1
+bf10|ac06|2018|bfg05|app31|Amber|9|5|1|1|FALSE|2
+bf10|ac06|2020|bfg05|app11|Green|9|5|1|1|TRUE|2
+bf10|ac06|2022|bfg05|app11|Green|9|5|1|1|FALSE|2
+bf10|ac07|2018|bfg05|app31|Amber|9|6|1|1|TRUE|1
+bf10|ac07|2020|bfg05|app11|Green|9|6|1|1|TRUE|1
+bf10|ac07|2022|bfg05|app11|Green|9|6|1|1|TRUE|1
+bf10|ac08|2018|bfg05|app13|Green|9|7|1|1|FALSE|1
+bf10|ac08|2020|bfg05|app11|Green|9|7|2|1|FALSE|1
+bf10|ac08|2020|bfg05|app11|Green|9|7|2|2|FALSE|1
+bf10|ac09|2018|bfg05|app12|Amber|9|8|1|1|FALSE|1
+bf10|ac09|2020|bfg05|app11|Green|9|8|1|1|FALSE|1
+bf10|ac09|2022|bfg05|app11|Green|9|8|1|1|FALSE|1
+bf11|ac01|2020|bfg05|app32|Green|8|0|1|1|FALSE|1
+bf11|ac01|2022|bfg05|app32|Green|8|0|2|1|FALSE|1
+bf11|ac01|2022|bfg05|app32|Green|8|0|2|2|FALSE|1
+bf11|ac02|2018|bfg05|app32|Green|8|1|2|1|FALSE|1
+bf11|ac02|2018|bfg05|app32|Green|8|1|2|2|FALSE|1
+bf11|ac02|2022|bfg05|app32|Green|8|1|1|1|FALSE|4
+bf11|ac03|2018|bfg05|app32|Green|8|2|1|1|FALSE|7
+bf11|ac03|2020|bfg05|app32|Green|8|2|1|1|FALSE|3
+bf11|ac03|2022|bfg05|app32|Green|8|2|1|1|TRUE|3
+bf11|ac04|2018|bfg05|app32|Green|8|3|1|1|TRUE|6
+bf11|ac04|2020|bfg05|app32|Green|8|3|1|1|TRUE|2
+bf11|ac04|2022|bfg05|app32|Green|8|3|1|1|TRUE|2
+bf11|ac05|2018|bfg05|app32|Green|8|4|1|1|TRUE|5
+bf11|ac05|2020|bfg05|app32|Green|8|4|1|1|TRUE|1
+bf11|ac05|2022|bfg05|app32|Green|8|4|1|1|TRUE|1
+bf11|ac06|2018|bfg05|app32|Green|8|5|1|1|TRUE|4
+bf11|ac06|2020|bfg05|app32|Green|8|5|2|1|FALSE|1
+bf11|ac06|2020|bfg05|app32|Green|8|5|2|2|FALSE|1
+bf11|ac07|2018|bfg05|app32|Green|8|6|1|1|TRUE|3
+bf11|ac07|2020|bfg05|app32|Green|8|6|1|1|FALSE|3
+bf11|ac07|2022|bfg05|app32|Green|8|6|1|1|FALSE|3
+bf11|ac08|2018|bfg05|app32|Green|8|7|1|1|TRUE|2
+bf11|ac08|2020|bfg05|app32|Green|8|7|1|1|TRUE|2
+bf11|ac08|2022|bfg05|app32|Green|8|7|1|1|TRUE|2
+bf11|ac09|2018|bfg05|app32|Green|8|8|1|1|TRUE|1
+bf11|ac09|2020|bfg05|app32|Green|8|8|1|1|TRUE|1
+bf11|ac09|2022|bfg05|app32|Green|8|8|1|1|TRUE|1
+bf12|ac01|2018|bfg06|app33|Amber|7|0|1|1|FALSE|1
+bf12|ac01|2020|bfg06|app11|Green|7|0|1|1|FALSE|1
+bf12|ac01|2022|bfg06|app11|Green|7|0|1|1|FALSE|3
+bf12|ac02|2018|bfg06|app11|Green|7|1|2|1|FALSE|1
+bf12|ac02|2018|bfg06|app33|Amber|7|1|2|2|FALSE|1
+bf12|ac02|2022|bfg06|app11|Green|7|1|1|1|TRUE|2
+bf12|ac03|2018|bfg06|app33|Amber|7|2|1|1|FALSE|1
+bf12|ac03|2020|bfg06|app11|Green|7|2|1|1|FALSE|1
+bf12|ac03|2022|bfg06|app11|Green|7|2|1|1|TRUE|1
+bf12|ac04|2020|bfg06|app11|Green|7|3|2|1|FALSE|1
+bf12|ac04|2020|bfg06|app11|Green|7|3|2|2|FALSE|1
+bf12|ac04|2022|bfg06|app33|Amber|7|3|1|1|FALSE|1
+bf12|ac05|2018|bfg06|app33|Amber|7|4|1|1|FALSE|5
+bf12|ac05|2020|bfg06|app11|Green|7|4|1|1|FALSE|5
+bf12|ac05|2022|bfg06|app11|Green|7|4|1|1|FALSE|5
+bf12|ac06|2018|bfg06|app33|Amber|7|5|1|1|TRUE|4
+bf12|ac06|2020|bfg06|app11|Green|7|5|1|1|TRUE|4
+bf12|ac06|2022|bfg06|app11|Green|7|5|1|1|TRUE|4
+bf12|ac07|2018|bfg06|app33|Amber|7|6|1|1|TRUE|3
+bf12|ac07|2020|bfg06|app11|Green|7|6|1|1|TRUE|3
+bf12|ac07|2022|bfg06|app11|Green|7|6|1|1|TRUE|3
+bf12|ac08|2018|bfg06|app33|Amber|7|7|1|1|TRUE|2
+bf12|ac08|2020|bfg06|app11|Green|7|7|1|1|TRUE|2
+bf12|ac08|2022|bfg06|app11|Green|7|7|1|1|TRUE|2
+bf12|ac09|2018|bfg06|app33|Amber|7|8|1|1|TRUE|1
+bf12|ac09|2020|bfg06|app11|Green|7|8|1|1|TRUE|1
+bf12|ac09|2022|bfg06|app11|Green|7|8|1|1|TRUE|1
+bf13|ac01|2018|bfg06|#N/A|White|6|0|1|1|FALSE|9
+bf13|ac01|2022|bfg06|#N/A|White|6|0|2|1|FALSE|1
+bf13|ac01|2022|bfg06|#N/A|White|6|0|2|2|FALSE|1
+bf13|ac02|2018|bfg06|#N/A|White|6|1|1|1|TRUE|8
+bf13|ac02|2020|bfg06|#N/A|White|6|1|1|1|FALSE|7
+bf13|ac02|2022|bfg06|#N/A|White|6|1|1|1|FALSE|7
+bf13|ac03|2018|bfg06|#N/A|White|6|2|1|1|TRUE|7
+bf13|ac03|2020|bfg06|#N/A|White|6|2|1|1|TRUE|6
+bf13|ac03|2022|bfg06|#N/A|White|6|2|1|1|TRUE|6
+bf13|ac04|2018|bfg06|#N/A|White|6|3|1|1|TRUE|6
+bf13|ac04|2020|bfg06|#N/A|White|6|3|1|1|TRUE|5
+bf13|ac04|2022|bfg06|#N/A|White|6|3|1|1|TRUE|5
+bf13|ac05|2018|bfg06|#N/A|White|6|4|1|1|TRUE|5
+bf13|ac05|2020|bfg06|#N/A|White|6|4|1|1|TRUE|4
+bf13|ac05|2022|bfg06|#N/A|White|6|4|1|1|TRUE|4
+bf13|ac06|2018|bfg06|#N/A|White|6|5|1|1|TRUE|4
+bf13|ac06|2020|bfg06|#N/A|White|6|5|1|1|TRUE|3
+bf13|ac06|2022|bfg06|#N/A|White|6|5|1|1|TRUE|3
+bf13|ac07|2018|bfg06|#N/A|White|6|6|1|1|TRUE|3
+bf13|ac07|2020|bfg06|#N/A|White|6|6|1|1|TRUE|2
+bf13|ac07|2022|bfg06|#N/A|White|6|6|1|1|TRUE|2
+bf13|ac08|2018|bfg06|#N/A|White|6|7|1|1|TRUE|2
+bf13|ac08|2020|bfg06|#N/A|White|6|7|1|1|TRUE|1
+bf13|ac08|2022|bfg06|#N/A|White|6|7|1|1|TRUE|1
+bf13|ac09|2018|bfg06|#N/A|White|6|8|1|1|TRUE|1
+bf13|ac09|2020|bfg06|#N/A|White|6|8|2|1|FALSE|1
+bf13|ac09|2020|bfg06|#N/A|White|6|8|2|2|FALSE|1
+bf14|ac01|2018|bfg07|app20|Green|5|0|1|1|FALSE|1
+bf14|ac01|2020|bfg07|app20|Green|5|0|1|1|FALSE|2
+bf14|ac01|2022|bfg07|app24|Amber|5|0|1|1|FALSE|1
+bf14|ac02|2018|bfg07|app14|Amber|5|1|2|1|FALSE|1
+bf14|ac02|2018|bfg07|app20|Green|5|1|2|2|FALSE|1
+bf14|ac02|2020|bfg07|app20|Green|5|1|1|1|TRUE|1
+bf14|ac03|2018|bfg07|app14|Amber|5|2|1|1|FALSE|3
+bf14|ac03|2020|bfg07|app20|Green|5|2|2|1|FALSE|1
+bf14|ac03|2020|bfg07|app20|Green|5|2|2|2|FALSE|1
+bf14|ac04|2018|bfg07|app14|Amber|5|3|1|1|TRUE|2
+bf14|ac04|2020|bfg07|app20|Green|5|3|2|1|FALSE|1
+bf14|ac04|2020|bfg07|app20|Green|5|3|2|2|FALSE|1
+bf14|ac05|2018|bfg07|app14|Amber|5|4|1|1|TRUE|1
+bf14|ac05|2020|bfg07|app20|Green|5|4|2|1|FALSE|1
+bf14|ac05|2020|bfg07|app20|Green|5|4|2|2|FALSE|1
+bf14|ac06|2018|bfg07|app14|Amber|5|5|2|1|FALSE|1
+bf14|ac06|2018|bfg07|app20|Green|5|5|2|2|FALSE|1
+bf14|ac06|2020|bfg07|app20|Green|5|5|1|1|FALSE|4
+bf14|ac07|2018|bfg07|app14|Amber|5|6|2|1|FALSE|1
+bf14|ac07|2018|bfg07|app20|Green|5|6|2|2|FALSE|1
+bf14|ac07|2020|bfg07|app20|Green|5|6|1|1|TRUE|3
+bf14|ac08|2018|bfg07|app13|Green|5|7|2|1|FALSE|1
+bf14|ac08|2018|bfg07|app20|Green|5|7|2|2|FALSE|1
+bf14|ac08|2020|bfg07|app20|Green|5|7|1|1|TRUE|2
+bf14|ac09|2018|bfg07|app12|Amber|5|8|2|1|FALSE|1
+bf14|ac09|2018|bfg07|app20|Green|5|8|2|2|FALSE|1
+bf14|ac09|2020|bfg07|app20|Green|5|8|1|1|TRUE|1
+bf15|ac01|2022|bfg07|app34|Green|4|0|2|1|FALSE|1
+bf15|ac01|2022|bfg07|app34|Green|4|0|2|2|FALSE|1
+bf15|ac02|2020|bfg07|app34|Green|4|1|1|1|FALSE|3
+bf15|ac02|2022|bfg07|app34|Green|4|1|2|1|FALSE|1
+bf15|ac02|2022|bfg07|app34|Green|4|1|2|2|FALSE|1
+bf15|ac03|2020|bfg07|app34|Green|4|2|1|1|TRUE|2
+bf15|ac03|2022|bfg07|app34|Green|4|2|2|1|FALSE|1
+bf15|ac03|2022|bfg07|app34|Green|4|2|2|2|FALSE|1
+bf15|ac04|2020|bfg07|app34|Green|4|3|1|1|TRUE|1
+bf15|ac04|2022|bfg07|app34|Green|4|3|2|1|FALSE|1
+bf15|ac04|2022|bfg07|app34|Green|4|3|2|2|FALSE|1
+bf15|ac05|2020|bfg07|app34|Green|4|4|2|1|FALSE|1
+bf15|ac05|2020|bfg07|app34|Green|4|4|2|2|FALSE|1
+bf15|ac05|2022|bfg07|app34|Green|4|4|1|1|FALSE|1
+bf15|ac06|2022|bfg07|app34|Green|4|5|2|1|FALSE|1
+bf15|ac06|2022|bfg07|app34|Green|4|5|2|2|FALSE|1
+bf15|ac07|2020|bfg07|app34|Green|4|6|1|1|FALSE|1
+bf15|ac07|2022|bfg07|app34|Green|4|6|2|1|FALSE|1
+bf15|ac07|2022|bfg07|app34|Green|4|6|2|2|FALSE|1
+bf15|ac08|2022|bfg07|app34|Green|4|7|2|1|FALSE|1
+bf15|ac08|2022|bfg07|app34|Green|4|7|2|2|FALSE|1
+bf15|ac09|2022|bfg07|app34|Green|4|8|2|1|FALSE|1
+bf15|ac09|2022|bfg07|app34|Green|4|8|2|2|FALSE|1
+bf16|ac01|2018|bfg07|app24|Green|3|0|2|1|FALSE|1
+bf16|ac01|2018|bfg07|app24|Green|3|0|2|2|FALSE|1
+bf16|ac01|2022|bfg07|app24|Green|3|0|1|1|FALSE|6
+bf16|ac02|2018|bfg07|app24|Green|3|1|1|1|FALSE|7
+bf16|ac02|2020|bfg07|app24|Green|3|1|1|1|FALSE|5
+bf16|ac02|2022|bfg07|app24|Green|3|1|1|1|TRUE|5
+bf16|ac03|2018|bfg07|app24|Green|3|2|1|1|TRUE|6
+bf16|ac03|2020|bfg07|app24|Green|3|2|1|1|TRUE|4
+bf16|ac03|2022|bfg07|app24|Green|3|2|1|1|TRUE|4
+bf16|ac04|2018|bfg07|app24|Green|3|3|1|1|TRUE|5
+bf16|ac04|2020|bfg07|app24|Green|3|3|1|1|TRUE|3
+bf16|ac04|2022|bfg07|app24|Green|3|3|1|1|TRUE|3
+bf16|ac05|2018|bfg07|app24|Green|3|4|1|1|TRUE|4
+bf16|ac05|2020|bfg07|app24|Green|3|4|1|1|TRUE|2
+bf16|ac05|2022|bfg07|app24|Green|3|4|1|1|TRUE|2
+bf16|ac06|2018|bfg07|app24|Green|3|5|1|1|TRUE|3
+bf16|ac06|2020|bfg07|app24|Green|3|5|1|1|TRUE|1
+bf16|ac06|2022|bfg07|app24|Green|3|5|1|1|TRUE|1
+bf16|ac07|2018|bfg07|app24|Green|3|6|1|1|TRUE|2
+bf16|ac07|2020|bfg07|app24|Green|3|6|2|1|FALSE|1
+bf16|ac07|2020|bfg07|app24|Green|3|6|2|2|FALSE|1
+bf16|ac08|2018|bfg07|app24|Green|3|7|1|1|TRUE|1
+bf16|ac08|2020|bfg07|app24|Green|3|7|1|1|FALSE|2
+bf16|ac08|2022|bfg07|app24|Green|3|7|1|1|FALSE|1
+bf16|ac09|2020|bfg07|app24|Green|3|8|1|1|TRUE|1
+bf16|ac09|2022|bfg07|app24|Green|3|8|2|1|FALSE|1
+bf16|ac09|2022|bfg07|app24|Green|3|8|2|2|FALSE|1
+bf17|ac01|2020|bfg08|app35|Green|2|0|2|1|FALSE|1
+bf17|ac01|2020|bfg08|app36|Green|2|0|2|2|FALSE|1
+bf17|ac01|2022|bfg08|app22|Amber|2|0|3|1|FALSE|1
+bf17|ac01|2022|bfg08|app35|Green|2|0|3|2|FALSE|1
+bf17|ac01|2022|bfg08|app36|Green|2|0|3|3|FALSE|1
+bf17|ac02|2018|bfg08|app14|Amber|2|1|1|1|FALSE|2
+bf17|ac02|2020|bfg08|app35|Green|2|1|2|1|FALSE|1
+bf17|ac02|2020|bfg08|app36|Green|2|1|2|2|FALSE|1
+bf17|ac02|2022|bfg08|app35|Green|2|1|2|1|FALSE|1
+bf17|ac02|2022|bfg08|app36|Green|2|1|2|2|FALSE|1
+bf17|ac03|2018|bfg08|app14|Amber|2|2|1|1|TRUE|1
+bf17|ac03|2020|bfg08|app35|Green|2|2|2|1|FALSE|1
+bf17|ac03|2020|bfg08|app36|Green|2|2|2|2|FALSE|1
+bf17|ac03|2022|bfg08|app35|Green|2|2|2|1|FALSE|1
+bf17|ac03|2022|bfg08|app36|Green|2|2|2|2|FALSE|1
+bf17|ac04|2018|bfg08|app14|Amber|2|3|2|1|FALSE|1
+bf17|ac04|2018|bfg08|app35|Green|2|3|2|2|FALSE|1
+bf17|ac04|2020|bfg08|app36|Green|2|3|1|1|FALSE|1
+bf17|ac04|2022|bfg08|app35|Green|2|3|2|1|FALSE|1
+bf17|ac04|2022|bfg08|app36|Green|2|3|2|2|FALSE|1
+bf17|ac05|2018|bfg08|app14|Amber|2|4|1|1|FALSE|3
+bf17|ac05|2020|bfg08|app35|Green|2|4|2|1|FALSE|1
+bf17|ac05|2020|bfg08|app36|Green|2|4|2|2|FALSE|1
+bf17|ac05|2022|bfg08|app35|Green|2|4|2|1|FALSE|1
+bf17|ac05|2022|bfg08|app36|Green|2|4|2|2|FALSE|1
+bf17|ac06|2018|bfg08|app14|Amber|2|5|1|1|TRUE|2
+bf17|ac06|2020|bfg08|app35|Green|2|5|2|1|FALSE|1
+bf17|ac06|2020|bfg08|app36|Green|2|5|2|2|FALSE|1
+bf17|ac06|2022|bfg08|app35|Green|2|5|2|1|FALSE|1
+bf17|ac06|2022|bfg08|app36|Green|2|5|2|2|FALSE|1
+bf17|ac07|2018|bfg08|app14|Amber|2|6|1|1|TRUE|1
+bf17|ac07|2020|bfg08|app35|Green|2|6|2|1|FALSE|1
+bf17|ac07|2020|bfg08|app36|Green|2|6|2|2|FALSE|1
+bf17|ac07|2022|bfg08|app35|Green|2|6|2|1|FALSE|1
+bf17|ac07|2022|bfg08|app36|Green|2|6|2|2|FALSE|1
+bf17|ac08|2018|bfg08|app13|Amber|2|7|1|1|FALSE|1
+bf17|ac08|2020|bfg08|app35|Green|2|7|3|1|FALSE|1
+bf17|ac08|2020|bfg08|app35|Green|2|7|3|2|FALSE|1
+bf17|ac08|2020|bfg08|app36|Green|2|7|3|3|FALSE|1
+bf17|ac08|2022|bfg08|app36|Green|2|7|1|1|FALSE|1
+bf17|ac09|2018|bfg08|app12|Amber|2|8|1|1|FALSE|1
+bf17|ac09|2020|bfg08|app35|Green|2|8|2|1|FALSE|1
+bf17|ac09|2020|bfg08|app36|Green|2|8|2|2|FALSE|1
+bf17|ac09|2022|bfg08|app35|Green|2|8|2|1|FALSE|1
+bf17|ac09|2022|bfg08|app36|Green|2|8|2|2|FALSE|1
+bf18|ac01|2018|bfg08|app35|Green|1|0|2|1|FALSE|1
+bf18|ac01|2018|bfg08|app37|Amber|1|0|2|2|FALSE|1
+bf18|ac01|2020|bfg08|app35|Green|1|0|1|1|FALSE|4
+bf18|ac01|2022|bfg08|app35|Green|1|0|1|1|FALSE|4
+bf18|ac02|2018|bfg08|app35|Green|1|1|2|1|FALSE|1
+bf18|ac02|2018|bfg08|app37|Amber|1|1|2|2|FALSE|1
+bf18|ac02|2020|bfg08|app35|Green|1|1|1|1|TRUE|3
+bf18|ac02|2022|bfg08|app35|Green|1|1|1|1|TRUE|3
+bf18|ac03|2018|bfg08|app35|Green|1|2|2|1|FALSE|1
+bf18|ac03|2018|bfg08|app37|Amber|1|2|2|2|FALSE|1
+bf18|ac03|2020|bfg08|app35|Green|1|2|1|1|TRUE|2
+bf18|ac03|2022|bfg08|app35|Green|1|2|1|1|TRUE|2
+bf18|ac04|2018|bfg08|app35|Green|1|3|2|1|FALSE|1
+bf18|ac04|2018|bfg08|app37|Amber|1|3|2|2|FALSE|1
+bf18|ac04|2020|bfg08|app35|Green|1|3|1|1|TRUE|1
+bf18|ac04|2022|bfg08|app35|Green|1|3|1|1|TRUE|1
+bf18|ac05|2018|bfg08|app35|Green|1|4|2|1|FALSE|1
+bf18|ac05|2018|bfg08|app37|Amber|1|4|2|2|FALSE|1
+bf18|ac05|2020|bfg08|app35|Green|1|4|2|1|FALSE|1
+bf18|ac05|2020|bfg08|app35|Green|1|4|2|2|FALSE|1
+bf18|ac06|2018|bfg08|app37|Amber|1|5|1|1|FALSE|1
+bf18|ac06|2020|bfg08|app35|Green|1|5|1|1|FALSE|3
+bf18|ac06|2022|bfg08|app35|Green|1|5|2|1|FALSE|1
+bf18|ac06|2022|bfg08|app35|Green|1|5|2|2|FALSE|1
+bf18|ac07|2018|bfg08|app35|Green|1|6|2|1|FALSE|1
+bf18|ac07|2018|bfg08|app37|Amber|1|6|2|2|FALSE|1
+bf18|ac07|2020|bfg08|app35|Green|1|6|1|1|TRUE|2
+bf18|ac07|2022|bfg08|app35|Green|1|6|1|1|FALSE|3
+bf18|ac08|2018|bfg08|app35|Green|1|7|2|1|FALSE|1
+bf18|ac08|2018|bfg08|app37|Amber|1|7|2|2|FALSE|1
+bf18|ac08|2020|bfg08|app35|Green|1|7|1|1|TRUE|1
+bf18|ac08|2022|bfg08|app35|Green|1|7|1|1|TRUE|2
+bf18|ac09|2018|bfg08|app35|Green|1|8|3|1|FALSE|1
+bf18|ac09|2018|bfg08|app35|Green|1|8|3|2|FALSE|1
+bf18|ac09|2018|bfg08|app37|Amber|1|8|3|3|FALSE|1
+bf18|ac09|2022|bfg08|app35|Green|1|8|1|1|TRUE|1
+bf19|ac01|2022|bfg08|app38|Green|0|0|2|1|FALSE|1
+bf19|ac01|2022|bfg08|app38|Green|0|0|2|2|FALSE|1
+bf19|ac02|2020|bfg08|app38|Green|0|1|1|1|FALSE|6
+bf19|ac02|2022|bfg08|app36|Green|0|1|2|1|FALSE|1
+bf19|ac02|2022|bfg08|app38|Green|0|1|2|2|FALSE|1
+bf19|ac03|2020|bfg08|app38|Green|0|2|1|1|TRUE|5
+bf19|ac03|2022|bfg08|app38|Green|0|2|1|1|FALSE|5
+bf19|ac04|2020|bfg08|app38|Green|0|3|1|1|TRUE|4
+bf19|ac04|2022|bfg08|app38|Green|0|3|1|1|TRUE|4
+bf19|ac05|2020|bfg08|app38|Green|0|4|1|1|TRUE|3
+bf19|ac05|2022|bfg08|app38|Green|0|4|1|1|TRUE|3
+bf19|ac06|2020|bfg08|app38|Green|0|5|1|1|TRUE|2
+bf19|ac06|2022|bfg08|app38|Green|0|5|1|1|TRUE|2
+bf19|ac07|2020|bfg08|app38|Green|0|6|1|1|TRUE|1
+bf19|ac07|2022|bfg08|app38|Green|0|6|1|1|TRUE|1
+bf19|ac08|2020|bfg08|app38|Green|0|7|2|1|FALSE|1
+bf19|ac08|2020|bfg08|app38|Green|0|7|2|2|FALSE|1
+bf19|ac09|2020|bfg08|app38|Green|0|8|1|1|FALSE|1
+bf19|ac09|2022|bfg08|app38|Green|0|8|1|1|FALSE|1

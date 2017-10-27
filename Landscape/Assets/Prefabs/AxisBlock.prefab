@@ -91,8 +91,8 @@ GameObject:
   - component: {fileID: 33051490132893770}
   - component: {fileID: 65190521300610028}
   - component: {fileID: 23719805243516890}
+  - component: {fileID: 114849363271479194}
   - component: {fileID: 114578886014570068}
-  - component: {fileID: 114213907638026324}
   m_Layer: 0
   m_Name: AxisBlock
   m_TagString: Untagged
@@ -182,17 +182,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114213907638026324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1323501097932228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aea6ae3703ffb742b333def146ba6c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114276256529050262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,6 +323,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!114 &114849363271479194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323501097932228}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26f61522c02961408843f4ba055d4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114952339147896174
 MonoBehaviour:
   m_ObjectHideFlags: 1
