@@ -41,6 +41,12 @@ public class SpeechManager : MonoBehaviour
             this.BroadcastMessage("ShowNodes");
         });
 
+        keywords.Add("All", () =>
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage("ShowNodes");
+        });
+
         keywords.Add("Drop", () =>
         {
             // Call the OnReset method on every descendant object.
