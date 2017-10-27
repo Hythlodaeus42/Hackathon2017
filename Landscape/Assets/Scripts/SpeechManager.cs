@@ -23,10 +23,22 @@ public class SpeechManager : MonoBehaviour
             this.BroadcastMessage("StopRotateGraph");
         });
 
-        keywords.Add("Labels", () =>
+        //keywords.Add("Labels", () =>
+        //{
+        //    // Call the OnReset method on every descendant object.
+        //    this.BroadcastMessage("ShowHideLabels");
+        //});
+
+        keywords.Add("Hide", () =>
         {
             // Call the OnReset method on every descendant object.
-            this.BroadcastMessage("ShowHideLabels");
+            this.BroadcastMessage("HideNodes");
+        });
+
+        keywords.Add("Show", () =>
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage("ShowNodes");
         });
 
         // Tell the KeywordRecognizer about our keywords.

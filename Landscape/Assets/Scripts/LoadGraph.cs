@@ -322,6 +322,7 @@ public class LoadGraph : MonoBehaviour {
             edgeProperties.isBidirectional = (int.Parse(edge.Descendants().Where(a => a.Attribute("key").Value == "e_Direction").Select(a => a.Value).FirstOrDefault()) == 2);
             edgeProperties.fromLayerOrdinal = int.Parse(startNode.GetComponent<NodeProperties>().LayerOrdinal);
             edgeProperties.toLayerOrdinal = int.Parse(endNode.GetComponent<NodeProperties>().LayerOrdinal);
+            edgeProperties.IsConnected = false;
 
             edgeInstance.name = edgeProperties.fromNode + '>' + edgeProperties.toNode;
             

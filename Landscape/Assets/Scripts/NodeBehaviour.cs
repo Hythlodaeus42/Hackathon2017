@@ -5,20 +5,26 @@ using UnityEngine.UI;
 
 public class NodeBehaviour : MonoBehaviour
 {
+    public bool IsSelected;
+    public bool IsNeighbour;
+
     //public Text displayInfo;
     //private Canvas mainCanvas;
     //private Canvas localCanvas;
     //private Text systemText;
     //private Text mainText;
     private Canvas infoCanvas;
+    private Transform yearContainer;
 
-    private bool selected;
 
     void Start()
     {
         //Debug.Log("NodeBehaviour.Start(): " + this.name);
         infoCanvas = GameObject.Find("InfoCanvas").GetComponentInChildren<Canvas>();
-        selected = false;
+        IsSelected = false;
+        IsNeighbour = false;
+
+        yearContainer = this.transform.parent.parent;
     }
 
     // Update is called once per frame
@@ -29,22 +35,26 @@ public class NodeBehaviour : MonoBehaviour
 
     void OnSelect()
     {
-        //Debug.Log("NodeBehaviour.OnSelect() called");
+        Debug.Log("NodeBehaviour.OnSelect() " + this.name);
 
-        // set selected
-        selected = !selected;
+        // set IsSelected
+        IsSelected = !IsSelected;
+
+        FlagNeighbours();
 
         Light light = this.GetComponent<Light>();
-        light.enabled = selected;
+        light.enabled = IsSelected;
 
-        if (selected)
+        if (IsSelected)
         {
             //Debug.Log(BuildInfoString());
             infoCanvas.GetComponent<InfoCanvasBehaviour>().Show(BuildInfoString());
+            yearContainer.GetComponent<ContainerBehaviour>().selectedGameObject = this.gameObject;
         } else
         {
             //Debug.Log(BuildInfoString());
             infoCanvas.GetComponent<InfoCanvasBehaviour>().Hide();
+            yearContainer.GetComponent<ContainerBehaviour>().selectedGameObject = null; 
         }
     }
 
@@ -61,5 +71,31 @@ public class NodeBehaviour : MonoBehaviour
 
         return info;
     }
+
+    void FlagNeighbours()
+    {
+        // find all edges with source or target to this node
+        foreach (EdgeProperties ep  in yearContainer.GetComponentsInChildren<EdgeProperties>())
+        {
+            // get nodes at other end of edges
+            if (ep.toNode == this.name)
+            {
+                // set neighbour flag
+                yearContainer.Find("Layer" + ep.fromLayerOrdinal + "/" + ep.fromNode).GetComponent<NodeBehaviour>().IsNeighbour = IsSelected;
+                ep.IsConnected = IsSelected;
+                
+            }
+
+            if (ep.fromNode == this.name)
+            {
+                // set neighbour flag
+                yearContainer.Find("Layer" + ep.toLayerOrdinal + "/" + ep.toNode).GetComponent<NodeBehaviour>().IsNeighbour = IsSelected;
+                ep.IsConnected = IsSelected;
+            }
+        }
+
+    }
+
+
     
 }
