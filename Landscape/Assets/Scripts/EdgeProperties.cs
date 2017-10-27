@@ -11,4 +11,5 @@ public class EdgeProperties : MonoBehaviour {
     public string flowRate;
     public string dataClass;
     public bool isBidirectional;
+    public bool IsConnected;
 }
