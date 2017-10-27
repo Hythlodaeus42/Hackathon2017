@@ -671,7 +671,7 @@ MonoBehaviour:
     type: 2}
   prefabLayerUI: {fileID: 224253035329266388, guid: ea470f3ba7449a148a57910e9d67ae32,
     type: 2}
-  hologramScale: 0.02
+  hologramScale: 0.05
   startVisible: 0
 --- !u!114 &998474385
 MonoBehaviour:
