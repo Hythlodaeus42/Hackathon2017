@@ -35,7 +35,13 @@ public class SpeechManager : MonoBehaviour
             this.BroadcastMessage("HideNodes");
         });
 
-        keywords.Add("Show", () =>
+        keywords.Add("Unhide", () =>
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage("ShowNodes");
+        });
+
+        keywords.Add("Drop", () =>
         {
             // Call the OnReset method on every descendant object.
             this.BroadcastMessage("ShowNodes");

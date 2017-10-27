@@ -1,9 +1,9 @@
-ac01|0
-ac02|1
-ac03|2
-ac04|3
-ac05|4
-ac06|5
-ac07|6
-ac08|7
-ac09|8
+Vanilla FX + NDF|0
+FXO|1
+Rates - Cash|2
+Rates - Derivatives|3
+Credit - Cash|4
+Credit - Derivatives|5
+Commodities|6
+Equity - Derivatives|7
+MM|8
