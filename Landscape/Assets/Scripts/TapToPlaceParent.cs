@@ -27,6 +27,11 @@ public class TapToPlaceParent : MonoBehaviour
         }
     }
 
+    void DropContainer()
+    {
+        OnSelect();
+    }
+
     // Update is called once per frame
     void Update()
     {

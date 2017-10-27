@@ -41,6 +41,12 @@ public class SpeechManager : MonoBehaviour
             this.BroadcastMessage("ShowNodes");
         });
 
+        keywords.Add("Drop", () =>
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage("DropContainer");
+        });
+
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 
