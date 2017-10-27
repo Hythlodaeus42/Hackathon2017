@@ -102,7 +102,7 @@ public class LoadGraph : MonoBehaviour {
 
     Transform CreateYearContainer(int year)
     {
-        float xoffset = (year - 2018)  / 2f - 0.5f;
+        float xoffset = (year - 2018)  / 2f + 0.5f;
         float yoffset = -0.3f;
         Instantiate(prefabLandscapeContainer, new Vector3(xoffset, yoffset, 0), Quaternion.identity, parentContainer);
         Transform yearContainer = parentContainer.GetChild(parentContainer.childCount - 1);
