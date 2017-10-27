@@ -102,10 +102,11 @@ public class LoadGraph : MonoBehaviour {
 
     Transform CreateYearContainer(int year)
     {
-        float xoffset = (year - 2018) + layerscale;
-        Instantiate(prefabLandscapeContainer, new Vector3(xoffset, 0, 0), Quaternion.identity, parentContainer);
+        float xoffset = (year - 2018)  / 2f - 0.5f;
+        float yoffset = -0.3f;
+        Instantiate(prefabLandscapeContainer, new Vector3(xoffset, yoffset, 0), Quaternion.identity, parentContainer);
         Transform yearContainer = parentContainer.GetChild(parentContainer.childCount - 1);
-        yearContainer.localPosition = new Vector3(xoffset, 0, 0);
+        yearContainer.localPosition = new Vector3(xoffset, yoffset, 0);
         yearContainer.name = "Landscape" + year.ToString();
 
         // quick option to put all children in year container without refactoring. 
