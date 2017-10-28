@@ -110,37 +110,40 @@ public class LoadBusinessMatrix : MonoBehaviour {
 
                 matrixTransform = matrixParentTransform.Find("Matrix" + year.ToString());
 
-                if (!leftMatch || appcount > 1)
+                if (matrixTransform != null)
                 {
-                    Transform blockInstance = AddBlock(x, y, z, contiguous, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
-                    blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
-
-                    // fix text panel size
-                    Transform objPanal1 = blockInstance.Find("Canvas/Panel1/Text1");
-                    objPanal1.localScale = new Vector3(objPanal1.localScale.x / contiguous, objPanal1.localScale.y * appcount, objPanal1.localScale.z);
-                    Transform objPanal2 = blockInstance.Find("Canvas/Panel2/Text2");
-                    objPanal2.localScale = new Vector3(objPanal2.localScale.x / contiguous, objPanal2.localScale.y * appcount, objPanal2.localScale.z);
-
-                    switch (colour)
+                    if (!leftMatch || appcount > 1)
                     {
-                        case "Amber":
-                            blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
-                            objPanal1.GetComponent<Text>().color = Color.black;
-                            objPanal2.GetComponent<Text>().color = Color.black;
-                            break;
-                        case "White":
-                            blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
-                            objPanal1.GetComponent<Text>().color = Color.black;
-                            objPanal2.GetComponent<Text>().color = Color.black;
-                            break;
-                    }                    
+                        Transform blockInstance = AddBlock(x, y, z, contiguous, Quaternion.identity, appName, prefabAppBlock, matrixTransform);
+                        blockInstance.localScale = new Vector3(blockInstance.localScale.x * contiguous, blockInstance.localScale.y / appcount, blockInstance.localScale.z);
 
-                    // add property
-                    BlockProperties blockProperties = blockInstance.gameObject.GetComponent<BlockProperties>();
-                    blockProperties.ApplicationName = appName;
-                    blockProperties.BusinessGroup = rowAttributes[3].Trim();
-                    blockProperties.BusinessFunction = rowAttributes[0].Trim();
-                    blockProperties.Desirability = colour;
+                        // fix text panel size
+                        Transform objPanal1 = blockInstance.Find("Canvas/Panel1/Text1");
+                        objPanal1.localScale = new Vector3(objPanal1.localScale.x / contiguous, objPanal1.localScale.y * appcount, objPanal1.localScale.z);
+                        Transform objPanal2 = blockInstance.Find("Canvas/Panel2/Text2");
+                        objPanal2.localScale = new Vector3(objPanal2.localScale.x / contiguous, objPanal2.localScale.y * appcount, objPanal2.localScale.z);
+
+                        switch (colour)
+                        {
+                            case "Amber":
+                                blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.yellow);
+                                objPanal1.GetComponent<Text>().color = Color.black;
+                                objPanal2.GetComponent<Text>().color = Color.black;
+                                break;
+                            case "White":
+                                blockInstance.GetComponent<Renderer>().material.SetColor("_Color", Color.grey);
+                                objPanal1.GetComponent<Text>().color = Color.black;
+                                objPanal2.GetComponent<Text>().color = Color.black;
+                                break;
+                        }
+
+                        // add property
+                        BlockProperties blockProperties = blockInstance.gameObject.GetComponent<BlockProperties>();
+                        blockProperties.ApplicationName = appName;
+                        blockProperties.BusinessGroup = rowAttributes[3].Trim();
+                        blockProperties.BusinessFunction = rowAttributes[0].Trim();
+                        blockProperties.Desirability = colour;
+                    }
                 }
 
             }
